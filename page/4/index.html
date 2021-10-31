@@ -1,166 +1,250 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="theme-color" content="#33474d">
-	<title>mtMatt.page</title>
-	<link rel="stylesheet" href="/css/style.css" />
-	
-      <link rel="alternate" href="/atom.xml" title="mtMatt.page" type="application/atom+xml">
+  <meta charset="utf-8">
+  
+  
+  <title>mtMatt.page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="mtMatt.page">
+<meta property="og:url" content="http://mtmatt.page/page/4/index.html">
+<meta property="og:site_name" content="mtMatt.page">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="mtmatt">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="mtMatt.page" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mtMatt.page</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">a coding page</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mtmatt.page"></form>
+      </div>
+    </div>
+  </div>
+</header>
 
-	<header class="header">
-		<nav class="header__nav">
-			
-				<a href="/archives" class="header__link">Archive</a>
-			
-				<a href="/tags" class="header__link">Tags</a>
-			
-				<a href="/atom.xml" class="header__link">RSS</a>
-			
-		</nav>
-		<h1 class="header__title"><a href="/">mtMatt.page</a></h1>
-		<h2 class="header__subtitle">a coding page</h2>
-	</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2021-07-02-cpp-review-dsu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/02/2021-07-02-cpp-review-dsu/" class="article-date">
+  <time class="dt-published" datetime="2021-07-02T00:00:00.000Z" itemprop="datePublished">2021-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cpp-review/">cpp-review</a>
+  </div>
 
-	<main>
-		
-	<span class="different-posts different-posts_earlier">📖 <a href="/page/3">earlier posts</a> 📖</span>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/07/02/2021-07-02-cpp-review-dsu/">C++ 並查集實作</a>
+    </h1>
+  
 
-
-
-
-	<article>
-	
-		<h1><a href="/2021/07/02/2021-07-02-cpp-review-dsu/">C++ 並查集實作</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-07-02</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/cpp-review/">cpp-review</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/disjointsets/" rel="tag">disjointsets</a> <a class="article__tag-none-link" href="/tags/review/" rel="tag">review</a>
-			</span>
-		
-	</div>
-
-	
-
-	
-		<p>並查集，適用於高速判斷AB是否再同一組，以及合併兩組。</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>並查集，適用於高速判斷AB是否再同一組，以及合併兩組。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">class dsu&#123;</span><br><span class="line">    private:</span><br><span class="line">        vector&lt;int&gt; p;</span><br><span class="line">        vector&lt;long long&gt; rank;</span><br><span class="line">    public:</span><br><span class="line">        void init(int n)&#123;</span><br><span class="line">            for(int i=0;i&lt;=n;i++)&#123;</span><br><span class="line">                p.push_back(i);</span><br><span class="line">                rank.push_back(1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        int find(int a)&#123;</span><br><span class="line">            if(a==p[a]) return a;</span><br><span class="line">            return p[a]=find(p[a]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        bool same(int a,int b)&#123;</span><br><span class="line">            return find(a)==find(b);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        bool uni(int a,int b)&#123;</span><br><span class="line">            if(!same(a,b))&#123;</span><br><span class="line">                int rA=rank[find(a)],rB=rank[find(b)];</span><br><span class="line">                if(rA&gt;rB)&#123;</span><br><span class="line">                    p[find(b)]=p[find(a)];</span><br><span class="line">                &#125;else if(rA==rB)&#123;</span><br><span class="line">                    p[find(b)]=p[find(a)];</span><br><span class="line">                    rank[p[find(a)]]++;</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    p[find(a)]=p[find(b)];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>包含路徑壓縮與啟發式合併。</p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/07/02/2021-07-02-cpp-review-dsu/" data-id="ckvei9wqm004530nn19py051v" data-title="C++ 並查集實作" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/disjointsets/" rel="tag">disjointsets</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/" rel="tag">review</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
+    <article id="post-2021-06-25-cpp-dp-01knckpack" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/25/2021-06-25-cpp-dp-01knckpack/" class="article-date">
+  <time class="dt-published" datetime="2021-06-25T00:00:00.000Z" itemprop="datePublished">2021-06-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cppojques/">cppojques</a>
+  </div>
 
-	<article>
-	
-		<h1><a href="/2021/06/25/2021-06-25-cpp-dp-01knckpack/">C++ 動態規劃經典題 01 背包 (atcoder)</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-06-25</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/cppojques/">cppojques</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/oj/" rel="tag">oj</a> <a class="article__tag-none-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/25/2021-06-25-cpp-dp-01knckpack/">C++ 動態規劃經典題 01 背包 (atcoder)</a>
+    </h1>
+  
 
-	
-
-	
-		<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line"></span><br><span class="line">ll dp[105][100010],v[105],w[105];</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    int n,W;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;W;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;w[i]&gt;&gt;v[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        for(int j=1;j&lt;=W;j++)&#123;</span><br><span class="line">            if(w[i]&gt;j) dp[i][j]=dp[i-1][j];</span><br><span class="line">            else&#123;</span><br><span class="line">                dp[i][j]=max(dp[i-1][j],dp[i-1][j-w[i]]+v[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;dp[n][W];</span><br><span class="line">    return 0; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line"></span><br><span class="line">ll dp[105][100010],v[105],w[105];</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    int n,W;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;W;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;w[i]&gt;&gt;v[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        for(int j=1;j&lt;=W;j++)&#123;</span><br><span class="line">            if(w[i]&gt;j) dp[i][j]=dp[i-1][j];</span><br><span class="line">            else&#123;</span><br><span class="line">                dp[i][j]=max(dp[i-1][j],dp[i-1][j-w[i]]+v[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;dp[n][W];</span><br><span class="line">    return 0; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>前提是n*W不能太大。</p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/06/25/2021-06-25-cpp-dp-01knckpack/" data-id="ckvei9wqk004130nn6sfm1bgv" data-title="C++ 動態規劃經典題 01 背包 (atcoder)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
+    <article id="post-2021-06-20-cpp-taichung-106-7" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/20/2021-06-20-cpp-taichung-106-7/" class="article-date">
+  <time class="dt-published" datetime="2021-06-20T00:00:00.000Z" itemprop="datePublished">2021-06-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
 
-	<article>
-	
-		<h1><a href="/2021/06/20/2021-06-20-cpp-taichung-106-7/">C++ 台中區 106-7 雙層骨牌</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-06-20</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/contest/">contest</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/competition/" rel="tag">competition</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/20/2021-06-20-cpp-taichung-106-7/">C++ 台中區 106-7 雙層骨牌</a>
+    </h1>
+  
 
-	
-
-	
-		<p>這題就難了，我真的想不到O(q2)以內的解。有點像01背包，就先參考別人的程式碼，並從中學習吧！(不是複製喔)</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>這題就難了，我真的想不到O(q2)以內的解。有點像01背包，就先參考別人的程式碼，並從中學習吧！(不是複製喔)</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define INF 32000</span><br><span class="line"></span><br><span class="line">int q,d;</span><br><span class="line">short dp[1005][12010];</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    cin&gt;&gt;q;</span><br><span class="line">    int up,dw;</span><br><span class="line">    for(int i=0;i&lt;1050;i++)&#123;</span><br><span class="line">        for(int j=0;j&lt;12010;j++) dp[i][j]=INF;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    const int mx=6*q;</span><br><span class="line">    dp[0][mx]=0;</span><br><span class="line">    for(int i=1;i&lt;=q;i++)&#123;</span><br><span class="line">        cin&gt;&gt;up&gt;&gt;dw;</span><br><span class="line">        d=up-dw;</span><br><span class="line">        for(int j=mx-i*6;j&lt;=mx+i*6;j++)&#123;</span><br><span class="line">            dp[i][j]=min(dp[i-1][j-d],dp[i-1][j+d]+1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int k=mx;</span><br><span class="line">    while(dp[q][k]==INF) k++;</span><br><span class="line">    cout&lt;&lt;dp[q][k]&lt;&lt;&quot;\n&quot;&lt;&lt;k-mx;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d091"></a><a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d091">http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d091</a><br>參考：<a target="_blank" rel="noopener" href="https://www.itread01.com/content/1545447844.html"></a><a target="_blank" rel="noopener" href="https://www.itread01.com/content/1545447844.html">https://www.itread01.com/content/1545447844.html</a></p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/06/20/2021-06-20-cpp-taichung-106-7/" data-id="ckvei9wqi003t30nnhr0898b7" data-title="C++ 台中區 106-7 雙層骨牌" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
+    <article id="post-2021-06-20-cpp-taichung-106-conclusion" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/20/2021-06-20-cpp-taichung-106-conclusion/" class="article-date">
+  <time class="dt-published" datetime="2021-06-20T00:00:00.000Z" itemprop="datePublished">2021-06-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
 
-	<article>
-	
-		<h1><a href="/2021/06/20/2021-06-20-cpp-taichung-106-conclusion/">106 台中區資訊學科能力競賽試題 總結</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-06-20</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/contest/">contest</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/competition/" rel="tag">competition</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/20/2021-06-20-cpp-taichung-106-conclusion/">106 台中區資訊學科能力競賽試題 總結</a>
+    </h1>
+  
 
-	
-
-	
-		<p>第一題到第五題都非常簡單，但第六題與第七題的難度與前五題根本不是一個量級，第六題用到回朔DFS，第七題是DP。而前五題卻不需要演算法。總歸一句：資訊學科能力競賽試題仍然是值得練習的題目。還有，我該練動態規劃啦！  </p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>第一題到第五題都非常簡單，但第六題與第七題的難度與前五題根本不是一個量級，第六題用到回朔DFS，第七題是DP。而前五題卻不需要演算法。總歸一句：資訊學科能力競賽試題仍然是值得練習的題目。還有，我該練動態規劃啦！  </p>
 <p>題解連結：</p>
 <ol>
 <li><a href="https://mtmatt.page/contest/c-tj-106-1/">https://mtmatt.page/contest/c-tj-106-1/</a></li>
@@ -172,266 +256,433 @@
 <li><a href="https://mtmatt.page/contest/c-tj-106-7/">https://mtmatt.page/contest/c-tj-106-7/</a></li>
 </ol>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/06/20/2021-06-20-cpp-taichung-106-conclusion/" data-id="ckvei9wqj003x30nnbhnwearu" data-title="106 台中區資訊學科能力競賽試題 總結" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
+    <article id="post-2021-06-19-cpp-q-2-13" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/19/2021-06-19-cpp-q-2-13/" class="article-date">
+  <time class="dt-published" datetime="2021-06-19T00:00:00.000Z" itemprop="datePublished">2021-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/apcs/">apcs</a>►<a class="article-category-link" href="/categories/apcs/325/">325</a>
+  </div>
 
-	<article>
-	
-		<h1><a href="/2021/06/19/2021-06-19-cpp-q-2-13/">C++ 基礎題 Q-2-13 無理數的快速冪</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-06-19</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/apcs/">apcs</a> > <a class="article-category-link" href="/categories/apcs/325/">325</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/apcs/" rel="tag">apcs</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/19/2021-06-19-cpp-q-2-13/">C++ 基礎題 Q-2-13 無理數的快速冪</a>
+    </h1>
+  
 
-	
-
-	
-		<p>實做好無理數的乘法後就簡單了</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>實做好無理數的乘法後就簡單了</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int p=1000000009;</span><br><span class="line">struct number&#123;</span><br><span class="line">    long long x,y;</span><br><span class="line">&#125;;</span><br><span class="line">number operator*(number a,number b)&#123;</span><br><span class="line">    number c;</span><br><span class="line">    c.x=((a.x*b.x%p)+(2*a.y*b.y%p))%p;</span><br><span class="line">    c.y=((a.x*b.y%p)+(a.y*b.x%p))%p;</span><br><span class="line">    return c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">number powerNum(number x,int n)&#123;</span><br><span class="line">    if(n==1) return x;</span><br><span class="line">    if(n&amp;1) return x*powerNum(x,n-1);</span><br><span class="line">    number t=powerNum(x,n/2);</span><br><span class="line">    return t*t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;</span><br><span class="line">    number a;</span><br><span class="line">    cin&gt;&gt;a.x&gt;&gt;a.y&gt;&gt;n;</span><br><span class="line">    number ans=powerNum(a,n);</span><br><span class="line">    cout&lt;&lt;ans.x&lt;&lt;&quot; &quot;&lt;&lt;ans.y;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>出處：<a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d022"></a><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d022">https://judge.tcirc.tw/ShowProblem?problemid=d022</a></p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/06/19/2021-06-19-cpp-q-2-13/" data-id="ckvei9wq5002x30nn2uuk4ggc" data-title="C++ 基礎題 Q-2-13 無理數的快速冪" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
+    <article id="post-2021-06-19-cpp-q-6-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/19/2021-06-19-cpp-q-6-5/" class="article-date">
+  <time class="dt-published" datetime="2021-06-19T00:00:00.000Z" itemprop="datePublished">2021-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/apcs/">apcs</a>►<a class="article-category-link" href="/categories/apcs/325/">325</a>
+  </div>
 
-	<article>
-	
-		<h1><a href="/2021/06/19/2021-06-19-cpp-q-6-5/">C++ 基礎題 Q-6-5 二維最大子矩陣</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-06-19</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/apcs/">apcs</a> > <a class="article-category-link" href="/categories/apcs/325/">325</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/apcs/" rel="tag">apcs</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/19/2021-06-19-cpp-q-6-5/">C++ 基礎題 Q-6-5 二維最大子矩陣</a>
+    </h1>
+  
 
-	
-
-	
-		<p>擱置了半年，如今終於解開。與 Q-2-12有異曲同工之妙，但複雜度變O(n2m)。</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>擱置了半年，如今終於解開。與 Q-2-12有異曲同工之妙，但複雜度變O(n2m)。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define r first</span><br><span class="line">#define c second</span><br><span class="line">#define INF 100000000000</span><br><span class="line">typedef long long ll;</span><br><span class="line"></span><br><span class="line">ll a[205][205],p[205][205];</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    int n,m;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        for(int j=0;j&lt;m;j++)&#123;</span><br><span class="line">            cin&gt;&gt;a[i][j];</span><br><span class="line">            p[i][j]=p[i-1][j]+a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ll ans=0;</span><br><span class="line">    for(int i=0;i&lt;=n;i++)&#123;</span><br><span class="line">        for(int j=i+1;j&lt;=n;j++)&#123;</span><br><span class="line">            ll psum=0;</span><br><span class="line">            for(int k=0;k&lt;m;k++)&#123;</span><br><span class="line">                psum+=p[j][k]-p[i][k];</span><br><span class="line">                if(psum&lt;0) psum=0;</span><br><span class="line">                ans=max(psum,ans);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>出處：<a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d073"></a><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d073">https://judge.tcirc.tw/ShowProblem?problemid=d073</a></p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/06/19/2021-06-19-cpp-q-6-5/" data-id="ckvei9wq7003130nn94licc28" data-title="C++ 基礎題 Q-6-5 二維最大子矩陣" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
+    <article id="post-2021-06-19-cpp-taichung-106-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/19/2021-06-19-cpp-taichung-106-1/" class="article-date">
+  <time class="dt-published" datetime="2021-06-19T00:00:00.000Z" itemprop="datePublished">2021-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
 
-	<article>
-	
-		<h1><a href="/2021/06/19/2021-06-19-cpp-taichung-106-1/">C++ 台中區 106-1 計算多個整數的平均值、最大值、最小值</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-06-19</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/contest/">contest</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/competition/" rel="tag">competition</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/19/2021-06-19-cpp-taichung-106-1/">C++ 台中區 106-1 計算多個整數的平均值、最大值、最小值</a>
+    </h1>
+  
 
-	
-
-	
-		<p>慣例的水題</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>慣例的水題</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define INF 1000000000</span><br><span class="line"></span><br><span class="line">long long round(long long a)&#123;</span><br><span class="line">    return (a+5)/10;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    long long n,sum=0,mx=-INF,mn=INF,t;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;t;</span><br><span class="line">        mx=max(mx,t);</span><br><span class="line">        mn=min(mn,t);</span><br><span class="line">        sum+=t;</span><br><span class="line">    &#125;</span><br><span class="line">    long long aver=round(sum*1000/n);</span><br><span class="line">    cout&lt;&lt;aver/100&lt;&lt;&quot;.&quot;;</span><br><span class="line">    printf(&quot;%02lld\n&quot;,aver%100);</span><br><span class="line">    cout&lt;&lt;mx&lt;&lt;&quot;\n&quot;&lt;&lt;mn&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d085"></a><a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d085">http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d085</a></p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/06/19/2021-06-19-cpp-taichung-106-1/" data-id="ckvei9wq8003530nnf4wh9o09" data-title="C++ 台中區 106-1 計算多個整數的平均值、最大值、最小值" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
+    <article id="post-2021-06-19-cpp-taichung-106-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/19/2021-06-19-cpp-taichung-106-2/" class="article-date">
+  <time class="dt-published" datetime="2021-06-19T00:00:00.000Z" itemprop="datePublished">2021-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
 
-	<article>
-	
-		<h1><a href="/2021/06/19/2021-06-19-cpp-taichung-106-2/">C++ 台中區 106-2 算帳</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-06-19</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/contest/">contest</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/competition/" rel="tag">competition</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/19/2021-06-19-cpp-taichung-106-2/">C++ 台中區 106-2 算帳</a>
+    </h1>
+  
 
-	
-
-	
-		<p>一般第二題也是水題？</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>一般第二題也是水題？</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;map&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define F first</span><br><span class="line">#define S second</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    map&lt;string,double&gt; s,amount;</span><br><span class="line">    string p;</span><br><span class="line">    double sum=0;</span><br><span class="line">    while(cin&gt;&gt;p &amp;&amp; p!=&quot;0000000000&quot;)&#123;</span><br><span class="line">        int a,pr;</span><br><span class="line">        cin&gt;&gt;pr&gt;&gt;a;</span><br><span class="line">        s[p]=pr;</span><br><span class="line">        amount[p]+=a;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(map&lt;string,double&gt;::iterator t=s.begin();t!=s.end();t++)&#123;</span><br><span class="line">        pair&lt;string,double&gt; a=*t;</span><br><span class="line">        sum+=a.S*amount[a.F];</span><br><span class="line">        switch(a.F[0])&#123;</span><br><span class="line">            case &#x27;X&#x27;:</span><br><span class="line">                if(amount[a.F]&gt;=2)</span><br><span class="line">                    sum-=a.S*floor(amount[a.F]*0.5);</span><br><span class="line">                break;</span><br><span class="line">            case &#x27;Y&#x27;:</span><br><span class="line">                if(amount[a.F]&gt;=2)</span><br><span class="line">                    sum-=a.S*floor(amount[a.F]*0.5)*0.5;</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;sum&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d086"></a><a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d086">http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d086</a></p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/06/19/2021-06-19-cpp-taichung-106-2/" data-id="ckvei9wqa003930nn80jqeoph" data-title="C++ 台中區 106-2 算帳" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
+    <article id="post-2021-06-19-cpp-taichung-106-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/19/2021-06-19-cpp-taichung-106-3/" class="article-date">
+  <time class="dt-published" datetime="2021-06-19T00:00:00.000Z" itemprop="datePublished">2021-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
 
-	<article>
-	
-		<h1><a href="/2021/06/19/2021-06-19-cpp-taichung-106-3/">C++ 台中區 106-3 費氏數列</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-06-19</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/contest/">contest</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/competition/" rel="tag">competition</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/19/2021-06-19-cpp-taichung-106-3/">C++ 台中區 106-3 費氏數列</a>
+    </h1>
+  
 
-	
-
-	
-		<p>第三題依舊水？？</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>第三題依舊水？？</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 100 </span><br><span class="line"></span><br><span class="line">long long ipt,f[N],pos=0,ct;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    f[1]=1;f[2]=1;</span><br><span class="line">    for(int i=3;i&lt;N;i++)&#123;</span><br><span class="line">        f[i]=f[i-1]+f[i-2];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;ipt;</span><br><span class="line">    for(int i=0;i&lt;N;i++)&#123;</span><br><span class="line">        if(ipt==f[i])&#123;</span><br><span class="line">            pos=i;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if(pos==0)&#123;</span><br><span class="line">        cout&lt;&lt;ipt;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    long long ans=pos;</span><br><span class="line">    while(cin&gt;&gt;ipt)&#123;</span><br><span class="line">        pos++;</span><br><span class="line">        if(ipt!=f[pos])&#123;</span><br><span class="line">            cout&lt;&lt;ipt;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans;</span><br><span class="line">    return 0;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
 <p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d087"></a><a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d087">http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d087</a></p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/06/19/2021-06-19-cpp-taichung-106-3/" data-id="ckvei9wqb003d30nn8qgb5tzp" data-title="C++ 台中區 106-3 費氏數列" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
+    <article id="post-2021-06-19-cpp-taichung-106-4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/19/2021-06-19-cpp-taichung-106-4/" class="article-date">
+  <time class="dt-published" datetime="2021-06-19T00:00:00.000Z" itemprop="datePublished">2021-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
 
-	<article>
-	
-		<h1><a href="/2021/06/19/2021-06-19-cpp-taichung-106-4/">C++ 台中區 106-4 數字序號轉換為雜湊表中對應的數字位置</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-06-19</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/contest/">contest</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/competition/" rel="tag">competition</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/19/2021-06-19-cpp-taichung-106-4/">C++ 台中區 106-4 數字序號轉換為雜湊表中對應的數字位置</a>
+    </h1>
+  
 
-	
-
-	
-		<p>debug 了好久，一直打錯字，看來基本功還要再練。不然這其實也是水題，花這麼多時間實屬慚愧。</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>debug 了好久，一直打錯字，看來基本功還要再練。不然這其實也是水題，花這麼多時間實屬慚愧。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">string str;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int sum=0,tmp=0;</span><br><span class="line">    cin&gt;&gt;str;</span><br><span class="line">    for(int i=0;i&lt;str.size()/3*3;i+=3)&#123;</span><br><span class="line">        tmp=0;</span><br><span class="line">        if(i&amp;1)&#123;</span><br><span class="line">            for(int j=2;j&gt;=0;j--)&#123;</span><br><span class="line">                tmp=int(str[i+j]-&#x27;0&#x27;)+10*tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            for(int j=0;j&lt;3;j++)&#123;</span><br><span class="line">                tmp=int(str[i+j]-&#x27;0&#x27;)+10*tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sum=(sum+tmp)%997;</span><br><span class="line">    &#125;</span><br><span class="line">    tmp=0;</span><br><span class="line">    if((str.size()/3*3)&amp;1)&#123;</span><br><span class="line">        for(int i=str.size()-1;i&gt;=str.size()/3*3;i--)&#123;</span><br><span class="line">            tmp=int(str[i]-&#x27;0&#x27;)+10*tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        for(int i=str.size()/3*3;i&lt;str.size();i++)&#123;</span><br><span class="line">            tmp=int(str[i]-&#x27;0&#x27;)+10*tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    sum=(sum+tmp)%997;</span><br><span class="line">    cout&lt;&lt;sum;</span><br><span class="line">    return 0;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
 <p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d088"></a><a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d088">http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d088</a></p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/06/19/2021-06-19-cpp-taichung-106-4/" data-id="ckvei9wqd003h30nn88b24sat" data-title="C++ 台中區 106-4 數字序號轉換為雜湊表中對應的數字位置" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
 
-	
-
+    </footer>
+  </div>
+  
 </article>
 
 
 
+  
 
 
-	<span class="different-posts">📖 <a href="/page/5">more posts</a> 📖</span>
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/">下一頁 &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/">apcs</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/325/">325</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/practicaltest/">practicaltest</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/contest/">contest</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp-review/">cpp-review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cppojques/">cppojques</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/practicaltest/">practicaltest</a></li></ul>
+    </div>
+  </div>
 
 
-
-	</main>
-
-	<footer class="footer">
-	<div class="footer-content">
-		
-	      <div class="footer__element">
-	<p>Hi there, <br />welcome to my Blog glad you found it. Have a look around, will you?</p>
-</div>
-
-	    
-	      <div class="footer__element">
-	<h5>Check out</h5>
-	<ul class="footer-links">
-		<li class="footer-links__link"><a href="/archives">Archive</a></li>
-		
-		  <li class="footer-links__link"><a href="/atom.xml">RSS</a></li>
-	    
-		<li class="footer-links__link"><a href="/about">about page</a></li>
-		<li class="footer-links__link"><a href="/tags">Tags</a></li>
-		<li class="footer-links__link"><a href="/categories">Categories</a></li>
-	</ul>
-</div>
-
-	    
-
-		<div class="footer-credit">
-			<span>© 2021 mtmatt | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/HoverBaum/meilidu-hexo">MeiliDu</a></span>
-		</div>
-
-	</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/competition/" rel="tag">competition</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datastructure/" rel="tag">datastructure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disjointsets/" rel="tag">disjointsets</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/input/" rel="tag">input</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loop/" rel="tag">loop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/naming/" rel="tag">naming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/output/" rel="tag">output</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/review/" rel="tag">review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/variable/" rel="tag">variable</a></li></ul>
+    </div>
+  </div>
 
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/apcs/" style="font-size: 15px;">apcs</a> <a href="/tags/competition/" style="font-size: 16.67px;">competition</a> <a href="/tags/datastructure/" style="font-size: 11.67px;">datastructure</a> <a href="/tags/disjointsets/" style="font-size: 10px;">disjointsets</a> <a href="/tags/hackerrank/" style="font-size: 18.33px;">hackerrank</a> <a href="/tags/input/" style="font-size: 10px;">input</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/naming/" style="font-size: 10px;">naming</a> <a href="/tags/oj/" style="font-size: 20px;">oj</a> <a href="/tags/onlinejudge/" style="font-size: 20px;">onlinejudge</a> <a href="/tags/output/" style="font-size: 10px;">output</a> <a href="/tags/review/" style="font-size: 13.33px;">review</a> <a href="/tags/variable/" style="font-size: 10px;">variable</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/09/05/2021-09-05-apcs-2021-9-5/">APCS 2021 9/5</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/18/2021-08-18-cpp-review-datastructure-binary-search-tree/">C++資料結構：Binary Search Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/15/2021-08-15-cpp-review-datastructure-stack-queue/">C++資料結構：Stack &amp; Queue</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/06/2021-08-06-cpp-chang-yun-chia-106-5/">C++ 彰雲嘉區複賽106-5 回文日期問題</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-1/">C++ 彰雲嘉區複賽106-1 三角形</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 mtmatt<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
 
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
 
 
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
 </body>
-
 </html>

@@ -1,105 +1,266 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="theme-color" content="#33474d">
-	<title>C++基礎題-a364: 2. 神秘的進位問題 | mtMatt.page</title>
-	<link rel="stylesheet" href="/css/style.css" />
-	
-      <link rel="alternate" href="/atom.xml" title="mtMatt.page" type="application/atom+xml">
+  <meta charset="utf-8">
+  
+  
+  <title>C++基礎題-a364: 2. 神秘的進位問題 | mtMatt.page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="我是用窮舉法，找出每一種可能。程式碼如下~ 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253#include&lt;iostream&gt;using namespace std;long long d(long long n)&amp;#123;    if(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++基礎題-a364: 2. 神秘的進位問題">
+<meta property="og:url" content="http://mtmatt.page/2021/02/03/2021-02-03-cpp-basic-a364/index.html">
+<meta property="og:site_name" content="mtMatt.page">
+<meta property="og:description" content="我是用窮舉法，找出每一種可能。程式碼如下~ 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253#include&lt;iostream&gt;using namespace std;long long d(long long n)&amp;#123;    if(">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-02-03T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-31T00:00:06.656Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="oj">
+<meta property="article:tag" content="onlinejudge">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="mtMatt.page" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mtMatt.page</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">a coding page</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mtmatt.page"></form>
+      </div>
+    </div>
+  </div>
+</header>
 
-	<header class="header">
-		<nav class="header__nav">
-			
-				<a href="/archives" class="header__link">Archive</a>
-			
-				<a href="/tags" class="header__link">Tags</a>
-			
-				<a href="/atom.xml" class="header__link">RSS</a>
-			
-		</nav>
-		<h1 class="header__title"><a href="/">mtMatt.page</a></h1>
-		<h2 class="header__subtitle">a coding page</h2>
-	</header>
+      <div class="outer">
+        <section id="main"><article id="post-2021-02-03-cpp-basic-a364" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/03/2021-02-03-cpp-basic-a364/" class="article-date">
+  <time class="dt-published" datetime="2021-02-03T00:00:00.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cppojques/">cppojques</a>
+  </div>
 
-	<main>
-		<article>
-	
-		<h1>C++基礎題-a364: 2. 神秘的進位問題</h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-02-03</span><br />
-		
-			<span class="article__category">
-				<a class="article-category-link" href="/categories/cppojques/">cppojques</a>
-			</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/oj/" rel="tag">oj</a> <a class="article__tag-none-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a>
-			</span>
-		
-	</div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      C++基礎題-a364: 2. 神秘的進位問題
+    </h1>
+  
 
-	
-
-	
-		<p>我是用窮舉法，找出每一種可能。程式碼如下~</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我是用窮舉法，找出每一種可能。程式碼如下~</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">long long d(long long n)&#123;</span><br><span class="line">    if(n&lt;=0)</span><br><span class="line">        return 1;</span><br><span class="line">    else</span><br><span class="line">        return n*d(n-1);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">long long c(long long m,long long n)&#123;</span><br><span class="line">    if(m&lt;n)</span><br><span class="line">        return 0;</span><br><span class="line">    else</span><br><span class="line">        return d(m)/(d(n)*d(m-n));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    long long iptNum,ipt=0;</span><br><span class="line">    bool isRight=false;</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;iptNum;</span><br><span class="line"></span><br><span class="line">    for(long long i=0;i&lt;iptNum;i++)&#123;</span><br><span class="line">        long long a=0;</span><br><span class="line">        isRight=false;</span><br><span class="line"></span><br><span class="line">        ipt=0;</span><br><span class="line">        cin&gt;&gt;ipt;</span><br><span class="line">        for(long long j=2;j&lt;17;j++)&#123;</span><br><span class="line">            for(long long k=1;k&lt;j;k++)&#123;</span><br><span class="line">                for(long long l=0;l&lt;k;l++)&#123;</span><br><span class="line">                    a=c(j,3)+c(k,2)+c(l,1);</span><br><span class="line"></span><br><span class="line">                    if(a==ipt)&#123;</span><br><span class="line">                        cout&lt;&lt;j&lt;&lt;k&lt;&lt;l&lt;&lt;&quot;\n&quot;;</span><br><span class="line">                        break;</span><br><span class="line">                    &#125;    </span><br><span class="line">                &#125;</span><br><span class="line">                if(a==ipt)&#123;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;    </span><br><span class="line">            &#125;</span><br><span class="line">            if(a==ipt)&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>出處 : <a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=a364"></a><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=a364">https://zerojudge.tw/ShowProblem?problemid=a364</a></p>
 
-	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/2021/02/03/2021-02-03-cpp-basic-a364/" data-id="ckvei9wot000930nn6eco41x2" data-title="C++基礎題-a364: 2. 神秘的進位問題" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li></ul>
 
-	
-		<span class="different-posts"><a href="/2021/02/03/2021-02-03-cpp-basic-a364/" onclick="window.history.go(-1); return false;">⬅️ Go back </a></span>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/02/21/2021-02-21-cpp-learningclass-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          C++程式設計基礎(三)：迴圈
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/02/02/2021-02-02-cpp-basic-a271/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C++基礎題-a271: 彩色蘿蔔</div>
+    </a>
+  
+</nav>
 
-	
-
+  
 </article>
 
-	</main>
 
-	<footer class="footer">
-	<div class="footer-content">
-		
-	      <div class="footer__element">
-	<p>Hi there, <br />welcome to my Blog glad you found it. Have a look around, will you?</p>
-</div>
-
-	    
-	      <div class="footer__element">
-	<h5>Check out</h5>
-	<ul class="footer-links">
-		<li class="footer-links__link"><a href="/archives">Archive</a></li>
-		
-		  <li class="footer-links__link"><a href="/atom.xml">RSS</a></li>
-	    
-		<li class="footer-links__link"><a href="/about">about page</a></li>
-		<li class="footer-links__link"><a href="/tags">Tags</a></li>
-		<li class="footer-links__link"><a href="/categories">Categories</a></li>
-	</ul>
-</div>
-
-	    
-
-		<div class="footer-credit">
-			<span>© 2021 mtmatt | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/HoverBaum/meilidu-hexo">MeiliDu</a></span>
-		</div>
-
-	</div>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/">apcs</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/325/">325</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/practicaltest/">practicaltest</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/contest/">contest</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp-review/">cpp-review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cppojques/">cppojques</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/practicaltest/">practicaltest</a></li></ul>
+    </div>
+  </div>
 
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/competition/" rel="tag">competition</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datastructure/" rel="tag">datastructure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disjointsets/" rel="tag">disjointsets</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/input/" rel="tag">input</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loop/" rel="tag">loop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/naming/" rel="tag">naming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/output/" rel="tag">output</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/review/" rel="tag">review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/variable/" rel="tag">variable</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/apcs/" style="font-size: 15px;">apcs</a> <a href="/tags/competition/" style="font-size: 16.67px;">competition</a> <a href="/tags/datastructure/" style="font-size: 11.67px;">datastructure</a> <a href="/tags/disjointsets/" style="font-size: 10px;">disjointsets</a> <a href="/tags/hackerrank/" style="font-size: 18.33px;">hackerrank</a> <a href="/tags/input/" style="font-size: 10px;">input</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/naming/" style="font-size: 10px;">naming</a> <a href="/tags/oj/" style="font-size: 20px;">oj</a> <a href="/tags/onlinejudge/" style="font-size: 20px;">onlinejudge</a> <a href="/tags/output/" style="font-size: 10px;">output</a> <a href="/tags/review/" style="font-size: 13.33px;">review</a> <a href="/tags/variable/" style="font-size: 10px;">variable</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/09/05/2021-09-05-apcs-2021-9-5/">APCS 2021 9/5</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/18/2021-08-18-cpp-review-datastructure-binary-search-tree/">C++資料結構：Binary Search Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/15/2021-08-15-cpp-review-datastructure-stack-queue/">C++資料結構：Stack &amp; Queue</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/06/2021-08-06-cpp-chang-yun-chia-106-5/">C++ 彰雲嘉區複賽106-5 回文日期問題</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-1/">C++ 彰雲嘉區複賽106-1 三角形</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 mtmatt<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
 
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
 
 
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
 </body>
-
 </html>
