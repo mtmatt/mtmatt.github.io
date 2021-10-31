@@ -75,12 +75,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-2021-09-05-apcs-2021-9-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/10/31/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-10-31T00:01:57.488Z" itemprop="datePublished">2021-10-31</time>
+    <a href="/2021/09/05/2021-09-05-apcs-2021-9-5/" class="article-date">
+  <time class="dt-published" datetime="2021-09-05T00:00:00.000Z" itemprop="datePublished">2021-09-05</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/apcs/">apcs</a>►<a class="article-category-link" href="/categories/apcs/practicaltest/">practicaltest</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -89,7 +93,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/10/31/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/2021/09/05/2021-09-05-apcs-2021-9-5/">APCS 2021 9/5</a>
     </h1>
   
 
@@ -97,27 +101,516 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h3 id="1-對聯"><a href="#1-對聯" class="headerlink" title="1. 對聯"></a>1. 對聯</h3><ul>
+<li>A : 2, 4字平仄不同 &amp;&amp; 2, 6平仄相同</li>
+<li>B : 第一句最後一字仄，第二句則是平</li>
+<li>C : 第一二句2, 4, 6 字分別平仄不同</li>
+</ul>
+<p>input : 七言對聯 0-&gt;平, 1-&gt;仄</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">0 0 0 0 1 1 1</span><br><span class="line">1 1 1 1 0 0 0</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>ouput : 違反ABC哪些個規則就輸出相對應的英文字母(ABC)，若沒違反則輸出 “None”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="2-炸彈魔王"><a href="#2-炸彈魔王" class="headerlink" title="2. 炸彈魔王"></a>2. 炸彈魔王</h3><p>遊戲採回合制，回合開始時若魔王位於炸彈上則所有在同一格的魔王會連同炸彈一起消失，所有未消失的魔王會先在腳下放一顆炸彈，再依據方向向量(s, t)移動。移動到邊界外的魔王視為消失。 求所有魔王消失時還有未爆彈的地點數。</p>
+<p>n,m,r,c &lt;= 100, k&lt;500, |s,t|&lt;=10</p>
+<p>input : 第一行 n, m, k 分別表示地圖長寬以及魔王數，接下來有 k 行每一行都有r, c, s, t 分別表示魔王初始位置座標，以及移動向量。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 3 2</span><br><span class="line">1 2 0 -1</span><br><span class="line">2 1 1 -2</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="3-幸運號碼"><a href="#3-幸運號碼" class="headerlink" title="3. 幸運號碼"></a>3. 幸運號碼</h3><p>給一個陣列，依據以下步驟尋找答案。</p>
+<ol>
+<li>找到區間最小值</li>
+<li>依據最小值分為左右兩邊詢問</li>
+<li>選擇區間和較小的一邊作為下個搜索區間 n&lt;=300000</li>
+</ol>
+<p>input :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">3 2 1 5 4 7</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-美食"><a href="#4-美食" class="headerlink" title="4. 美食"></a>4. 美食</h3><p>有 n 攤美食和 k 個人，每個人必須吃連續區段的攤位，且菜色不得重複。求最大可以被吃到的攤位數。</p>
+<p>n&lt;=1000000, k&lt;=20, nk&lt;=5000000, a[i]&lt;100000</p>
+<p>其他限制 50% k=1 100% none</p>
+<p>input :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5 1</span><br><span class="line">1 2 3 1 2</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.github.io/2021/10/31/hello-world/" data-id="ckveh8x76000074nn5vljdrac" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.github.io/2021/09/05/2021-09-05-apcs-2021-9-5/" data-id="ckvei9wrt007530nn794fa0xu" data-title="APCS 2021 9/5" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2021-08-18-cpp-review-datastructure-binary-search-tree" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/18/2021-08-18-cpp-review-datastructure-binary-search-tree/" class="article-date">
+  <time class="dt-published" datetime="2021-08-18T00:00:00.000Z" itemprop="datePublished">2021-08-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cpp-review/">cpp-review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/08/18/2021-08-18-cpp-review-datastructure-binary-search-tree/">C++資料結構：Binary Search Tree</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Binary Search Tree (二元搜尋樹)，是用來存放多筆資料，並快速搜尋的資料結構。大概的原則就是，大的放右邊，小的放左邊。</p>
+<h4 id="新增，刪除一個值都只要O-log-N"><a href="#新增，刪除一個值都只要O-log-N" class="headerlink" title="新增，刪除一個值都只要O(log(N))"></a>新增，刪除一個值都只要O(log(N))</h4><p>以下為實作範例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">template&lt;class T&gt;</span><br><span class="line">class bst&#123;</span><br><span class="line">    private:</span><br><span class="line">        struct node&#123;</span><br><span class="line">            T val;</span><br><span class="line">            node* l,r;</span><br><span class="line"></span><br><span class="line">            node()&#123;</span><br><span class="line">                l=r=nullptr;</span><br><span class="line">            &#125;</span><br><span class="line">            node(T v)&#123;</span><br><span class="line">                l=r=nullptr;</span><br><span class="line">                val=v;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        bool find(node *n,T v)&#123;</span><br><span class="line">            if(n-&gt;val==v)&#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;else if(n-&gt;val &gt; v &amp;&amp; n-&gt;r!=nullptr)&#123;</span><br><span class="line">                find(n-&gt;r,v);</span><br><span class="line">            &#125;else if(n-&gt;val &lt; v &amp;&amp; n-&gt;l!=nullptr)&#123;</span><br><span class="line">                find(n-&gt;l,v);</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void insert(node *&amp;n,T v)&#123;</span><br><span class="line">            if(n==nullptr)&#123;</span><br><span class="line">                node nd=new node(v);</span><br><span class="line">                n=&amp;nd;</span><br><span class="line">            &#125;else if(n-&gt;val &gt; v &amp;&amp; n-&gt;r!=nullptr)&#123;</span><br><span class="line">                insert(n-&gt;r,v);</span><br><span class="line">            &#125;else if(n-&gt;val &lt; v &amp;&amp; n-&gt;l!=nullptr)&#123;</span><br><span class="line">                insert(n-&gt;l,v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void DeleteNode(node *&amp;n)&#123;</span><br><span class="line">            if(n-&gt;l==nullptr &amp;&amp; n-&gt;r==nullptr)&#123;</span><br><span class="line">                delete n;</span><br><span class="line">                n=nullptr;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                node *left,*right;</span><br><span class="line">                if(n-&gt;l==nullptr)&#123;</span><br><span class="line">                    right=n-&gt;r;</span><br><span class="line">                    n-&gt;val=right-&gt;val;</span><br><span class="line">                    n-&gt;l=right-&gt;l;</span><br><span class="line">                    n-&gt;r=right-&gt;r;</span><br><span class="line">                    delete right;</span><br><span class="line">                &#125;else if(n-&gt;r==nullptr)&#123;</span><br><span class="line">                    left=n-&gt;l;</span><br><span class="line">                    n-&gt;val=left-&gt;val;</span><br><span class="line">                    n-&gt;l=left-&gt;l;</span><br><span class="line">                    n-&gt;r=left-&gt;r;</span><br><span class="line">                    delete left;</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    right=n;</span><br><span class="line">                    left=n-&gt;l;</span><br><span class="line">                    while(left-&gt;r!=nullptr)&#123;</span><br><span class="line">                        right=left;</span><br><span class="line">                        left=left-&gt;l;</span><br><span class="line">                    &#125;</span><br><span class="line">                    n-&gt;val=left-&gt;val;</span><br><span class="line">                    if(right!=n)</span><br><span class="line">                        right-&gt;r=left-&gt;l;</span><br><span class="line">                    else</span><br><span class="line">                        right-&gt;l=left-&gt;l;</span><br><span class="line">                    delete left;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void erase(node *n,T v)&#123;</span><br><span class="line">            if(n-&gt;val==v)&#123;</span><br><span class="line">                DeleteNode(n);</span><br><span class="line">            &#125;else if(n-&gt;val &gt; v &amp;&amp; n-&gt;r!=nullptr)&#123;</span><br><span class="line">                erase(n-&gt;r,v);</span><br><span class="line">            &#125;else if(n-&gt;val &lt; v &amp;&amp; n-&gt;l!=nullptr)&#123;</span><br><span class="line">                erase(n-&gt;l,v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void DeleteTree(node *n)&#123;</span><br><span class="line">            if(n-&gt;l!=nullptr)</span><br><span class="line">                DeleteTree(n-&gt;l);</span><br><span class="line">            if(n-&gt;r!=nullptr)</span><br><span class="line">                DeleteTree(n-&gt;r);</span><br><span class="line">            delete n;</span><br><span class="line">        &#125;</span><br><span class="line">    public:</span><br><span class="line">        bst()&#123;</span><br><span class="line">            root=nullptr;</span><br><span class="line">            sz=0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ~bst()&#123;</span><br><span class="line">            if(root!=nullptr)</span><br><span class="line">                DeleteTree(root);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        bool find(T v)&#123;</span><br><span class="line">            if(root!=nullptr)</span><br><span class="line">                return find(root,v);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void insert(T v)&#123;</span><br><span class="line">            if(root==nullptr)&#123;</span><br><span class="line">                node n=new node(v);</span><br><span class="line">                root=&amp;n;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                insert(root,v);</span><br><span class="line">            &#125;</span><br><span class="line">            sz++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void erase(T v)&#123;</span><br><span class="line">            if(root==nullptr) return;</span><br><span class="line">            erase(root,v);</span><br><span class="line">            sz--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        int size()&#123;</span><br><span class="line">            return sz;</span><br><span class="line">        &#125;</span><br><span class="line">    private:</span><br><span class="line">        node *root;</span><br><span class="line">        int sz;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="相同的，C-都幫你做好了，就是所謂的Set-amp-Map。"><a href="#相同的，C-都幫你做好了，就是所謂的Set-amp-Map。" class="headerlink" title="相同的，C++都幫你做好了，就是所謂的Set &amp; Map。"></a>相同的，C++都幫你做好了，就是所謂的Set &amp; Map。</h4><p>以下為使用範例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    vector&lt;int&gt; v(100);</span><br><span class="line">    for(int i=0;i&lt;100;++i)&#123;</span><br><span class="line">        v[i]=i;</span><br><span class="line">    &#125;</span><br><span class="line">    random_shuffle(v.begin(),v.end());</span><br><span class="line"></span><br><span class="line">    set&lt;int&gt; s;</span><br><span class="line">    for(auto a:v)&#123;</span><br><span class="line">        s.insert(a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    random_shuffle(v.begin(),v.end());</span><br><span class="line"></span><br><span class="line">    for(auto a:v)&#123;</span><br><span class="line">        cout&lt;&lt;*s.lower_bound(a)&lt;&lt;&quot; &quot;;</span><br><span class="line">        cout&lt;&lt;*s.upper_bound(a)&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    s.erase(10);</span><br><span class="line">    cout&lt;&lt;*s.lower_bound(10);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="我相信許多人跟我一樣，一開始不知道這些東西要用在哪？"><a href="#我相信許多人跟我一樣，一開始不知道這些東西要用在哪？" class="headerlink" title="我相信許多人跟我一樣，一開始不知道這些東西要用在哪？"></a>我相信許多人跟我一樣，一開始不知道這些東西要用在哪？</h4><p>以下我找了幾個範例</p>
+<p><strong>1.</strong> 在O(Nlog(26))以內找出是否有一個字母在兩個字串中均能被找到(出處：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/two-strings/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps">HackerRank</a>)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">string twoStrings(string s1, string s2) &#123;</span><br><span class="line">    set&lt;char&gt; s;</span><br><span class="line">    for(auto a:s1)&#123;</span><br><span class="line">        s.insert(a);</span><br><span class="line">    &#125;</span><br><span class="line">    for(auto a:s2)&#123;</span><br><span class="line">        if(s.count(a))&#123;</span><br><span class="line">            return &quot;YES&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return &quot;NO&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.</strong> 以O(N3log(N))找出一個字串中無序變形子串對的數目(出處：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps">HackerRank</a>) 最重要的，就是其刪除快速的特性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int sherlockAndAnagrams(string s) &#123;</span><br><span class="line">    int ct=0,len=s.size();</span><br><span class="line">    for(int i=0;i&lt;len;i++)&#123;</span><br><span class="line">        for(int j=i;j&lt;len;j++)&#123;</span><br><span class="line">            multiset&lt;char&gt; st,tt;</span><br><span class="line">            for(int k=i;k&lt;=j;k++)&#123;</span><br><span class="line">                st.insert(s[k]);</span><br><span class="line">                tt.insert(s[k]);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            for(int k=i+1;k&lt;len-(j-i);k++)&#123;</span><br><span class="line">                tt.insert(s[k+(j-i)]);</span><br><span class="line">                auto it=tt.find(s[k-1]);</span><br><span class="line">                if(it!=tt.end()) tt.erase(it);</span><br><span class="line">                if(tt==st) ct++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ct;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.</strong> 最後一個是Map的應用範例，Map是以first做排序依據，second存放對應資料。最常見的就是數字與出現頻率，以下甚至還有用來存頻率的頻率的用法。(出處：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/frequency-queries/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps">HackerRank</a>) m 放&lt;數字 , 頻率&gt;，ct 放&lt;頻率 , 頻率的頻率&gt;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt; freqQuery(vector&lt;vector&lt;int&gt;&gt; q) &#123;</span><br><span class="line">    vector&lt;int&gt; ans;</span><br><span class="line">    map&lt;int,int&gt; m,ct;</span><br><span class="line">    for(auto a:q)&#123;</span><br><span class="line">        if(a[0]==1)&#123;</span><br><span class="line">            ct[m[a[1]]]=max(ct[m[a[1]]]-1,0);</span><br><span class="line">            m[a[1]]++;</span><br><span class="line">            ct[m[a[1]]]++;</span><br><span class="line">        &#125;else if(a[0]==2)&#123;</span><br><span class="line">            ct[m[a[1]]]=max(ct[m[a[1]]]-1,0);</span><br><span class="line">            m[a[1]]=max(m[a[1]]-1,0);</span><br><span class="line">            ct[m[a[1]]]++;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            ans.push_back(bool(ct[a[1]]));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下一篇心得會補 pointer (指標) 的部分，在此之前可以先Google搜尋(C++指標)。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.github.io/2021/08/18/2021-08-18-cpp-review-datastructure-binary-search-tree/" data-id="ckvei9wrs007130nngoatc5nf" data-title="C++資料結構：Binary Search Tree" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/datastructure/" rel="tag">datastructure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/" rel="tag">review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2021-08-15-cpp-review-datastructure-stack-queue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/15/2021-08-15-cpp-review-datastructure-stack-queue/" class="article-date">
+  <time class="dt-published" datetime="2021-08-15T00:00:00.000Z" itemprop="datePublished">2021-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cpp-review/">cpp-review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/08/15/2021-08-15-cpp-review-datastructure-stack-queue/">C++資料結構：Stack &amp; Queue</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>Stack</strong>，又稱作堆疊，顧名思義就是從上面(也可以說前面)放入與取出的資料結構。 <strong>Queue</strong>，稱為佇列，是從前面放後面取出的資料結構。</p>
+<p>實作程式碼如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">template&lt;class T&gt;</span><br><span class="line">class Stack&#123;</span><br><span class="line">    private:</span><br><span class="line">        int t=-1;</span><br><span class="line">        vector&lt;T&gt; dt;</span><br><span class="line">    public:</span><br><span class="line">        T top()&#123;</span><br><span class="line">            if(t!=-1)&#123;</span><br><span class="line">                return dt[t];</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                cout&lt;&lt;&quot;Stack is empty.\n&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void pop()&#123;</span><br><span class="line">            if(t!=-1)&#123;</span><br><span class="line">                t--;</span><br><span class="line">                dt.pop_back();</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                cout&lt;&lt;&quot;Stack is empty.\n&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void push(T p)&#123;</span><br><span class="line">            t++;</span><br><span class="line">            dt.push_back(p);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">template&lt;class T&gt;</span><br><span class="line">class Queue&#123;</span><br><span class="line">    private:</span><br><span class="line">        deque&lt;T&gt; dt;</span><br><span class="line">    public:</span><br><span class="line">        T front()&#123;</span><br><span class="line">            if(!dt.empty())&#123;</span><br><span class="line">                return dt.front();</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                cout&lt;&lt;&quot;Queue is empty.\n&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void pop()&#123;</span><br><span class="line">            if(!dt.empty())&#123;</span><br><span class="line">                dt.pop_front();</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                cout&lt;&lt;&quot;Queue is empty.\n&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        void push(T p)&#123;</span><br><span class="line">            dt.push_back(p);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>C++已經幫你將這兩個資料結構實做好了，以下示範例程式碼</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;stack&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">#include&lt;deque&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    stack&lt;int&gt; st;</span><br><span class="line">    for(int i=0;i&lt;10;++i)&#123;</span><br><span class="line">        st.push(i);</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;st.size()&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    while(!st.empty())&#123;</span><br><span class="line">        cout&lt;&lt;st.top()&lt;&lt;&quot; &quot;;</span><br><span class="line">        st.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;&quot;\n\n&quot;;</span><br><span class="line"></span><br><span class="line">    queue&lt;int&gt; q;</span><br><span class="line">    for(int i=0;i&lt;10;++i)&#123;</span><br><span class="line">        q.push(i);</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;q.size()&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    while(!q.empty())&#123;</span><br><span class="line">        cout&lt;&lt;q.front()&lt;&lt;&quot; &quot;&lt;&lt;q.back()&lt;&lt;&quot;\n&quot;;</span><br><span class="line">        q.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;&quot;\n&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>光聽這兩個介紹以及大部分的分享，相信你還是不知道這兩個東西要用在哪裡。以下會有幾個應用的範例，都是用 STL 。</p>
+<h2 id="1-在-O-N-的複雜度下做單調對列-Ex-洛谷"><a href="#1-在-O-N-的複雜度下做單調對列-Ex-洛谷" class="headerlink" title="1.在 O(N) 的複雜度下做單調對列 Ex : 洛谷"></a>1.在 O(N) 的複雜度下做單調對列 Ex : <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5788">洛谷</a></h2><p>題目敘述：<br>對於每個元素，從後面找出第一個比他大的元素的位置</p>
+<p>這題就是要透過 stack 保持裡面所存位置對應的元素的單調遞減性。實際做法就是，遇到比他大的就丟掉，反正已經確認現在這個元素已經比他大了，後面也不會用到。否則他就還沒遇到還沒遇到比他大的。  </p>
+<p>以下為程式碼</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    vector&lt;int&gt; v(n);</span><br><span class="line">    for(int i=0;i&lt;n;++i) cin&gt;&gt;v[i];</span><br><span class="line"></span><br><span class="line">    vector&lt;int&gt; ans(n,0);</span><br><span class="line">    stack&lt;int,vector&lt;int&gt;&gt; st;</span><br><span class="line">    for(int i=0;i&lt;n;++i)&#123;</span><br><span class="line">        while(!st.empty() &amp;&amp; v[st.top()]&lt;v[i])&#123;</span><br><span class="line">            ans[st.top()]=i+1;</span><br><span class="line">            st.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        st.push(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(int a:ans)</span><br><span class="line">        cout&lt;&lt;a&lt;&lt;&quot; &quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-以-O-N-在滑動窗口中找最大以及最小值-Ex-洛谷"><a href="#2-以-O-N-在滑動窗口中找最大以及最小值-Ex-洛谷" class="headerlink" title="2.以 O(N) 在滑動窗口中找最大以及最小值 Ex : 洛谷"></a>2.以 O(N) 在滑動窗口中找最大以及最小值 Ex : <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1886">洛谷</a></h2><p>題目敘述：<br>在所有長度為k的窗口中找到最大以及最小值</p>
+<p>這題要用deque(double-ended-queue)，也就是雙向佇列，是一個從前後方都可以加入以及刪除值的queue。用以維持內部元素既在範圍以內，又保持單調遞增或遞減。  </p>
+<p>以下為程式碼</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define ll long long</span><br><span class="line"></span><br><span class="line">int nm[1000010]=&#123;0&#125;,rmax[1000010],rmin[1000010];</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,k;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;k;</span><br><span class="line"></span><br><span class="line">    for(int i=0;i&lt;n;i++) cin&gt;&gt;nm[i];</span><br><span class="line"></span><br><span class="line">    deque&lt;int&gt; mx,mn;</span><br><span class="line"></span><br><span class="line">    for(int i=0;i&lt;k;i++)&#123;</span><br><span class="line">        while(!mx.empty() &amp;&amp; nm[mx.front()]&lt;nm[i])</span><br><span class="line">            mx.pop_front();</span><br><span class="line">        mx.push_front(i);</span><br><span class="line"></span><br><span class="line">        while(!mn.empty() &amp;&amp; nm[mn.front()]&gt;nm[i])</span><br><span class="line">            mn.pop_front();</span><br><span class="line">        mn.push_front(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    rmax[0]=mx.back();</span><br><span class="line">    rmin[0]=mn.back();</span><br><span class="line"></span><br><span class="line">    for(int i=1,j=k;j&lt;n;i++)&#123;</span><br><span class="line"></span><br><span class="line">        while(!mx.empty() &amp;&amp; mx.back()&lt;i)</span><br><span class="line">            mx.pop_back();</span><br><span class="line">        while(!mn.empty() &amp;&amp; mn.back()&lt;i)</span><br><span class="line">            mn.pop_back();</span><br><span class="line"></span><br><span class="line">        while(!mx.empty() &amp;&amp; nm[mx.front()]&lt;nm[j])</span><br><span class="line">            mx.pop_front();</span><br><span class="line">        mx.push_front(j);</span><br><span class="line">        while(!mn.empty() &amp;&amp; nm[mn.front()]&gt;nm[j])</span><br><span class="line">            mn.pop_front();</span><br><span class="line">        mn.push_front(j);</span><br><span class="line"></span><br><span class="line">        rmax[i]=mx.back();</span><br><span class="line">        rmin[i]=mn.back();</span><br><span class="line"></span><br><span class="line">        j++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(int i=0;i&lt;n-k+1;i++)</span><br><span class="line">        cout&lt;&lt;nm[rmin[i]]&lt;&lt;&quot; &quot;;</span><br><span class="line">    cout&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    for(int i=0;i&lt;n-k+1;i++)</span><br><span class="line">        cout&lt;&lt;nm[rmax[i]]&lt;&lt;&quot; &quot;;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>未完待續~~</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.github.io/2021/08/15/2021-08-15-cpp-review-datastructure-stack-queue/" data-id="ckvei9wrq006y30nn9xof37a9" data-title="C++資料結構：Stack &amp; Queue" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/datastructure/" rel="tag">datastructure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/" rel="tag">review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2021-08-06-cpp-chang-yun-chia-106-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/06/2021-08-06-cpp-chang-yun-chia-106-5/" class="article-date">
+  <time class="dt-published" datetime="2021-08-06T00:00:00.000Z" itemprop="datePublished">2021-08-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/08/06/2021-08-06-cpp-chang-yun-chia-106-5/">C++ 彰雲嘉區複賽106-5 回文日期問題</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>窮舉法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int dom[15]=&#123;0,31,28,31,30,31,30,31,31,30,31,30,31,0,0&#125;;</span><br><span class="line">int pro[700],nt,ct=0;</span><br><span class="line"></span><br><span class="line">void check(int y)&#123;</span><br><span class="line">    if(y%400==0 || (y%4==0 &amp;&amp; y%100!=0))&#123;</span><br><span class="line">        dom[2]=29;</span><br><span class="line">    &#125;else dom[2]=28;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void isv(int a)&#123;</span><br><span class="line">    string s;</span><br><span class="line">    int b=a;</span><br><span class="line">    while(a&gt;0)&#123;</span><br><span class="line">        s+=char(a%10+&#x27;0&#x27;);</span><br><span class="line">        a/=10;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=0;i&lt;=s.size()/2;i++)&#123;</span><br><span class="line">        if(s[i]!=s[s.size()-1-i])&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    pro[nt++]=b;</span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    while(n--)&#123;</span><br><span class="line">        int y;</span><br><span class="line">        nt=ct=0;</span><br><span class="line">        cin&gt;&gt;y;</span><br><span class="line">        check(y);</span><br><span class="line">        for(int i=1;i&lt;=12;i++)&#123;</span><br><span class="line">            int tmp=i;</span><br><span class="line">            for(int j=1;j&lt;=dom[i];j++)&#123;</span><br><span class="line">                if(i&lt;10)&#123;</span><br><span class="line">                    if(j&lt;10)&#123;</span><br><span class="line">                        isv(y*100+i*10+j);</span><br><span class="line">                        isv(y*1000+i*10+j);</span><br><span class="line">                        isv(y*1000+i*100+j);</span><br><span class="line">                        isv(y*10000+i*100+j);</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        isv(y*1000+i*100+j);</span><br><span class="line">                        isv(y*10000+i*100+j);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    if(j&lt;10)&#123;</span><br><span class="line">                        isv(y*1000+i*10+j);</span><br><span class="line">                        isv(y*10000+i*100+j);</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        isv(y*10000+i*100+j);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            i=tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;nt&lt;&lt;&quot; &quot;;</span><br><span class="line">        sort(pro,pro+nt);</span><br><span class="line">        for(int i=0;i&lt;nt;i++)&#123;</span><br><span class="line">            cout&lt;&lt;pro[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d096">GreenJudge</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.github.io/2021/08/06/2021-08-06-cpp-chang-yun-chia-106-5/" data-id="ckvei9wrp006u30nn78nd5zk9" data-title="C++ 彰雲嘉區複賽106-5 回文日期問題" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2021-07-25-cpp-chang-yun-chia-106-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-1/" class="article-date">
+  <time class="dt-published" datetime="2021-07-25T00:00:00.000Z" itemprop="datePublished">2021-07-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-1/">C++ 彰雲嘉區複賽106-1 三角形</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>簡單的三角形判別</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    while(n--)&#123;</span><br><span class="line">        int d[3];</span><br><span class="line">        for(int i=0;i&lt;3;i++) cin&gt;&gt;d[i];</span><br><span class="line">        sort(d,d+3);</span><br><span class="line">        if(d[0]+d[1]&lt;=d[2])&#123;</span><br><span class="line">            cout&lt;&lt;0&lt;&lt;&quot;\n&quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            cout&lt;&lt;1&lt;&lt;&quot; &quot;;</span><br><span class="line">            if(d[0]==d[1] || d[1]==d[2]) cout&lt;&lt;1;</span><br><span class="line">            else cout&lt;&lt;0;</span><br><span class="line">            cout&lt;&lt;&quot;\n&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d092">GreenJudge</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.github.io/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-1/" data-id="ckvei9wrh006g30nnak6i526w" data-title="C++ 彰雲嘉區複賽106-1 三角形" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2021-07-25-cpp-chang-yun-chia-106-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-2/" class="article-date">
+  <time class="dt-published" datetime="2021-07-25T00:00:00.000Z" itemprop="datePublished">2021-07-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-2/">C++ 彰雲嘉區複賽106-2 跑長編碼與資料壓縮</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>字串基本應用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">string num[10]=&#123;&quot;000&quot;,&quot;001&quot;,&quot;010&quot;,&quot;011&quot;,&quot;100&quot;,&quot;101&quot;,&quot;110&quot;,&quot;111&quot;&#125;;</span><br><span class="line"></span><br><span class="line">string print(int sum,char bit)&#123;</span><br><span class="line">    string re(1,bit);</span><br><span class="line">    re+=num[sum];</span><br><span class="line">    re+=&quot; &quot;;</span><br><span class="line">    return re;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    int iptNum=0;</span><br><span class="line">    cin&gt;&gt;iptNum;</span><br><span class="line"></span><br><span class="line">    string bit,out;</span><br><span class="line">    getline(cin,bit);</span><br><span class="line"></span><br><span class="line">    while(iptNum--)&#123;</span><br><span class="line">        out=&quot;&quot;;</span><br><span class="line">        getline(cin,bit);</span><br><span class="line">        int j,sum=1;</span><br><span class="line">        long long rate=0;</span><br><span class="line">        for(j=1;j&lt;bit.size();j++)&#123;</span><br><span class="line">            if(bit[j]!=&#x27;0&#x27; &amp;&amp; bit[j]!=&#x27;1&#x27;)&#123;</span><br><span class="line">                cout&lt;&lt;&quot;-1\n&quot;;</span><br><span class="line">                j++;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if(bit[j-1]==bit[j] &amp;&amp; sum&lt;7)&#123;</span><br><span class="line">                sum++;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                out+=print(sum,bit[j-1]);</span><br><span class="line">                rate+=4;</span><br><span class="line">                sum=1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        out+=print(sum,bit[j-1]);</span><br><span class="line">        rate+=4;</span><br><span class="line">        rate*=1000;</span><br><span class="line">        rate/=bit.size();</span><br><span class="line">        rate=(rate+5)/10;</span><br><span class="line"></span><br><span class="line">        if(bit[j-1]==&#x27;0&#x27; || bit[j-1]==&#x27;1&#x27;)&#123;</span><br><span class="line">            cout&lt;&lt;out&lt;&lt;rate&lt;&lt;&quot;\n&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d093">GreenJudge</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.github.io/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-2/" data-id="ckvei9wri006k30nngtrd2htw" data-title="C++ 彰雲嘉區複賽106-2 跑長編碼與資料壓縮" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2021-07-25-cpp-chang-yun-chia-106-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-3/" class="article-date">
+  <time class="dt-published" datetime="2021-07-25T00:00:00.000Z" itemprop="datePublished">2021-07-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-3/">C++ 彰雲嘉區複賽106-3 費波南希數列</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>用到最簡單DP和二分搜(都可以不用)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    int n,f[200];</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line"></span><br><span class="line">    f[0]=-1;f[1]=1;f[2]=1;</span><br><span class="line">    for(int i=3;i&lt;100;i++)&#123;</span><br><span class="line">        f[i]=f[i-1]+f[i-2];</span><br><span class="line">        if(f[i]&lt;0) f[i]=0x3f3f3f3f;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    while(n--)&#123;</span><br><span class="line">        int a;</span><br><span class="line">        cin&gt;&gt;a;</span><br><span class="line">        int it=lower_bound(f,f+100,a)-f;</span><br><span class="line">        if(f[it]==a)&#123;</span><br><span class="line">            cout&lt;&lt;it;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            cout&lt;&lt;-1;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d094">GreenJudge</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.github.io/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-3/" data-id="ckvei9wrj006n30nneupv52t9" data-title="C++ 彰雲嘉區複賽106-3 費波南希數列" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2021-07-25-cpp-chang-yun-chia-106-4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-4/" class="article-date">
+  <time class="dt-published" datetime="2021-07-25T00:00:00.000Z" itemprop="datePublished">2021-07-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-4/">C++ 彰雲嘉區複賽106-4 變位字判斷</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>用map很方便(如果是C++11更方便)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;set&gt;</span><br><span class="line">#include&lt;map&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">#include&lt;cstdlib&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    string a,b;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    getline(cin,a);</span><br><span class="line">    while(n--)&#123;</span><br><span class="line">        getline(cin,a);</span><br><span class="line">        getline(cin,b);</span><br><span class="line">        map&lt;char,int&gt; ma,mb;</span><br><span class="line"></span><br><span class="line">        for(int i=0;i&lt;a.size();i++)&#123;</span><br><span class="line">            char c=a[i];</span><br><span class="line">            if(islower(c))&#123;</span><br><span class="line">                ma[c]++;</span><br><span class="line">            &#125;else if(isupper(c))&#123;</span><br><span class="line">                ma[tolower(c)]++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for(int i=0;i&lt;b.size();i++)&#123;</span><br><span class="line">            char c=b[i];</span><br><span class="line">            if(islower(c))&#123;</span><br><span class="line">                mb[c]++;</span><br><span class="line">            &#125;else if(isupper(c))&#123;</span><br><span class="line">                mb[tolower(c)]++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        bool isv=true;</span><br><span class="line">        map&lt;char,int&gt;::iterator ta=ma.begin(),tb=mb.begin();</span><br><span class="line">        for(ta=ma.begin();ta!=ma.end() &amp;&amp; tb!=mb.end();ta++)&#123;</span><br><span class="line">            pair&lt;char,int&gt; pa=(*ta),pb=(*tb);</span><br><span class="line">            if(pa!=pb)&#123;</span><br><span class="line">                isv=false;</span><br><span class="line">            &#125;</span><br><span class="line">            tb++;</span><br><span class="line">        &#125;</span><br><span class="line">        if(ma.size()!=mb.size()) isv=false;</span><br><span class="line">        cout&lt;&lt;isv&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>出處：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d095">GreenJudge</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.github.io/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-4/" data-id="ckvei9wro006r30nnaws2h5rg" data-title="C++ 彰雲嘉區複賽106-4 變位字判斷" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2021-07-19-cpp-dijkstra-apply" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/19/2021-07-19-cpp-dijkstra-apply/" class="article-date">
+  <time class="dt-published" datetime="2021-07-19T00:00:00.000Z" itemprop="datePublished">2021-07-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cppojques/">cppojques</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/07/19/2021-07-19-cpp-dijkstra-apply/">C++ 最短路徑問題 Dijkstra應用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>這題用 Bellman-Ford 必定 TLE</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define INF 0x3f3f3f3f</span><br><span class="line">const int dr[4]&#123;1,0,-1,0&#125;,dc[4]&#123;0,1,0,-1&#125;;</span><br><span class="line"></span><br><span class="line">int dt[2005][2005];</span><br><span class="line">string mp[2005];</span><br><span class="line">bitset&lt;2005&gt; v[2005];</span><br><span class="line"></span><br><span class="line">struct position&#123;</span><br><span class="line">    int r,c;</span><br><span class="line">    bool operator==(position a)&#123;</span><br><span class="line">        return r==a.r &amp;&amp; c==a.c;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">bool operator&lt;(position a,position b)&#123;</span><br><span class="line">    return dt[a.r][a.c]&gt;dt[b.r][b.c];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    ios::sync_with_stdio(0);cin.tie(0);</span><br><span class="line"></span><br><span class="line">    int n,m,ans=INF;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line"></span><br><span class="line">    for(int i=0;i&lt;n;i++) for(int j=0;j&lt;m;j++) dt[i][j]=INF;</span><br><span class="line"></span><br><span class="line">    for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;mp[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    position ps,pe;</span><br><span class="line">    cin&gt;&gt;ps.r&gt;&gt;ps.c;ps.r--;ps.c--;</span><br><span class="line">    cin&gt;&gt;pe.r&gt;&gt;pe.c;pe.r--;pe.c--;</span><br><span class="line">    dt[ps.r][ps.c]=0;</span><br><span class="line"></span><br><span class="line">    priority_queue&lt;position&gt; bfs;</span><br><span class="line">    bfs.push(ps);</span><br><span class="line"></span><br><span class="line">    int ct;</span><br><span class="line">    position now,next,mnPos;</span><br><span class="line">    while(!bfs.empty())&#123;</span><br><span class="line">        now=bfs.top();</span><br><span class="line">        bfs.pop();</span><br><span class="line">        v[now.r][now.c]=1;</span><br><span class="line">        for(int i=0;i&lt;4;i++)&#123;</span><br><span class="line">            next.r=now.r+dr[i];</span><br><span class="line">            next.c=now.c+dc[i];</span><br><span class="line">            if(next.r&gt;=0 &amp;&amp; next.c&gt;=0 &amp;&amp; next.r&lt;n &amp;&amp; next.c&lt;m)&#123;</span><br><span class="line">                ct=dt[now.r][now.c];</span><br><span class="line">                if(mp[next.r][next.c]==&#x27;.&#x27;)</span><br><span class="line">                    ct++;</span><br><span class="line">                if(pe==next)</span><br><span class="line">                    ans=min(ans,ct);</span><br><span class="line">                if(!v[next.r][next.c])&#123;</span><br><span class="line">                    v[next.r][next.c]=1;</span><br><span class="line">                    dt[next.r][next.c]=ct;</span><br><span class="line">                    bfs.push(next);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;&quot;\n&quot;;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>出處：<a target="_blank" rel="noopener" href="https://neoj.sprout.tw/problem/393/">資芽OJ</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.github.io/2021/07/19/2021-07-19-cpp-dijkstra-apply/" data-id="ckvei9wrf006d30nn1i0af4ym" data-title="C++ 最短路徑問題 Dijkstra應用" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2021-07-18-hackerrank-sorting-3-comparator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/18/2021-07-18-hackerrank-sorting-3-comparator/" class="article-date">
+  <time class="dt-published" datetime="2021-07-18T00:00:00.000Z" itemprop="datePublished">2021-07-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cppojques/">cppojques</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/07/18/2021-07-18-hackerrank-sorting-3-comparator/">HackerRank Sorting 3.Comparator</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>比較函式的撰寫</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">struct Player &#123;</span><br><span class="line">    int score;</span><br><span class="line">    string name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">class Checker&#123;</span><br><span class="line">public:</span><br><span class="line">    static int comparator(Player a, Player b)  &#123;</span><br><span class="line">        if(a.score!=b.score) return a.score&gt;b.score?0:-1;</span><br><span class="line">        return a.name&lt;b.name?0:-1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>出處：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/ctci-comparator-sorting/">HackerRank</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.github.io/2021/07/18/2021-07-18-hackerrank-sorting-3-comparator/" data-id="ckvei9wrb006230nn6jhq583q" data-title="HackerRank Sorting 3.Comparator" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li></ul>
+
     </footer>
   </div>
   
@@ -128,23 +621,49 @@
   
 
 
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">下一頁 &raquo;</a>
+  </nav>
+
 </section>
         
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/">apcs</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/325/">325</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/practicaltest/">practicaltest</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/contest/">contest</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp-review/">cpp-review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cppojques/">cppojques</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/practicaltest/">practicaltest</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/competition/" rel="tag">competition</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datastructure/" rel="tag">datastructure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disjointsets/" rel="tag">disjointsets</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/input/" rel="tag">input</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loop/" rel="tag">loop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/naming/" rel="tag">naming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/output/" rel="tag">output</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/review/" rel="tag">review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/variable/" rel="tag">variable</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/apcs/" style="font-size: 15px;">apcs</a> <a href="/tags/competition/" style="font-size: 16.67px;">competition</a> <a href="/tags/datastructure/" style="font-size: 11.67px;">datastructure</a> <a href="/tags/disjointsets/" style="font-size: 10px;">disjointsets</a> <a href="/tags/hackerrank/" style="font-size: 18.33px;">hackerrank</a> <a href="/tags/input/" style="font-size: 10px;">input</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/naming/" style="font-size: 10px;">naming</a> <a href="/tags/oj/" style="font-size: 20px;">oj</a> <a href="/tags/onlinejudge/" style="font-size: 20px;">onlinejudge</a> <a href="/tags/output/" style="font-size: 10px;">output</a> <a href="/tags/review/" style="font-size: 13.33px;">review</a> <a href="/tags/variable/" style="font-size: 10px;">variable</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">彙整</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li></ul>
     </div>
   </div>
 
@@ -157,7 +676,23 @@
       <ul>
         
           <li>
-            <a href="/2021/10/31/hello-world/">Hello World</a>
+            <a href="/2021/09/05/2021-09-05-apcs-2021-9-5/">APCS 2021 9/5</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/18/2021-08-18-cpp-review-datastructure-binary-search-tree/">C++資料結構：Binary Search Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/15/2021-08-15-cpp-review-datastructure-stack-queue/">C++資料結構：Stack &amp; Queue</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/06/2021-08-06-cpp-chang-yun-chia-106-5/">C++ 彰雲嘉區複賽106-5 回文日期問題</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-1/">C++ 彰雲嘉區複賽106-1 三角形</a>
           </li>
         
       </ul>
