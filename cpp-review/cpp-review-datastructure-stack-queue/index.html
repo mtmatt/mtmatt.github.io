@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>C++資料結構：Stack &amp; Queue | mtMatt.page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Stack，又稱作堆疊，顧名思義就是從上面(也可以說前面)放入與取出的資料結構。 Queue，稱為佇列，是從前面放後面取出的資料結構。 實作程式碼如下 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657#include&lt;bits&#x2F;st">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++資料結構：Stack &amp; Queue">
+<meta property="og:url" content="http://mtmatt.page/cpp-review/cpp-review-datastructure-stack-queue/index.html">
+<meta property="og:site_name" content="mtMatt.page">
+<meta property="og:description" content="Stack，又稱作堆疊，顧名思義就是從上面(也可以說前面)放入與取出的資料結構。 Queue，稱為佇列，是從前面放後面取出的資料結構。 實作程式碼如下 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657#include&lt;bits&#x2F;st">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-08-15T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-02T11:53:38.681Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="review">
+<meta property="article:tag" content="datastructure">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="mtMatt.page" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mtMatt.page</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">a coding page</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mtmatt.page"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-cpp-review-datastructure-stack-queue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cpp-review/cpp-review-datastructure-stack-queue/" class="article-date">
+  <time class="dt-published" datetime="2021-08-15T00:00:00.000Z" itemprop="datePublished">2021-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cpp-review/">cpp-review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      C++資料結構：Stack &amp; Queue
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>Stack</strong>，又稱作堆疊，顧名思義就是從上面(也可以說前面)放入與取出的資料結構。 <strong>Queue</strong>，稱為佇列，是從前面放後面取出的資料結構。</p>
+<p>實作程式碼如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span>&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        <span class="keyword">int</span> t=<span class="number">-1</span>;</span><br><span class="line">        vector&lt;T&gt; dt;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function">T <span class="title">top</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(t!=<span class="number">-1</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> dt[t];</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cout&lt;&lt;<span class="string">&quot;Stack is empty.\n&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(t!=<span class="number">-1</span>)&#123;</span><br><span class="line">                t--;</span><br><span class="line">                dt.<span class="built_in">pop_back</span>();</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cout&lt;&lt;<span class="string">&quot;Stack is empty.\n&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(T p)</span></span>&#123;</span><br><span class="line">            t++;</span><br><span class="line">            dt.<span class="built_in">push_back</span>(p);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Queue</span>&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        deque&lt;T&gt; dt;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function">T <span class="title">front</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(!dt.<span class="built_in">empty</span>())&#123;</span><br><span class="line">                <span class="keyword">return</span> dt.<span class="built_in">front</span>();</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cout&lt;&lt;<span class="string">&quot;Queue is empty.\n&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(!dt.<span class="built_in">empty</span>())&#123;</span><br><span class="line">                dt.<span class="built_in">pop_front</span>();</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cout&lt;&lt;<span class="string">&quot;Queue is empty.\n&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(T p)</span></span>&#123;</span><br><span class="line">            dt.<span class="built_in">push_back</span>(p);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>C++已經幫你將這兩個資料結構實做好了，以下示範例程式碼</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    stack&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;++i)&#123;</span><br><span class="line">        st.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;st.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">while</span>(!st.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        cout&lt;&lt;st.<span class="built_in">top</span>()&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        st.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;\n\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    queue&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;++i)&#123;</span><br><span class="line">        q.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;q.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        cout&lt;&lt;q.<span class="built_in">front</span>()&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;q.<span class="built_in">back</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>光聽這兩個介紹以及大部分的分享，相信你還是不知道這兩個東西要用在哪裡。以下會有幾個應用的範例，都是用 STL 。</p>
+<h2 id="1-在-O-N-的複雜度下做單調對列-Ex-洛谷"><a href="#1-在-O-N-的複雜度下做單調對列-Ex-洛谷" class="headerlink" title="1.在 O(N) 的複雜度下做單調對列 Ex : 洛谷"></a>1.在 O(N) 的複雜度下做單調對列 Ex : <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5788">洛谷</a></h2><p>題目敘述：<br>對於每個元素，從後面找出第一個比他大的元素的位置</p>
+<p>這題就是要透過 stack 保持裡面所存位置對應的元素的單調遞減性。實際做法就是，遇到比他大的就丟掉，反正已經確認現在這個元素已經比他大了，後面也不會用到。否則他就還沒遇到還沒遇到比他大的。  </p>
+<p>以下為程式碼</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i) cin&gt;&gt;v[i];</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">ans</span><span class="params">(n,<span class="number">0</span>)</span></span>;</span><br><span class="line">    stack&lt;<span class="keyword">int</span>,vector&lt;<span class="keyword">int</span>&gt;&gt; st;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)&#123;</span><br><span class="line">        <span class="keyword">while</span>(!st.<span class="built_in">empty</span>() &amp;&amp; v[st.<span class="built_in">top</span>()]&lt;v[i])&#123;</span><br><span class="line">            ans[st.<span class="built_in">top</span>()]=i+<span class="number">1</span>;</span><br><span class="line">            st.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        st.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> a:ans)</span><br><span class="line">        cout&lt;&lt;a&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-以-O-N-在滑動窗口中找最大以及最小值-Ex-洛谷"><a href="#2-以-O-N-在滑動窗口中找最大以及最小值-Ex-洛谷" class="headerlink" title="2.以 O(N) 在滑動窗口中找最大以及最小值 Ex : 洛谷"></a>2.以 O(N) 在滑動窗口中找最大以及最小值 Ex : <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1886">洛谷</a></h2><p>題目敘述：<br>在所有長度為k的窗口中找到最大以及最小值</p>
+<p>這題要用deque(double-ended-queue)，也就是雙向佇列，是一個從前後方都可以加入以及刪除值的queue。用以維持內部元素既在範圍以內，又保持單調遞增或遞減。  </p>
+<p>以下為程式碼</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> nm[<span class="number">1000010</span>]=&#123;<span class="number">0</span>&#125;,rmax[<span class="number">1000010</span>],rmin[<span class="number">1000010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,k;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;k;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) cin&gt;&gt;nm[i];</span><br><span class="line"></span><br><span class="line">    deque&lt;<span class="keyword">int</span>&gt; mx,mn;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(!mx.<span class="built_in">empty</span>() &amp;&amp; nm[mx.<span class="built_in">front</span>()]&lt;nm[i])</span><br><span class="line">            mx.<span class="built_in">pop_front</span>();</span><br><span class="line">        mx.<span class="built_in">push_front</span>(i);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!mn.<span class="built_in">empty</span>() &amp;&amp; nm[mn.<span class="built_in">front</span>()]&gt;nm[i])</span><br><span class="line">            mn.<span class="built_in">pop_front</span>();</span><br><span class="line">        mn.<span class="built_in">push_front</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    rmax[<span class="number">0</span>]=mx.<span class="built_in">back</span>();</span><br><span class="line">    rmin[<span class="number">0</span>]=mn.<span class="built_in">back</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,j=k;j&lt;n;i++)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!mx.<span class="built_in">empty</span>() &amp;&amp; mx.<span class="built_in">back</span>()&lt;i)</span><br><span class="line">            mx.<span class="built_in">pop_back</span>();</span><br><span class="line">        <span class="keyword">while</span>(!mn.<span class="built_in">empty</span>() &amp;&amp; mn.<span class="built_in">back</span>()&lt;i)</span><br><span class="line">            mn.<span class="built_in">pop_back</span>();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!mx.<span class="built_in">empty</span>() &amp;&amp; nm[mx.<span class="built_in">front</span>()]&lt;nm[j])</span><br><span class="line">            mx.<span class="built_in">pop_front</span>();</span><br><span class="line">        mx.<span class="built_in">push_front</span>(j);</span><br><span class="line">        <span class="keyword">while</span>(!mn.<span class="built_in">empty</span>() &amp;&amp; nm[mn.<span class="built_in">front</span>()]&gt;nm[j])</span><br><span class="line">            mn.<span class="built_in">pop_front</span>();</span><br><span class="line">        mn.<span class="built_in">push_front</span>(j);</span><br><span class="line"></span><br><span class="line">        rmax[i]=mx.<span class="built_in">back</span>();</span><br><span class="line">        rmin[i]=mn.<span class="built_in">back</span>();</span><br><span class="line"></span><br><span class="line">        j++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n-k+<span class="number">1</span>;i++)</span><br><span class="line">        cout&lt;&lt;nm[rmin[i]]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n-k+<span class="number">1</span>;i++)</span><br><span class="line">        cout&lt;&lt;nm[rmax[i]]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>未完待續~~</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/cpp-review/cpp-review-datastructure-stack-queue/" data-id="ckvi1ztlm003bhgnn6d7pd9wt" data-title="C++資料結構：Stack &amp; Queue" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/datastructure/" rel="tag">datastructure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/" rel="tag">review</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/cpp-review/cpp-review-datastructure-binary-search-tree/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          C++資料結構：Binary Search Tree
+        
+      </div>
+    </a>
+  
+  
+    <a href="/contest/cpp-chang-yun-chia-106-5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C++ 彰雲嘉區複賽106-5 回文日期問題</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/">apcs</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/325/">325</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/apcs/practicaltest/">practicaltest</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/contest/">contest</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp-review/">cpp-review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cppojques/">cppojques</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/practicaltest/">practicaltest</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/competition/" rel="tag">competition</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datastructure/" rel="tag">datastructure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disjointsets/" rel="tag">disjointsets</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/input/" rel="tag">input</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loop/" rel="tag">loop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/naming/" rel="tag">naming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/output/" rel="tag">output</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/review/" rel="tag">review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/variable/" rel="tag">variable</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/apcs/" style="font-size: 15px;">apcs</a> <a href="/tags/competition/" style="font-size: 16.67px;">competition</a> <a href="/tags/datastructure/" style="font-size: 11.67px;">datastructure</a> <a href="/tags/disjointsets/" style="font-size: 10px;">disjointsets</a> <a href="/tags/hackerrank/" style="font-size: 18.33px;">hackerrank</a> <a href="/tags/input/" style="font-size: 10px;">input</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/naming/" style="font-size: 10px;">naming</a> <a href="/tags/oj/" style="font-size: 20px;">oj</a> <a href="/tags/onlinejudge/" style="font-size: 20px;">onlinejudge</a> <a href="/tags/output/" style="font-size: 10px;">output</a> <a href="/tags/review/" style="font-size: 13.33px;">review</a> <a href="/tags/variable/" style="font-size: 10px;">variable</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/apcs/practicaltest/apcs-2021-9-5/">APCS 2021 9/5</a>
+          </li>
+        
+          <li>
+            <a href="/cpp-review/cpp-review-datastructure-binary-search-tree/">C++資料結構：Binary Search Tree</a>
+          </li>
+        
+          <li>
+            <a href="/cpp-review/cpp-review-datastructure-stack-queue/">C++資料結構：Stack &amp; Queue</a>
+          </li>
+        
+          <li>
+            <a href="/contest/cpp-chang-yun-chia-106-5/">C++ 彰雲嘉區複賽106-5 回文日期問題</a>
+          </li>
+        
+          <li>
+            <a href="/contest/cpp-chang-yun-chia-106-2/">C++ 彰雲嘉區複賽106-2 跑長編碼與資料壓縮</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 mtmatt<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

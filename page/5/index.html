@@ -75,9 +75,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-2021-06-19-cpp-taichung-106-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-cpp-taichung-106-6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/contest/2021-06-19-cpp-taichung-106-5/" class="article-date">
+    <a href="/contest/cpp-taichung-106-6/" class="article-date">
   <time class="dt-published" datetime="2021-06-19T00:00:00.000Z" itemprop="datePublished">2021-06-19</time>
 </a>
     
@@ -93,55 +93,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/contest/2021-06-19-cpp-taichung-106-5/">C++ 台中區 106-5 以價格的移動平均值判斷買賣時機</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>基本上就是照著題目敘述稀里糊塗寫在 if 裡面就可以了，我還用了前綴和，這樣比較方便算區間和。感覺比上一題簡單。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k[<span class="number">20</span>]=&#123;<span class="number">0</span>&#125;,p[<span class="number">20</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">15</span>;i++)&#123;</span><br><span class="line">        cin&gt;&gt;k[i];</span><br><span class="line">        p[i]=p[i<span class="number">-1</span>]+k[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">11</span>;i&lt;=<span class="number">15</span>;i++)&#123;</span><br><span class="line">        cout&lt;&lt;k[i];</span><br><span class="line">        <span class="keyword">if</span>((p[i]-p[i<span class="number">-10</span>]) &gt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-10</span>]) &amp;&amp;</span><br><span class="line">          (p[i]-p[i<span class="number">-5</span>]) &gt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-5</span>]) &amp;&amp;</span><br><span class="line">          (k[i]*<span class="number">5</span>&gt; (p[i]-p[i<span class="number">-5</span>]) &amp;&amp; (p[i]-p[i<span class="number">-5</span>])*<span class="number">2</span> &gt; (p[i]-p[i<span class="number">-10</span>])) &amp;&amp;</span><br><span class="line">          (<span class="number">5</span>*k[i]*<span class="number">10</span> &lt; <span class="number">6</span>*(p[i]-p[i<span class="number">-10</span>])*<span class="number">10</span>/<span class="number">10</span>)  )&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;B&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="number">5</span>*k[i]*<span class="number">10</span> &gt; <span class="number">6</span>*(p[i]-p[i<span class="number">-10</span>])*<span class="number">10</span>/<span class="number">10</span> ||</span><br><span class="line">          (k[i]*<span class="number">10</span>&lt; (p[i]-p[i<span class="number">-5</span>])*<span class="number">10</span>/<span class="number">5</span> &amp;&amp; (p[i]-p[i<span class="number">-5</span>])*<span class="number">2</span> &lt; (p[i]-p[i<span class="number">-10</span>])) ||</span><br><span class="line">          (p[i]-p[i<span class="number">-10</span>]) &lt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-10</span>]) )&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;S&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;N&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>題目來源：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d089"></a><a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d089">http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d089</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mtmatt.page/contest/2021-06-19-cpp-taichung-106-5/" data-id="ckvei9wqe003l30nn92ow6t2g" data-title="C++ 台中區 106-5 以價格的移動平均值判斷買賣時機" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2021-06-19-cpp-taichung-106-6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/contest/2021-06-19-cpp-taichung-106-6/" class="article-date">
-  <time class="dt-published" datetime="2021-06-19T00:00:00.000Z" itemprop="datePublished">2021-06-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/contest/">contest</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/contest/2021-06-19-cpp-taichung-106-6/">C++ 台中區 106-6 馬步問題</a>
+      <a class="p-name article-title" href="/contest/cpp-taichung-106-6/">C++ 台中區 106-6 馬步問題</a>
     </h1>
   
 
@@ -157,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/contest/2021-06-19-cpp-taichung-106-6/" data-id="ckvei9wqg003p30nn4809ekar" data-title="C++ 台中區 106-6 馬步問題" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/contest/cpp-taichung-106-6/" data-id="ckvi1ztlx003whgnna2qh3ko8" data-title="C++ 台中區 106-6 馬步問題" class="article-share-link">Share</a>
       
       
       
@@ -171,9 +123,57 @@
 
 
   
-    <article id="post-2021-06-18-cpp-apcs325-q-2-12" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-cpp-taichung-106-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/apcs/325/2021-06-18-cpp-apcs325-q-2-12/" class="article-date">
+    <a href="/contest/cpp-taichung-106-5/" class="article-date">
+  <time class="dt-published" datetime="2021-06-19T00:00:00.000Z" itemprop="datePublished">2021-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/contest/">contest</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/contest/cpp-taichung-106-5/">C++ 台中區 106-5 以價格的移動平均值判斷買賣時機</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>基本上就是照著題目敘述稀里糊塗寫在 if 裡面就可以了，我還用了前綴和，這樣比較方便算區間和。感覺比上一題簡單。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k[<span class="number">20</span>]=&#123;<span class="number">0</span>&#125;,p[<span class="number">20</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">15</span>;i++)&#123;</span><br><span class="line">        cin&gt;&gt;k[i];</span><br><span class="line">        p[i]=p[i<span class="number">-1</span>]+k[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">11</span>;i&lt;=<span class="number">15</span>;i++)&#123;</span><br><span class="line">        cout&lt;&lt;k[i];</span><br><span class="line">        <span class="keyword">if</span>((p[i]-p[i<span class="number">-10</span>]) &gt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-10</span>]) &amp;&amp;</span><br><span class="line">          (p[i]-p[i<span class="number">-5</span>]) &gt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-5</span>]) &amp;&amp;</span><br><span class="line">          (k[i]*<span class="number">5</span>&gt; (p[i]-p[i<span class="number">-5</span>]) &amp;&amp; (p[i]-p[i<span class="number">-5</span>])*<span class="number">2</span> &gt; (p[i]-p[i<span class="number">-10</span>])) &amp;&amp;</span><br><span class="line">          (<span class="number">5</span>*k[i]*<span class="number">10</span> &lt; <span class="number">6</span>*(p[i]-p[i<span class="number">-10</span>])*<span class="number">10</span>/<span class="number">10</span>)  )&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;B&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="number">5</span>*k[i]*<span class="number">10</span> &gt; <span class="number">6</span>*(p[i]-p[i<span class="number">-10</span>])*<span class="number">10</span>/<span class="number">10</span> ||</span><br><span class="line">          (k[i]*<span class="number">10</span>&lt; (p[i]-p[i<span class="number">-5</span>])*<span class="number">10</span>/<span class="number">5</span> &amp;&amp; (p[i]-p[i<span class="number">-5</span>])*<span class="number">2</span> &lt; (p[i]-p[i<span class="number">-10</span>])) ||</span><br><span class="line">          (p[i]-p[i<span class="number">-10</span>]) &lt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-10</span>]) )&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;S&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;N&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>題目來源：<a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d089"></a><a target="_blank" rel="noopener" href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d089">http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d089</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/contest/cpp-taichung-106-5/" data-id="ckvi1ztlz003zhgnn3vyp9xkc" data-title="C++ 台中區 106-5 以價格的移動平均值判斷買賣時機" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-cpp-apcs325-q-2-12" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/apcs/325/cpp-apcs325-q-2-12/" class="article-date">
   <time class="dt-published" datetime="2021-06-18T00:00:00.000Z" itemprop="datePublished">2021-06-18</time>
 </a>
     
@@ -189,7 +189,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/apcs/325/2021-06-18-cpp-apcs325-q-2-12/">C++ APCS325 Q-2-12 最接近的子矩陣和</a>
+      <a class="p-name article-title" href="/apcs/325/cpp-apcs325-q-2-12/">C++ APCS325 Q-2-12 最接近的子矩陣和</a>
     </h1>
   
 
@@ -204,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/apcs/325/2021-06-18-cpp-apcs325-q-2-12/" data-id="ckvei9wpz002l30nn7s8z3tuj" data-title="C++ APCS325 Q-2-12 最接近的子矩陣和" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/apcs/325/cpp-apcs325-q-2-12/" data-id="ckvi1ztk4000qhgnn8937f7gg" data-title="C++ APCS325 Q-2-12 最接近的子矩陣和" class="article-share-link">Share</a>
       
       
       
@@ -218,9 +218,9 @@
 
 
   
-    <article id="post-2021-06-18-cpp-tioj-1161" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-cpp-tioj-1161" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-06-18-cpp-tioj-1161/" class="article-date">
+    <a href="/cppojques/cpp-tioj-1161/" class="article-date">
   <time class="dt-published" datetime="2021-06-18T00:00:00.000Z" itemprop="datePublished">2021-06-18</time>
 </a>
     
@@ -236,7 +236,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-06-18-cpp-tioj-1161/">C++ 基礎題 TIOJ 1161 虛擬番茄</a>
+      <a class="p-name article-title" href="/cppojques/cpp-tioj-1161/">C++ 基礎題 TIOJ 1161 虛擬番茄</a>
     </h1>
   
 
@@ -250,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-06-18-cpp-tioj-1161/" data-id="ckvei9wq3002q30nnbflo2oyp" data-title="C++ 基礎題 TIOJ 1161 虛擬番茄" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/cpp-tioj-1161/" data-id="ckvi1ztm6004bhgnngiow6jmc" data-title="C++ 基礎題 TIOJ 1161 虛擬番茄" class="article-share-link">Share</a>
       
       
       
@@ -264,9 +264,9 @@
 
 
   
-    <article id="post-2021-06-18-cpp-topological-sort-oj" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-cpp-topological-sort-oj" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-06-18-cpp-topological-sort-oj/" class="article-date">
+    <a href="/cppojques/cpp-topological-sort-oj/" class="article-date">
   <time class="dt-published" datetime="2021-06-18T00:00:00.000Z" itemprop="datePublished">2021-06-18</time>
 </a>
     
@@ -282,7 +282,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-06-18-cpp-topological-sort-oj/">C++ 基礎題 陣線推進(資芽OJ)</a>
+      <a class="p-name article-title" href="/cppojques/cpp-topological-sort-oj/">C++ 基礎題 陣線推進(資芽OJ)</a>
     </h1>
   
 
@@ -298,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-06-18-cpp-topological-sort-oj/" data-id="ckvei9wq4002t30nn08f37t38" data-title="C++ 基礎題 陣線推進(資芽OJ)" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/cpp-topological-sort-oj/" data-id="ckvi1ztm9004hhgnnddlm52ml" data-title="C++ 基礎題 陣線推進(資芽OJ)" class="article-share-link">Share</a>
       
       
       
@@ -312,9 +312,9 @@
 
 
   
-    <article id="post-2021-06-17-cpp-bfs-sprout" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-cpp-bfs-sprout" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-06-17-cpp-bfs-sprout/" class="article-date">
+    <a href="/cppojques/cpp-bfs-sprout/" class="article-date">
   <time class="dt-published" datetime="2021-06-17T00:00:00.000Z" itemprop="datePublished">2021-06-17</time>
 </a>
     
@@ -330,7 +330,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-06-17-cpp-bfs-sprout/">C++ 基礎題 BFS(資訊之芽)</a>
+      <a class="p-name article-title" href="/cppojques/cpp-bfs-sprout/">C++ 基礎題 BFS(資訊之芽)</a>
     </h1>
   
 
@@ -346,7 +346,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-06-17-cpp-bfs-sprout/" data-id="ckvei9wpy002i30nn1e7re6q4" data-title="C++ 基礎題 BFS(資訊之芽)" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/cpp-bfs-sprout/" data-id="ckvi1ztkr001qhgnnd8m9gswe" data-title="C++ 基礎題 BFS(資訊之芽)" class="article-share-link">Share</a>
       
       
       
@@ -360,9 +360,9 @@
 
 
   
-    <article id="post-2021-06-01-cpp-basic-a249-dropping-balls" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-cpp-basic-a249-dropping-balls" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-06-01-cpp-basic-a249-dropping-balls/" class="article-date">
+    <a href="/cppojques/cpp-basic-a249-dropping-balls/" class="article-date">
   <time class="dt-published" datetime="2021-06-01T00:00:00.000Z" itemprop="datePublished">2021-06-01</time>
 </a>
     
@@ -378,7 +378,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-06-01-cpp-basic-a249-dropping-balls/">C++基礎題 a249 : Dropping Balls</a>
+      <a class="p-name article-title" href="/cppojques/cpp-basic-a249-dropping-balls/">C++基礎題 a249 : Dropping Balls</a>
     </h1>
   
 
@@ -392,7 +392,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-06-01-cpp-basic-a249-dropping-balls/" data-id="ckvei9wpr002630nn578c3hko" data-title="C++基礎題 a249 : Dropping Balls" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/cpp-basic-a249-dropping-balls/" data-id="ckvi1ztke0012hgnn04h0ctyq" data-title="C++基礎題 a249 : Dropping Balls" class="article-share-link">Share</a>
       
       
       
@@ -406,9 +406,9 @@
 
 
   
-    <article id="post-2021-06-01-cpp-review-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-cpp-review-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cpp-review/2021-06-01-cpp-review-5/" class="article-date">
+    <a href="/cpp-review/cpp-review-5/" class="article-date">
   <time class="dt-published" datetime="2021-06-01T00:00:00.000Z" itemprop="datePublished">2021-06-01</time>
 </a>
     
@@ -424,7 +424,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cpp-review/2021-06-01-cpp-review-5/">C++程式設計基礎(五)：函式與遞迴</a>
+      <a class="p-name article-title" href="/cpp-review/cpp-review-5/">C++程式設計基礎(五)：函式與遞迴</a>
     </h1>
   
 
@@ -449,7 +449,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cpp-review/2021-06-01-cpp-review-5/" data-id="ckvei9wpw002a30nnaboudsfy" data-title="C++程式設計基礎(五)：函式與遞迴" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cpp-review/cpp-review-5/" data-id="ckvi1ztlo003ehgnn9pswajfv" data-title="C++程式設計基礎(五)：函式與遞迴" class="article-share-link">Share</a>
       
       
       
@@ -463,9 +463,9 @@
 
 
   
-    <article id="post-2021-06-01-cpp-toi-2021-a" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-cpp-toi-2021-a" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/contest/2021-06-01-cpp-toi-2021-a/" class="article-date">
+    <a href="/contest/cpp-toi-2021-a/" class="article-date">
   <time class="dt-published" datetime="2021-06-01T00:00:00.000Z" itemprop="datePublished">2021-06-01</time>
 </a>
     
@@ -481,7 +481,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/contest/2021-06-01-cpp-toi-2021-a/">TOI 2021 入營考 A. 原始人排序</a>
+      <a class="p-name article-title" href="/contest/cpp-toi-2021-a/">TOI 2021 入營考 A. 原始人排序</a>
     </h1>
   
 
@@ -495,7 +495,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/contest/2021-06-01-cpp-toi-2021-a/" data-id="ckvei9wpx002d30nn8ube4qza" data-title="TOI 2021 入營考 A. 原始人排序" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/contest/cpp-toi-2021-a/" data-id="ckvi1ztm8004ehgnn9j6u5zzr" data-title="TOI 2021 入營考 A. 原始人排序" class="article-share-link">Share</a>
       
       
       
@@ -509,9 +509,9 @@
 
 
   
-    <article id="post-2021-05-13-cpp-basic-p3613-15-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-cpp-basic-p3613-15-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-05-13-cpp-basic-p3613-15-2/" class="article-date">
+    <a href="/cppojques/cpp-basic-p3613-15-2/" class="article-date">
   <time class="dt-published" datetime="2021-05-13T00:00:00.000Z" itemprop="datePublished">2021-05-13</time>
 </a>
     
@@ -527,7 +527,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-05-13-cpp-basic-p3613-15-2/">C++基礎題 洛谷 P3613 【深基15. 例2】寄包櫃</a>
+      <a class="p-name article-title" href="/cppojques/cpp-basic-p3613-15-2/">C++基礎題 洛谷 P3613 【深基15. 例2】寄包櫃</a>
     </h1>
   
 
@@ -543,7 +543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-05-13-cpp-basic-p3613-15-2/" data-id="ckvei9wpp002230nn14hh0q8w" data-title="C++基礎題 洛谷 P3613 【深基15. 例2】寄包櫃" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/cpp-basic-p3613-15-2/" data-id="ckvi1ztkm001hhgnnblzqccjw" data-title="C++基礎題 洛谷 P3613 【深基15. 例2】寄包櫃" class="article-share-link">Share</a>
       
       
       
@@ -614,23 +614,23 @@
       <ul>
         
           <li>
-            <a href="/apcs/practicaltest/2021-09-05-apcs-2021-9-5/">APCS 2021 9/5</a>
+            <a href="/apcs/practicaltest/apcs-2021-9-5/">APCS 2021 9/5</a>
           </li>
         
           <li>
-            <a href="/cpp-review/2021-08-18-cpp-review-datastructure-binary-search-tree/">C++資料結構：Binary Search Tree</a>
+            <a href="/cpp-review/cpp-review-datastructure-binary-search-tree/">C++資料結構：Binary Search Tree</a>
           </li>
         
           <li>
-            <a href="/cpp-review/2021-08-15-cpp-review-datastructure-stack-queue/">C++資料結構：Stack &amp; Queue</a>
+            <a href="/cpp-review/cpp-review-datastructure-stack-queue/">C++資料結構：Stack &amp; Queue</a>
           </li>
         
           <li>
-            <a href="/contest/2021-08-06-cpp-chang-yun-chia-106-5/">C++ 彰雲嘉區複賽106-5 回文日期問題</a>
+            <a href="/contest/cpp-chang-yun-chia-106-5/">C++ 彰雲嘉區複賽106-5 回文日期問題</a>
           </li>
         
           <li>
-            <a href="/contest/2021-07-25-cpp-chang-yun-chia-106-1/">C++ 彰雲嘉區複賽106-1 三角形</a>
+            <a href="/contest/cpp-chang-yun-chia-106-2/">C++ 彰雲嘉區複賽106-2 跑長編碼與資料壓縮</a>
           </li>
         
       </ul>

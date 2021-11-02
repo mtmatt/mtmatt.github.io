@@ -75,9 +75,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hackerrank-sorting-5-counting-inversions" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications/" class="article-date">
+    <a href="/cppojques/hackerrank-sorting-5-counting-inversions/" class="article-date">
   <time class="dt-published" datetime="2021-07-18T00:00:00.000Z" itemprop="datePublished">2021-07-18</time>
 </a>
     
@@ -93,55 +93,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications/">HackerRank Sorting 4.Fraudulent Activity Notifications</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>我只想到用 Counting Sort (O(n*exp[i]_range))。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">activityNotifications</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; e, <span class="keyword">int</span> d)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ct=<span class="number">0</span>;</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">m</span><span class="params">(<span class="number">205</span>,<span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;d;i++)&#123;</span><br><span class="line">        m[e[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=d;i&lt;e.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> k=<span class="number">0</span>,p=<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">201</span>;j++)&#123;</span><br><span class="line">            k+=m[j];</span><br><span class="line">            <span class="keyword">if</span>(d&amp;<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(k&gt;=d/<span class="number">2</span>+<span class="number">1</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(e[i]&gt;=j*<span class="number">2</span>) ct++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(k==d/<span class="number">2</span>)&#123;</span><br><span class="line">                    p=j;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(k&gt;d/<span class="number">2</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(p==<span class="number">-1</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span>(e[i]&gt;=j*<span class="number">2</span>) ct++;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">if</span>(e[i]&gt;=j+p) ct++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        m[e[i]]++;</span><br><span class="line">        m[e[i-d]]--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ct;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>題目來源：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/fraudulent-activity-notifications/">HackerRank</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications/" data-id="ckvei9wrc006630nngt07f2cs" data-title="HackerRank Sorting 4.Fraudulent Activity Notifications" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2021-07-18-hackerrank-sorting-5-counting-inversions" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cppojques/2021-07-18-hackerrank-sorting-5-counting-inversions/" class="article-date">
-  <time class="dt-published" datetime="2021-07-18T00:00:00.000Z" itemprop="datePublished">2021-07-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/cppojques/">cppojques</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-07-18-hackerrank-sorting-5-counting-inversions/">HackerRank Sorting 5.Counting Inversions</a>
+      <a class="p-name article-title" href="/cppojques/hackerrank-sorting-5-counting-inversions/">HackerRank Sorting 5.Counting Inversions</a>
     </h1>
   
 
@@ -157,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-5-counting-inversions/" data-id="ckvei9wrd006930nnall97y1e" data-title="HackerRank Sorting 5.Counting Inversions" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/hackerrank-sorting-5-counting-inversions/" data-id="ckvi1ztms005khgnn4okw7v7b" data-title="HackerRank Sorting 5.Counting Inversions" class="article-share-link">Share</a>
       
       
       
@@ -171,9 +123,57 @@
 
 
   
-    <article id="post-2021-07-15-cpp-hualien-106" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hackerrank-sorting-4-fraudulent-activity-notifications" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/contest/2021-07-15-cpp-hualien-106/" class="article-date">
+    <a href="/cppojques/hackerrank-sorting-4-fraudulent-activity-notifications/" class="article-date">
+  <time class="dt-published" datetime="2021-07-18T00:00:00.000Z" itemprop="datePublished">2021-07-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cppojques/">cppojques</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cppojques/hackerrank-sorting-4-fraudulent-activity-notifications/">HackerRank Sorting 4.Fraudulent Activity Notifications</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我只想到用 Counting Sort (O(n*exp[i]_range))。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">activityNotifications</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; e, <span class="keyword">int</span> d)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ct=<span class="number">0</span>;</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">m</span><span class="params">(<span class="number">205</span>,<span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;d;i++)&#123;</span><br><span class="line">        m[e[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=d;i&lt;e.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> k=<span class="number">0</span>,p=<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">201</span>;j++)&#123;</span><br><span class="line">            k+=m[j];</span><br><span class="line">            <span class="keyword">if</span>(d&amp;<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(k&gt;=d/<span class="number">2</span>+<span class="number">1</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(e[i]&gt;=j*<span class="number">2</span>) ct++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(k==d/<span class="number">2</span>)&#123;</span><br><span class="line">                    p=j;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(k&gt;d/<span class="number">2</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(p==<span class="number">-1</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span>(e[i]&gt;=j*<span class="number">2</span>) ct++;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">if</span>(e[i]&gt;=j+p) ct++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        m[e[i]]++;</span><br><span class="line">        m[e[i-d]]--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ct;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>題目來源：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/fraudulent-activity-notifications/">HackerRank</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/cppojques/hackerrank-sorting-4-fraudulent-activity-notifications/" data-id="ckvi1ztmu005nhgnngs1c3f2x" data-title="HackerRank Sorting 4.Fraudulent Activity Notifications" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-cpp-hualien-106" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/contest/cpp-hualien-106/" class="article-date">
   <time class="dt-published" datetime="2021-07-15T00:00:00.000Z" itemprop="datePublished">2021-07-15</time>
 </a>
     
@@ -189,7 +189,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/contest/2021-07-15-cpp-hualien-106/">C++ 106 花蓮 一起回家的日子</a>
+      <a class="p-name article-title" href="/contest/cpp-hualien-106/">C++ 106 花蓮 一起回家的日子</a>
     </h1>
   
 
@@ -205,7 +205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/contest/2021-07-15-cpp-hualien-106/" data-id="ckvei9wra005z30nn1h7i7vkh" data-title="C++ 106 花蓮 一起回家的日子" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/contest/cpp-hualien-106/" data-id="ckvi1ztl2002ehgnn1ht8dz8k" data-title="C++ 106 花蓮 一起回家的日子" class="article-share-link">Share</a>
       
       
       
@@ -219,9 +219,9 @@
 
 
   
-    <article id="post-2021-07-14-hackerrank-sorting-1-bubble-sort" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hackerrank-sorting-1-bubble-sort" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-07-14-hackerrank-sorting-1-bubble-sort/" class="article-date">
+    <a href="/cppojques/hackerrank-sorting-1-bubble-sort/" class="article-date">
   <time class="dt-published" datetime="2021-07-14T00:00:00.000Z" itemprop="datePublished">2021-07-14</time>
 </a>
     
@@ -237,7 +237,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-07-14-hackerrank-sorting-1-bubble-sort/">HackerRank Sorting 1.Bubble Sort</a>
+      <a class="p-name article-title" href="/cppojques/hackerrank-sorting-1-bubble-sort/">HackerRank Sorting 1.Bubble Sort</a>
     </h1>
   
 
@@ -253,7 +253,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-1-bubble-sort/" data-id="ckvei9wr8005s30nn2ao3bo5e" data-title="HackerRank Sorting 1.Bubble Sort" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/hackerrank-sorting-1-bubble-sort/" data-id="ckvi1ztml005bhgnnb5dm5zoo" data-title="HackerRank Sorting 1.Bubble Sort" class="article-share-link">Share</a>
       
       
       
@@ -267,9 +267,9 @@
 
 
   
-    <article id="post-2021-07-14-hackerrank-sorting-2-mark-and-toys" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hackerrank-sorting-2-mark-and-toys" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-07-14-hackerrank-sorting-2-mark-and-toys/" class="article-date">
+    <a href="/cppojques/hackerrank-sorting-2-mark-and-toys/" class="article-date">
   <time class="dt-published" datetime="2021-07-14T00:00:00.000Z" itemprop="datePublished">2021-07-14</time>
 </a>
     
@@ -285,7 +285,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-07-14-hackerrank-sorting-2-mark-and-toys/">HackerRank Sorting 2.Mark and Toys</a>
+      <a class="p-name article-title" href="/cppojques/hackerrank-sorting-2-mark-and-toys/">HackerRank Sorting 2.Mark and Toys</a>
     </h1>
   
 
@@ -301,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-2-mark-and-toys/" data-id="ckvei9wr9005v30nn7yxjfd45" data-title="HackerRank Sorting 2.Mark and Toys" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/hackerrank-sorting-2-mark-and-toys/" data-id="ckvi1ztmn005ehgnn3oog4dkg" data-title="HackerRank Sorting 2.Mark and Toys" class="article-share-link">Share</a>
       
       
       
@@ -315,9 +315,9 @@
 
 
   
-    <article id="post-2021-07-13-hacker-rank-array-1-2d-array-ds" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hackerrank-array-1-2d-array-ds" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-07-13-hacker-rank-array-1-2d-array-ds/" class="article-date">
+    <a href="/cppojques/hackerrank-array-1-2d-array-ds/" class="article-date">
   <time class="dt-published" datetime="2021-07-13T00:00:00.000Z" itemprop="datePublished">2021-07-13</time>
 </a>
     
@@ -333,7 +333,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-07-13-hacker-rank-array-1-2d-array-ds/">HackerRank Array 1.2D Array - DS</a>
+      <a class="p-name article-title" href="/cppojques/hackerrank-array-1-2d-array-ds/">HackerRank Array 1.2D Array - DS</a>
     </h1>
   
 
@@ -349,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-1-2d-array-ds/" data-id="ckvei9wqp004h30nn1lvmcxbv" data-title="HackerRank Array 1.2D Array - DS" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/hackerrank-array-1-2d-array-ds/" data-id="ckvi1ztma004khgnnal5v2ud5" data-title="HackerRank Array 1.2D Array - DS" class="article-share-link">Share</a>
       
       
       
@@ -363,9 +363,9 @@
 
 
   
-    <article id="post-2021-07-13-hacker-rank-array-3-new-year-chaos" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hackerrank-array-2-left-rotation" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-07-13-hacker-rank-array-3-new-year-chaos/" class="article-date">
+    <a href="/cppojques/hackerrank-array-2-left-rotation/" class="article-date">
   <time class="dt-published" datetime="2021-07-13T00:00:00.000Z" itemprop="datePublished">2021-07-13</time>
 </a>
     
@@ -381,55 +381,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-07-13-hacker-rank-array-3-new-year-chaos/">HackerRank Array 3.New Year Chaos</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>這題比較有難度了，總之有逆序在加</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">minimumBribes</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; q)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=q.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(q[i]-(i+<span class="number">1</span>)&gt;<span class="number">2</span>)&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;Too chaotic\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="built_in">max</span>(<span class="number">0</span>,q[i]<span class="number">-2</span>);j&lt;i;j++)</span><br><span class="line">            <span class="keyword">if</span>(q[j]&gt;q[i])ans++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>題目來源：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays">HackerRank</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-3-new-year-chaos/" data-id="ckvei9wqq004l30nn3ibeejxo" data-title="HackerRank Array 3.New Year Chaos" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2021-07-13-hacker-rank-array-2-left-rotation" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cppojques/2021-07-13-hacker-rank-array-2-left-rotation/" class="article-date">
-  <time class="dt-published" datetime="2021-07-13T00:00:00.000Z" itemprop="datePublished">2021-07-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/cppojques/">cppojques</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-07-13-hacker-rank-array-2-left-rotation/">HackerRank Array 2.Left Rotation</a>
+      <a class="p-name article-title" href="/cppojques/hackerrank-array-2-left-rotation/">HackerRank Array 2.Left Rotation</a>
     </h1>
   
 
@@ -445,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-2-left-rotation/" data-id="ckvei9wqr004p30nn7fribzju" data-title="HackerRank Array 2.Left Rotation" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/hackerrank-array-2-left-rotation/" data-id="ckvi1ztmc004nhgnne62u8vr4" data-title="HackerRank Array 2.Left Rotation" class="article-share-link">Share</a>
       
       
       
@@ -459,9 +411,9 @@
 
 
   
-    <article id="post-2021-07-13-hacker-rank-array-4-minimum-swaps-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hackerrank-array-4-minimum-swaps-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-07-13-hacker-rank-array-4-minimum-swaps-2/" class="article-date">
+    <a href="/cppojques/hackerrank-array-4-minimum-swaps-2/" class="article-date">
   <time class="dt-published" datetime="2021-07-13T00:00:00.000Z" itemprop="datePublished">2021-07-13</time>
 </a>
     
@@ -477,7 +429,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-07-13-hacker-rank-array-4-minimum-swaps-2/">HackerRank Array 4.Minimum Swaps 2</a>
+      <a class="p-name article-title" href="/cppojques/hackerrank-array-4-minimum-swaps-2/">HackerRank Array 4.Minimum Swaps 2</a>
     </h1>
   
 
@@ -493,7 +445,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-4-minimum-swaps-2/" data-id="ckvei9wqs004t30nnf7vi48av" data-title="HackerRank Array 4.Minimum Swaps 2" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/hackerrank-array-4-minimum-swaps-2/" data-id="ckvi1ztmd004qhgnn6zru8cuf" data-title="HackerRank Array 4.Minimum Swaps 2" class="article-share-link">Share</a>
       
       
       
@@ -507,9 +459,9 @@
 
 
   
-    <article id="post-2021-07-13-hacker-rank-array-5-array-manipulation" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hackerrank-array-3-new-year-chaos" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cppojques/2021-07-13-hacker-rank-array-5-array-manipulation/" class="article-date">
+    <a href="/cppojques/hackerrank-array-3-new-year-chaos/" class="article-date">
   <time class="dt-published" datetime="2021-07-13T00:00:00.000Z" itemprop="datePublished">2021-07-13</time>
 </a>
     
@@ -525,7 +477,55 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cppojques/2021-07-13-hacker-rank-array-5-array-manipulation/">HackerRank Array 5.Array Manipulation</a>
+      <a class="p-name article-title" href="/cppojques/hackerrank-array-3-new-year-chaos/">HackerRank Array 3.New Year Chaos</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>這題比較有難度了，總之有逆序在加</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">minimumBribes</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; q)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=q.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(q[i]-(i+<span class="number">1</span>)&gt;<span class="number">2</span>)&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;Too chaotic\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="built_in">max</span>(<span class="number">0</span>,q[i]<span class="number">-2</span>);j&lt;i;j++)</span><br><span class="line">            <span class="keyword">if</span>(q[j]&gt;q[i])ans++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>題目來源：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays">HackerRank</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/cppojques/hackerrank-array-3-new-year-chaos/" data-id="ckvi1ztme004thgnngfjr5au9" data-title="HackerRank Array 3.New Year Chaos" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hackerrank/" rel="tag">hackerrank</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hackerrank-array-5-array-manipulation" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cppojques/hackerrank-array-5-array-manipulation/" class="article-date">
+  <time class="dt-published" datetime="2021-07-13T00:00:00.000Z" itemprop="datePublished">2021-07-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/cppojques/">cppojques</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cppojques/hackerrank-array-5-array-manipulation/">HackerRank Array 5.Array Manipulation</a>
     </h1>
   
 
@@ -541,7 +541,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-5-array-manipulation/" data-id="ckvei9wqv004w30nn0iij0x7b" data-title="HackerRank Array 5.Array Manipulation" class="article-share-link">Share</a>
+      <a data-url="http://mtmatt.page/cppojques/hackerrank-array-5-array-manipulation/" data-id="ckvi1ztmf004whgnn5jpl2uee" data-title="HackerRank Array 5.Array Manipulation" class="article-share-link">Share</a>
       
       
       
@@ -612,23 +612,23 @@
       <ul>
         
           <li>
-            <a href="/apcs/practicaltest/2021-09-05-apcs-2021-9-5/">APCS 2021 9/5</a>
+            <a href="/apcs/practicaltest/apcs-2021-9-5/">APCS 2021 9/5</a>
           </li>
         
           <li>
-            <a href="/cpp-review/2021-08-18-cpp-review-datastructure-binary-search-tree/">C++資料結構：Binary Search Tree</a>
+            <a href="/cpp-review/cpp-review-datastructure-binary-search-tree/">C++資料結構：Binary Search Tree</a>
           </li>
         
           <li>
-            <a href="/cpp-review/2021-08-15-cpp-review-datastructure-stack-queue/">C++資料結構：Stack &amp; Queue</a>
+            <a href="/cpp-review/cpp-review-datastructure-stack-queue/">C++資料結構：Stack &amp; Queue</a>
           </li>
         
           <li>
-            <a href="/contest/2021-08-06-cpp-chang-yun-chia-106-5/">C++ 彰雲嘉區複賽106-5 回文日期問題</a>
+            <a href="/contest/cpp-chang-yun-chia-106-5/">C++ 彰雲嘉區複賽106-5 回文日期問題</a>
           </li>
         
           <li>
-            <a href="/contest/2021-07-25-cpp-chang-yun-chia-106-1/">C++ 彰雲嘉區複賽106-1 三角形</a>
+            <a href="/contest/cpp-chang-yun-chia-106-2/">C++ 彰雲嘉區複賽106-2 跑長編碼與資料壓縮</a>
           </li>
         
       </ul>

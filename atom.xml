@@ -18,8 +18,8 @@
   
   <entry>
     <title>APCS 2021 9/5</title>
-    <link href="http://mtmatt.page/apcs/practicaltest/2021-09-05-apcs-2021-9-5/"/>
-    <id>http://mtmatt.page/apcs/practicaltest/2021-09-05-apcs-2021-9-5/</id>
+    <link href="http://mtmatt.page/apcs/practicaltest/apcs-2021-9-5/"/>
+    <id>http://mtmatt.page/apcs/practicaltest/apcs-2021-9-5/</id>
     <published>2021-09-05T00:00:00.000Z</published>
     <updated>2021-11-02T11:56:43.743Z</updated>
     
@@ -46,8 +46,8 @@
   
   <entry>
     <title>C++資料結構：Binary Search Tree</title>
-    <link href="http://mtmatt.page/cpp-review/2021-08-18-cpp-review-datastructure-binary-search-tree/"/>
-    <id>http://mtmatt.page/cpp-review/2021-08-18-cpp-review-datastructure-binary-search-tree/</id>
+    <link href="http://mtmatt.page/cpp-review/cpp-review-datastructure-binary-search-tree/"/>
+    <id>http://mtmatt.page/cpp-review/cpp-review-datastructure-binary-search-tree/</id>
     <published>2021-08-18T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -73,8 +73,8 @@
   
   <entry>
     <title>C++資料結構：Stack &amp; Queue</title>
-    <link href="http://mtmatt.page/cpp-review/2021-08-15-cpp-review-datastructure-stack-queue/"/>
-    <id>http://mtmatt.page/cpp-review/2021-08-15-cpp-review-datastructure-stack-queue/</id>
+    <link href="http://mtmatt.page/cpp-review/cpp-review-datastructure-stack-queue/"/>
+    <id>http://mtmatt.page/cpp-review/cpp-review-datastructure-stack-queue/</id>
     <published>2021-08-15T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -101,8 +101,8 @@
   
   <entry>
     <title>C++ 彰雲嘉區複賽106-5 回文日期問題</title>
-    <link href="http://mtmatt.page/contest/2021-08-06-cpp-chang-yun-chia-106-5/"/>
-    <id>http://mtmatt.page/contest/2021-08-06-cpp-chang-yun-chia-106-5/</id>
+    <link href="http://mtmatt.page/contest/cpp-chang-yun-chia-106-5/"/>
+    <id>http://mtmatt.page/contest/cpp-chang-yun-chia-106-5/</id>
     <published>2021-08-06T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -125,34 +125,9 @@
   </entry>
   
   <entry>
-    <title>C++ 彰雲嘉區複賽106-1 三角形</title>
-    <link href="http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-1/"/>
-    <id>http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-1/</id>
-    <published>2021-07-25T00:00:00.000Z</published>
-    <updated>2021-11-02T11:53:38.681Z</updated>
-    
-    <content type="html"><![CDATA[<p>簡單的三角形判別</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">        <span class="keyword">int</span> d[<span class="number">3</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++) cin&gt;&gt;d[i];</span><br><span class="line">        <span class="built_in">sort</span>(d,d+<span class="number">3</span>);</span><br><span class="line">        <span class="keyword">if</span>(d[<span class="number">0</span>]+d[<span class="number">1</span>]&lt;=d[<span class="number">2</span>])&#123;</span><br><span class="line">            cout&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cout&lt;&lt;<span class="number">1</span>&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">            <span class="keyword">if</span>(d[<span class="number">0</span>]==d[<span class="number">1</span>] || d[<span class="number">1</span>]==d[<span class="number">2</span>]) cout&lt;&lt;<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> cout&lt;&lt;<span class="number">0</span>;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>題目來源：<a href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d092">GreenJudge</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;簡單的三角形判別&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="contest" scheme="http://mtmatt.page/categories/contest/"/>
-    
-    
-    <category term="competition" scheme="http://mtmatt.page/tags/competition/"/>
-    
-  </entry>
-  
-  <entry>
     <title>C++ 彰雲嘉區複賽106-2 跑長編碼與資料壓縮</title>
-    <link href="http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-2/"/>
-    <id>http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-2/</id>
+    <link href="http://mtmatt.page/contest/cpp-chang-yun-chia-106-2/"/>
+    <id>http://mtmatt.page/contest/cpp-chang-yun-chia-106-2/</id>
     <published>2021-07-25T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -175,19 +150,19 @@
   </entry>
   
   <entry>
-    <title>C++ 彰雲嘉區複賽106-3 費波南希數列</title>
-    <link href="http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-3/"/>
-    <id>http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-3/</id>
+    <title>C++ 彰雲嘉區複賽106-1 三角形</title>
+    <link href="http://mtmatt.page/contest/cpp-chang-yun-chia-106-1/"/>
+    <id>http://mtmatt.page/contest/cpp-chang-yun-chia-106-1/</id>
     <published>2021-07-25T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
-    <content type="html"><![CDATA[<p>用到最簡單DP和二分搜(都可以不用)</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n,f[<span class="number">200</span>];</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line"></span><br><span class="line">    f[<span class="number">0</span>]=<span class="number">-1</span>;f[<span class="number">1</span>]=<span class="number">1</span>;f[<span class="number">2</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">        f[i]=f[i<span class="number">-1</span>]+f[i<span class="number">-2</span>];</span><br><span class="line">        <span class="keyword">if</span>(f[i]&lt;<span class="number">0</span>) f[i]=<span class="number">0x3f3f3f3f</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">        <span class="keyword">int</span> a;</span><br><span class="line">        cin&gt;&gt;a;</span><br><span class="line">        <span class="keyword">int</span> it=<span class="built_in">lower_bound</span>(f,f+<span class="number">100</span>,a)-f;</span><br><span class="line">        <span class="keyword">if</span>(f[it]==a)&#123;</span><br><span class="line">            cout&lt;&lt;it;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cout&lt;&lt;<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>題目來源：<a href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d094">GreenJudge</a></p>]]></content>
+    <content type="html"><![CDATA[<p>簡單的三角形判別</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">        <span class="keyword">int</span> d[<span class="number">3</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++) cin&gt;&gt;d[i];</span><br><span class="line">        <span class="built_in">sort</span>(d,d+<span class="number">3</span>);</span><br><span class="line">        <span class="keyword">if</span>(d[<span class="number">0</span>]+d[<span class="number">1</span>]&lt;=d[<span class="number">2</span>])&#123;</span><br><span class="line">            cout&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cout&lt;&lt;<span class="number">1</span>&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">            <span class="keyword">if</span>(d[<span class="number">0</span>]==d[<span class="number">1</span>] || d[<span class="number">1</span>]==d[<span class="number">2</span>]) cout&lt;&lt;<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> cout&lt;&lt;<span class="number">0</span>;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>題目來源：<a href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d092">GreenJudge</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;用到最簡單DP和二分搜(都可以不用)&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;</summary>
+    <summary type="html">&lt;p&gt;簡單的三角形判別&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;</summary>
       
     
     
@@ -201,8 +176,8 @@
   
   <entry>
     <title>C++ 彰雲嘉區複賽106-4 變位字判斷</title>
-    <link href="http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-4/"/>
-    <id>http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-4/</id>
+    <link href="http://mtmatt.page/contest/cpp-chang-yun-chia-106-4/"/>
+    <id>http://mtmatt.page/contest/cpp-chang-yun-chia-106-4/</id>
     <published>2021-07-25T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -225,9 +200,34 @@
   </entry>
   
   <entry>
+    <title>C++ 彰雲嘉區複賽106-3 費波南希數列</title>
+    <link href="http://mtmatt.page/contest/cpp-chang-yun-chia-106-3/"/>
+    <id>http://mtmatt.page/contest/cpp-chang-yun-chia-106-3/</id>
+    <published>2021-07-25T00:00:00.000Z</published>
+    <updated>2021-11-02T11:53:38.681Z</updated>
+    
+    <content type="html"><![CDATA[<p>用到最簡單DP和二分搜(都可以不用)</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n,f[<span class="number">200</span>];</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line"></span><br><span class="line">    f[<span class="number">0</span>]=<span class="number">-1</span>;f[<span class="number">1</span>]=<span class="number">1</span>;f[<span class="number">2</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">        f[i]=f[i<span class="number">-1</span>]+f[i<span class="number">-2</span>];</span><br><span class="line">        <span class="keyword">if</span>(f[i]&lt;<span class="number">0</span>) f[i]=<span class="number">0x3f3f3f3f</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">        <span class="keyword">int</span> a;</span><br><span class="line">        cin&gt;&gt;a;</span><br><span class="line">        <span class="keyword">int</span> it=<span class="built_in">lower_bound</span>(f,f+<span class="number">100</span>,a)-f;</span><br><span class="line">        <span class="keyword">if</span>(f[it]==a)&#123;</span><br><span class="line">            cout&lt;&lt;it;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cout&lt;&lt;<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>題目來源：<a href="http://www.tcgs.tc.edu.tw:1218/ShowProblem?problemid=d094">GreenJudge</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;用到最簡單DP和二分搜(都可以不用)&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;</summary>
+      
+    
+    
+    
+    <category term="contest" scheme="http://mtmatt.page/categories/contest/"/>
+    
+    
+    <category term="competition" scheme="http://mtmatt.page/tags/competition/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C++ 最短路徑問題 Dijkstra應用</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-19-cpp-dijkstra-apply/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-19-cpp-dijkstra-apply/</id>
+    <link href="http://mtmatt.page/cppojques/cpp-dijkstra-apply/"/>
+    <id>http://mtmatt.page/cppojques/cpp-dijkstra-apply/</id>
     <published>2021-07-19T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:52.763Z</updated>
     
@@ -255,8 +255,8 @@
   
   <entry>
     <title>HackerRank Sorting 3.Comparator</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-3-comparator/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-3-comparator/</id>
+    <link href="http://mtmatt.page/cppojques/hackerrank-sorting-3-comparator/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-sorting-3-comparator/</id>
     <published>2021-07-18T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -283,38 +283,9 @@
   </entry>
   
   <entry>
-    <title>HackerRank Sorting 4.Fraudulent Activity Notifications</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications/</id>
-    <published>2021-07-18T00:00:00.000Z</published>
-    <updated>2021-11-02T11:50:07.183Z</updated>
-    
-    <content type="html"><![CDATA[<p>我只想到用 Counting Sort (O(n*exp[i]_range))。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">activityNotifications</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; e, <span class="keyword">int</span> d)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ct=<span class="number">0</span>;</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">m</span><span class="params">(<span class="number">205</span>,<span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;d;i++)&#123;</span><br><span class="line">        m[e[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=d;i&lt;e.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> k=<span class="number">0</span>,p=<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">201</span>;j++)&#123;</span><br><span class="line">            k+=m[j];</span><br><span class="line">            <span class="keyword">if</span>(d&amp;<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(k&gt;=d/<span class="number">2</span>+<span class="number">1</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(e[i]&gt;=j*<span class="number">2</span>) ct++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(k==d/<span class="number">2</span>)&#123;</span><br><span class="line">                    p=j;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(k&gt;d/<span class="number">2</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(p==<span class="number">-1</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span>(e[i]&gt;=j*<span class="number">2</span>) ct++;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">if</span>(e[i]&gt;=j+p) ct++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        m[e[i]]++;</span><br><span class="line">        m[e[i-d]]--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ct;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>題目來源：<a href="https://www.hackerrank.com/challenges/fraudulent-activity-notifications/">HackerRank</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;我只想到用 Counting Sort (O(n*exp[i]_range))。&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;</summary>
-      
-    
-    
-    
-    <category term="cppojques" scheme="http://mtmatt.page/categories/cppojques/"/>
-    
-    
-    <category term="oj" scheme="http://mtmatt.page/tags/oj/"/>
-    
-    <category term="onlinejudge" scheme="http://mtmatt.page/tags/onlinejudge/"/>
-    
-    <category term="hackerrank" scheme="http://mtmatt.page/tags/hackerrank/"/>
-    
-  </entry>
-  
-  <entry>
     <title>HackerRank Sorting 5.Counting Inversions</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-5-counting-inversions/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-5-counting-inversions/</id>
+    <link href="http://mtmatt.page/cppojques/hackerrank-sorting-5-counting-inversions/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-sorting-5-counting-inversions/</id>
     <published>2021-07-18T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -341,9 +312,38 @@
   </entry>
   
   <entry>
+    <title>HackerRank Sorting 4.Fraudulent Activity Notifications</title>
+    <link href="http://mtmatt.page/cppojques/hackerrank-sorting-4-fraudulent-activity-notifications/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-sorting-4-fraudulent-activity-notifications/</id>
+    <published>2021-07-18T00:00:00.000Z</published>
+    <updated>2021-11-02T11:50:07.183Z</updated>
+    
+    <content type="html"><![CDATA[<p>我只想到用 Counting Sort (O(n*exp[i]_range))。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">activityNotifications</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; e, <span class="keyword">int</span> d)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ct=<span class="number">0</span>;</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">m</span><span class="params">(<span class="number">205</span>,<span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;d;i++)&#123;</span><br><span class="line">        m[e[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=d;i&lt;e.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> k=<span class="number">0</span>,p=<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">201</span>;j++)&#123;</span><br><span class="line">            k+=m[j];</span><br><span class="line">            <span class="keyword">if</span>(d&amp;<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(k&gt;=d/<span class="number">2</span>+<span class="number">1</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(e[i]&gt;=j*<span class="number">2</span>) ct++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(k==d/<span class="number">2</span>)&#123;</span><br><span class="line">                    p=j;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(k&gt;d/<span class="number">2</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(p==<span class="number">-1</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span>(e[i]&gt;=j*<span class="number">2</span>) ct++;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">if</span>(e[i]&gt;=j+p) ct++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        m[e[i]]++;</span><br><span class="line">        m[e[i-d]]--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ct;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>題目來源：<a href="https://www.hackerrank.com/challenges/fraudulent-activity-notifications/">HackerRank</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我只想到用 Counting Sort (O(n*exp[i]_range))。&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;</summary>
+      
+    
+    
+    
+    <category term="cppojques" scheme="http://mtmatt.page/categories/cppojques/"/>
+    
+    
+    <category term="oj" scheme="http://mtmatt.page/tags/oj/"/>
+    
+    <category term="onlinejudge" scheme="http://mtmatt.page/tags/onlinejudge/"/>
+    
+    <category term="hackerrank" scheme="http://mtmatt.page/tags/hackerrank/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C++ 106 花蓮 一起回家的日子</title>
-    <link href="http://mtmatt.page/contest/2021-07-15-cpp-hualien-106/"/>
-    <id>http://mtmatt.page/contest/2021-07-15-cpp-hualien-106/</id>
+    <link href="http://mtmatt.page/contest/cpp-hualien-106/"/>
+    <id>http://mtmatt.page/contest/cpp-hualien-106/</id>
     <published>2021-07-15T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -367,8 +367,8 @@
   
   <entry>
     <title>HackerRank Sorting 1.Bubble Sort</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-1-bubble-sort/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-1-bubble-sort/</id>
+    <link href="http://mtmatt.page/cppojques/hackerrank-sorting-1-bubble-sort/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-sorting-1-bubble-sort/</id>
     <published>2021-07-14T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -396,8 +396,8 @@
   
   <entry>
     <title>HackerRank Sorting 2.Mark and Toys</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-2-mark-and-toys/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-2-mark-and-toys/</id>
+    <link href="http://mtmatt.page/cppojques/hackerrank-sorting-2-mark-and-toys/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-sorting-2-mark-and-toys/</id>
     <published>2021-07-14T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -425,8 +425,8 @@
   
   <entry>
     <title>HackerRank Array 1.2D Array - DS</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-1-2d-array-ds/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-1-2d-array-ds/</id>
+    <link href="http://mtmatt.page/cppojques/hackerrank-array-1-2d-array-ds/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-array-1-2d-array-ds/</id>
     <published>2021-07-13T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -453,38 +453,9 @@
   </entry>
   
   <entry>
-    <title>HackerRank Array 3.New Year Chaos</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-3-new-year-chaos/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-3-new-year-chaos/</id>
-    <published>2021-07-13T00:00:00.000Z</published>
-    <updated>2021-11-02T11:50:07.183Z</updated>
-    
-    <content type="html"><![CDATA[<p>這題比較有難度了，總之有逆序在加</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">minimumBribes</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; q)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=q.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(q[i]-(i+<span class="number">1</span>)&gt;<span class="number">2</span>)&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;Too chaotic\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="built_in">max</span>(<span class="number">0</span>,q[i]<span class="number">-2</span>);j&lt;i;j++)</span><br><span class="line">            <span class="keyword">if</span>(q[j]&gt;q[i])ans++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>題目來源：<a href="https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays">HackerRank</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;這題比較有難度了，總之有逆序在加&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2</summary>
-      
-    
-    
-    
-    <category term="cppojques" scheme="http://mtmatt.page/categories/cppojques/"/>
-    
-    
-    <category term="oj" scheme="http://mtmatt.page/tags/oj/"/>
-    
-    <category term="onlinejudge" scheme="http://mtmatt.page/tags/onlinejudge/"/>
-    
-    <category term="hackerrank" scheme="http://mtmatt.page/tags/hackerrank/"/>
-    
-  </entry>
-  
-  <entry>
     <title>HackerRank Array 2.Left Rotation</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-2-left-rotation/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-2-left-rotation/</id>
+    <link href="http://mtmatt.page/cppojques/hackerrank-array-2-left-rotation/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-array-2-left-rotation/</id>
     <published>2021-07-13T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -512,8 +483,8 @@
   
   <entry>
     <title>HackerRank Array 4.Minimum Swaps 2</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-4-minimum-swaps-2/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-4-minimum-swaps-2/</id>
+    <link href="http://mtmatt.page/cppojques/hackerrank-array-4-minimum-swaps-2/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-array-4-minimum-swaps-2/</id>
     <published>2021-07-13T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -540,9 +511,38 @@
   </entry>
   
   <entry>
+    <title>HackerRank Array 3.New Year Chaos</title>
+    <link href="http://mtmatt.page/cppojques/hackerrank-array-3-new-year-chaos/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-array-3-new-year-chaos/</id>
+    <published>2021-07-13T00:00:00.000Z</published>
+    <updated>2021-11-02T11:50:07.183Z</updated>
+    
+    <content type="html"><![CDATA[<p>這題比較有難度了，總之有逆序在加</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">minimumBribes</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; q)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=q.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(q[i]-(i+<span class="number">1</span>)&gt;<span class="number">2</span>)&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;Too chaotic\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="built_in">max</span>(<span class="number">0</span>,q[i]<span class="number">-2</span>);j&lt;i;j++)</span><br><span class="line">            <span class="keyword">if</span>(q[j]&gt;q[i])ans++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>題目來源：<a href="https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays">HackerRank</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;這題比較有難度了，總之有逆序在加&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2</summary>
+      
+    
+    
+    
+    <category term="cppojques" scheme="http://mtmatt.page/categories/cppojques/"/>
+    
+    
+    <category term="oj" scheme="http://mtmatt.page/tags/oj/"/>
+    
+    <category term="onlinejudge" scheme="http://mtmatt.page/tags/onlinejudge/"/>
+    
+    <category term="hackerrank" scheme="http://mtmatt.page/tags/hackerrank/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HackerRank Array 5.Array Manipulation</title>
-    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-5-array-manipulation/"/>
-    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-5-array-manipulation/</id>
+    <link href="http://mtmatt.page/cppojques/hackerrank-array-5-array-manipulation/"/>
+    <id>http://mtmatt.page/cppojques/hackerrank-array-5-array-manipulation/</id>
     <published>2021-07-13T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
