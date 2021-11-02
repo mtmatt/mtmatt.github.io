@@ -14,7 +14,7 @@
 <meta property="og:description" content="1. 對聯 A : 2, 4字平仄不同 &amp;&amp; 2, 6平仄相同 B : 第一句最後一字仄，第二句則是平 C : 第一二句2, 4, 6 字分別平仄不同  input : 七言對聯 0-&gt;平, 1-&gt;仄 12310 0 0 0 1 1 11 1 1 1 0 0 0  ouput : 違反ABC哪些個規則就輸出相對應的英文字母(ABC)，若沒違反則輸出 “None” 1A">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-09-05T00:00:00.000Z">
-<meta property="article:modified_time" content="2021-10-31T00:00:08.361Z">
+<meta property="article:modified_time" content="2021-11-02T11:56:43.743Z">
 <meta property="article:author" content="mtmatt">
 <meta property="article:tag" content="apcs">
 <meta name="twitter:card" content="summary">
@@ -110,18 +110,18 @@
 <li>C : 第一二句2, 4, 6 字分別平仄不同</li>
 </ul>
 <p>input : 七言對聯 0-&gt;平, 1-&gt;仄</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">0 0 0 0 1 1 1</span><br><span class="line">1 1 1 1 0 0 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 
 <p>ouput : 違反ABC哪些個規則就輸出相對應的英文字母(ABC)，若沒違反則輸出 “None”</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-炸彈魔王"><a href="#2-炸彈魔王" class="headerlink" title="2. 炸彈魔王"></a>2. 炸彈魔王</h3><p>遊戲採回合制，回合開始時若魔王位於炸彈上則所有在同一格的魔王會連同炸彈一起消失，所有未消失的魔王會先在腳下放一顆炸彈，再依據方向向量(s, t)移動。移動到邊界外的魔王視為消失。 求所有魔王消失時還有未爆彈的地點數。</p>
 <p>n,m,r,c &lt;= 100, k&lt;500, |s,t|&lt;=10</p>
 <p>input : 第一行 n, m, k 分別表示地圖長寬以及魔王數，接下來有 k 行每一行都有r, c, s, t 分別表示魔王初始位置座標，以及移動向量。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 3 2</span><br><span class="line">1 2 0 -1</span><br><span class="line">2 1 1 -2</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">3</span> <span class="number">2</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">2</span> <span class="number">1</span> <span class="number">1</span> <span class="number">-2</span></span><br></pre></td></tr></table></figure>
 
 <p>output:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="3-幸運號碼"><a href="#3-幸運號碼" class="headerlink" title="3. 幸運號碼"></a>3. 幸運號碼</h3><p>給一個陣列，依據以下步驟尋找答案。</p>
 <ol>
@@ -130,19 +130,19 @@
 <li>選擇區間和較小的一邊作為下個搜索區間 n&lt;=300000</li>
 </ol>
 <p>input :</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">3 2 1 5 4 7</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">3</span> <span class="number">2</span> <span class="number">1</span> <span class="number">5</span> <span class="number">4</span> <span class="number">7</span></span><br></pre></td></tr></table></figure>
 
 <p>output:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="4-美食"><a href="#4-美食" class="headerlink" title="4. 美食"></a>4. 美食</h3><p>有 n 攤美食和 k 個人，每個人必須吃連續區段的攤位，且菜色不得重複。求最大可以被吃到的攤位數。</p>
 <p>n&lt;=1000000, k&lt;=20, nk&lt;=5000000, a[i]&lt;100000</p>
 <p>其他限制 50% k=1 100% none</p>
 <p>input :</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5 1</span><br><span class="line">1 2 3 1 2</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">1</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
 
 <p>output:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
