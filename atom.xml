@@ -18,8 +18,8 @@
   
   <entry>
     <title>APCS 2021 9/5</title>
-    <link href="http://mtmatt.page/2021/09/05/2021-09-05-apcs-2021-9-5/"/>
-    <id>http://mtmatt.page/2021/09/05/2021-09-05-apcs-2021-9-5/</id>
+    <link href="http://mtmatt.page/apcs/practicaltest/2021-09-05-apcs-2021-9-5/"/>
+    <id>http://mtmatt.page/apcs/practicaltest/2021-09-05-apcs-2021-9-5/</id>
     <published>2021-09-05T00:00:00.000Z</published>
     <updated>2021-11-02T11:56:43.743Z</updated>
     
@@ -46,8 +46,8 @@
   
   <entry>
     <title>C++資料結構：Binary Search Tree</title>
-    <link href="http://mtmatt.page/2021/08/18/2021-08-18-cpp-review-datastructure-binary-search-tree/"/>
-    <id>http://mtmatt.page/2021/08/18/2021-08-18-cpp-review-datastructure-binary-search-tree/</id>
+    <link href="http://mtmatt.page/cpp-review/2021-08-18-cpp-review-datastructure-binary-search-tree/"/>
+    <id>http://mtmatt.page/cpp-review/2021-08-18-cpp-review-datastructure-binary-search-tree/</id>
     <published>2021-08-18T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -73,8 +73,8 @@
   
   <entry>
     <title>C++資料結構：Stack &amp; Queue</title>
-    <link href="http://mtmatt.page/2021/08/15/2021-08-15-cpp-review-datastructure-stack-queue/"/>
-    <id>http://mtmatt.page/2021/08/15/2021-08-15-cpp-review-datastructure-stack-queue/</id>
+    <link href="http://mtmatt.page/cpp-review/2021-08-15-cpp-review-datastructure-stack-queue/"/>
+    <id>http://mtmatt.page/cpp-review/2021-08-15-cpp-review-datastructure-stack-queue/</id>
     <published>2021-08-15T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -101,8 +101,8 @@
   
   <entry>
     <title>C++ 彰雲嘉區複賽106-5 回文日期問題</title>
-    <link href="http://mtmatt.page/2021/08/06/2021-08-06-cpp-chang-yun-chia-106-5/"/>
-    <id>http://mtmatt.page/2021/08/06/2021-08-06-cpp-chang-yun-chia-106-5/</id>
+    <link href="http://mtmatt.page/contest/2021-08-06-cpp-chang-yun-chia-106-5/"/>
+    <id>http://mtmatt.page/contest/2021-08-06-cpp-chang-yun-chia-106-5/</id>
     <published>2021-08-06T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>C++ 彰雲嘉區複賽106-1 三角形</title>
-    <link href="http://mtmatt.page/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-1/"/>
-    <id>http://mtmatt.page/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-1/</id>
+    <link href="http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-1/"/>
+    <id>http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-1/</id>
     <published>2021-07-25T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -151,8 +151,8 @@
   
   <entry>
     <title>C++ 彰雲嘉區複賽106-2 跑長編碼與資料壓縮</title>
-    <link href="http://mtmatt.page/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-2/"/>
-    <id>http://mtmatt.page/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-2/</id>
+    <link href="http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-2/"/>
+    <id>http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-2/</id>
     <published>2021-07-25T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -176,8 +176,8 @@
   
   <entry>
     <title>C++ 彰雲嘉區複賽106-3 費波南希數列</title>
-    <link href="http://mtmatt.page/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-3/"/>
-    <id>http://mtmatt.page/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-3/</id>
+    <link href="http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-3/"/>
+    <id>http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-3/</id>
     <published>2021-07-25T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -201,8 +201,8 @@
   
   <entry>
     <title>C++ 彰雲嘉區複賽106-4 變位字判斷</title>
-    <link href="http://mtmatt.page/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-4/"/>
-    <id>http://mtmatt.page/2021/07/25/2021-07-25-cpp-chang-yun-chia-106-4/</id>
+    <link href="http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-4/"/>
+    <id>http://mtmatt.page/contest/2021-07-25-cpp-chang-yun-chia-106-4/</id>
     <published>2021-07-25T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:38.681Z</updated>
     
@@ -226,8 +226,8 @@
   
   <entry>
     <title>C++ 最短路徑問題 Dijkstra應用</title>
-    <link href="http://mtmatt.page/2021/07/19/2021-07-19-cpp-dijkstra-apply/"/>
-    <id>http://mtmatt.page/2021/07/19/2021-07-19-cpp-dijkstra-apply/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-19-cpp-dijkstra-apply/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-19-cpp-dijkstra-apply/</id>
     <published>2021-07-19T00:00:00.000Z</published>
     <updated>2021-11-02T11:53:52.763Z</updated>
     
@@ -255,8 +255,8 @@
   
   <entry>
     <title>HackerRank Sorting 3.Comparator</title>
-    <link href="http://mtmatt.page/2021/07/18/2021-07-18-hackerrank-sorting-3-comparator/"/>
-    <id>http://mtmatt.page/2021/07/18/2021-07-18-hackerrank-sorting-3-comparator/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-3-comparator/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-3-comparator/</id>
     <published>2021-07-18T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -284,8 +284,8 @@
   
   <entry>
     <title>HackerRank Sorting 4.Fraudulent Activity Notifications</title>
-    <link href="http://mtmatt.page/2021/07/18/2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications/"/>
-    <id>http://mtmatt.page/2021/07/18/2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-4-fraudulent-activity-notifications/</id>
     <published>2021-07-18T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -313,8 +313,8 @@
   
   <entry>
     <title>HackerRank Sorting 5.Counting Inversions</title>
-    <link href="http://mtmatt.page/2021/07/18/2021-07-18-hackerrank-sorting-5-counting-inversions/"/>
-    <id>http://mtmatt.page/2021/07/18/2021-07-18-hackerrank-sorting-5-counting-inversions/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-5-counting-inversions/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-18-hackerrank-sorting-5-counting-inversions/</id>
     <published>2021-07-18T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -342,8 +342,8 @@
   
   <entry>
     <title>C++ 106 花蓮 一起回家的日子</title>
-    <link href="http://mtmatt.page/2021/07/15/2021-07-15-cpp-hualien-106/"/>
-    <id>http://mtmatt.page/2021/07/15/2021-07-15-cpp-hualien-106/</id>
+    <link href="http://mtmatt.page/contest/2021-07-15-cpp-hualien-106/"/>
+    <id>http://mtmatt.page/contest/2021-07-15-cpp-hualien-106/</id>
     <published>2021-07-15T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -367,8 +367,8 @@
   
   <entry>
     <title>HackerRank Sorting 1.Bubble Sort</title>
-    <link href="http://mtmatt.page/2021/07/14/2021-07-14-hackerrank-sorting-1-bubble-sort/"/>
-    <id>http://mtmatt.page/2021/07/14/2021-07-14-hackerrank-sorting-1-bubble-sort/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-1-bubble-sort/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-1-bubble-sort/</id>
     <published>2021-07-14T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -396,8 +396,8 @@
   
   <entry>
     <title>HackerRank Sorting 2.Mark and Toys</title>
-    <link href="http://mtmatt.page/2021/07/14/2021-07-14-hackerrank-sorting-2-mark-and-toys/"/>
-    <id>http://mtmatt.page/2021/07/14/2021-07-14-hackerrank-sorting-2-mark-and-toys/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-2-mark-and-toys/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-14-hackerrank-sorting-2-mark-and-toys/</id>
     <published>2021-07-14T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -425,8 +425,8 @@
   
   <entry>
     <title>HackerRank Array 1.2D Array - DS</title>
-    <link href="http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-1-2d-array-ds/"/>
-    <id>http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-1-2d-array-ds/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-1-2d-array-ds/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-1-2d-array-ds/</id>
     <published>2021-07-13T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -454,8 +454,8 @@
   
   <entry>
     <title>HackerRank Array 3.New Year Chaos</title>
-    <link href="http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-3-new-year-chaos/"/>
-    <id>http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-3-new-year-chaos/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-3-new-year-chaos/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-3-new-year-chaos/</id>
     <published>2021-07-13T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -483,8 +483,8 @@
   
   <entry>
     <title>HackerRank Array 2.Left Rotation</title>
-    <link href="http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-2-left-rotation/"/>
-    <id>http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-2-left-rotation/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-2-left-rotation/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-2-left-rotation/</id>
     <published>2021-07-13T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -512,8 +512,8 @@
   
   <entry>
     <title>HackerRank Array 4.Minimum Swaps 2</title>
-    <link href="http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-4-minimum-swaps-2/"/>
-    <id>http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-4-minimum-swaps-2/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-4-minimum-swaps-2/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-4-minimum-swaps-2/</id>
     <published>2021-07-13T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
@@ -541,8 +541,8 @@
   
   <entry>
     <title>HackerRank Array 5.Array Manipulation</title>
-    <link href="http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-5-array-manipulation/"/>
-    <id>http://mtmatt.page/2021/07/13/2021-07-13-hacker-rank-array-5-array-manipulation/</id>
+    <link href="http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-5-array-manipulation/"/>
+    <id>http://mtmatt.page/cppojques/2021-07-13-hacker-rank-array-5-array-manipulation/</id>
     <published>2021-07-13T00:00:00.000Z</published>
     <updated>2021-11-02T11:50:07.183Z</updated>
     
