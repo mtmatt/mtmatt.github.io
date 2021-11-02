@@ -171,53 +171,6 @@
 
 
   
-    <article id="post-cpp-apcs325-q-2-12" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/apcs/325/cpp-apcs325-q-2-12/" class="article-date">
-  <time class="dt-published" datetime="2021-06-18T00:00:00.000Z" itemprop="datePublished">2021-06-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/apcs/">apcs</a>►<a class="article-category-link" href="/categories/apcs/325/">325</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/apcs/325/cpp-apcs325-q-2-12/">C++ APCS325 Q-2-12 最接近的子矩陣和</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k,m,n;</span><br><span class="line">    cin&gt;&gt;k&gt;&gt;m&gt;&gt;n;</span><br><span class="line">    vector&lt;<span class="keyword">int</span>&gt; a[<span class="number">55</span>],ps[<span class="number">55</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) ps[<span class="number">0</span>].<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">            <span class="keyword">int</span> tmp;cin&gt;&gt;tmp;</span><br><span class="line">            a[i].<span class="built_in">push_back</span>(tmp);</span><br><span class="line">            ps[i].<span class="built_in">push_back</span>(tmp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">            ps[i][j]+=ps[i<span class="number">-1</span>][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> best=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            <span class="function">set&lt;<span class="keyword">int</span>&gt; <span class="title">s</span><span class="params">(&#123;<span class="number">0</span>&#125;)</span></span>;</span><br><span class="line">            <span class="keyword">int</span> psum=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> o=<span class="number">0</span>;o&lt;n;o++)&#123;</span><br><span class="line">                psum+=(ps[j][o]-ps[i][o]);</span><br><span class="line">                <span class="keyword">auto</span> it=s.<span class="built_in">lower_bound</span>(psum-k);</span><br><span class="line">                <span class="keyword">if</span>(it!=s.<span class="built_in">end</span>())&#123;</span><br><span class="line">                    best=<span class="built_in">max</span>(best,psum-(*it));</span><br><span class="line">                &#125;</span><br><span class="line">                s.<span class="built_in">insert</span>(psum);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;best&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>以後都用這個啦(Highlighting code block)，這樣就不用手動調色了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mtmatt.page/apcs/325/cpp-apcs325-q-2-12/" data-id="ckvi1ztk4000qhgnn8937f7gg" data-title="C++ APCS325 Q-2-12 最接近的子矩陣和" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-cpp-tioj-1161" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/cppojques/cpp-tioj-1161/" class="article-date">
@@ -303,6 +256,53 @@
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onlinejudge/" rel="tag">onlinejudge</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-cpp-apcs-325-q-2-12" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/apcs/325/cpp-apcs-325-q-2-12/" class="article-date">
+  <time class="dt-published" datetime="2021-06-18T00:00:00.000Z" itemprop="datePublished">2021-06-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/apcs/">apcs</a>►<a class="article-category-link" href="/categories/apcs/325/">325</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/apcs/325/cpp-apcs-325-q-2-12/">C++ APCS325 Q-2-12 最接近的子矩陣和</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k,m,n;</span><br><span class="line">    cin&gt;&gt;k&gt;&gt;m&gt;&gt;n;</span><br><span class="line">    vector&lt;<span class="keyword">int</span>&gt; a[<span class="number">55</span>],ps[<span class="number">55</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) ps[<span class="number">0</span>].<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">            <span class="keyword">int</span> tmp;cin&gt;&gt;tmp;</span><br><span class="line">            a[i].<span class="built_in">push_back</span>(tmp);</span><br><span class="line">            ps[i].<span class="built_in">push_back</span>(tmp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">            ps[i][j]+=ps[i<span class="number">-1</span>][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> best=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            <span class="function">set&lt;<span class="keyword">int</span>&gt; <span class="title">s</span><span class="params">(&#123;<span class="number">0</span>&#125;)</span></span>;</span><br><span class="line">            <span class="keyword">int</span> psum=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> o=<span class="number">0</span>;o&lt;n;o++)&#123;</span><br><span class="line">                psum+=(ps[j][o]-ps[i][o]);</span><br><span class="line">                <span class="keyword">auto</span> it=s.<span class="built_in">lower_bound</span>(psum-k);</span><br><span class="line">                <span class="keyword">if</span>(it!=s.<span class="built_in">end</span>())&#123;</span><br><span class="line">                    best=<span class="built_in">max</span>(best,psum-(*it));</span><br><span class="line">                &#125;</span><br><span class="line">                s.<span class="built_in">insert</span>(psum);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;best&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以後都用這個啦(Highlighting code block)，這樣就不用手動調色了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mtmatt.page/apcs/325/cpp-apcs-325-q-2-12/" data-id="ckvi34uct0000o0nne5nl94vi" data-title="C++ APCS325 Q-2-12 最接近的子矩陣和" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apcs/" rel="tag">apcs</a></li></ul>
 
     </footer>
   </div>
