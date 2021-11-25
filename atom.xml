@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>mtMatt.Page</title>
   
-  <subtitle>a coding page</subtitle>
+  <subtitle>Powered by GitHub and Hexo</subtitle>
   <link href="http://gitpage.mtmatt.page/atom.xml" rel="self"/>
   
   <link href="http://gitpage.mtmatt.page/"/>
