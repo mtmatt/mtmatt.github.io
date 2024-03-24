@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言今天，我試著將 Google 帳號做整理，把少用的 Gmail 關閉，關閉前我透過 Google Takeout 將 Gmail 備份並匯出，匯出後得到的電子郵件，我發現是 MBOX 格式，打開 Google Takeout 匯出的 ZIP 檔，可以看到有一個貼心的說明檔：「封存_總覽.html」，裡面說明可以怎麼處理這個匯出的檔案，由於我花了一點點時間摸索才讓這個 MBOX 檔得以使用，所以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 ThunderBird 將 Gmail 備份檔轉換至另外一個 Gmail 帳號">
+<meta property="og:url" content="http://mtmatt.one/google/import-google-takeout-by-thunderbird-with-importexporttools-ng/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言今天，我試著將 Google 帳號做整理，把少用的 Gmail 關閉，關閉前我透過 Google Takeout 將 Gmail 備份並匯出，匯出後得到的電子郵件，我發現是 MBOX 格式，打開 Google Takeout 匯出的 ZIP 檔，可以看到有一個貼心的說明檔：「封存_總覽.html」，裡面說明可以怎麼處理這個匯出的檔案，由於我花了一點點時間摸索才讓這個 MBOX 檔得以使用，所以">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313374660_59f44fa97c_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235229_43467e7137_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313350330_1f378752f4_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313350305_995f033e61_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313119318_73020c9f6c_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53312873551_cf37d6a35a_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235219_ebdc1a4a62_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53312873536_c288291e32_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53312007327_60cb6a44fa_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313350290_88b1009e68_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53312007302_f40a38bc9a_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235184_560ac29271_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235179_b8cd1c0d21_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313350270_31e9912731_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235174_9dcb6a6ff7_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235174_9dcb6a6ff7_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53312873491_a6092f37de_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235164_15991d882e_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235164_15991d882e_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235149_aef5b09289_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313350225_7f2efb3089_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53312007247_82fbbc6f5b_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313119213_1f6bb9263f_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53312873451_6f2ff6e28b_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53312873441_7a7224bcdc_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313119203_2a5f09ebe0_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313350195_3ce811a094_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53313235099_25f7d005d1_c.jpg">
+<meta property="article:published_time" content="2023-11-06T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-06T08:52:37.781Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="googleAccount">
+<meta property="article:tag" content="gmail">
+<meta property="article:tag" content="mozilla">
+<meta property="article:tag" content="thunderbird">
+<meta property="article:tag" content="importExportToolsNG">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/53313374660_59f44fa97c_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/google/import-google-takeout-by-thunderbird-with-importexporttools-ng/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>使用 ThunderBird 將 Gmail 備份檔轉換至另外一個 Gmail 帳號 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/google/import-google-takeout-by-thunderbird-with-importexporttools-ng/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用 ThunderBird 將 Gmail 備份檔轉換至另外一個 Gmail 帳號
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-11-06 08:00:00" itemprop="dateCreated datePublished" datetime="2023-11-06T08:00:00+08:00">2023-11-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/google/" itemprop="url" rel="index"><span itemprop="name">google</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>2 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今天，我試著將 Google 帳號做整理，把少用的 Gmail 關閉，關閉前我透過 Google Takeout 將 Gmail 備份並匯出，匯出後得到的電子郵件，我發現是 MBOX 格式，打開 Google Takeout 匯出的 ZIP 檔，可以看到有一個貼心的說明檔：「封存_總覽.html」，裡面說明可以怎麼處理這個匯出的檔案，由於我花了一點點時間摸索才讓這個 MBOX 檔得以使用，所以，就決定一併做個紀錄，以備不時之需。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313374660/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (0)"><img src="https://live.staticflickr.com/65535/53313374660_59f44fa97c_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (0)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<hr>
+<h3 id="匯出-Google-Takeout"><a href="#匯出-Google-Takeout" class="headerlink" title="匯出 Google Takeout"></a>匯出 Google Takeout</h3><ol>
+<li>走一趟 <a target="_blank" rel="noopener" href="https://takeout.google.com./">https://takeout.google.com。</a></li>
+<li>選擇想要匯出的內容，本次的紀錄裡，我要匯出的是 Gmail。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235229/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (1)"><img src="https://live.staticflickr.com/65535/53313235229_43467e7137_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (1)"/></a> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313350330/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (2)"><img src="https://live.staticflickr.com/65535/53313350330_1f378752f4_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313350305/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (3)"><img src="https://live.staticflickr.com/65535/53313350305_995f033e61_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (3)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313119318/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (4)"><img src="https://live.staticflickr.com/65535/53313119318_73020c9f6c_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (4)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>我選擇「轉移至：『以電子郵件傳送下載連結』」，所以，Google 處理完 Takeout 檔之後，會寄一封 Email 到我在 Google Takeout 設定過程所留下來的 Email 信箱，這封 Email 裡面除了一些說明文字外，最重要的是會有一個檔案下載的連結。下圖是我已經從該連結將檔案載回主機，並且準備進行解壓縮。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53312873551/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (5)"><img src="https://live.staticflickr.com/65535/53312873551_cf37d6a35a_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (5)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>承上，直接原地解壓縮的話，會得到一個「Takeout」資料夾，打開這個資料夾，第一層會看到「封存_總覽.html」(檔案)與「郵件」(資料夾)，再打開「郵件」這個資料夾，會再看到「包括 [垃圾郵件] 和 [垃圾桶] 內的所有郵件.mbox」這個檔案，記得這個檔案所在的路徑，因為等一下匯入的時候就會用得到。</li>
+</ol>
+<hr>
+<h3 id="設定-ThunderBird"><a href="#設定-ThunderBird" class="headerlink" title="設定 ThunderBird"></a>設定 ThunderBird</h3><ol>
+<li><p>登入另外一個 Gmail 帳號(或是自己想要匯入的 Email 帳號)。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235219/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (6)"><img src="https://live.staticflickr.com/65535/53313235219_ebdc1a4a62_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53312873536/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (7)"><img src="https://live.staticflickr.com/65535/53312873536_c288291e32_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (7)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53312007327/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (8)"><img src="https://live.staticflickr.com/65535/53312007327_60cb6a44fa_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (8)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313350290/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (9)"><img src="https://live.staticflickr.com/65535/53313350290_88b1009e68_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (9)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53312007302/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (10)"><img src="https://live.staticflickr.com/65535/53312007302_f40a38bc9a_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (10)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235184/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (11)"><img src="https://live.staticflickr.com/65535/53313235184_560ac29271_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (11)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235179/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (12)"><img src="https://live.staticflickr.com/65535/53313235179_b8cd1c0d21_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (12)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313350270/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (13)"><img src="https://live.staticflickr.com/65535/53313350270_31e9912731_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (13)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+<li><p>在「本機信件匣」，新增一個等一下要匯入的信件匣，命名隨意，只要找得到就好(下圖是用 importGoogleTakeout 命名)。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235174/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (14)"><img src="https://live.staticflickr.com/65535/53313235174_9dcb6a6ff7_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (14)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235174/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (14)"><img src="https://live.staticflickr.com/65535/53313235174_9dcb6a6ff7_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (14)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53312873491/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (15)"><img src="https://live.staticflickr.com/65535/53312873491_a6092f37de_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (15)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235164/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (16)"><img src="https://live.staticflickr.com/65535/53313235164_15991d882e_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (16)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235164/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (16)"><img src="https://live.staticflickr.com/65535/53313235164_15991d882e_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (16)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+</ol>
+<hr>
+<h3 id="安裝-ImportExportTools-NG"><a href="#安裝-ImportExportTools-NG" class="headerlink" title="安裝 ImportExportTools NG"></a>安裝 ImportExportTools NG</h3><ol>
+<li>點一下設定這個【齒輪】圖示。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235149/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (17)"><img src="https://live.staticflickr.com/65535/53313235149_aef5b09289_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (17)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>再點【附加元件與佈景主題】。<a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313350225/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (18)"><img src="https://live.staticflickr.com/65535/53313350225_7f2efb3089_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (18)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>在「搜尋選項」方框裡，打關鍵字「importexporttools ng」，再按下【Enter】，把「ImportExportTools NG」找出來。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53312007247/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (19)"><img src="https://live.staticflickr.com/65535/53312007247_82fbbc6f5b_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (19)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>找出來之後，進行安裝的動作。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313119213/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (20)"><img src="https://live.staticflickr.com/65535/53313119213_1f6bb9263f_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (20)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53312873451/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (21)"><img src="https://live.staticflickr.com/65535/53312873451_6f2ff6e28b_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (21)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53312873441/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (22)"><img src="https://live.staticflickr.com/65535/53312873441_7a7224bcdc_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (22)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="進行匯入大法"><a href="#進行匯入大法" class="headerlink" title="進行匯入大法"></a>進行匯入大法</h3><ol>
+<li>在剛才「本機信件匣」新增要拿來匯入的信件匣上頭，點右鍵並滑到「ImportExportTools NG」，再順著找到「导入 mbox 文件」，點一下裡面的「单个 mbox 文件」。<a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313119203/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (23)"><img src="https://live.staticflickr.com/65535/53313119203_2a5f09ebe0_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (23)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>找到並選取「包括 [垃圾郵件] 和 [垃圾桶] 內的所有郵件.mbox」這個檔案。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313350195/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (24)"><img src="https://live.staticflickr.com/65535/53313350195_3ce811a094_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (24)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>匯入後，我觀察會新增一個「包括 [垃圾郵件] 和 [垃圾桶] 內的所有郵件」信件匣，只要將自己想要轉入 Gmail 帳號的信件選取後，拖放到 ThunerBird 上面已登入的 Gmail 帳號，就算大功告成。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53313235099/in/dateposted-public/" title="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (25)"><img src="https://live.staticflickr.com/65535/53313235099_25f7d005d1_c.jpg" width="800" height="500" alt="importGoogleTakeoutbyThunderbirdwithImportExportToolsNGEp (25)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>完成上述程序，如果還是沒有看到自己想要還原的 Email，可以試著去「封存」裡面找找，按理來說是找得到的。</li>
+<li><a target="_blank" rel="noopener" href="https://briian.com/5574/">用 Thunderbird 備份 Gmail 中的郵件（或其他webmail） – 重灌狂人</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/googleAccount/" rel="tag"># googleAccount</a>
+              <a href="/tags/gmail/" rel="tag"># gmail</a>
+              <a href="/tags/mozilla/" rel="tag"># mozilla</a>
+              <a href="/tags/thunderbird/" rel="tag"># thunderbird</a>
+              <a href="/tags/importExportToolsNG/" rel="tag"># importExportToolsNG</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/boshiamy/opensuse-leap-15-5-and-boshiamy/" rel="prev" title="openSUSE Leap 15.5 與嘸蝦米">
+      <i class="fa fa-chevron-left"></i> openSUSE Leap 15.5 與嘸蝦米
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/boshiamy/fedora-39-and-boshiamy/" rel="next" title="Fedora 39 與嘸蝦米">
+      Fedora 39 與嘸蝦米 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%AF%E5%87%BA-Google-Takeout"><span class="nav-number">2.</span> <span class="nav-text">匯出 Google Takeout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9A-ThunderBird"><span class="nav-number">3.</span> <span class="nav-text">設定 ThunderBird</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-ImportExportTools-NG"><span class="nav-number">4.</span> <span class="nav-text">安裝 ImportExportTools NG</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%B2%E8%A1%8C%E5%8C%AF%E5%85%A5%E5%A4%A7%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">進行匯入大法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">6.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

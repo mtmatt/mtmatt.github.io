@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言5 月 24 日，微軟針對 Windows 11 釋出 KB5014019 (作業系統組建 22000.708) 的更新。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[版本更新] 快速回顧 微軟發布 KB5014019 (Windows 11 作業系統組建 22000.708)">
+<meta property="og:url" content="http://mtmatt.one/windows/kb5014019-windows-11-os-build-22000-708/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言5 月 24 日，微軟針對 Windows 11 釋出 KB5014019 (作業系統組建 22000.708) 的更新。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52100873267_7cf072027e_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52102171924_64bfa833e0_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52112540496_1a7c1fee98_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52111511337_14dc5c4c86_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52101934573_bd0897f12b_o.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52100873227_e025ed18a1_o.jpg">
+<meta property="article:published_time" content="2022-05-27T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-03T11:14:40.962Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="windows11">
+<meta property="article:tag" content="windowsupdate">
+<meta property="article:tag" content="quickrecap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52100873267_7cf072027e_o.png">
+
+<link rel="canonical" href="http://mtmatt.one/windows/kb5014019-windows-11-os-build-22000-708/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>[版本更新] 快速回顧 微軟發布 KB5014019 (Windows 11 作業系統組建 22000.708) | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/windows/kb5014019-windows-11-os-build-22000-708/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [版本更新] 快速回顧 微軟發布 KB5014019 (Windows 11 作業系統組建 22000.708)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-05-27 08:00:00" itemprop="dateCreated datePublished" datetime="2022-05-27T08:00:00+08:00">2022-05-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/windows/" itemprop="url" rel="index"><span itemprop="name">windows</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>5 月 24 日，微軟針對 Windows 11 釋出 KB5014019 (作業系統組建 22000.708) 的更新。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52100873267/in/dateposted-public/" title="KB5014019Ep1"><img src="https://live.staticflickr.com/65535/52100873267_7cf072027e_o.png" alt="KB5014019Ep1"></a></p>
+<hr>
+<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><ol>
+<li><p>官方說明文件：<a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/topic/may-24-2022-kb5014019-os-build-22000-708-preview-442dbde4-ce28-4345-aecf-2d4744376418">May 24, 2022—KB5014019 (OS Build 22000.708) Preview</a>，截至本篇紀錄發稿前，官方的說明還沒有繁體中文版。另外，說明文件提到這支更新的性質(如下)。</p>
+<blockquote>
+<p>This non-security update includes quality improvements. Key changes…</p>
+</blockquote>
+</li>
+<li><p>上面的網址是「<a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/topic/%E2%80%A6%E3%80%8D%EF%BC%8C%E6%9C%89%E8%88%88%E8%B6%A3%E7%9A%84%E4%BC%99%E4%BC%B4%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%A9%A6%E8%91%97%E6%8A%8A%E3%80%8Cen-us%E3%80%8D%E6%94%B9%E6%88%90%E3%80%8Czh-tw%E3%80%8D%E6%88%96%E3%80%8Czh-cn%E3%80%8D%EF%BC%8C%E5%86%8D%E6%8C%89%E3%80%8CEnter%E3%80%8D%E9%8D%B5%E3%80%82%E6%88%91%E8%A9%A6%E8%91%97%E6%94%B9%E6%88%90%E3%80%8Czh-tw%E3%80%8D%E5%BE%8C%EF%BC%8C%E7%9B%AE%E5%89%8D%E5%BE%97%E5%88%B0%E7%9A%84%E7%B5%90%E6%9E%9C%E5%A6%82%E4%B8%8B%E5%9C%96%EF%BC%8C%E5%B0%B1%E6%98%AF%E2%80%A6%E8%AA%AA%E6%98%8E%E6%96%87%E4%BB%B6%E9%82%84%E6%98%AF%E7%B6%AD%E6%8C%81%E8%8B%B1%E6%96%87%EF%BC%8C%E4%BD%86%E7%B6%B2%E9%A0%81%E5%B0%8E%E8%A6%BD%E7%AD%89%E5%85%B6%E4%BB%96%E5%9C%B0%E6%96%B9%EF%BC%8C%E5%91%88%E7%8F%BE%E7%9A%84%E6%98%AF%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E3%80%82">https://support.microsoft.com/en-us/topic/…」，有興趣的伙伴，可以試著把「en-us」改成「zh-tw」或「zh-cn」，再按「Enter」鍵。我試著改成「zh-tw」後，目前得到的結果如下圖，就是…說明文件還是維持英文，但網頁導覽等其他地方，呈現的是繁體中文。</a> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52102171924/in/dateposted-public/" title="KB5014019Ep7"><img src="https://live.staticflickr.com/65535/52102171924_64bfa833e0_b.jpg" alt="KB5014019Ep7"></a></p>
+</li>
+<li><p>(2022 年 5 月 31 日更新說明)我今天試著用上述方法重新進入頁面，發現已經轉為繁體中文的說明頁面(如下圖)，相信這個語言還是相對親切許多。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52112540496/in/dateposted-public/" title="translationOfKbPageEp1"><img src="https://live.staticflickr.com/65535/52112540496_1a7c1fee98_b.jpg" alt="translationOfKbPageEp1"></a> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52111511337/in/dateposted-public/" title="translationOfKbPageEp2"><img src="https://live.staticflickr.com/65535/52111511337_14dc5c4c86_b.jpg" alt="translationOfKbPageEp2"></a></p>
+</li>
+<li><p>從上一支補丁(<a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755">May 10, 2022—KB5013943 (OS Build 22000.675)</a>)至今，官方的說明都還沒有中文化，可能是有些時候中文化之後，還要讓使用者「中翻中」，所以，我猜這些說明，有可能暫時不會再做中文化，我是滿期待未來有更完美的中文化說明後，再次展現給使用者閱讀。(2022 年 5 月 31 日這天，我再試著進入，發現已有繁體中文說明。)</p>
+</li>
+<li><p>這一次，我會更新的原因，主要是想要測試一下「Windows 焦點」(Windows spotlight)，細節的部分，我留到下一段再做說明。</p>
+<blockquote>
+<p>Windows spotlight on the desktop brings the world to your desktop with new background pictures. With this feature, new pictures will automatically appear as your desktop background. This feature already exists for the lock screen.</p>
+</blockquote>
+</li>
+<li><p>其實，另外一個更新：Microsoft Family Safety，我個人也滿期待的，只不過，我家小朋友的作業系統雖然都可以更新到 Windows 11，但，我目前仍然保守地讓機器們都停在 Windows 10。是也滿期待 Windows 10 也有類似的更新與改善，這個部分，我再找時間去確認一下下。</p>
+<blockquote>
+<p>Improves the Family Safety verification experience for a child account when you send a request for additional screen time.</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="「Windows-焦點」-Windows-spotlight"><a href="#「Windows-焦點」-Windows-spotlight" class="headerlink" title="「Windows 焦點」(Windows spotlight)"></a>「Windows 焦點」(Windows spotlight)</h3><p>我之前都用 <a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-tw/bing/bing-wallpaper">Bing Wallpaper</a> 來達到持續變換桌布的效果，透過這支 App 更換桌布，會讓我產生一種從窗內望向窗外無界限的感覺。</p>
+<p>而今次更新裡的「Windows 焦點」，感覺比較多是把類似的功能，直接整合到系統裡面，使用者就不用另外安裝 App。</p>
+<p>不過，如果您跟我一樣，也有安裝 <a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-tw/bing/bing-wallpaper">Bing Wallpaper</a> 的話，就會發現這 2 個功能並不是協同合作的。</p>
+<p>大致上的狀況是「Windows 焦點」改動了 <a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-tw/bing/bing-wallpaper">Bing Wallpaper</a> 設定的桌布，系統就會丟出下列的通知。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52101934573/in/dateposted-public/" title="KB5014019Ep3"><img src="https://live.staticflickr.com/65535/52101934573_bd0897f12b_o.jpg" alt="KB5014019Ep3"></a></p>
+<p>如果我們啟用 <a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-tw/bing/bing-wallpaper">Bing Wallpaper</a>，「Windows 焦點」會從設定裡面自動跳掉。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52100873227/in/dateposted-public/" title="KB5014019Ep2"><img src="https://live.staticflickr.com/65535/52100873227_e025ed18a1_o.jpg" alt="KB5014019Ep2"></a></p>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>我正在思考，是不是要繼續使用 <a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-tw/bing/bing-wallpaper">Bing Wallpaper</a>。</p>
+<p>另外，我另外一部機器早就跑完更新，也拿來處理工作上的事，度過一整天(還包括加班)。</p>
+<p>截至目前在使用上，沒有特別奇怪的狀況發生。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/windows/" rel="tag"># windows</a>
+              <a href="/tags/windows11/" rel="tag"># windows11</a>
+              <a href="/tags/windowsupdate/" rel="tag"># windowsupdate</a>
+              <a href="/tags/quickrecap/" rel="tag"># quickrecap</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/boshiamy/installing-fcitx-4-with-boshiamy-table-on-ubuntu-22-04-lts/" rel="prev" title="在 ubuntu 22.04 LTS 上輕鬆安裝嘸蝦米 (2023 年 9 月 15 日更新)">
+      <i class="fa fa-chevron-left"></i> 在 ubuntu 22.04 LTS 上輕鬆安裝嘸蝦米 (2023 年 9 月 15 日更新)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/boshiamy/ubuntu-22-04-lts-and-official-boshiamy-ibus-table/" rel="next" title="ubuntu 22.04 LTS 與行易有限公司釋出的官方 iBus 版本嘸蝦米表格檔">
+      ubuntu 22.04 LTS 與行易有限公司釋出的官方 iBus 版本嘸蝦米表格檔 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%89%8D%E5%85%A7%E5%AE%B9%E6%A6%82%E8%A6%BD"><span class="nav-number">2.</span> <span class="nav-text">更新前內容概覽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%8CWindows-%E7%84%A6%E9%BB%9E%E3%80%8D-Windows-spotlight"><span class="nav-number">3.</span> <span class="nav-text">「Windows 焦點」(Windows spotlight)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

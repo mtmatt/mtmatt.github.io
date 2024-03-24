@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言Zorin OS 也是一支以 ubuntu 為基礎的 Linux Distro。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zorin OS 16.3 Core 與嘸蝦米">
+<meta property="og:url" content="http://mtmatt.one/boshiamy/zorin-os-16-3-core-and-boshiamy/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言Zorin OS 也是一支以 ubuntu 為基礎的 Linux Distro。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53172742516_d8c4eb312d_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53173248363_4fa338cf23_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53172151442_fba6a15823_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53173176775_6a5338cd43_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53172943389_93e1d2229c_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53173226718_f436a857d6_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53173226648_d735fd9507_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53172943289_c83b4b54b8_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53172742571_24dc04151c_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53172742576_523495b546_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53172943294_36714fa2d9_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53172742606_8327d7b468_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53172943194_eb9a0550c0_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53173176680_8b85ba6347_c.jpg">
+<meta property="article:published_time" content="2023-09-08T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-17T01:52:01.435Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="ibus">
+<meta property="article:tag" content="fcitx">
+<meta property="article:tag" content="fcitx-table-boshiamy">
+<meta property="article:tag" content="zorinos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/53172742516_d8c4eb312d_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/boshiamy/zorin-os-16-3-core-and-boshiamy/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>Zorin OS 16.3 Core 與嘸蝦米 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/boshiamy/zorin-os-16-3-core-and-boshiamy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Zorin OS 16.3 Core 與嘸蝦米
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-09-08 08:00:00" itemprop="dateCreated datePublished" datetime="2023-09-08T08:00:00+08:00">2023-09-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/boshiamy/" itemprop="url" rel="index"><span itemprop="name">boshiamy</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.8k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Zorin OS 也是一支以 ubuntu 為基礎的 Linux Distro。<br> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53172742516/in/dateposted/" title="zorinOS16.3andBoshiamyEp (12)"><img src="https://live.staticflickr.com/65535/53172742516_d8c4eb312d_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (12)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<hr>
+<h3 id="安裝-Zorin-OS"><a href="#安裝-Zorin-OS" class="headerlink" title="安裝 Zorin OS"></a>安裝 Zorin OS</h3><ol>
+<li>安裝的過程，就像是 ubuntu 23.04 版本之前的安裝程式，換上另外一張皮，初次進入系統，可以跟著指示走，基本而言，並沒有什麼難度。</li>
+<li>在 Zorin OS 16.3 我注意到一件事，在安裝過程，安裝程式把「參加人口普查」的前面再加個「不要」二個字，以現在的使用介面引導話語而言，使用者可能會很容易地就參加人口普查 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53173248363/in/dateposted/" title="zorinOS16.3andBoshiamyEp (14)"><img src="https://live.staticflickr.com/65535/53173248363_4fa338cf23_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (14)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="在-Zorin-OS-16-3-上安裝及使用嘸蝦米"><a href="#在-Zorin-OS-16-3-上安裝及使用嘸蝦米" class="headerlink" title="在 Zorin OS 16.3 上安裝及使用嘸蝦米"></a>在 Zorin OS 16.3 上安裝及使用嘸蝦米</h3><p>推薦順序上，就跟 Zorin OS 16 一樣：iBus → fcitx(4) → Fcitx5。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53172151442/in/dateposted/" title="zorinOS16.3andBoshiamyEp (1)"><img src="https://live.staticflickr.com/65535/53172151442_fba6a15823_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (1)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53173176775/in/photostream/" title="zorinOS16.3andBoshiamyEp (2)"><img src="https://live.staticflickr.com/65535/53173176775_6a5338cd43_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<h4 id="iBus"><a href="#iBus" class="headerlink" title="iBus"></a>iBus</h4><ul>
+<li>Zorin OS 16.3 預設的輸入法是 iBus，ibut-table 這支套件一開始就已經安裝好，我個人滿推薦直接服用官網的表格檔。</li>
+</ul>
+<h4 id="fcitx-4"><a href="#fcitx-4" class="headerlink" title="fcitx(4)"></a>fcitx(4)</h4><ol>
+<li><p>相較於我在 Zorin OS 16 時所下的指令(<code>sudo apt-get install fcitx fcitx-m17n fcitx-table-boshiamy</code>)，Zorin OS 16.3 變得簡單很多，而且與多數的 ubuntu 及其衍生發行版一樣，指令如下。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx-table-boshiamy</span><br></pre></td></tr></table></figure>
+<p> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53172943389/in/photostream/" title="zorinOS16.3andBoshiamyEp (3)"><img src="https://live.staticflickr.com/65535/53172943389_93e1d2229c_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (3)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53173226718/in/photostream/" title="zorinOS16.3andBoshiamyEp (4)"><img src="https://live.staticflickr.com/65535/53173226718_f436a857d6_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (4)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+<li><p>從開始選單，進入「設定值」→「地區和語言」→「管理安裝的語言」，設定 fcitx 為「鍵盤輸入法系統」(這個地方，也可以用一道指令搞定：<code>im-config -n fcitx</code>)。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53173226648/in/photostream/" title="zorinOS16.3andBoshiamyEp (5)"><img src="https://live.staticflickr.com/65535/53173226648_d735fd9507_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (5)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53172943289/in/photostream/" title="zorinOS16.3andBoshiamyEp (6)"><img src="https://live.staticflickr.com/65535/53172943289_c83b4b54b8_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53172742571/in/photostream/" title="zorinOS16.3andBoshiamyEp (7)"><img src="https://live.staticflickr.com/65535/53172742571_24dc04151c_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (7)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53172742576/in/photostream/" title="zorinOS16.3andBoshiamyEp (8)"><img src="https://live.staticflickr.com/65535/53172742576_523495b546_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (8)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+<li><p>重新啟動 Zorin OS。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53172943294/in/photostream/" title="zorinOS16.3andBoshiamyEp (9)"><img src="https://live.staticflickr.com/65535/53172943294_36714fa2d9_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (9)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53172742606/in/photostream/" title="zorinOS16.3andBoshiamyEp (10)"><img src="https://live.staticflickr.com/65535/53172742606_8327d7b468_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (10)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+<li><p>原則上，雖然系統上看起來是 iBus 與 fcitx(4) 兩個輸入法框架並行，但使用 Win+Space 切換到 iBus 的新酷音輸入法是無法使用的，而只能是 Ctrl+Space 將輸入法切換到 fcitx(4) 的嘸蝦米輸入法。換句話說，設定好 fcitx(4) 之後，基本上，就可以移除「輸入來源」裡的「新酷音」，讓輸入法框架在呈現上單純一點。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53172943194/in/photostream/" title="zorinOS16.3andBoshiamyEp (11)"><img src="https://live.staticflickr.com/65535/53172943194_eb9a0550c0_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (11)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/jutedev/53173176680/in/photostream/" title="zorinOS16.3andBoshiamyEp (13)"><img src="https://live.staticflickr.com/65535/53173176680_8b85ba6347_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (13)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+</ol>
+<h4 id="Fcitx5"><a href="#Fcitx5" class="headerlink" title="Fcitx5"></a>Fcitx5</h4><ol>
+<li>可以透過 APT 安裝 Fcitx5，但是軟體倉庫裡並沒有 fcitx5-table-extra，如要使用，應該也可以像 Debian 12 一樣，走一趟 pkgs.org 找表格檔處理。</li>
+<li>我不推薦的原因，就是除了安裝軟體倉庫的 Fcitx5 相關程式外，還得另外處理表格檔，多幾道工法才能達到目的，除非讓我遇到某些程式，iBus 或 fcitx(4) 無法使用，我才會把念頭動到 Fcitx5 身上。</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 Zorin-OS-16.3-Core-64-bit.iso。</li>
+<li>Zorin OS 16.3 分為 3 個版本，分別是需要付費的 Pro 版(美金 40.5 元)、Core 版與 Lite 版，3 個版本都有 Zorin 外觀(皮)，要簡說出不同的部分，應該是就是付費的 Pro 版包含了 Core 與 Lite 版的功能外，還有類 macOS、 Windows 11 &amp; Classic 與 ubuntu 等幾個桌面環境、內建專業層級的 App 套件包與進階的生產力軟體等等。</li>
+<li>我是在 Zorin OS 16.3 這一版(立基於 ubuntu 20.04.3 LTS) 開始與 Zorin OS 的。使用後不久，我就滿喜歡這一支 Distro 的，也曾經一度讓 Zorin OS 以雙系統的方式，在筆電上生活好長一段時間。今天再跑一趟，把玩一下 Zorin OS，一方面，想看看有沒有 Back to School 的優惠；另一方面，則是想要看看安裝嘸蝦米的部分，是不是更輕鬆簡單一點(按常理而言，這個想法應該是「肯定」的)。</li>
+<li>立基在 ubuntu 架構與特性上的 Distro，我目前知道有 Linux Mint、elementary OS 與這次紀錄的 Zorin OS，有一種開枝散葉的感覺。<br>(1)Linux Mint：From freedom came elegance.<br>(2)elementary OS：The thoughtful, capable, and ethical replacement for Windows and macOS.<br>(3)Zorin OS：Make your computer better, faster, easier, more powerful, secure, and reliable.</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/ibus/" rel="tag"># ibus</a>
+              <a href="/tags/fcitx/" rel="tag"># fcitx</a>
+              <a href="/tags/fcitx-table-boshiamy/" rel="tag"># fcitx-table-boshiamy</a>
+              <a href="/tags/zorinos/" rel="tag"># zorinos</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/boshiamy/ubuntu-23-04-and-boshiamy/" rel="prev" title="ubuntu 23.04 與嘸蝦米">
+      <i class="fa fa-chevron-left"></i> ubuntu 23.04 與嘸蝦米
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/boshiamy/manjaro-xfce-23-0-and-boshiamy/" rel="next" title="Manjaro XFCE 23.0 與嘸蝦米">
+      Manjaro XFCE 23.0 與嘸蝦米 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-Zorin-OS"><span class="nav-number">2.</span> <span class="nav-text">安裝 Zorin OS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-Zorin-OS-16-3-%E4%B8%8A%E5%AE%89%E8%A3%9D%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%98%B8%E8%9D%A6%E7%B1%B3"><span class="nav-number">3.</span> <span class="nav-text">在 Zorin OS 16.3 上安裝及使用嘸蝦米</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#iBus"><span class="nav-number">3.1.</span> <span class="nav-text">iBus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fcitx-4"><span class="nav-number">3.2.</span> <span class="nav-text">fcitx(4)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fcitx5"><span class="nav-number">3.3.</span> <span class="nav-text">Fcitx5</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

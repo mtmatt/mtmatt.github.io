@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言最近我同學有在架設我們學校的線上評測系統，而一開始我們的系統非常不穩定，因此，他想到可以寫離線的程式答題系統緩解我們上課的需求。而我看到這個系統，我覺得這是一個不錯的想法，並依此加以改良，新增 TLE 判定和超時時會強制停止，並且可以跨平台使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Offline Judge 離線程式評測系統">
+<meta property="og:url" content="http://mtmatt.one/misc/offline-judge-system/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言最近我同學有在架設我們學校的線上評測系統，而一開始我們的系統非常不穩定，因此，他想到可以寫離線的程式答題系統緩解我們上課的需求。而我看到這個系統，我覺得這是一個不錯的想法，並依此加以改良，新增 TLE 判定和超時時會強制停止，並且可以跨平台使用。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52131824719_f3ef187894_o.png">
+<meta property="article:published_time" content="2022-06-05T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-11T22:30:01.406Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="oj">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52131824719_f3ef187894_o.png">
+
+<link rel="canonical" href="http://mtmatt.one/misc/offline-judge-system/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>Offline Judge 離線程式評測系統 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/misc/offline-judge-system/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Offline Judge 離線程式評測系統
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-06-05 08:00:00" itemprop="dateCreated datePublished" datetime="2022-06-05T08:00:00+08:00">2022-06-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/misc/" itemprop="url" rel="index"><span itemprop="name">misc</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>8.2k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>15 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近我同學有在架設我們學校的線上評測系統，而一開始我們的系統非常不穩定，因此，他想到可以寫離線的程式答題系統緩解我們上課的需求。而我看到這個系統，我覺得這是一個不錯的想法，並依此加以改良，新增 TLE 判定和超時時會強制停止，並且可以跨平台使用。</p>
+<h2 id="使用-解題者"><a href="#使用-解題者" class="headerlink" title="使用(解題者)"></a>使用(解題者)</h2><p>一題會是一個資料夾，裡面會有隱藏檔案和非隱藏檔案。</p>
+<table>
+<thead>
+<tr>
+<th>檔案名稱</th>
+<th>大致內容</th>
+<th>是否隱藏</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC</td>
+<td>ascii art 的 AC 字樣</td>
+<td>True</td>
+</tr>
+<tr>
+<td>WA</td>
+<td>ascii art 的 WA 字樣</td>
+<td>True</td>
+</tr>
+<tr>
+<td>TLE</td>
+<td>ascii art 的 TLE 字樣</td>
+<td>True</td>
+</tr>
+<tr>
+<td>main.h</td>
+<td>主要程式</td>
+<td>原則上 True</td>
+</tr>
+<tr>
+<td>Run.cpp</td>
+<td>執行程式</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Solve.h</td>
+<td>使用者的程式</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>題目敘述</td>
+<td>False</td>
+</tr>
+<tr>
+<td>README.txt</td>
+<td>說明使用方法(如下)</td>
+<td>False</td>
+</tr>
+</tbody></table>
+<h3 id="README-txt-內文"><a href="#README-txt-內文" class="headerlink" title="README.txt 內文"></a>README.txt 內文</h3><h4 id="以下說明檔案功能及用法"><a href="#以下說明檔案功能及用法" class="headerlink" title="以下說明檔案功能及用法"></a>以下說明檔案功能及用法</h4><ol>
+<li>編譯並執行 Run.cpp 可以獲得評測結果</li>
+<li>程式碼請寫在 Solve.h 裡面</li>
+<li>題目敘述在 Description 裡面，一般應該是 .txt，.md 或 .pdf</li>
+<li>標準輸入輸出用 cin 和 cout 就可以了</li>
+</ol>
+<h4 id="以下說明答題結果"><a href="#以下說明答題結果" class="headerlink" title="以下說明答題結果"></a>以下說明答題結果</h4><ol>
+<li>AC 作答正確</li>
+<li>WA 輸出結果錯誤，或不符合題目要求</li>
+<li>TLE 執行時間過長</li>
+<li>程式跳掉 一般來說都是 RE(runtime error)</li>
+</ol>
+<h4 id="以下規定請勿違反"><a href="#以下規定請勿違反" class="headerlink" title="以下規定請勿違反"></a>以下規定請勿違反</h4><ol>
+<li>擅自更改除 Solve 以外的檔案</li>
+</ol>
+<h4 id="貼心小提醒"><a href="#貼心小提醒" class="headerlink" title="貼心小提醒"></a>貼心小提醒</h4><p>由於 Solve 函式會被重複使用，因此變數就算開在全域也要記得初始化</p>
+<h3 id="截圖"><a href="#截圖" class="headerlink" title="截圖"></a>截圖</h3><p><img src="https://live.staticflickr.com/65535/52131824719_f3ef187894_o.png" alt="AC"></p>
+<h2 id="使用-出題者"><a href="#使用-出題者" class="headerlink" title="使用(出題者)"></a>使用(出題者)</h2><p>資料夾中還含有一個隱藏資料夾 TestCase，裡面存放有測試資料。裡面的檔案如下</p>
+<table>
+<thead>
+<tr>
+<th>檔案名稱</th>
+<th>大致內容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gen.cpp</td>
+<td>預設的測試資料生成程式</td>
+</tr>
+<tr>
+<td>GraphGen.h</td>
+<td>圖論測資生成程式 ( <a href="https://mtmatt.one/misc/the-test-case-builder-of-graph-theory/">使用介紹</a> )</td>
+</tr>
+<tr>
+<td>log.txt</td>
+<td>測試資料們的基本資料</td>
+</tr>
+<tr>
+<td>OJ</td>
+<td>生成可以上傳到 UOJ 系統的測試資料</td>
+</tr>
+</tbody></table>
+<h3 id="Gen-cpp"><a href="#Gen-cpp" class="headerlink" title="Gen.cpp"></a>Gen.cpp</h3><p>介紹各個函式的功能</p>
+<table>
+<thead>
+<tr>
+<th>函式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RandomNumber(long long a,long long b)</td>
+<td>生成一個隨機數 ( 範圍[a,b] )</td>
+</tr>
+<tr>
+<td>RandomNumber(long long n)</td>
+<td>生成一個隨機數 ( 範圍[1,n] )</td>
+</tr>
+<tr>
+<td>solve()</td>
+<td>共用解答函式 ( 有需要的話 )</td>
+</tr>
+<tr>
+<td>SubTesk1(int a)</td>
+<td>生成第 a 筆測資</td>
+</tr>
+</tbody></table>
+<p>如果覺得 RandomNumber 太長，GraphGen.h 裡面有相同功能的函式 Rand</p>
+<p>其他都不是非常重要，主要是可以同時支援 UOJ 格式的測資。以下是 a+b problem 的範例。</p>
+<h4 id="code"><a href="#code" class="headerlink" title="code"></a>code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;GraphGen.h&quot;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">unsigned</span> seed=chrono::steady_clock::<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line">mt19937_64 rng=<span class="built_in">mt19937_64</span>(seed);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">RandomNumber</span><span class="params">(<span class="type">long</span> <span class="type">long</span> a,<span class="type">long</span> <span class="type">long</span> b)</span></span>&#123;</span><br><span class="line">    <span class="function">uniform_int_distribution&lt;<span class="type">long</span> <span class="type">long</span>&gt; <span class="title">dis</span><span class="params">(a,b)</span></span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">dis</span>(rng);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">RandomNumber</span><span class="params">(<span class="type">long</span> <span class="type">long</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">RandomNumber</span>(<span class="number">1</span>,n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">SubTesk1</span><span class="params">(<span class="type">int</span> a)</span></span>&#123;</span><br><span class="line">    string fileName=<span class="built_in">to_string</span>(a);</span><br><span class="line"></span><br><span class="line">    <span class="function">ofstream <span class="title">ques</span><span class="params">(fileName+<span class="string">&quot;.in&quot;</span>)</span>,<span class="title">ans</span><span class="params">(fileName+<span class="string">&quot;.out&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> aa=<span class="built_in">RandomNumber</span>(<span class="number">10000</span>),b=<span class="built_in">RandomNumber</span>(<span class="number">10000</span>);</span><br><span class="line"></span><br><span class="line">    ques&lt;&lt;aa&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;b&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    ans&lt;&lt;aa+b&lt;&lt;<span class="string">&quot;\n&quot;</span>; </span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;a&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">UOJ</span><span class="params">(<span class="type">int</span> a)</span></span>&#123;</span><br><span class="line">    string fileName=<span class="string">&quot;./OJ\\a&quot;</span>+<span class="built_in">to_string</span>(a);</span><br><span class="line"></span><br><span class="line">    <span class="function">ofstream <span class="title">ques</span><span class="params">(fileName+<span class="string">&quot;.in&quot;</span>)</span>,<span class="title">ans</span><span class="params">(fileName+<span class="string">&quot;.out&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> aa=<span class="built_in">RandomNumber</span>(<span class="number">10000</span>),b=<span class="built_in">RandomNumber</span>(<span class="number">10000</span>);</span><br><span class="line"></span><br><span class="line">    ques&lt;&lt;aa&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;b&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    ans&lt;&lt;aa+b&lt;&lt;<span class="string">&quot;\n&quot;</span>; </span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;a&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ExTest</span><span class="params">(<span class="type">int</span> a)</span></span>&#123;</span><br><span class="line">    string fileName=<span class="string">&quot;./OJ\\ex_a&quot;</span>+<span class="built_in">to_string</span>(a);</span><br><span class="line"></span><br><span class="line">    <span class="function">ofstream <span class="title">ques</span><span class="params">(fileName+<span class="string">&quot;.in&quot;</span>)</span>,<span class="title">ans</span><span class="params">(fileName+<span class="string">&quot;.out&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> aa=<span class="built_in">RandomNumber</span>(<span class="number">10000</span>),b=<span class="built_in">RandomNumber</span>(<span class="number">10000</span>);</span><br><span class="line"></span><br><span class="line">    ques&lt;&lt;aa&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;b&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    ans&lt;&lt;aa+b&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;a&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> REP(i,a,b) for(int i=(a);i&lt;(b);++i)</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">clock_t</span> startTime=<span class="built_in">clock</span>();</span><br><span class="line"><span class="comment">//  測資生成函式使用都放在這裡面</span></span><br><span class="line">    <span class="built_in">REP</span>(i,<span class="number">1</span>,<span class="number">5</span>+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">SubTesk1</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">REP</span>(i,<span class="number">1</span>,<span class="number">10</span>+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">UOJ</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">REP</span>(i,<span class="number">1</span>,<span class="number">10</span>+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">ExTest</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//  End Of Processes</span></span><br><span class="line">    <span class="type">clock_t</span> endTime=<span class="built_in">clock</span>();</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;<span class="built_in">double</span>(endTime-startTime)/<span class="number">1000</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="log-txt"><a href="#log-txt" class="headerlink" title="log.txt"></a>log.txt</h3><p>只有兩行，第一行是測試資料數目，第二行是執行時間限制，以毫秒為單位。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TestCases:     5</span><br><span class="line">TimeLimit(ms): 50</span><br></pre></td></tr></table></figure>
+
+<h2 id="主程式"><a href="#主程式" class="headerlink" title="主程式"></a>主程式</h2><table>
+<thead>
+<tr>
+<th>函式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RunCode(int timeLimit)</td>
+<td>執行使用者程式(會計算時間，盡量減少多餘程式碼)</td>
+</tr>
+<tr>
+<td>RunTestCase(int testCase,int timeLimit)</td>
+<td>完成執行第 testCase 筆測試資料所需的前置條件</td>
+</tr>
+<tr>
+<td>Judge(int testCase)</td>
+<td>評判解答正確性</td>
+</tr>
+<tr>
+<td>RunSolution()</td>
+<td>執行所有測試並輸出結果</td>
+</tr>
+</tbody></table>
+<h3 id="code-1"><a href="#code-1" class="headerlink" title="code"></a>code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> MAIN_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAIN_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;conio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Solve.h&quot;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> isfinish=<span class="literal">false</span>;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; costTime;</span><br><span class="line"></span><br><span class="line"><span class="comment">// TLE 例外物件</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TimeLimitExceeded</span> : <span class="keyword">public</span> exception&#123;</span><br><span class="line">    <span class="keyword">public</span> :</span><br><span class="line">        <span class="built_in">TimeLimitExceeded</span>() : <span class="built_in">exception</span>() &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">RunCode</span><span class="params">(<span class="type">int</span> timeLimit)</span></span>&#123;</span><br><span class="line">    isfinish=<span class="literal">false</span>;</span><br><span class="line">    <span class="type">clock_t</span> start=<span class="built_in">clock</span>();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Solve</span>();</span><br><span class="line"></span><br><span class="line">    isfinish=<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">clock_t</span> end=<span class="built_in">clock</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(end-start&gt;timeLimit)&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="built_in">TimeLimitExceeded</span>();</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    costTime.<span class="built_in">emplace_back</span>(end-start);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">RunTestCase</span><span class="params">(<span class="type">int</span> testCase,<span class="type">int</span> timeLimit)</span></span>&#123;</span><br><span class="line">    string fileNum=<span class="built_in">to_string</span>(testCase);</span><br><span class="line"></span><br><span class="line">    string inputFile=<span class="string">&quot;./TestCase\\&quot;</span>;</span><br><span class="line">    inputFile+=fileNum;</span><br><span class="line">    inputFile+=<span class="string">&quot;.in&quot;</span>;</span><br><span class="line"></span><br><span class="line">    string userOutput=<span class="string">&quot;./TestCase\\sol&quot;</span>;</span><br><span class="line">    userOutput+=fileNum;</span><br><span class="line">    userOutput+=<span class="string">&quot;.out&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">freopen</span>(inputFile.<span class="built_in">c_str</span>(),<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(userOutput.<span class="built_in">c_str</span>(),<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line"></span><br><span class="line">    thread run&#123;RunCode,timeLimit&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function">chrono::milliseconds <span class="title">s</span><span class="params">(timeLimit+<span class="number">20</span>)</span></span>;</span><br><span class="line">    this_thread::<span class="built_in">sleep_for</span>(s);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(!isfinish)&#123;</span><br><span class="line">        run.<span class="built_in">detach</span>();</span><br><span class="line">        <span class="keyword">throw</span> <span class="built_in">TimeLimitExceeded</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        run.<span class="built_in">join</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">Judge</span><span class="params">(<span class="type">int</span> testCase)</span></span>&#123;</span><br><span class="line">    <span class="function">ifstream <span class="title">userOutput</span><span class="params">(<span class="string">&quot;./TestCase\\sol&quot;</span>+to_string(testCase)+<span class="string">&quot;.out&quot;</span>)</span></span>;</span><br><span class="line">    <span class="function">ifstream <span class="title">question</span><span class="params">(<span class="string">&quot;./TestCase\\&quot;</span>+to_string(testCase)+<span class="string">&quot;.in&quot;</span>)</span></span>;</span><br><span class="line">    <span class="function">ifstream <span class="title">answer</span><span class="params">(<span class="string">&quot;./TestCase\\&quot;</span>+to_string(testCase)+<span class="string">&quot;.out&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    string tp,userAns,systemAns;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(userOutput&gt;&gt;tp)&#123;</span><br><span class="line">        userAns+=tp;</span><br><span class="line">        <span class="keyword">if</span>(userAns.<span class="built_in">size</span>()&gt;<span class="number">10000000</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(answer&gt;&gt;tp)&#123;</span><br><span class="line">        systemAns+=tp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cerr&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> systemAns==userAns;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">RunSolution</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">ifstream <span class="title">log</span><span class="params">(<span class="string">&quot;./TestCase\\log.txt&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    string recycle;</span><br><span class="line">    <span class="type">int</span> testCases,timeLimit;</span><br><span class="line"></span><br><span class="line">    log&gt;&gt;recycle&gt;&gt;testCases;</span><br><span class="line">    log&gt;&gt;recycle&gt;&gt;timeLimit;</span><br><span class="line"></span><br><span class="line">    cerr&lt;&lt;<span class="string">&quot;There&#x27;re &quot;</span>&lt;&lt;testCases&lt;&lt;<span class="string">&quot; testcases.&quot;</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    cerr&lt;&lt;<span class="string">&quot;Running TestCase...&quot;</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=testCases;++i)&#123;</span><br><span class="line">            <span class="built_in">RunTestCase</span>(i,timeLimit);</span><br><span class="line">            cerr&lt;&lt;i&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cerr&lt;&lt;<span class="string">&quot;\n\n&quot;</span>;</span><br><span class="line">    &#125;<span class="built_in">catch</span>(TimeLimitExceeded)&#123;</span><br><span class="line">        <span class="function">ifstream <span class="title">TLE</span><span class="params">(<span class="string">&quot;TLE&quot;</span>)</span></span>;</span><br><span class="line">        string line;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">getline</span>(TLE,line))&#123;</span><br><span class="line">            cerr&lt;&lt;line&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cerr&lt;&lt;flush;</span><br><span class="line">        <span class="built_in">getch</span>();</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;<span class="built_in">catch</span>(exception)&#123;</span><br><span class="line">        <span class="function">ifstream <span class="title">RE</span><span class="params">(<span class="string">&quot;RE&quot;</span>)</span></span>;</span><br><span class="line">        string line;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">getline</span>(RE,line))&#123;</span><br><span class="line">            cerr&lt;&lt;line&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cerr&lt;&lt;flush;</span><br><span class="line">        <span class="built_in">getch</span>();</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> allCorrect=<span class="literal">true</span>;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">bool</span>&gt; <span class="title">outputCorrect</span><span class="params">(testCases+<span class="number">1</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=testCases;++i)&#123;</span><br><span class="line">        outputCorrect[i]=<span class="built_in">Judge</span>(i);</span><br><span class="line">        <span class="keyword">if</span>(!outputCorrect[i])&#123;</span><br><span class="line">            allCorrect=<span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cerr&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">if</span>(allCorrect)&#123;</span><br><span class="line">        <span class="function">ifstream <span class="title">AC</span><span class="params">(<span class="string">&quot;AC&quot;</span>)</span></span>;</span><br><span class="line">        string line;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">getline</span>(AC,line))&#123;</span><br><span class="line">            cerr&lt;&lt;line&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cerr&lt;&lt;flush;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        ifstream <span class="built_in">WA</span>(<span class="string">&quot;WA&quot;</span>);</span><br><span class="line">        string line;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">getline</span>(WA,line))&#123;</span><br><span class="line">            cerr&lt;&lt;line&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cerr&lt;&lt;flush;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    string ret[<span class="number">2</span>]&#123;<span class="string">&quot;WA&quot;</span>,<span class="string">&quot;AC&quot;</span>&#125;;</span><br><span class="line">    cerr&lt;&lt;<span class="string">&quot;For each testcase : &quot;</span>&lt;&lt;<span class="string">&quot;\n\n&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=testCases;++i)&#123;</span><br><span class="line">        cerr&lt;&lt;right&lt;&lt;<span class="built_in">setw</span>(<span class="number">3</span>)&lt;&lt;i&lt;&lt;<span class="string">&quot;. &quot;</span>&lt;&lt;flush;</span><br><span class="line">        cerr&lt;&lt;ret[outputCorrect[i]]&lt;&lt;<span class="string">&quot;  &quot;</span>&lt;&lt;flush;</span><br><span class="line">        cerr&lt;&lt;<span class="string">&quot;Execution time : &quot;</span>&lt;&lt;right&lt;&lt;<span class="built_in">setw</span>(<span class="number">4</span>)&lt;&lt;costTime[i<span class="number">-1</span>]&lt;&lt;<span class="string">&quot; ms&quot;</span>&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    cerr&lt;&lt;flush;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">getch</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="競賽中不會出現的-C-功能"><a href="#競賽中不會出現的-C-功能" class="headerlink" title="競賽中不會出現的 C++ 功能"></a>競賽中不會出現的 C++ 功能</h2><p>多執行續 thread 函式庫</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 開新的執行續處理函式 RunCode</span></span><br><span class="line">thread run&#123;RunCode,timeLimit&#125;;</span><br><span class="line"><span class="comment">// 讓此執行續等待一段時間 chrono 格式</span></span><br><span class="line">this_thread::<span class="built_in">sleep_for</span>(chrono::<span class="built_in">milliseconds</span>(timeLimit+<span class="number">20</span>))</span><br><span class="line"><span class="comment">// 放空該執行續(與物件 run 取消綁定，但會繼續執行)</span></span><br><span class="line">run.<span class="built_in">detach</span>();</span><br><span class="line"><span class="comment">// 合併執行續，意味著它會等待到 run 那個執行序完成(return)後再合併</span></span><br><span class="line">run.<span class="built_in">join</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="其它題目"><a href="#其它題目" class="headerlink" title="其它題目"></a>其它題目</h2><p>可以去雲端硬碟下載。這裡有一些題目。<a target="_blank" rel="noopener" href="https://mega.nz/folder/HgdU3J4A#NjDnWXqIS6Ov_hDGnrbtkA">Mega</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/oj/" rel="tag"># oj</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/boshiamy/ubuntu-22-04-lts-and-official-boshiamy-ibus-table/" rel="prev" title="ubuntu 22.04 LTS 與行易有限公司釋出的官方 iBus 版本嘸蝦米表格檔">
+      <i class="fa fa-chevron-left"></i> ubuntu 22.04 LTS 與行易有限公司釋出的官方 iBus 版本嘸蝦米表格檔
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/ojques/leetcode-2-add-two-numbers/" rel="next" title="LeetCode 2. Add Two Numbers">
+      LeetCode 2. Add Two Numbers <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-%E8%A7%A3%E9%A1%8C%E8%80%85"><span class="nav-number">2.</span> <span class="nav-text">使用(解題者)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#README-txt-%E5%85%A7%E6%96%87"><span class="nav-number">2.1.</span> <span class="nav-text">README.txt 內文</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8B%E8%AA%AA%E6%98%8E%E6%AA%94%E6%A1%88%E5%8A%9F%E8%83%BD%E5%8F%8A%E7%94%A8%E6%B3%95"><span class="nav-number">2.1.1.</span> <span class="nav-text">以下說明檔案功能及用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8B%E8%AA%AA%E6%98%8E%E7%AD%94%E9%A1%8C%E7%B5%90%E6%9E%9C"><span class="nav-number">2.1.2.</span> <span class="nav-text">以下說明答題結果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8B%E8%A6%8F%E5%AE%9A%E8%AB%8B%E5%8B%BF%E9%81%95%E5%8F%8D"><span class="nav-number">2.1.3.</span> <span class="nav-text">以下規定請勿違反</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B2%BC%E5%BF%83%E5%B0%8F%E6%8F%90%E9%86%92"><span class="nav-number">2.1.4.</span> <span class="nav-text">貼心小提醒</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%AA%E5%9C%96"><span class="nav-number">2.2.</span> <span class="nav-text">截圖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-%E5%87%BA%E9%A1%8C%E8%80%85"><span class="nav-number">3.</span> <span class="nav-text">使用(出題者)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Gen-cpp"><span class="nav-number">3.1.</span> <span class="nav-text">Gen.cpp</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#code"><span class="nav-number">3.1.1.</span> <span class="nav-text">code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#log-txt"><span class="nav-number">3.2.</span> <span class="nav-text">log.txt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">主程式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-1"><span class="nav-number">4.1.</span> <span class="nav-text">code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%B6%E8%B3%BD%E4%B8%AD%E4%B8%8D%E6%9C%83%E5%87%BA%E7%8F%BE%E7%9A%84-C-%E5%8A%9F%E8%83%BD"><span class="nav-number">5.</span> <span class="nav-text">競賽中不會出現的 C++ 功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E9%A1%8C%E7%9B%AE"><span class="nav-number">6.</span> <span class="nav-text">其它題目</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

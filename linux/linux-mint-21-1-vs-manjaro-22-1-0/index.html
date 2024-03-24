@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言Linux Mint 與 Manjaro 在 DistroWatch 上，分別佔據第 3、4 名的位置，而且，第 3 名與第 4 名之間的差距還有點大。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="來一場 Linux Mint 21.1 與 Manjaro 22.1.0 之間的 PK">
+<meta property="og:url" content="http://mtmatt.one/linux/linux-mint-21-1-vs-manjaro-22-1-0/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言Linux Mint 與 Manjaro 在 DistroWatch 上，分別佔據第 3、4 名的位置，而且，第 3 名與第 4 名之間的差距還有點大。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52895300967_24357df365_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52896261865_568159628b_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52896040594_ee236f01e7_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52896040574_0fd2efb2a5_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52895872691_95654cd2e0_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52895300997_12862449d8_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52895327157_744f46355c_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52896325963_820a599d4c_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52896694141_2a898d513f_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52896261850_133cfc5358_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52896040604_618ebfcc0a_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52896040489_08047d0bc1_c.jpg">
+<meta property="article:published_time" content="2023-05-14T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-03T11:14:42.000Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="fcitx5">
+<meta property="article:tag" content="manjaro">
+<meta property="article:tag" content="linuxmint">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52895300967_24357df365_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/linux/linux-mint-21-1-vs-manjaro-22-1-0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>來一場 Linux Mint 21.1 與 Manjaro 22.1.0 之間的 PK | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/linux/linux-mint-21-1-vs-manjaro-22-1-0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          來一場 Linux Mint 21.1 與 Manjaro 22.1.0 之間的 PK
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-05-14 08:00:00" itemprop="dateCreated datePublished" datetime="2023-05-14T08:00:00+08:00">2023-05-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>2.5k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>5 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Linux Mint 與 Manjaro 在 DistroWatch 上，分別佔據第 3、4 名的位置，而且，第 3 名與第 4 名之間的差距還有點大。</p>
+<p>最近在 Virtualbox 安裝與使用上述 2 支 Distro 一小段時間，因為，我拿到一部 HP ProDesk 600 G1 DM，便想說把測試過程印象良好的 Linux Mint 安裝上去把玩一陣子看看，玩著玩著就玩出今天要分享的這一篇小小心得。</p>
+<p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52895300967/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep12"><img src="https://live.staticflickr.com/65535/52895300967_24357df365_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep12"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<hr>
+<h3 id="在-VirtualBox-上的表現"><a href="#在-VirtualBox-上的表現" class="headerlink" title="在 VirtualBox 上的表現"></a>在 VirtualBox 上的表現</h3><ol>
+<li><p>Linux Mint 21.1：表現穩定又輕快，而且系統預載的程式，剛好都符合我一進入系統可能會先安裝的那幾支。</p>
+</li>
+<li><p>Manjaro 22.1.0：在 VirtualBox 上的體驗，我試過 Manjaro KDE 與 XFCE，只要開啟 EFI，安裝完之後，初次進入系統，我做完更新之後，就無法再進入系統。不要核取 EFI 還能夠用大絕招關機法，再重新開啟後，進入系統。由於 Manjaro 22.1.0 是最近才釋出更新的 Distro，不得不說這樣的表現，我是真的感到滿意外的。</p>
+</li>
+</ol>
+<hr>
+<h3 id="在-HP-ProDesk-600-上的表現"><a href="#在-HP-ProDesk-600-上的表現" class="headerlink" title="在 HP ProDesk 600 上的表現"></a>在 HP ProDesk 600 上的表現</h3><h4 id="Linux-Mint-21-1"><a href="#Linux-Mint-21-1" class="headerlink" title="Linux Mint 21.1"></a>Linux Mint 21.1</h4><p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52896261865/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep01"><img src="https://live.staticflickr.com/65535/52896261865_568159628b_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep01"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<ol>
+<li><p>原本，在 VirtualBox 上感受節的穩定與輕快，在 ProDesk 600 幾乎是感受不到的，特別是在安裝過程，那個彩色小球就轉很久。初始安裝完成後，我巡一下預設安裝的套件，發現來到實體機器上，並沒有被更動。或許，會有伙伴問我，這有什麼好比的，…說真的，也是因為 Manjaro 安裝到實體機器後，有些小地方確實與 VirtualBox 上安裝後呈現的不太一樣，因此，我才特別提出來說一下下。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52896040594/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep04"><img src="https://live.staticflickr.com/65535/52896040594_ee236f01e7_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep04"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>接下來要分享的是我在 VirtualBox 上使用時沒有發現的問題，這個問題比較偏向是輸入法框架這方面的。那就是 Linux Mint 開始選單的搜尋功能，似乎與 Fcitx5 感情不好，我無論是用嘸蝦米還是新酷音，都無法正常輸入；換到 Manjaro KDE 開始選單的搜尋功能，Fcitx5 是沒有問題的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52896040574/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep05"><img src="https://live.staticflickr.com/65535/52896040574_0fd2efb2a5_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep05"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>整個系統在我設定好之後，想說泡杯咖啡來看一下有土伯上面的影片，想不到竟然能夠看影片看到系統掛點，發生的狀況，要不是整個畫面黑掉，就是系統自動閃退，重新回到登入畫面，這可以說是我近年來使用 Linux 從未見過的場面。第 1 支影片還沒有看完，重新登入系統再開啟 Firefox 後，Firefox 建議我重新開機，並重新指定 Profile 檔，…想不到按下重新開機後，系統跑滿久才又回到桌面，我當下沒想到要截圖下來，因為我認為是一個小小意外。但，…第 2 支影片，雖然沒有要我重新開機，又再掛點一次，我就開始轉向 Manjaro。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52895872691/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep07"><img src="https://live.staticflickr.com/65535/52895872691_95654cd2e0_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep07"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52895300997/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep08"><img src="https://live.staticflickr.com/65535/52895300997_12862449d8_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep08"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h4 id="Manjaro-22-1-0"><a href="#Manjaro-22-1-0" class="headerlink" title="Manjaro 22.1.0"></a>Manjaro 22.1.0</h4><p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52895327157/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep13"><img src="https://live.staticflickr.com/65535/52895327157_744f46355c_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep13"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<ol>
+<li><p>我決定安裝 KDE 版的 Manjaro 到 ProDesk 600 上頭，安裝期間，安裝程式突然閃退過 1 次(據我了解，有伙伴在網路上分享自己安裝 Manjaro KDE 22.0.5 到實體機器的經驗更不順利)，閃退後我沒有重新開機，就再執行一次安裝程式，也就「順利地(?)」把系統 On 上去。</p>
+</li>
+<li><p>必須說，系統運行不能算是輕快，但穩定度夠好。只是原本在 VirtualBox 可以輕鬆搞定的 Fcitx5，來到實體機器上，初始安裝完是看不到 Fcitx5 的，需要一步一步慢慢處理，回想起來，在 VirtualBox 與實體機上明顯的差異，就是實體機器上的安裝程式有過一次閃退，我不確定是不是跟這個事件有關。</p>
+</li>
+<li><p>我把 Fcitx5 與新酷音、嘸蝦米等安裝與環境設定簡述如下。 (1)先下 sudo pacman -S fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-chewing fcitx5-table-extra (2)sudo nano &#x2F;etc&#x2F;enviroment，並將以下資料寫入，存檔後重新登入系統(或重新開機)。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br></pre></td></tr></table></figure>
+<p> (3)用 Fcitx5 的圖形介面，把想要用的輸入法新增進來，原則上就搞定輸入法。</p>
+</li>
+<li><p>XFCE 版預設將 gufw 安裝進來，KDE 版的話，一如在 VirtualBox 那般是要自行安裝的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52896325963/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep09"><img src="https://live.staticflickr.com/65535/52896325963_820a599d4c_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep09"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>上面提到 Linux Mint 開始選單，使用搜尋功能時，Fcitx5 無用武之地，而 Manjaro KDE 則是正常發揮，OK 的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52896694141/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep14"><img src="https://live.staticflickr.com/65535/52896694141_2a898d513f_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep14"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="無關-PK-的其他狀況"><a href="#無關-PK-的其他狀況" class="headerlink" title="無關 PK 的其他狀況"></a>無關 PK 的其他狀況</h3><h4 id="Linux-暫時與-NBA-無緣"><a href="#Linux-暫時與-NBA-無緣" class="headerlink" title="Linux 暫時與 NBA 無緣"></a>Linux 暫時與 NBA 無緣</h4><ol>
+<li><p>應該是 2022 年 10 月開始的，就是…無論是那一支 Linux Distro，最明顯無解的狀況就是…，無法看 NBA 上面的影片。</p>
+</li>
+<li><p>有些 Distro 跟 Linux Mint 一樣可以看到個幾秒廣告，但不久後就像是被封禁一樣。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52896261850/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep02"><img src="https://live.staticflickr.com/65535/52896261850_133cfc5358_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep02"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52896040604/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep03"><img src="https://live.staticflickr.com/65535/52896040604_618ebfcc0a_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep03"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>有些 Distro 跟 Manjaro 一樣，直接就是來一波像被封禁那般…。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52896040489/in/dateposted-public/" title="linuxMint21.1vsManjaroKde22.1.0Ep11"><img src="https://live.staticflickr.com/65535/52896040489_08047d0bc1_c.jpg" alt="linuxMint21.1vsManjaroKde22.1.0Ep11"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>我想到的解法，就是找到其他能夠觀看的系統裝置，再不就是用 VirtualBox 去安裝 Windows。…想不到網路上有人確實就是用 VirtualBox + Windows 來處理，我認為會這樣處理的人，要不就是手上只有那麼一部電腦，但，更大部分的可能性是再去找其他裝置還比較麻煩，乾脆弄個虛擬機器還比較快所致。</p>
+</li>
+</ol>
+<hr>
+<h4 id="Line-沒有原生的程式"><a href="#Line-沒有原生的程式" class="headerlink" title="Line 沒有原生的程式"></a>Line 沒有原生的程式</h4><ol>
+<li><p>我不是很清楚大家怎麼處理這個問題，我的話，處理方式是安裝 Google Chrome + Line 的 Extension(傳送門：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/line/ophjlpahpchlmihnnnihgmmeilfjmjjc?hl=zh-TW">LINE - Chrome 線上應用程式商店</a>)。</p>
+</li>
+<li><p>我認為，上述方式就是應應急，或是當下有需要才會用上。大部分的時間裡，我會直接把手機拿出來，或是切到 macOS、Windows 使用功能完整且原生的 Line 程式。</p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://linuxmint.com/">Linux Mint</a></li>
+<li><a target="_blank" rel="noopener" href="https://manjaro.org/">Manjaro</a></li>
+<li><a target="_blank" rel="noopener" href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
+<li><a target="_blank" rel="noopener" href="https://fcitx-im.org/wiki/Fcitx_5">Fcitx 5 - Fcitx</a></li>
+<li><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/line/ophjlpahpchlmihnnnihgmmeilfjmjjc?hl=zh-TW">LINE - Chrome 線上應用程式商店</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
+              <a href="/tags/manjaro/" rel="tag"># manjaro</a>
+              <a href="/tags/linuxmint/" rel="tag"># linuxmint</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/boshiamy/linux-mint-21-1-and-boshiamy-feat-fcitx5-table-extra/" rel="prev" title="Linux Mint 21.1 與嘸蝦米 (feat. fcitx5-table-extra)">
+      <i class="fa fa-chevron-left"></i> Linux Mint 21.1 與嘸蝦米 (feat. fcitx5-table-extra)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/linux/solus-4-4/" rel="next" title="來玩 Solus 4.4">
+      來玩 Solus 4.4 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-VirtualBox-%E4%B8%8A%E7%9A%84%E8%A1%A8%E7%8F%BE"><span class="nav-number">2.</span> <span class="nav-text">在 VirtualBox 上的表現</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-HP-ProDesk-600-%E4%B8%8A%E7%9A%84%E8%A1%A8%E7%8F%BE"><span class="nav-number">3.</span> <span class="nav-text">在 HP ProDesk 600 上的表現</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-Mint-21-1"><span class="nav-number">3.1.</span> <span class="nav-text">Linux Mint 21.1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Manjaro-22-1-0"><span class="nav-number">3.2.</span> <span class="nav-text">Manjaro 22.1.0</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%84%A1%E9%97%9C-PK-%E7%9A%84%E5%85%B6%E4%BB%96%E7%8B%80%E6%B3%81"><span class="nav-number">4.</span> <span class="nav-text">無關 PK 的其他狀況</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-%E6%9A%AB%E6%99%82%E8%88%87-NBA-%E7%84%A1%E7%B7%A3"><span class="nav-number">4.1.</span> <span class="nav-text">Linux 暫時與 NBA 無緣</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Line-%E6%B2%92%E6%9C%89%E5%8E%9F%E7%94%9F%E7%9A%84%E7%A8%8B%E5%BC%8F"><span class="nav-number">4.2.</span> <span class="nav-text">Line 沒有原生的程式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">5.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

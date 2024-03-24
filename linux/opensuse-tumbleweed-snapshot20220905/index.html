@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言openSUSE，目前在 DistroWatch 上的「網頁參觀排名」是第 10 名，本篇貼文裡面，我所使用的 Tumbleweed 是 2022 年 9 月 5 日快照版。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="來玩 openSUSE Tumbleweed Snapshot20220905">
+<meta property="og:url" content="http://mtmatt.one/linux/opensuse-tumbleweed-snapshot20220905/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言openSUSE，目前在 DistroWatch 上的「網頁參觀排名」是第 10 名，本篇貼文裡面，我所使用的 Tumbleweed 是 2022 年 9 月 5 日快照版。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52339394067_881e3be9e1_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52340654099_82e55851c2_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52340353426_221e2647c1_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52339393802_9ed5c262ec_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52340345526_e01b3b513f_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52340782840_79bc358ab1_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52339393802_9ed5c262ec_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52340782810_188b94eb9b_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52340353186_81458e68df_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52340591518_9326e85cf6_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52340353161_7264b69789_c.jpg">
+<meta property="article:published_time" content="2022-09-07T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-28T23:19:20.895Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="fcitx5">
+<meta property="article:tag" content="fcitx5-table-extra">
+<meta property="article:tag" content="fcitx">
+<meta property="article:tag" content="opensuse">
+<meta property="article:tag" content="tumbleweed">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52339394067_881e3be9e1_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/linux/opensuse-tumbleweed-snapshot20220905/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>來玩 openSUSE Tumbleweed Snapshot20220905 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/linux/opensuse-tumbleweed-snapshot20220905/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          來玩 openSUSE Tumbleweed Snapshot20220905
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-09-07 08:00:00" itemprop="dateCreated datePublished" datetime="2022-09-07T08:00:00+08:00">2022-09-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>openSUSE，目前在 DistroWatch 上的「網頁參觀排名」是第 10 名，本篇貼文裡面，我所使用的 Tumbleweed 是 2022 年 9 月 5 日快照版。</p>
+<p>Tumbleweed 這個版本，與 Leap 版有哪裡不一樣？簡言之，就是「滾動發行版」與「穩定版」之間的關係。</p>
+<p>而 Leap 作為新的穩定版出現後，Tumbleweed 是經過測試的發行版，這是 Tumbleweed 與其他滾動發行版不同的地方，而且，經過測試後，也大大提高了穩定性(詳可見：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/OpenSUSE#openSUSE_Tumbleweed">openSUSE - 維基百科，自由的百科全書</a>)。</p>
+<hr>
+<h3 id="快速回顧與感想"><a href="#快速回顧與感想" class="headerlink" title="快速回顧與感想"></a>快速回顧與感想</h3><p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/albums/72177720301905740" title="openSUSETumbleweedSnapshot20220905"><img src="https://live.staticflickr.com/65535/52339394067_881e3be9e1_c.jpg" alt="openSUSETumbleweedSnapshot20220905"></a></p>
+<ol>
+<li><p>安裝與使用過程：我是在 VirtualBox 上安裝的，在整個安裝過程，我幾乎只做語言(系)設定。軟體庫的部分，預設有 3 個已勾選，另外 2 個，我看完之後，考量到現階段我不太會對這個系統挖太深，就決定不安裝。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52340654099/in/album-72177720301905740" title="openSUSETumbleweedSnapshot20220905onVirtualBox (5)"><img src="https://live.staticflickr.com/65535/52340654099_82e55851c2_c.jpg" alt="openSUSETumbleweedSnapshot20220905onVirtualBox (5)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52340353426/in/album-72177720301905740" title="openSUSETumbleweedSnapshot20220905onVirtualBox (6)"><img src="https://live.staticflickr.com/65535/52340353426_221e2647c1_c.jpg" alt="openSUSETumbleweedSnapshot20220905onVirtualBox (6)"></a></p>
+</li>
+<li><p>桌面環境：由於才安裝使用 Leap 15.4 不久，我發現大概比較能夠從預設桌布一眼看出自己是在使用 Tumbleweed，無論如何，以桌面環境而言，我選用的 KDE 在 Tumbleweed(2022 年 9 月 5 日快照版) 上運作，與 Leap 15.4 同樣是穩定的。(桌布對比照如下) ↘Tumbleweed <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52339393802/in/album-72177720301905740/" title="openSUSETumbleweedSnapshot20220905onVirtualBox (31)"><img src="https://live.staticflickr.com/65535/52339393802_9ed5c262ec_c.jpg" alt="openSUSETumbleweedSnapshot20220905onVirtualBox (31)"></a></p>
+<p>  ↘Leap 15.4 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52340345526/in/dateposted-public/" title="openSUSELeap15.4onVirtualBox (10)"><img src="https://live.staticflickr.com/65535/52340345526_e01b3b513f_c.jpg" alt="openSUSELeap15.4onVirtualBox (10)"></a></p>
+</li>
+<li><p>架設伺服器：使用 Tumbleweed 前，我做了點功課，發現多數使用 Tumbleweed 的伙伴，基本上是以使用桌面環境為主，設定成伺服器的比較少數。不過，我看的文章並不夠多，應該也不夠全面，我雖然沒有設定成伺服器的打算，但，我相信想要設定成伺服器，自然也是沒有問題。</p>
+</li>
+</ol>
+<hr>
+<h3 id="中文輸入法框架的使用心得"><a href="#中文輸入法框架的使用心得" class="headerlink" title="中文輸入法框架的使用心得"></a>中文輸入法框架的使用心得</h3><ol>
+<li><p>與 Leap 15.4 一樣，內建是 gcin。但是，同樣直接用 YaST 把「fcitx(4)+嘸蝦米」的套件，一併安裝進來的方式，在 Tumbleweed(2022 年 9 月 5 日快照版) 卻是在重新登入後，讓 gcin 啟動，…卻無法正常使用。</p>
+</li>
+<li><p>我在 YaST 單純安裝嘸蝦米 fcitx(4) 套件後，fcitx(4) 之所以沒有 On 起來，原因是 YaST 並沒有把 fcitx(4) 主程式套件安裝進來，我因此花了一點時間瞭解一下 Tumbleweed(2022 年 9 月 5 日快照版) 上頭的軟體庫內容。方法也不難，就是用關鍵字在 YaST 裡面去「搜尋」套件。也就這樣，在搜尋的過程，發現 Tumbleweed(2022 年 9 月 5 日快照版) 已經將 Fcitx5 納進來，這一點與 Leap 15.4 是不同的。</p>
+</li>
+<li><p>後來，我把 fcitx(4) 與 Fcitx5 都試著安裝及使用，全然沒有問題。下圖是 Fcitx5 安裝的大致流程，坦白說，我還是比較喜歡用 YaST 桌面環境系統介面做套件安裝、管理的動作，至於 fcitx(4) 的安裝，可以參考 <a target="_blank" rel="noopener" href="https://addsalt.fr/linux/opensuse-leap-15-4/">來玩 openSUSE Leap 15.4</a>。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52340782840/in/album-72177720301905740/" title="openSUSETumbleweedSnapshot20220905onVirtualBox (30)"><img src="https://live.staticflickr.com/65535/52340782840_79bc358ab1_c.jpg" alt="openSUSETumbleweedSnapshot20220905onVirtualBox (30)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52339393802/in/album-72177720301905740/" title="openSUSETumbleweedSnapshot20220905onVirtualBox (31)"><img src="https://live.staticflickr.com/65535/52339393802_9ed5c262ec_c.jpg" alt="openSUSETumbleweedSnapshot20220905onVirtualBox (31)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52340782810/in/album-72177720301905740/" title="openSUSETumbleweedSnapshot20220905onVirtualBox (32)"><img src="https://live.staticflickr.com/65535/52340782810_188b94eb9b_c.jpg" alt="openSUSETumbleweedSnapshot20220905onVirtualBox (32)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52340353186/in/album-72177720301905740/" title="openSUSETumbleweedSnapshot20220905onVirtualBox (33)"><img src="https://live.staticflickr.com/65535/52340353186_81458e68df_c.jpg" alt="openSUSETumbleweedSnapshot20220905onVirtualBox (33)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52340591518/in/album-72177720301905740/" title="openSUSETumbleweedSnapshot20220905onVirtualBox (36)"><img src="https://live.staticflickr.com/65535/52340591518_9326e85cf6_c.jpg" alt="openSUSETumbleweedSnapshot20220905onVirtualBox (36)"></a></p>
+</li>
+<li><p>由於，我先安裝 fcitx(4)，後把 fcitx(4) 移除，再改安裝與使用 Fcitx5。啟用 Fcitx5 之初跳出一個程式介面，該介面是方便讓使用者從 fcitx(4) 升級至 Fcitx5 時，可以做一個設定轉移的動作。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52340353161/in/album-72177720301905740/" title="openSUSETumbleweedSnapshot20220905onVirtualBox (34)"><img src="https://live.staticflickr.com/65535/52340353161_7264b69789_c.jpg" alt="openSUSETumbleweedSnapshot20220905onVirtualBox (34)"></a></p>
+</li>
+<li><p>至於 gcin，我仍想保留一份情懷而不去動它。實際上，誠如我第一點提到的，誤打誤撞啟用 gcin，只不過，幾分鐘內使用 gcin 後，發現似乎沒有產生任何中文輸入的做用，而我也決定不再多花太時間在這上面。</p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 openSUSE-Tumbleweed-DVD-x86_64-Snapshot20220905-Media.iso。</li>
+<li>openSUSE Tumbleweed 可以說，是一個兼顧有趣與穩定的版本。以桌面環境使用而言，如果要我從 Leap 與 Tumbleweed 做出選擇，我應該會先選 Tumbleweed。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
+              <a href="/tags/fcitx5-table-extra/" rel="tag"># fcitx5-table-extra</a>
+              <a href="/tags/fcitx/" rel="tag"># fcitx</a>
+              <a href="/tags/opensuse/" rel="tag"># opensuse</a>
+              <a href="/tags/tumbleweed/" rel="tag"># tumbleweed</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/windows/kb5015882-windows-11-os-build-22000-832/" rel="prev" title="[版本更新] 快速回顧 微軟發布 KB5015882 (Windows 11 作業系統組建 22000.832)">
+      <i class="fa fa-chevron-left"></i> [版本更新] 快速回顧 微軟發布 KB5015882 (Windows 11 作業系統組建 22000.832)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/linux/opensuse-leap-15-4/" rel="next" title="來玩 openSUSE Leap 15.4">
+      來玩 openSUSE Leap 15.4 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%A7%E8%88%87%E6%84%9F%E6%83%B3"><span class="nav-number">2.</span> <span class="nav-text">快速回顧與感想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%A1%86%E6%9E%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97"><span class="nav-number">3.</span> <span class="nav-text">中文輸入法框架的使用心得</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

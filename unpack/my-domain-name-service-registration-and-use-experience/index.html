@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言想要在網路上闖盪，一個專屬的網域名稱，似乎是一個遲早都要考慮的選項，今天來分享一下我的心得，希望這些微薄的經驗，能夠對想要使用域名服務的人，有一些幫助。    Photo by Markus Winkler on Unsplash">
+<meta property="og:type" content="article">
+<meta property="og:title" content="開箱我的域名服務註冊、使用經驗">
+<meta property="og:url" content="http://mtmatt.one/unpack/my-domain-name-service-registration-and-use-experience/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言想要在網路上闖盪，一個專屬的網域名稱，似乎是一個遲早都要考慮的選項，今天來分享一下我的心得，希望這些微薄的經驗，能夠對想要使用域名服務的人，有一些幫助。    Photo by Markus Winkler on Unsplash">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://images.unsplash.com/photo-1587287720754-94bac45f0bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+<meta property="article:published_time" content="2022-02-06T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-01T11:43:20.039Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="google">
+<meta property="article:tag" content="domainName">
+<meta property="article:tag" content="godaddy">
+<meta property="article:tag" content="hinet">
+<meta property="article:tag" content="pchome">
+<meta property="article:tag" content="website">
+<meta property="article:tag" content="websiteBuilding">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1587287720754-94bac45f0bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+
+<link rel="canonical" href="http://mtmatt.one/unpack/my-domain-name-service-registration-and-use-experience/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>開箱我的域名服務註冊、使用經驗 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/unpack/my-domain-name-service-registration-and-use-experience/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          開箱我的域名服務註冊、使用經驗
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-02-06 08:00:00" itemprop="dateCreated datePublished" datetime="2022-02-06T08:00:00+08:00">2022-02-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/unpack/" itemprop="url" rel="index"><span itemprop="name">unpack</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>2.3k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>4 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>想要在網路上闖盪，一個專屬的網域名稱，似乎是一個遲早都要考慮的選項，今天來分享一下我的心得，希望這些微薄的經驗，能夠對想要使用域名服務的人，有一些幫助。  <img src="https://images.unsplash.com/photo-1587287720754-94bac45f0bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">  Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/s/photos/domain-name?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+<hr>
+<h3 id="域名選擇"><a href="#域名選擇" class="headerlink" title="域名選擇"></a>域名選擇</h3><p>我最早註冊是 .IDV.TW 的網域名稱，當時對網域名稱並沒有全盤的瞭解，而且 .IDV.TW 的網域名稱的註冊費用是最低的，每年的費用是 400 元，如果一次註冊 3 年以上，好像會打個 8 折還是 9 折。</p>
+<p>想當年，國內要註冊 .COM.TW 的域名，我記得註冊時需要提供營利事業登記證，現在不知道還要不要，更何況，現在都可以直接註冊 .COM 的頂級域名，要不要附上營利事業登記證去申請 .COM.TW，似乎，也就不是那麼重要。</p>
+<p>另外一個比較現實的考量，就是 .COM 域名每年的註冊費用，通常只有 .COM.TW 的一半。</p>
+<p>以現在網域名稱的發展來看，除了 .COM、.NET 或是 .ORG 等頂級域名外，還有一堆頂級域名可以使用。因此，我自己觀點是除非真的是自己喜歡的名稱被註冊走，又不想多花很多錢透過一些域名註冊商去協調並再支付額外費用轉移註冊到自己手上，才會想要用 .COM.TW 的域名。</p>
+<p>但是，.TW 結尾的域名，還是有一定實質上的意義：再怎麼說，看到 .TW 多少都會有一份人不親地親的感覺，…至少我個人是有那麼點感覺。</p>
+<hr>
+<h3 id="國內的域名註冊商"><a href="#國內的域名註冊商" class="headerlink" title="國內的域名註冊商"></a>國內的域名註冊商</h3><p>HiNet：最早最早，我是跟中華電信額外註冊一個固定 IP 的網路連線(不是「HiNet非固定制固定IP申請」這項服務)，並且找了部電腦，用 Linux 架設 Web Server，所以，我決定選用 HiNet 域名註冊服務，那個年頭，沒有所謂的生態系，但回想起來就是一種，反正「通通用 HiNet 最好」的莫名思維。</p>
+<p>國內其他註冊商：印象中有用過 PChome，但介面長怎麼樣，已經不清楚。</p>
+<p>如果要再註冊的話，域名設定後的更新速度會是我主要的考量，而這一點，普遍來說是國內域名註冊商的弱項。</p>
+<hr>
+<h3 id="國外的域名註冊商"><a href="#國外的域名註冊商" class="headerlink" title="國外的域名註冊商"></a>國外的域名註冊商</h3><p>Godaddy：有一本書，書名是「這小子，讓川普讚嘆！」，作者 <a target="_blank" rel="noopener" href="https://www.cameronjohnson.com/">Cameron Johnson</a> 建議用自己喜歡的名稱，一次就把 .COM、.NET、.ORG 等頂級域名註冊下來，我當時接受這樣的說法，一口氣註冊 .NET、.ORG 與 .INFO，而 .COM 的部分，我記得是域名蟑螂觀察到我的動態，主動聯繫我，並且開了一個數目字不小的價格，問我要不要，我當時是請 Godaddy 出面，幫我用一個比較合理的價格取得該域名，但是，也實在不便宜。Godaddy 當時還沒有中文，客服能夠讀懂我的破英文，並且提供服務，真的是滿不錯的。</p>
+<p>Google：老早以前，在 Blogger 服務上面得知 Google 也有提供域名註冊的服務，2021 年開始實際使用 Google 提供的域名服務，整體而言滿意度是高的，比方說，域名設定更動後，更新速度奇快，而且，對於 Google 家的其他產品整合度高，例如：Google Console Search、Google Analytics 與 Google AdSense 等，設定上也相對方便許多，而目前大家注重的隱私權部分，除了幾個域名有其本身的限制外，例如：.DE 網域不支援隱私保護服務，基本上，Google 都提供帶有支援隱私保護服務的域名，不用額外花費，算盤打起來，有些時候反而是划算的。</p>
+<hr>
+<h3 id="域名經營與維持"><a href="#域名經營與維持" class="headerlink" title="域名經營與維持"></a>域名經營與維持</h3><p>是一段我個人的經驗…</p>
+<p>當年，一方面是出於我對頂級域名的嚮往；一方面，則是折算下來，頂級域名每年要付的費用不用到 400 元，感覺是又帥又省錢的做法，我決定不再續用一個經營至少 3 年左右的域名，結果，那一個域名後來有了一段奇妙的遭遇：被拿去架設色情網站；而上面也提到，我一次註冊了不少個頂級域名，其實也沒有省到什麼錢。當時的決定所帶來的遭遇，可以說是賠了夫人又折兵。</p>
+<p>所以，我會比較建議，假設域名經營得還算不錯，或是自己用得很習慣，也滿常拿來代表自己，甚至印在名片上的話，那麼，這個域名的使用上，雖不用到至死方休，但，最好是持續用下去，這個預算不能省。</p>
+<p>假設想要轉換到不一樣的域名，那麼，舊的域名做好轉址設定後，至少要再用個一年。這一點，我在 Google Console Search 也有看過類似的建議。</p>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>貨比三家不吃虧，現在要註冊 .TW 結尾的域名，也不一定要使用國內的域名註冊商，我現在的做法，會先去域名比價網站，搜尋自己喜歡的域名，在那一家域名註冊商進行註冊的性價比最高，再決定使用那一家的域名註冊或主機服務。</li>
+<li>開箱費用：<br> (1).BUZZ 域名註冊費用(1年) &#x3D; 新台幣 27 元。<br> (2)Godaddy 經濟版 Linux 主機含 cPanel(1年) + 國外交易手續費：173 + 3 &#x3D; 176元。<br> (3)總計：27 + 176 &#x3D; 203 元。(價格可能會有波動)</li>
+<li>入手方式：<br> (1).BUZZ 域名註冊：<a target="_blank" rel="noopener" href="https://www.dynadot.com/" title="Dynadot | Domain Name Registration - Website Builder - Domain Aftermarket">Dynadot | Domain Name Registration – Website Builder – Domain Aftermarket</a><br> (2)Godaddy 經濟版 Linux 主機含 cPanel(1年)：<a target="_blank" rel="noopener" href="https://tw.godaddy.com/">網域名稱、網站、主機和網路行銷工具 – GoDaddy TW</a></li>
+<li>參考資料：<br> (1)<a target="_blank" rel="noopener" href="https://www.domcomp.com/">Domain Availability and Price Comparison – Find cheap domain to buy!</a><br> (2)<a target="_blank" rel="noopener" href="https://zh-hant.tld-list.com/">比較所有頂級域名的價格 | TLD List</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/google/" rel="tag"># google</a>
+              <a href="/tags/domainName/" rel="tag"># domainName</a>
+              <a href="/tags/godaddy/" rel="tag"># godaddy</a>
+              <a href="/tags/hinet/" rel="tag"># hinet</a>
+              <a href="/tags/pchome/" rel="tag"># pchome</a>
+              <a href="/tags/website/" rel="tag"># website</a>
+              <a href="/tags/websiteBuilding/" rel="tag"># websiteBuilding</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/unpack/powersync-TPS344AN0018/" rel="prev" title="開箱 PowerSync 四開四插防雷擊抗搖擺延長線-黑色 (產品型號：TPS344AN0018)">
+      <i class="fa fa-chevron-left"></i> 開箱 PowerSync 四開四插防雷擊抗搖擺延長線-黑色 (產品型號：TPS344AN0018)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/reviews/seven-habits-that-constantly-drain-your-energy-and-how-to-fixit/" rel="next" title="讀後感想之「7 Habits That Constantly Drain Your Energy (And How To FixIt)」">
+      讀後感想之「7 Habits That Constantly Drain Your Energy (And How To FixIt)」 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E9%81%B8%E6%93%87"><span class="nav-number">2.</span> <span class="nav-text">域名選擇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%8B%E5%85%A7%E7%9A%84%E5%9F%9F%E5%90%8D%E8%A8%BB%E5%86%8A%E5%95%86"><span class="nav-number">3.</span> <span class="nav-text">國內的域名註冊商</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%8B%E5%A4%96%E7%9A%84%E5%9F%9F%E5%90%8D%E8%A8%BB%E5%86%8A%E5%95%86"><span class="nav-number">4.</span> <span class="nav-text">國外的域名註冊商</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%B6%93%E7%87%9F%E8%88%87%E7%B6%AD%E6%8C%81"><span class="nav-number">5.</span> <span class="nav-text">域名經營與維持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">6.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

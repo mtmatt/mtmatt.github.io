@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言Mac mini 2014 年末的機器，算不算老？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在我的 Mac mini 上安裝 Pop!_OS 21.10">
+<meta property="og:url" content="http://mtmatt.one/apple/installing-pop_os-21-10-on-my-mac-mini/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言Mac mini 2014 年末的機器，算不算老？">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774478389_d0d89e4d93_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774478429_3ff49103a1_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774720970_dafb1583d7_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774407979_70bc22a078_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51773765446_90ef06d919_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774407924_4561b32f23_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774651180_8ce3cf3d67_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774651175_6d8b48e53d_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774651170_0aa52152ce_q.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774651145_3706d387a6_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51773765346_455d6c89f7_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774407839_c397dfec17_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51776779109_95fe56903b_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51774651070_0faeb27038_o.png">
+<meta property="article:published_time" content="2021-12-25T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-17T03:13:26.565Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="macos">
+<meta property="article:tag" content="pop_os">
+<meta property="article:tag" content="highsierra">
+<meta property="article:tag" content="mojave">
+<meta property="article:tag" content="ubuntu">
+<meta property="article:tag" content="macmini">
+<meta property="article:tag" content="davinciresolve17">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/51774478389_d0d89e4d93_o.png">
+
+<link rel="canonical" href="http://mtmatt.one/apple/installing-pop_os-21-10-on-my-mac-mini/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>在我的 Mac mini 上安裝 Pop!_OS 21.10 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/apple/installing-pop_os-21-10-on-my-mac-mini/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在我的 Mac mini 上安裝 Pop!_OS 21.10
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-12-25 08:00:00" itemprop="dateCreated datePublished" datetime="2021-12-25T08:00:00+08:00">2021-12-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/apple/" itemprop="url" rel="index"><span itemprop="name">apple</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Mac mini 2014 年末的機器，算不算老？</p>
+<p>不久前，我在一部親友淘汰的機器上 <a target="_blank" rel="noopener" href="http://mtmatt.page/linux/installing-pop_os-21-04-and-boshiamy/">安裝 Pop!_OS 21.04 與嘸蝦米</a>，讓一部跑起 Windows 7 已氣喘呼呼的機器，轉而成為文書工作小幫手。</p>
+<p>今天，我會再對 Mac mini 下手，原因是我想用 <a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a>，順順跑的 macOS High Sierra 已不支援，原以為系統將系統升級到 macOS Mojave 應該會比較快，想不到這個升級就花掉 1 小時又 10 分鐘左右。</p>
+<p><img src="https://live.staticflickr.com/65535/51774478389_d0d89e4d93_o.png"></p>
+<p>升級完 macOS Mojave 之後，<a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a> 硬是卡在安裝過程，光是解開安裝檔的虛擬硬碟，就讓記憶體直接被吃好吃滿，Finder 當掉好幾次之後，我就決定把方向轉到 Linux 身上。</p>
+<p><img src="https://live.staticflickr.com/65535/51774478429_3ff49103a1_o.png"></p>
+<h3 id="安裝-Pop-OS-21-10"><a href="#安裝-Pop-OS-21-10" class="headerlink" title="安裝 Pop!_OS 21.10"></a>安裝 Pop!_OS 21.10</h3><ol>
+<li>先處理硬碟：我的做法是把久久未用的 Bootcamp 刪除，分割給 Linux 安裝與使用。 <img src="https://live.staticflickr.com/65535/51774720970_dafb1583d7_o.png"> <img src="https://live.staticflickr.com/65535/51774407979_70bc22a078_o.png"></li>
+<li>Pop!_OS 21.10 要求 &#x2F;boot 至少要 500MB，我再分割 2GB 給 Swap，其他的硬碟空間就掛載在 &#x2F; 這裡。(這樣，算是簡單粗暴嗎？) <img src="https://live.staticflickr.com/65535/51773765446_90ef06d919_o.png"></li>
+<li>快速完成：我自己對 ubuntu 與它的衍生版本的觀察，硬碟分割好的下一步，不用等太久，就可以重新開機(下圖)。但，重開機後，畫面黑中帶光，我一度以為安裝失敗，還好稍稍耐著性子，就看到右下角若隱若現的鼠標，不久後就會進到系統登入畫面。 <img src="https://live.staticflickr.com/65535/51774407924_4561b32f23_o.png"></li>
+</ol>
+<h3 id="安裝嘸蝦米"><a href="#安裝嘸蝦米" class="headerlink" title="安裝嘸蝦米"></a>安裝嘸蝦米</h3><ol>
+<li>先從嘸蝦米官網將 iBus 表格檔載回來安裝，之前曾經在 <a target="_blank" rel="noopener" href="http://mtmatt.page/linux/installing-ibus-table-for-boshiamy-on-ubuntu-20-04-lts/">在 ubuntu 20.04 安裝官方嘸蝦米的 iBus 表格檔</a> 分享過對應的表格檔版本。 <img src="https://live.staticflickr.com/65535/51774651180_8ce3cf3d67_o.png"></li>
+<li>安裝好之後，再到「設定值」裡面的「鍵盤」，點「+」(加號)把「中文(嘸蝦米-繁)」加進來。 <img src="https://live.staticflickr.com/65535/51774651175_6d8b48e53d_o.png"></li>
+<li>如果在這裡沒有看到嘸蝦米的話，要重新登入或是重新開機。 <img src="https://live.staticflickr.com/65535/51774651170_0aa52152ce_q.jpg"></li>
+</ol>
+<h3 id="安裝-DaVinci-Resolve-17"><a href="#安裝-DaVinci-Resolve-17" class="headerlink" title="安裝 DaVinci Resolve 17"></a>安裝 DaVinci Resolve 17</h3><ol>
+<li>這是我今天的主要目的，但我認為很有可能安裝不起來，或是安裝完之後，也無法使用。 <img src="https://live.staticflickr.com/65535/51774651145_3706d387a6_o.png"></li>
+<li><a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a> 官方提供的檔案裡，就有安裝的相關說明，我按表操課就順利安裝上來。 <img src="https://live.staticflickr.com/65535/51773765346_455d6c89f7_o.png"></li>
+<li>嗯，目前還是無法使用，我嘗試調整一些 GPU 的設定，觀察到這部老 Mac mini 應該無法使用 <a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a>。 <img src="https://live.staticflickr.com/65535/51774407839_c397dfec17_o.png"></li>
+<li>2014 年末 Mac mini 是真的夠老了，也不好太為難它，姑且，另外找一部 Wintel 的機器來跑 <a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a>！ <img src="https://live.staticflickr.com/65535/51776779109_95fe56903b_o.png"></li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>參考網站： (1)<a target="_blank" rel="noopener" href="https://pop.system76.com/">Pop!_OS by System76</a> (2)<a target="_blank" rel="noopener" href="https://system76.com/">System76 - Linux Laptops, Desktops, and Servers</a> (3)<a target="_blank" rel="noopener" href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a> (4)<a target="_blank" rel="noopener" href="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17 | Blackmagic Design</a> (5)<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Wintel">Wintel - 維基百科，自由的百科全書</a></li>
+<li>本次安裝使用的 ISO 檔版本是 pop-os_21.10_amd64_intel_3.iso。</li>
+<li>硬體：Mac mini 2014 年末。 <img src="https://live.staticflickr.com/65535/51774651070_0faeb27038_o.png"></li>
+<li>有別於上次佔滿整部 Mac mini 的 Arch Linux 被我砍掉，今次走的是雙系統，而且這次的 Pop!_OS 21.10 我原則上會先保留，需要用到 iTunes、相簿與 iMovie 時，我再切換到 macOS，而切換的方式「只能」在開機時按住 Option 鍵，再找到我想使用的系統，這一點非常合我意。</li>
+<li>macOS Mojave 在這一部 Mac mini 上的效能，實在讓人難以接受，我已經趕在聖誕節結束前，砍掉 macOS Mojave，灌回 macOS High Sierra。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/macos/" rel="tag"># macos</a>
+              <a href="/tags/pop-os/" rel="tag"># pop_os</a>
+              <a href="/tags/highsierra/" rel="tag"># highsierra</a>
+              <a href="/tags/mojave/" rel="tag"># mojave</a>
+              <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+              <a href="/tags/macmini/" rel="tag"># macmini</a>
+              <a href="/tags/davinciresolve17/" rel="tag"># davinciresolve17</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/unpack/black-belkin-secure-holder-for-airtag/" rel="prev" title="開箱「適用於 AirTag 的 Belkin Secure Holder (附鑰匙圈) - 黑色」">
+      <i class="fa fa-chevron-left"></i> 開箱「適用於 AirTag 的 Belkin Secure Holder (附鑰匙圈) - 黑色」
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/cppreview/optimize/" rel="next" title="一個非常暴力的常數優化">
+      一個非常暴力的常數優化 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-Pop-OS-21-10"><span class="nav-number">2.</span> <span class="nav-text">安裝 Pop!_OS 21.10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E5%98%B8%E8%9D%A6%E7%B1%B3"><span class="nav-number">3.</span> <span class="nav-text">安裝嘸蝦米</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-DaVinci-Resolve-17"><span class="nav-number">4.</span> <span class="nav-text">安裝 DaVinci Resolve 17</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">5.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

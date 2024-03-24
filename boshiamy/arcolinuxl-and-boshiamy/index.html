@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言喜歡 Arch Linux，或是說想要嘗試 Arch Linux，卻被一開始的暗黑安裝畫面給擊退的伙伴，其實有很多不同的選擇(有興趣的伙伴，可以試著從標籤雲裡點一下 archLinux 這個標籤，找看看)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ArcoLinuxL 與嘸蝦米">
+<meta property="og:url" content="http://mtmatt.one/boshiamy/arcolinuxl-and-boshiamy/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言喜歡 Arch Linux，或是說想要嘗試 Arch Linux，卻被一開始的暗黑安裝畫面給擊退的伙伴，其實有很多不同的選擇(有興趣的伙伴，可以試著從標籤雲裡點一下 archLinux 這個標籤，找看看)。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058466189_a963036ab7_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058466154_51b5f415fd_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52057189462_99e7999456_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058716140_58df2ec8d1_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058466134_27d84ae333_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058261178_912023ce0c_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52057189397_9ebddff0fe_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058466084_f7280a82c8_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058466089_4ee892584a_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058228711_0754b513de_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058261098_1109b762b2_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52057189302_8581a3d879_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058261048_25957efc4a_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058715975_7285b0cc7b_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058715920_b22df39ecc_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52057189247_c73243484a_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058465864_0b5ff41d92_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058228526_a7af812190_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058260898_4da09a1312_b.jpg">
+<meta property="article:published_time" content="2022-05-08T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-17T01:52:01.435Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="archlinux">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="arcolinux">
+<meta property="article:tag" content="fcitx5">
+<meta property="article:tag" content="fcitx5-table-extra">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52058466189_a963036ab7_b.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/boshiamy/arcolinuxl-and-boshiamy/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>ArcoLinuxL 與嘸蝦米 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/boshiamy/arcolinuxl-and-boshiamy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ArcoLinuxL 與嘸蝦米
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-05-08 08:00:00" itemprop="dateCreated datePublished" datetime="2022-05-08T08:00:00+08:00">2022-05-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/boshiamy/" itemprop="url" rel="index"><span itemprop="name">boshiamy</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>喜歡 Arch Linux，或是說想要嘗試 Arch Linux，卻被一開始的暗黑安裝畫面給擊退的伙伴，其實有很多不同的選擇(有興趣的伙伴，可以試著從標籤雲裡點一下 <a href="http://mtmatt.one/tag/archlinux/">archLinux</a> 這個標籤，找看看)。</p>
+<p>今天，來紀錄一下另外一支，比較接近原生 Arch Linux 的衍生發行版的安裝與使用的快速回顧。</p>
+<p>這支 Distro 名為 ArcoLinux，截至本文完稿前，它在 DistroWatch.com 上的排名在第 21 名。</p>
+<hr>
+<h3 id="安裝過程截圖"><a href="#安裝過程截圖" class="headerlink" title="安裝過程截圖"></a>安裝過程截圖</h3><p>一樣，我是用 VirtualBox 來體驗 ArcoLinux，從虛擬光礙讀到的光碟 ISO 檔進入系統後，畫面會直接跳出 ArcoLinux Welcome App。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058466189/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp1"><img src="https://live.staticflickr.com/65535/52058466189_a963036ab7_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp1"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>我第一件事，就是按下「Update Arch Linux Mirrors」這個按鈕。但，我忘了去看 Mirrors 是不是真的有被 Update。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058466154/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp2"><img src="https://live.staticflickr.com/65535/52058466154_51b5f415fd_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp2"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>再來，我選擇 Easy Installation 啟動 ArcoLinux Installer。( 下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52057189462/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp3"><img src="https://live.staticflickr.com/65535/52057189462_99e7999456_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp3"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>切換到繁體中文。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058716140/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp4"><img src="https://live.staticflickr.com/65535/52058716140_58df2ec8d1_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp4"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>設定位置。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058466134/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp5"><img src="https://live.staticflickr.com/65535/52058466134_27d84ae333_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp5"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>設定鍵盤。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058261178/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp6"><img src="https://live.staticflickr.com/65535/52058261178_912023ce0c_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp6"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>設定硬碟分割，預設並不是 btrfs，但我現在想用這個格式。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52057189397/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp7"><img src="https://live.staticflickr.com/65535/52057189397_9ebddff0fe_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp7"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>設定使用者，我發現…，不用密碼也可過得去，這樣好像不太好，建議還是設定一下比較妥。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058466084/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp8"><img src="https://live.staticflickr.com/65535/52058466084_f7280a82c8_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp8"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>安裝前，做最後的確認。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058466089/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp9"><img src="https://live.staticflickr.com/65535/52058466089_4ee892584a_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp9"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058228711/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp10"><img src="https://live.staticflickr.com/65535/52058228711_0754b513de_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp10"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>因為最近安裝任何一支 Distro 的 Linux，大約都花費 15 分鐘，索性就將機器放著，去做點別的事，所以，我沒有注意，也沒有再去查究竟花多少時間完成安裝。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058261098/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp11"><img src="https://live.staticflickr.com/65535/52058261098_1109b762b2_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp11"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52057189302/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp12"><img src="https://live.staticflickr.com/65535/52057189302_8581a3d879_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp12"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>安裝完重新啟動後，來到 GRUB 畫面。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058261048/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp13"><img src="https://live.staticflickr.com/65535/52058261048_25957efc4a_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp13"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>登入畫面，滿有現代感的。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058715975/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp14"><img src="https://live.staticflickr.com/65535/52058715975_7285b0cc7b_c.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp14"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>系統剛安裝完之後，剛進入系統，就會有更新通知，強烈建議，在一開始就先將這些補丁通通打上去。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058715920/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp15"><img src="https://live.staticflickr.com/65535/52058715920_b22df39ecc_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp15"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>從 Terminal 來看看 VirtualBox 虛擬出來的機器規格。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52057189247/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp16"><img src="https://live.staticflickr.com/65535/52057189247_c73243484a_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp16"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<hr>
+<h3 id="快速回顧"><a href="#快速回顧" class="headerlink" title="快速回顧"></a>快速回顧</h3><p>圖形介面安裝：其實，試著記下圖形介面的安裝過程，就不難發現，在 Terminal 進行安裝，要做的事也差不就是那些。所以，我相信 ArcoLinux 想要做的不只是好安裝而已。</p>
+<p>ArcoLinux Tweak Tool：現在滿多 Distro 都會做專屬自己的輔助 App，例如：Garuda Linux 的 Setup Assistant，在 ArcoLinux 上，則是一支名為 ArcoLinux Tweak Tool 的 App。這支 App 可以說是能夠 Tweak 山 Tweak 海的，比較更惜的是沒有 Tweak 亞洲語系的文字顯示與輸入法。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058465864/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp18"><img src="https://live.staticflickr.com/65535/52058465864_0b5ff41d92_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp18"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<hr>
+<h3 id="安裝嘸蝦米輸入法"><a href="#安裝嘸蝦米輸入法" class="headerlink" title="安裝嘸蝦米輸入法"></a>安裝嘸蝦米輸入法</h3><p>既然是 Arch Linux 衍生發行版，基本上就用一樣的方式服用即可，大致的步驟如下。</p>
+<ol>
+<li><p>啟動 Terminal，並輸入以下的指令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S vim fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-table-extra</span><br><span class="line">sudo vim /etc/environment</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>啟動 vim 編輯，寫入以下內容 (直接從這裡複製貼上服用也行)</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重開機。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重開機之後，右下角會出現一個鍵盤圖示，點右鍵進入「設定」。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058228526/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp20"><img src="https://live.staticflickr.com/65535/52058228526_a7af812190_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp20"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>在設定視窗裡，找到「可用輸入法：」下的搜尋框，我是打關鍵字「bosh」把嘸蝦米找出來並新增。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058260898/in/dateposted-public/" title="installingArcoLinuxLv22.05onVirtualBoxEp22"><img src="https://live.staticflickr.com/65535/52058260898_4da09a1312_b.jpg" alt="installingArcoLinuxLv22.05onVirtualBoxEp22"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>Ctrl+Space，看到右下角的鍵盤圖示轉成紅色的「嘸」，就表示可以切換並使用嘸蝦米輸入法。</p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>下載 ArcoLinux 時，會發現有 L、S、D 與 B 總共 4 個版本(透過 Torrent 的話，還有一個 Lts 版)，可供使用者選用，如果不是很清楚的話，記得先到 <a target="_blank" rel="noopener" href="https://www.arcolinux.info/what-to-choose/">What to choose | ArcoLinux</a> 這裡，這張頁面最底下有圖解這幾個版本的不一樣之處在哪裡。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/archlinux/" rel="tag"># archlinux</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/arcolinux/" rel="tag"># arcolinux</a>
+              <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
+              <a href="/tags/fcitx5-table-extra/" rel="tag"># fcitx5-table-extra</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/reviews/cp-value-of-protecting-product-for-iphone/" rel="prev" title="行動裝置上的螢幕保護貼性價比的選擇與思考">
+      <i class="fa fa-chevron-left"></i> 行動裝置上的螢幕保護貼性價比的選擇與思考
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/linux/20-days-after-shifting-to-garuda-linux/" rel="next" title="轉換至 Garuda Linux 之 20 天後">
+      轉換至 Garuda Linux 之 20 天後 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E9%81%8E%E7%A8%8B%E6%88%AA%E5%9C%96"><span class="nav-number">2.</span> <span class="nav-text">安裝過程截圖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%A7"><span class="nav-number">3.</span> <span class="nav-text">快速回顧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E5%98%B8%E8%9D%A6%E7%B1%B3%E8%BC%B8%E5%85%A5%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">安裝嘸蝦米輸入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">5.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="源起 &amp; 說明起心動念編纂這本「講義」的時候，正值我準備 APCS 考試期間，當時也正在就讀高中，考量到時間上的不足，我邀請 3 個人一起參與，所以，作者總共有 4 個人，而本篇貼文所摘錄的是我所創作的部分。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[置頂] APCS 講義">
+<meta property="og:url" content="http://mtmatt.one/apcs/apcspracticaltest/my-apcs-handout/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="源起 &amp; 說明起心動念編纂這本「講義」的時候，正值我準備 APCS 考試期間，當時也正在就讀高中，考量到時間上的不足，我邀請 3 個人一起參與，所以，作者總共有 4 個人，而本篇貼文所摘錄的是我所創作的部分。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53128470737_d105641fc7_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53129060566_a9054451ce_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53129470005_445f4ddc2c_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53129540858_71fcd54c45_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53129540863_b35edb90b3_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51821755725_f3cbcbed1f_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51903502674_6ba5e3979e_o.png">
+<meta property="article:published_time" content="2033-07-10T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-24T02:56:08.079Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="apcs">
+<meta property="article:tag" content="APCS與競賽入門">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/53128470737_d105641fc7_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/apcs/apcspracticaltest/my-apcs-handout/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>[置頂] APCS 講義 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/apcs/apcspracticaltest/my-apcs-handout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [置頂] APCS 講義
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2033-07-10 08:00:00" itemprop="dateCreated datePublished" datetime="2033-07-10T08:00:00+08:00">2033-07-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/apcs/" itemprop="url" rel="index"><span itemprop="name">apcs</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/apcs/apcspracticaltest/" itemprop="url" rel="index"><span itemprop="name">apcspracticaltest</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>24k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>43 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="源起-說明"><a href="#源起-說明" class="headerlink" title="源起 &amp; 說明"></a>源起 &amp; 說明</h1><p>起心動念編纂這本「講義」的時候，正值我準備 APCS 考試期間，當時也正在就讀高中，考量到時間上的不足，我邀請 3 個人一起參與，所以，作者總共有 4 個人，而本篇貼文所摘錄的是我所創作的部分。</p>
+<h1 id="作者序"><a href="#作者序" class="headerlink" title="作者序"></a>作者序</h1><p>演算法與資料結構一直以來都是程式設計中最重要的部分。然而許多的書籍在介紹時，出於篇幅考量，字句精簡，以致晦澀難懂。本書旨在對於演算法及資料結構進行詳細的介紹，避免初學者遇到與我相同的困境，因而花費許多時間。雖說是競賽入門，然我仍有計畫放一些進階的資料結構與演算法。</p>
+<p>後續我盡可能會將所有題目放在 ZeroJudge 的課程裡，方便大家測試自己的程式碼，也方便除錯。<br>(參加課程方式。從使用者選單-&gt;「參加課程」-&gt;課程代碼：a7HcCs)</p>
+<p>這本書作為我程式設計學習的其中一個指標，也是我自主學習計畫的內容。希望能幫助到一些在資料結構與演算法的學習與運用上不知如何進展的人。</p>
+<p>作者：李尚哲、余光磊、戴偉璿與李卓岳。</p>
+<p>本教材歡迎分享使用，僅須註明出處，惟不得作營利用途。</p>
+<h1 id="樹狀樹組-BIT"><a href="#樹狀樹組-BIT" class="headerlink" title="樹狀樹組-BIT"></a>樹狀樹組-BIT</h1><blockquote>
+<p><strong>快速求取區間和的助手</strong></p>
+</blockquote>
+<h2 id="回顧"><a href="#回顧" class="headerlink" title="回顧"></a>回顧</h2><p>還記得前綴和嗎，他也是用來求區間和的，但你應該會發現，若當中有一個值需要被修改，那整列都會被動到。</p>
+<p>以下是一個比較表，了解BIT強大之處</p>
+<table>
+<thead>
+<tr>
+<th>資料結構</th>
+<th>查尋區間和</th>
+<th>單點修改值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>純陣列</td>
+<td>\(O(n)\)</td>
+<td>\(O(1)\)</td>
+</tr>
+<tr>
+<td>前綴和</td>
+<td>\(O(1)\)</td>
+<td>\(O(n)\)</td>
+</tr>
+<tr>
+<td>BIT</td>
+<td>\(O(log(n))\)</td>
+<td>\(O(log(n))\)</td>
+</tr>
+</tbody></table>
+<h2 id="用途-概念"><a href="#用途-概念" class="headerlink" title="用途 &amp; 概念"></a>用途 &amp; 概念</h2><p>BIT用於在快速求取區間和的同時，又能保證快速修改。感覺像是陣列與前綴和的優點結合下的產物，不過其複雜程度也是三者之中最高的。以下為示意圖，其中數字代表它儲存的區間。</p>
+<img src="https://live.staticflickr.com/65535/53128470737_d105641fc7_c.jpg" width="750" height="400" alt="myApcsHanoutEp1"/>
+
+<p>如果想要知道<code>1~5</code>的和，可以查詢<code>1~4+5</code>。以下為查詢所需區間表。</p>
+<table>
+<thead>
+<tr>
+<th align="center">1</th>
+<th align="center">1~2</th>
+<th align="center">1~3</th>
+<th align="center">1~4</th>
+<th align="center">1~5</th>
+<th align="center">1~6</th>
+<th align="center">1~7</th>
+<th align="center">1~8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">1~2</td>
+<td align="center">1~2 &amp; 3</td>
+<td align="center">1~4</td>
+<td align="center">1~4 &amp; 5</td>
+<td align="center">1<del>4 &amp; 5</del>6</td>
+<td align="center">1<del>4 &amp; 5</del>6 &amp; 7</td>
+<td align="center">1~8</td>
+</tr>
+</tbody></table>
+<p>可以發現，在元素數量為8時，最多會需要查詢3個區間就可以得到<code>1~n</code>的值，接著就像前綴和那樣，用<code>1~R - 1~(L-1)</code>就可以求出所有區間的和了。</p>
+<h2 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h2><p>BIT一般都是用陣列實作，用區間最大值作為存放位置(例如<code>1~4</code>放在<code>4</code>)。那搜尋與修改呢？這部分就比較複雜了，需要了解一些二進位制，如果你已經理解二進位制了，那就繼續往下看吧。</p>
+<h3 id="二進位表"><a href="#二進位表" class="headerlink" title="二進位表"></a>二進位表</h3><table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>000001</td>
+<td>000010</td>
+<td>000011</td>
+<td>000100</td>
+<td>000101</td>
+<td>000110</td>
+<td>000111</td>
+<td>001000</td>
+</tr>
+</tbody></table>
+<h3 id="lowbit"><a href="#lowbit" class="headerlink" title="lowbit"></a>lowbit</h3><p>lowbit是在二進位下右邊看過來最前面的1，例如：6(000110)就是2(000010)，一樣提供一個表</p>
+<table>
+<thead>
+<tr>
+<th align="center">1</th>
+<th>2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">000001</td>
+<td>000010</td>
+<td align="center">000011</td>
+<td align="center">000100</td>
+<td align="center">000101</td>
+<td align="center">000110</td>
+<td align="center">000111</td>
+<td align="center">001000</td>
+</tr>
+<tr>
+<td align="center">000001</td>
+<td>000010</td>
+<td align="center">000001</td>
+<td align="center">000100</td>
+<td align="center">000001</td>
+<td align="center">000010</td>
+<td align="center">000001</td>
+<td align="center">001000</td>
+</tr>
+</tbody></table>
+<h3 id="查詢"><a href="#查詢" class="headerlink" title="查詢"></a>查詢</h3><p>可以發現，\(x\)重複\(-lowbit(x)\)會變成0，且途中會經過所有需要的區間。以7為例</p>
+<img src="https://live.staticflickr.com/65535/53129060566_a9054451ce_c.jpg" width="750" height="400" alt="myApcsHanoutEp2"/>
+
+<p>只要將所有經過的區間加在一起，就可以得到區間和了。這也呼應為何他查尋的複雜度為\(O(log(n))\)，因為\(n\)只會有\(log(n)\)個\(bit\)。</p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><img src="https://live.staticflickr.com/65535/53129470005_445f4ddc2c_c.jpg" width="750" height="300" alt="myApcsHanoutEp3"/>
+
+<p>這樣最多也是\(O(log(n))\)。也可以發現\(lowbit\)的重要性。</p>
+<h3 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> lowbit(x) (x&amp;-x)</span></span><br><span class="line"><span class="comment">// 與 int lowbit(x)&#123; return x&amp;-x;&#125;</span></span><br><span class="line"><span class="comment">// 用define或函式雖然不會讓你的程式碼寫起來比較快，但可以使其較易於理解。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> ll=<span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line">ll bt[<span class="number">200010</span>];</span><br><span class="line">ll a[<span class="number">200010</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// build 函式是透過逐個更新陣列的所有元素來建構BIT</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> x=i;x&lt;<span class="number">200005</span>;x+=<span class="built_in">lowbit</span>(x))</span><br><span class="line">            bt[x]+=a[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 單點加值</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> k)</span></span>&#123;</span><br><span class="line">    a[x]+=k;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=x;i&lt;=<span class="number">200005</span>;i+=<span class="built_in">lowbit</span>(i))</span><br><span class="line">        bt[i]+=k;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 由單點加值衍生出來的單點修改</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="built_in">add</span>(x,k-a[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 搜尋1~x的區間和</span></span><br><span class="line"><span class="function">ll <span class="title">find_sum</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    ll ret=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=x;i&gt;<span class="number">0</span>;i-=<span class="built_in">lowbit</span>(i))</span><br><span class="line">        ret+=bt[i];</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用計算(1~r) - (1~(l-1))算出所有區間的區間和</span></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">find_sum</span>(r)-<span class="built_in">find_sum</span>(l<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="習題"><a href="#習題" class="headerlink" title="習題"></a>習題</h2><h3 id="Q-13-1-區域調查-POJ-1195-Mobile-phones-改編"><a href="#Q-13-1-區域調查-POJ-1195-Mobile-phones-改編" class="headerlink" title="Q-13-1 區域調查(POJ.1195 Mobile phones 改編)"></a>Q-13-1 <a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d796">區域調查(POJ.1195 Mobile phones 改編)</a></h3><h4 id="題目敘述"><a href="#題目敘述" class="headerlink" title="題目敘述 :"></a>題目敘述 :</h4><p>給一個矩陣 T(1,1), T(1,2),…. T(N,M)，求 T(x1,y1)  到 T(x2,y2) 的總和 或者是修改 T(x1,y1) 的值</p>
+<h4 id="輸入說明"><a href="#輸入說明" class="headerlink" title="輸入說明 :"></a>輸入說明 :</h4><p>每組輸入的第一行會有兩個正整數 N Q ( 1 ≦ N ≦ 250,  Q ≦ 50,0000)</p>
+<p>接下來會有 N 行，每行上會有 N 個元素 M ( 0 ≦ M ≦ 32767 )</p>
+<p>接下來會有 Q 行，倘若第一個數字為 1，則接下來會有四個數字</p>
+<p>x1 , y1 , x2 , y2， 1 ≦ x1 , y1 , x2 , y2 ≦ 250</p>
+<p>請輸出元素 \(S&#x3D;{( x , y ) | x1 ≦ x ≦ x2, y1 ≦ y ≦ y2 }\)符合的所有元素總和</p>
+<p>倘若第一個數字為2，則接下來會有三個數字</p>
+<p>x1 , y1 , V， 1 ≦ x1 , y1 ≦ 250 , 0 ≦ V ≦ 32767,</p>
+<p>請修改 ( x1 , y1 )&#x3D; V ; 此行不必輸出</p>
+<h4 id="輸出說明"><a href="#輸出說明" class="headerlink" title="輸出說明 :"></a>輸出說明 :</h4><p>若為調查，則輸出區域中的元素總和，若為修改，則不必輸出</p>
+<h4 id="範例輸入-1"><a href="#範例輸入-1" class="headerlink" title="範例輸入 1 :"></a>範例輸入 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">5 10</span><br><span class="line">3 2 2 3 7</span><br><span class="line">4 4 0 3 8</span><br><span class="line">2 4 7 2 3</span><br><span class="line">5 9 6 1 4</span><br><span class="line">7 1 7 1 1</span><br><span class="line">2 2 2 1</span><br><span class="line">1 5 4 5 5</span><br><span class="line">2 2 1 7</span><br><span class="line">1 3 2 1 5</span><br><span class="line">1 2 5 4 5</span><br><span class="line">1 1 2 2 1</span><br><span class="line">2 2 2 7</span><br><span class="line">2 4 5 5</span><br><span class="line">1 3 3 4 5</span><br><span class="line">1 4 3 2 2</span><br></pre></td></tr></table></figure>
+<h4 id="範例輸出-1"><a href="#範例輸出-1" class="headerlink" title="範例輸出 1 :"></a>範例輸出 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">42</span><br><span class="line">15</span><br><span class="line">13</span><br><span class="line">24</span><br><span class="line">33</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Q-13-2-2D-rank-finding-problem-98學年度中投區資訊學科能力競賽"><a href="#Q-13-2-2D-rank-finding-problem-98學年度中投區資訊學科能力競賽" class="headerlink" title="Q-13-2 2D rank finding problem(98學年度中投區資訊學科能力競賽)"></a>Q-13-2 <a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d847">2D rank finding problem(98學年度中投區資訊學科能力競賽)</a></h3><h4 id="題目敘述-1"><a href="#題目敘述-1" class="headerlink" title="題目敘述 :"></a>題目敘述 :</h4><p>二度空間上的排名計算問題(2D rank finding problem)：給定二度平面空間(2D)上的點A &#x3D; (a1,a2)與點B &#x3D; (b1,b2)，其大小關係定義為若A &gt; B 若且唯若 a1&gt; b1 且 a2 &gt; b2 ;亦即A點在B點的右上方。如下圖中，B &gt;A, C&gt;A, D&gt;A, D&gt;C, D&gt; B。值得注意的是，並非任意兩點均可以決定大小關係，如下圖中的點A與點E，點D與點E等，無法決定這兩點的大小關係故為無法比較(incomparable)。給定N個點(x1,y1), (x2,y2), …, (xn,yn)，定義某一個點的排名(rank) 為所給的點集合中，比該點小的點的個數。</p>
+<p>設計一個程式，從檔案讀取點的名稱與座標，計算出在所給定的集合中，所有點的排名值。</p>
+<h4 id="輸入說明-1"><a href="#輸入說明-1" class="headerlink" title="輸入說明 :"></a>輸入說明 :</h4><p>有多組測試資料</p>
+<p>每組的第一行有一個數字N ( 1 ≦ N ≦ 10000 )</p>
+<p>接下來會有N行，每行上會有兩個數字  x  y  ( 1 ≦ x , y ≦ 1000 )</p>
+<h4 id="輸出說明-1"><a href="#輸出說明-1" class="headerlink" title="輸出說明 :"></a>輸出說明 :</h4><p>請按照輸入的順序，求出對於 ( x , y ) 有多少個點 ( a , b )</p>
+<p>在它的左下方 a &lt; x , b &lt; y</p>
+<h4 id="範例輸入-1-1"><a href="#範例輸入-1-1" class="headerlink" title="範例輸入 1 :"></a>範例輸入 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">961 404</span><br><span class="line">640 145</span><br><span class="line">983 888</span><br><span class="line">539 71</span><br><span class="line">437 532</span><br></pre></td></tr></table></figure>
+<h4 id="範例輸出-1-1"><a href="#範例輸出-1-1" class="headerlink" title="範例輸出 1 :"></a>範例輸出 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1</span><br><span class="line">4</span><br><span class="line">0</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Q-13-3-低地距離-2020年10月APCS"><a href="#Q-13-3-低地距離-2020年10月APCS" class="headerlink" title="Q-13-3 低地距離(2020年10月APCS)"></a>Q-13-3 <a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f315">低地距離(2020年10月APCS)</a></h3><h4 id="題目敘述-2"><a href="#題目敘述-2" class="headerlink" title="題目敘述 :"></a>題目敘述 :</h4><p>輸入一個長度為 2n 的陣列，其中 1 ~ n 的每個數字都剛好各 2 次。</p>
+<p>i 的低窪值的定義是兩個數值為 i 的位置中間，有幾個小於 i 的的數字。</p>
+<p>以 \([3, 1, 2, 1, 3, 2]\) 為例，1的低窪值為 0, 2 的低窪值值為 1, 3 的低窪值為 3。</p>
+<p>請對於每個 1 ~ n 的數字都求其低窪值（兩個相同的數字之間有幾個數字比它小），輸出低窪值的總和，答案可能會超過 C++ int 的上限。</p>
+<h4 id="輸入說明-2"><a href="#輸入說明-2" class="headerlink" title="輸入說明 :"></a>輸入說明 :</h4><p>第一行有一個正整數 n<br>第二行有 2n 個正整數，以空格分隔，保證 1 ~ n 每個數字都恰好出現兩次。</p>
+<p>1≤n≤100000</p>
+<h4 id="輸出說明-2"><a href="#輸出說明-2" class="headerlink" title="輸出說明 :"></a>輸出說明 :</h4><p>輸出 1 ~ n 每個數字的低窪值總和。</p>
+<h4 id="範例輸入-1-2"><a href="#範例輸入-1-2" class="headerlink" title="範例輸入 1 :"></a>範例輸入 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">3 1 2 1 3 2</span><br></pre></td></tr></table></figure>
+<h4 id="範例輸出-1-2"><a href="#範例輸出-1-2" class="headerlink" title="範例輸出 1 :"></a>範例輸出 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h1 id="線段樹"><a href="#線段樹" class="headerlink" title="線段樹"></a>線段樹</h1><blockquote>
+<p><strong>於競賽而言強大的工具。</strong></p>
+</blockquote>
+<h2 id="用法-概念"><a href="#用法-概念" class="headerlink" title="用法 &amp; 概念"></a>用法 &amp; 概念</h2><p>線段樹除了可以用來快速解區間和問題，還可以用來執行許多與區間有關的操作。大致上用以下方式建構區間</p>
+<img src="https://live.staticflickr.com/65535/53129540858_71fcd54c45_c.jpg" width="750" height="275" alt="myApcsHanoutEp4"/>
+
+<p>每個區間視情況放不同的數值，例如：最大&#x2F;小，或是區間總和等。</p>
+<p>接著，每個區間就都可以分為\(O(log(n))\)個區間，例如<code>2~7</code>可以分為<code>2, 3~4, 5~6, 7</code></p>
+<img src="https://live.staticflickr.com/65535/53129540863_b35edb90b3_c.jpg" width="750" height="275" alt="myApcsHanoutEp5"/>
+
+<p>查詢時皆以最大區間為出發點，例如上圖就會是從<code>1~8</code>這個區間開始，如果要查詢的區間是<code>2~7</code>。因為<code>1~8</code>這個區間並沒有完全包含<code>2~7</code>，因此需要往下遞迴，分成<code>1~4</code>和<code>5~8</code>再次查詢。</p>
+<p>接著，因為<code>1~4</code>和<code>5~8</code>仍然沒有完全被<code>2~7</code>包含，因此要再次遞迴，這次是分解成<code>1~2</code>,<code>3~4</code>,<code>5~6</code>以及<code>7~8</code>。</p>
+<p>這次<code>3~4</code>和<code>5~6</code>都有被完全包含，因此可以直接回傳這個區間的值。而<code>1~2</code>和<code>7~8</code>還是沒有。所以這兩個區間還要再次向下查詢。</p>
+<p>查詢時最重要的是，若區間完全被包含就直接回傳，若完全沒被包含就不往那邊搜尋，否則再將區間分成兩塊向下遞迴。</p>
+<h2 id="實作-1"><a href="#實作-1" class="headerlink" title="實作"></a>實作</h2><p>可以發現他是一顆二元樹，於是我們有兩種做法：指標型與陣列型。以下實作以區間總和為範例。</p>
+<h3 id="指標型"><a href="#指標型" class="headerlink" title="指標型"></a>指標型</h3><p>請詳讀程式碼，我盡可能詳細註解</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">    <span class="comment">//value</span></span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//左右子樹的指標</span></span><br><span class="line">    node *rch,*lch;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//建構式</span></span><br><span class="line">    <span class="built_in">node</span>()&#123;</span><br><span class="line">        val=<span class="number">0</span>;</span><br><span class="line">        rch=lch=<span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//帶有初始值的建構式</span></span><br><span class="line">    <span class="built_in">node</span>(<span class="type">int</span> v)&#123;</span><br><span class="line">        val=v;</span><br><span class="line">        rch=lch=<span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//當左右子樹改變時，應重新計算父節點的值</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pull</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//歸零</span></span><br><span class="line">        val=<span class="number">0</span>;</span><br><span class="line">        <span class="comment">//必須先有左右子樹才能拜訪</span></span><br><span class="line">        <span class="comment">//if(l) 相當於 if(l!=nullptr)</span></span><br><span class="line">        <span class="keyword">if</span>(lch) val+=lch-&gt;val;</span><br><span class="line">        <span class="keyword">if</span>(rch) val+=rch-&gt;val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//單點修改</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> p,<span class="type">int</span> v,<span class="type">int</span> lb=<span class="number">1</span>,<span class="type">int</span> rb=n)</span></span>&#123;</span><br><span class="line">        <span class="comment">//終止條件：區間長度為1</span></span><br><span class="line">        <span class="keyword">if</span>(lb==rb)&#123;</span><br><span class="line">            val=v;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//若左右子樹沒有結點則開一個新的</span></span><br><span class="line">        <span class="keyword">if</span>(!lch) lch=<span class="keyword">new</span> <span class="built_in">node</span>();</span><br><span class="line">        <span class="keyword">if</span>(!rch) rch=<span class="keyword">new</span> <span class="built_in">node</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//設mid為區間中點，均分為左右區間</span></span><br><span class="line">        <span class="comment">//&gt;&gt;1相當於/2，但快很多</span></span><br><span class="line">        <span class="type">int</span> mid=lb+rb&gt;&gt;<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//左邊走左，右邊走右</span></span><br><span class="line">        <span class="keyword">if</span>(p&lt;=mid) lch-&gt;<span class="built_in">modify</span>(p,v, lb ,mid);</span><br><span class="line">        <span class="keyword">if</span>(mid&lt;p)  rch-&gt;<span class="built_in">modify</span>(p,v,mid+<span class="number">1</span>,rb);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//還記得子樹修改完要做什麼？</span></span><br><span class="line">        <span class="built_in">pull</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r,<span class="type">int</span> lb=<span class="number">1</span>,<span class="type">int</span> rb=n)</span></span>&#123;</span><br><span class="line">        <span class="comment">//終止條件：所在區間位於欲查詢區間之中</span></span><br><span class="line">        <span class="keyword">if</span>(l&lt;=lb &amp;&amp; rb&lt;=r)&#123;</span><br><span class="line">            <span class="keyword">return</span> val;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//同modify</span></span><br><span class="line">        <span class="type">int</span> mid=lb+rb&gt;&gt;<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//左右遞迴求解</span></span><br><span class="line">        <span class="type">int</span> ret=<span class="number">0</span>;</span><br><span class="line">        <span class="comment">//若左右區間不在要查詢的區間或是沒有左右子樹則不遞迴</span></span><br><span class="line">        <span class="keyword">if</span>(lch &amp;&amp; l&lt;=mid) ret+=lch-&gt;<span class="built_in">query</span>(l,r, lb ,mid);</span><br><span class="line">        <span class="keyword">if</span>(rch &amp;&amp; mid&lt;r)  ret+=rch-&gt;<span class="built_in">query</span>(l,r,mid+<span class="number">1</span>,rb);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//為求保險，以及供以後懶人標記使用</span></span><br><span class="line">        <span class="built_in">pull</span>();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">node *rt=<span class="keyword">new</span> <span class="built_in">node</span>();<span class="comment">//root</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="陣列型"><a href="#陣列型" class="headerlink" title="陣列型"></a>陣列型</h3><blockquote>
+<p>設根節點idx為1，在完滿二元樹中，左子樹就會是\(idx \times 2\)，右子樹就是\(idx \times 2+1\)。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> a[N];</span><br><span class="line"><span class="comment">//陣列seg的大小建議是N*4，否則你要先知道大於N的最小2^k值</span></span><br><span class="line"><span class="comment">// 131072 -&gt; 262144 所以其實開 262200 就可以了</span></span><br><span class="line"><span class="type">int</span> seg[N*<span class="number">4</span>];</span><br><span class="line"><span class="type">int</span> n,MXN=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//不同於指標型的是：陣列行要預建構</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> lb=<span class="number">1</span>,<span class="type">int</span> rb=MXN,<span class="type">int</span> idx=<span class="number">1</span>)</span></span>&#123;</span><br><span class="line">    <span class="comment">//終止條件：區間長度為1</span></span><br><span class="line">    <span class="keyword">if</span>(lb==rb) <span class="keyword">return</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//設mid為區間中點，均分為左右區間</span></span><br><span class="line">    <span class="comment">//&gt;&gt;1相當於/2，但稍快</span></span><br><span class="line">    <span class="type">int</span> mid=lb+rb&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//idx*2   為左子樹</span></span><br><span class="line">    <span class="comment">//idx*2+1 為右子樹</span></span><br><span class="line">    <span class="built_in">build</span>(lb,mid,idx*<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">build</span>(mid+<span class="number">1</span>,rb,idx*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    seg[idx]=seg[idx*<span class="number">2</span>]+seg[idx*<span class="number">2</span>+<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//為了讓他長度為2^k</span></span><br><span class="line">    <span class="keyword">while</span>(MXN&lt;n) MXN&lt;&lt;=<span class="number">1</span>;</span><br><span class="line">    <span class="comment">//歸零</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=MXN+<span class="number">1</span>;i&lt;MXN*<span class="number">2</span>;i++) seg[i]=<span class="number">0</span>;</span><br><span class="line">    <span class="comment">//以陣列的內容對其初始化</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i) seg[MXN+i<span class="number">-1</span>]=a[i];</span><br><span class="line">    <span class="comment">//將所有節點都建構好</span></span><br><span class="line">    <span class="built_in">build</span>();</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="comment">//此部分也與指標型不同，陣列可以直接依據座標修改</span></span><br><span class="line">    x=x+MXN<span class="number">-1</span>;</span><br><span class="line">    seg[x]=k;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//向上更新節點</span></span><br><span class="line">    <span class="keyword">while</span>(x&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        x&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        seg[x]=seg[x*<span class="number">2</span>]+seg[x*<span class="number">2</span>+<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r,<span class="type">int</span> lb=<span class="number">1</span>,<span class="type">int</span> rb=MXN,<span class="type">int</span> idx=<span class="number">1</span>)</span></span>&#123;</span><br><span class="line">    <span class="comment">//終止條件：所在區間位於欲查詢區間之中</span></span><br><span class="line">    <span class="keyword">if</span>(l&lt;=lb &amp;&amp; rb&lt;=r) <span class="keyword">return</span> seg[idx];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//設mid為區間中點，均分為左右區間</span></span><br><span class="line">    <span class="comment">//&gt;&gt;1相當於/2，但稍快</span></span><br><span class="line">    <span class="type">int</span> mid=lb+rb&gt;&gt;<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//左右遞迴求解</span></span><br><span class="line">    <span class="type">int</span> ret=<span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//若左右區間不在要查詢的區間或是沒有左右子樹則不遞迴</span></span><br><span class="line">    <span class="keyword">if</span>(l&lt;=mid)   ret+=<span class="built_in">query</span>(l,r, lb ,mid,idx*<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span>(r&gt;=mid+<span class="number">1</span>) ret+=<span class="built_in">query</span>(l,r,mid+<span class="number">1</span>,rb,idx*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i) cin&gt;&gt;a[i];</span><br><span class="line">    <span class="comment">//一定要記得init()</span></span><br><span class="line">    <span class="built_in">init</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="懶人標記"><a href="#懶人標記" class="headerlink" title="懶人標記"></a>懶人標記</h2><p>以上的實作方法都只能用於單點修改，而若需要區間加值的話則會很費時，因此有人想到一個方法：若要修改的區間剛好完全包含線段樹上的某個區間的話，就可以先在上面打一個標記。等到需要動到他下面的子區間再向下放。這樣的話區間加值也可以從 \(O(nlog(n))\) 進步到 \(O(log(n))\) 。</p>
+<h3 id="實作-2"><a href="#實作-2" class="headerlink" title="實作"></a>實作</h3><h4 id="指標型-1"><a href="#指標型-1" class="headerlink" title="指標型"></a>指標型</h4><p>請詳讀程式碼，我盡可能詳細註解</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">    <span class="comment">//value tag</span></span><br><span class="line">    <span class="type">int</span> val,tag;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//左右子樹的指標</span></span><br><span class="line">    node *rch,*lch;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//建構式</span></span><br><span class="line">    <span class="built_in">node</span>()&#123;</span><br><span class="line">        val=tag=<span class="number">0</span>;</span><br><span class="line">        rch=lch=<span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//帶有初始值的建構式</span></span><br><span class="line">    <span class="built_in">node</span>(<span class="type">int</span> v)&#123;</span><br><span class="line">        val=v, tag=<span class="number">0</span>;</span><br><span class="line">        rch=lch=<span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//多了一個push()，將標記下放</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">        <span class="comment">//&gt;&gt;運算會在+-之後</span></span><br><span class="line">        <span class="type">int</span> len=r-l+<span class="number">1</span>&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(lch)&#123;</span><br><span class="line">            lch-&gt;val+=tag*len;</span><br><span class="line">            lch-&gt;tag+=tag;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(rch)&#123;</span><br><span class="line">            rch-&gt;val+=tag*len;</span><br><span class="line">            rch-&gt;tag+=tag;</span><br><span class="line">        &#125;</span><br><span class="line">        tag=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//當左右子樹改變時，應重新計算父節點的值</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pull</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//歸零</span></span><br><span class="line">        val=<span class="number">0</span>;</span><br><span class="line">        <span class="comment">//必須先有左右子樹才能拜訪</span></span><br><span class="line">        <span class="comment">//if(l) 相當於 if(l!=nullptr)</span></span><br><span class="line">        <span class="keyword">if</span>(lch) val+=lch-&gt;val;</span><br><span class="line">        <span class="keyword">if</span>(rch) val+=rch-&gt;val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//單點修改</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> p,<span class="type">int</span> v,<span class="type">int</span> lb=<span class="number">1</span>,<span class="type">int</span> rb=n)</span></span>&#123;</span><br><span class="line">        <span class="comment">//終止條件：區間長度為1</span></span><br><span class="line">        <span class="keyword">if</span>(lb==rb)&#123;</span><br><span class="line">            val=v;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//若左右子樹沒有結點則開一個新的</span></span><br><span class="line">        <span class="keyword">if</span>(!lch) lch=<span class="keyword">new</span> <span class="built_in">node</span>();</span><br><span class="line">        <span class="keyword">if</span>(!rch) rch=<span class="keyword">new</span> <span class="built_in">node</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//在遞迴之前先下放標記</span></span><br><span class="line">        <span class="built_in">push</span>(lb,rb);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//設mid為區間中點，均分為左右區間</span></span><br><span class="line">        <span class="comment">//&gt;&gt;1相當於/2，但快很多</span></span><br><span class="line">        <span class="type">int</span> mid=lb+rb&gt;&gt;<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//左邊走左，右邊走右</span></span><br><span class="line">        <span class="keyword">if</span>(p&lt;=mid) lch-&gt;<span class="built_in">modify</span>(p,v, lb ,mid);</span><br><span class="line">        <span class="keyword">if</span>(mid&lt;p)  rch-&gt;<span class="built_in">modify</span>(p,v,mid+<span class="number">1</span>,rb);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//還記得子樹修改完要做什麼？</span></span><br><span class="line">        <span class="built_in">pull</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r,<span class="type">int</span> lb=<span class="number">1</span>,<span class="type">int</span> rb=n)</span></span>&#123;</span><br><span class="line">        <span class="comment">//終止條件：所在區間位於欲查詢區間之中</span></span><br><span class="line">        <span class="keyword">if</span>(l&lt;=lb &amp;&amp; rb&lt;=r)&#123;</span><br><span class="line">            <span class="keyword">return</span> val;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//在遞迴之前先下放標記</span></span><br><span class="line">        <span class="built_in">push</span>(lb,rb);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//同modify</span></span><br><span class="line">        <span class="type">int</span> mid=lb+rb&gt;&gt;<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//左右遞迴求解</span></span><br><span class="line">        <span class="type">int</span> ret=<span class="number">0</span>;</span><br><span class="line">        <span class="comment">//若左右區間不在要查詢的區間或是沒有左右子樹則不遞迴</span></span><br><span class="line">        <span class="keyword">if</span>(lch &amp;&amp; l&lt;=mid) ret+=lch-&gt;<span class="built_in">query</span>(l,r, lb ,mid);</span><br><span class="line">        <span class="keyword">if</span>(rch &amp;&amp; mid&lt;r)  ret+=rch-&gt;<span class="built_in">query</span>(l,r,mid+<span class="number">1</span>,rb);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">pull</span>();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//多了一個函式，區間加值</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r,<span class="type">int</span> v,<span class="type">int</span> lb=<span class="number">1</span>,<span class="type">int</span> rb=n)</span></span>&#123;</span><br><span class="line">        <span class="comment">//終止條件：所在區間位於欲查詢區間之中</span></span><br><span class="line">        <span class="keyword">if</span>(l&lt;=lb &amp;&amp; rb&lt;=r)&#123;</span><br><span class="line">            <span class="comment">//由於區間為閉區間[lb,rb]因此要加1</span></span><br><span class="line">            val+=v*(rb-lb+<span class="number">1</span>);</span><br><span class="line">            tag+=v;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//在遞迴之前先下放標記</span></span><br><span class="line">        <span class="built_in">push</span>(lb,rb);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//同modify</span></span><br><span class="line">        <span class="type">int</span> mid=lb+rb&gt;&gt;<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//左右遞迴求解</span></span><br><span class="line">        <span class="type">int</span> ret=<span class="number">0</span>;</span><br><span class="line">        <span class="comment">//若左右區間不在要查詢的區間或是沒有左右子樹則不遞迴</span></span><br><span class="line">        <span class="keyword">if</span>(lch &amp;&amp; l&lt;=mid) lch-&gt;<span class="built_in">add</span>(l,r,v, lb ,mid);</span><br><span class="line">        <span class="keyword">if</span>(rch &amp;&amp; mid&lt;r)  rch-&gt;<span class="built_in">add</span>(l,r,v,mid+<span class="number">1</span>,rb);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//改完不要更新節點</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">node rt;<span class="comment">//root</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="習題-1"><a href="#習題-1" class="headerlink" title="習題"></a>習題</h2><h3 id="Segment-Tree-練習-ZJe409"><a href="#Segment-Tree-練習-ZJe409" class="headerlink" title="Segment Tree 練習(ZJe409)"></a><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=e409">Segment Tree 練習(ZJe409)</a></h3><h4 id="題目概述"><a href="#題目概述" class="headerlink" title="題目概述 :"></a>題目概述 :</h4><p>將 \(A[x]\)的值更新為 \(y\)<br>要查詢 \(A[X]\)~\(A[Y]\) 之中最大值\(maxA\)及最小值\(minA\)的差</p>
+<h4 id="輸入說明-3"><a href="#輸入說明-3" class="headerlink" title="輸入說明 :"></a>輸入說明 :</h4><p>第1列有兩個正整數 \(k\) \(m\) ，第2列有 \(k\) 個正整數, 請讀入放至 \(A[1..k]\)<br>接著讀入第3列的 \(N\) \(Q\) 兩個正整數，呼叫所附的產生測資程式 <code>gen_dat()</code><br>以上 \(5&lt;k \leq n, 5&lt;m&lt;1000\)<br>然後就是解題，依\(C,X,Y\)陣列的值 執行更新或查詢</p>
+<h4 id="輸出說明-3"><a href="#輸出說明-3" class="headerlink" title="輸出說明 :"></a>輸出說明 :</h4><p>若為調查，則輸出區域中的元素總和，若為修改，則不必輸出</p>
+<h4 id="範例輸入-1-3"><a href="#範例輸入-1-3" class="headerlink" title="範例輸入 1 :"></a>範例輸入 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">10 541</span><br><span class="line">12 34 56 78 91 23 45 67 89 111</span><br><span class="line">25 15</span><br></pre></td></tr></table></figure>
+<h4 id="範例輸出-1-3"><a href="#範例輸出-1-3" class="headerlink" title="範例輸出 1 :"></a>範例輸出 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">328</span><br><span class="line">68</span><br><span class="line">406</span><br><span class="line">0</span><br><span class="line">79</span><br><span class="line">251</span><br><span class="line">327</span><br><span class="line">489</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="戰術資料庫-110宜中資訊社校內賽pF"><a href="#戰術資料庫-110宜中資訊社校內賽pF" class="headerlink" title="戰術資料庫(110宜中資訊社校內賽pF)"></a><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=g625">戰術資料庫(110宜中資訊社校內賽pF)</a></h3><h4 id="題目敘述-3"><a href="#題目敘述-3" class="headerlink" title="題目敘述 :"></a>題目敘述 :</h4><p>要求能在一個陣列中做以下操作</p>
+<ol>
+<li>搜尋區間和 \(find sum\) \((l)\) \((r)\)</li>
+<li>搜尋區間最大和最小值 \(find\) \(max&#x2F;min (l)\) \((r)\)</li>
+<li>單點加減值 \(plus&#x2F;minus\) \((position)\) \((k)\)</li>
+</ol>
+<h4 id="輸入說明-4"><a href="#輸入說明-4" class="headerlink" title="輸入說明 :"></a>輸入說明 :</h4><p>輸入第一行有一個數字 n, q ，下一行有 n 個數字，緊接著有 q 筆操作，可能為以下五種</p>
+<ol>
+<li>搜尋區間和</li>
+<li>搜尋區間最大和最小值</li>
+<li>單點加減值</li>
+</ol>
+<p>相鄰數字間以空白隔開。<br>\(n, q \leq 100000 , a[i] \leq 100000\)</p>
+<h4 id="輸出說明-4"><a href="#輸出說明-4" class="headerlink" title="輸出說明 :"></a>輸出說明 :</h4><p>對於每個搜尋指令做出回答</p>
+<h4 id="範例輸入-1-4"><a href="#範例輸入-1-4" class="headerlink" title="範例輸入 1 :"></a>範例輸入 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">7 10</span><br><span class="line">1 2 3 4 5 6 7</span><br><span class="line">find max 2 5</span><br><span class="line">find min 1 4</span><br><span class="line">minus 3 1</span><br><span class="line">plus 2 4</span><br><span class="line">find sum 1 7</span><br><span class="line">plus 7 -3</span><br><span class="line">find sum 1 3</span><br><span class="line">minus 6 0</span><br><span class="line">plus 1 1</span><br><span class="line">find max 1 7</span><br></pre></td></tr></table></figure>
+<h4 id="範例輸出-1-4"><a href="#範例輸出-1-4" class="headerlink" title="範例輸出 1 :"></a>範例輸出 1 :</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1</span><br><span class="line">31</span><br><span class="line">9</span><br><span class="line">6</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>2022&#x2F;1&#x2F;10</strong></p>
+</blockquote>
+<h1 id="樹堆-Treap"><a href="#樹堆-Treap" class="headerlink" title="樹堆(Treap)"></a>樹堆(Treap)</h1><p>Treap 是一個隨機平衡的二元搜尋樹，這裡所說的 Treap 是以 merge&#x2F;split 的方式實作的，這樣實作的 Treap 有很多好處，我們先說明他的基本規則，以及 merge&#x2F;split 函式(function)在做什麼，結著說明如何實作。</p>
+<p>樹堆的名稱來由是 樹(Tree) 和 堆積(Heap) 結合而成，每個節點會至少存放兩個數值 val,pri ， val (也有人叫他 key)就是內容，而 pri 則是用以平衡。</p>
+<h2 id="規則與前置作業"><a href="#規則與前置作業" class="headerlink" title="規則與前置作業"></a>規則與前置作業</h2><ul>
+<li>所有節點的 pri 值必須比他的左右子樹小(大也可以)</li>
+<li>樹上的 val 滿足 \(“二元搜尋樹”\) 的性質</li>
+</ul>
+<p>為了避免有人忘記什麼是 \(“二元搜尋樹”\) 的性質，以下用一個我出過的題目說明。</p>
+<h3 id="Safe-Sorter"><a href="#Safe-Sorter" class="headerlink" title="Safe Sorter"></a>Safe Sorter</h3><img src="https://live.staticflickr.com/65535/51821755725_f3cbcbed1f_o.png" width="714" height="579" alt="pic">
+
+<ul>
+<li>如果該節點還沒有任何保險箱，此保險箱就會佔據該節點</li>
+<li>否則若這個要放入的保險箱裡面的金塊比在該節點的保險箱還要多，他會被往右邊送</li>
+<li>否則就往左邊送</li>
+<li>必須送到他占用一個節點為止</li>
+</ul>
+<p>以上圖為例</p>
+<ul>
+<li>第一個放進來的保險箱有 8 個金塊</li>
+<li>第二個有 10 個，因此他被放在右邊</li>
+<li>第三個有 14 個，因此第一步會先往右送，發現右邊的節點也有保險箱了，因而再次被往右送</li>
+<li>第四個有 3 個，於是被放在左邊</li>
+<li>其他依此類推</li>
+</ul>
+<p>而所謂隨機平衡就是他的平衡方式來自所有節點被賦予的一個隨機的 pri 值。</p>
+<hr>
+<p>Treap 當中最重要的就是以下兩種操作</p>
+<ul>
+<li>merge(a,b) : 將兩顆樹 a, b 合併。前提 : a, b 滿足所有在 a 裡面的節點所存放的值皆小於所有在 b 裡面的節點</li>
+<li>split(a,b,p) : 將一棵樹分成 a, b 並同時滿足 a 中的值皆小於等於 \((\le)\) p ， 而 b 中的值皆大於 \((&gt;)\) p</li>
+</ul>
+<p>兩者詳細步驟是依照遞迴定義的，如下。</p>
+<h3 id="Merge"><a href="#Merge" class="headerlink" title="Merge"></a>Merge</h3><ul>
+<li>如果 a,b 至少其中一個是空指標，回傳非空的那一個 (兩個都空救回傳空指標)</li>
+<li>否則為了同時維持 BST 和 heap 的性質，我們先判斷哪一個的 pri(priority) 值更大，我的實作是將 pri 值小的放上面 (較接近樹根的位置)</li>
+<li>如果 a 的 pri 值較小，我們會回傳 a 作為呼叫此函數的樹的根，不過在此之前，我們要先決定 a 的右子樹 (因為 b 也還沒被合併完) ，所以要向下遞迴</li>
+<li>b 的情況剛好相反，因為 b 裡面的值都大於 a 裡面的值</li>
+</ul>
+<h4 id="實作-3"><a href="#實作-3" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">node *<span class="title">merge</span><span class="params">(node *a,node *b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!a || !b) <span class="keyword">return</span> a ? a : b;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(a-&gt;pri &lt; b-&gt;pri)&#123;</span><br><span class="line">        a-&gt;rch=<span class="built_in">merge</span>(a-&gt;rch,b);</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        b-&gt;lch=<span class="built_in">merge</span>(a,b-&gt;lch);</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Split"><a href="#Split" class="headerlink" title="Split"></a>Split</h3><p>split 較為複雜，因為同時要滿足 Treap 的兩種性質</p>
+<ul>
+<li>若 T(要被分割的 Treap) 為空指標的話，代表整棵樹都被分完了，因此將 a,b 都設為空指標。</li>
+<li>否則一樣要分成兩個條件 : T 的根結點的值小於等於 p ，和大於 p</li>
+<li>如果 T 的根結點的值小於等於 p ，選擇將 T 的根結點與他的左子樹給 a 並繼續向下分解 T 的右子樹給 a 的右子樹與 b</li>
+<li>否則將 T 的根結點與他的右子樹給 b 並繼續向下分解 T 的左子樹給 b 的左子樹與 a</li>
+</ul>
+<h4 id="實作-4"><a href="#實作-4" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">split</span><span class="params">(node *T,node *&amp;a,node *&amp;b,<span class="type">int</span> p)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)&#123;</span><br><span class="line">        a=b=<span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(T-&gt;key &lt;= p)&#123;</span><br><span class="line">        a=T;</span><br><span class="line">        <span class="built_in">split</span>(T-&gt;rch,a-&gt;rch,b,p);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        b=T;</span><br><span class="line">        <span class="built_in">split</span>(T-&gt;lch,a,b-&gt;lch,p);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="名次樹"><a href="#名次樹" class="headerlink" title="名次樹"></a>名次樹</h3><p>首先介紹一下名次樹，名次樹是透過在節點內多存一個數值 \(\to\) 子樹大小(size)，以實現更多功能，例如 : k 在這棵樹裡面排第幾，刪除比 k 大的第一個數，還有排名第 k 的樹為何等。</p>
+<p>為了在 Treap 中實現這個功能，我們要多實作兩個函數 \(\to\) pull &amp; SplitBySize(splitSz)。</p>
+<p>首先，我先將節點完整的 struct ，還有尋找某個指標底下的樹的 size 的函式寫出來，方便後續講解。順帶一題，為了維持名次樹的正確性，每次只要樹有經過更動就要 執行 pull 。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">    <span class="comment">// key 是排序依據</span></span><br><span class="line">    <span class="comment">// pri 是 heap 的依據</span></span><br><span class="line">    <span class="type">int</span> key,pri,sz;</span><br><span class="line">    node *lch,*rch;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">node</span>(<span class="type">int</span> _key)&#123;</span><br><span class="line">        key=_key;</span><br><span class="line">        sz=<span class="number">1</span>;</span><br><span class="line">        lch=rch=<span class="literal">nullptr</span>;</span><br><span class="line">        <span class="comment">// RandomInt() 之後會實作</span></span><br><span class="line">        pri=<span class="built_in">RandomInt</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pull</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// 自己也算</span></span><br><span class="line">        sz=<span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 判斷式相當於 lch!=nullptr</span></span><br><span class="line">        <span class="comment">// 要加上左右子樹的大小才是完整的</span></span><br><span class="line">        <span class="keyword">if</span>(lch) sz+=lch-&gt;sz;</span><br><span class="line">        <span class="keyword">if</span>(rch) sz+=rch-&gt;sz;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">fs</span><span class="params">(node *a)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 如果 a 為空指標則 sz(回傳值) 為 0</span></span><br><span class="line">    <span class="keyword">return</span> a ? a-&gt;sz : <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="SplitBySize"><a href="#SplitBySize" class="headerlink" title="SplitBySize"></a>SplitBySize</h3><p>這個函式會與 Split 有點像，差別在於分開的依據不同， SplitBySize 會將整棵樹分為 a, b ， 其中 a 存有前 s 小的所有數， b 則存剩下的。詳細步驟如下。</p>
+<ul>
+<li>與 Split 相同，若 T 為空則表示分完，將 a,b 都設為空指標</li>
+<li>否則如果 T 的左子樹的元素個數不到 s ，將 T 和他的左子樹都給 a ，然後繼續從 T 的右子樹當中切出 s-( T 的左子樹大小)-1( T 自己) 個元素給 a 的右子樹</li>
+<li>否則將 T 和他的右子樹都給 b ，然後從 T 的左子樹當中切出 s 個元素給 a</li>
+</ul>
+<h4 id="實作-5"><a href="#實作-5" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">splitSz</span><span class="params">(node *T,node *&amp;a,node *&amp;b,<span class="type">int</span> s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)&#123;</span><br><span class="line">        a=b=<span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">fs</span>(T-&gt;lch)&lt;s)&#123;</span><br><span class="line">        a=T;</span><br><span class="line">        <span class="built_in">splitSz</span>(T-&gt;rch,a-&gt;rch,b,s-<span class="built_in">fs</span>(T-&gt;lch)<span class="number">-1</span>);</span><br><span class="line">        <span class="comment">// 普通的 Split 中放 pull 的位置與他相同</span></span><br><span class="line">        a-&gt;<span class="built_in">pull</span>();</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        b=T;</span><br><span class="line">        <span class="built_in">splitSz</span>(T-&gt;lch,a,b-&gt;lch,s);</span><br><span class="line">        b-&gt;<span class="built_in">pull</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="隨機數"><a href="#隨機數" class="headerlink" title="隨機數"></a>隨機數</h3><p>C++ 本身就有內建隨機函式可供取用。就直接放在下面供大家參考。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 簡單作法，但可能被 hack</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;crand&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">RandomInt</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">rand</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 較長，但較不易被破解</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;random&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">unsigned</span> seed=chrono::<span class="built_in">steady_clock</span>().<span class="built_in">now</span>().<span class="built_in">time_since_epoch</span>().<span class="built_in">count</span>();</span><br><span class="line"><span class="function">mt19937 <span class="title">rng</span><span class="params">(seed)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">RandomInt</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">rng</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h2><p>有了這些函式之後，後面的大多數操作都會變很簡單，舉凡插入(insert)，刪除(erase)，尋找(find) 等等。因為他們都可以用 merge and split 湊出來。而且很多功能甚至不只有一種實作方法。讓我們看下去。</p>
+<h3 id="Insert"><a href="#Insert" class="headerlink" title="Insert"></a>Insert</h3><p>insert 可以被簡單地分成幾個步驟。假設我要插入的數字為 v 。</p>
+<ul>
+<li>將整棵樹(我都存在 rt 指標中) 切成小於等於 v 和大於 v 的兩棵樹 rt, b</li>
+<li>另外用 v new 一個節點 a(v) 出來 (不會動態記憶體分配的可以先去複習一下)。</li>
+<li>合併 rt 和 a ，並將合併後的樹給 rt </li>
+<li>合並 rt 和 b ，並將合併後的樹給 rt</li>
+</ul>
+<h4 id="實作-6"><a href="#實作-6" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> v)</span></span>&#123;</span><br><span class="line">    node *a=<span class="keyword">new</span> <span class="built_in">node</span>(v),*b;</span><br><span class="line">    <span class="built_in">split</span>(rt,rt,b,v);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Erase"><a href="#Erase" class="headerlink" title="Erase"></a>Erase</h3><p>Erase 一樣可以被簡單地分成幾個步驟。假設我要刪除的數字為 v 。</p>
+<h4 id="1-刪除所有等於-v-的數-整數才可以"><a href="#1-刪除所有等於-v-的數-整數才可以" class="headerlink" title="1. 刪除所有等於 v 的數(整數才可以)"></a>1. 刪除所有等於 v 的數(整數才可以)</h4><ul>
+<li>將整棵樹(我都存在 rt 指標中) 切成小於等於 v 和大於 v 的兩棵樹 rt, b</li>
+<li>再將 rt 指向的樹切成小於等於 v-1 和大於 v-1 的兩棵樹 rt, a</li>
+<li>刪除 a 整棵樹 </li>
+<li>合併 rt 和 b ，並將合併後的樹給 rt</li>
+</ul>
+<h4 id="2-刪除一個等於-v-的數-整數才可以"><a href="#2-刪除一個等於-v-的數-整數才可以" class="headerlink" title="2. 刪除一個等於 v 的數(整數才可以)"></a>2. 刪除一個等於 v 的數(整數才可以)</h4><ul>
+<li>將整棵樹(我都存在 rt 指標中) 切成小於等於 v-1 和大於 v-1 的兩棵樹 rt, b</li>
+<li>再將 b 指向的樹切成左邊一個元素，剩下都放右邊的 b, a </li>
+<li>刪除 b </li>
+<li>合併 rt 和 b ，並將合併後的樹給 rt</li>
+</ul>
+<h4 id="實作-7"><a href="#實作-7" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 這個函式是先刪除左右子樹，再刪除自己，並透過遞迴來刪掉整棵樹。</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">delete_tree</span><span class="params">(node *n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n-&gt;lch) <span class="built_in">delete_tree</span>(n-&gt;lch);</span><br><span class="line">    <span class="keyword">if</span>(n-&gt;rch) <span class="built_in">delete_tree</span>(n-&gt;rch);</span><br><span class="line">    <span class="built_in">delete</span>(n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// erase all element between (v-1~v] -&gt; 對應 1</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">erase</span><span class="params">(<span class="type">int</span> v)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">split</span>(rt,rt,b,v);</span><br><span class="line">    <span class="built_in">split</span>(rt,rt,a,v<span class="number">-1</span>);<span class="comment">// or v-eps</span></span><br><span class="line">    <span class="comment">// it&#x27;s better to use delete_tree function</span></span><br><span class="line">    <span class="built_in">delete</span>(a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// erase one element between (v-1~v] -&gt; 對應 2</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">erase</span><span class="params">(<span class="type">int</span> v)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">split</span>(rt,rt,b,v<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">splitSz</span>(b,b,a,<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">delete</span>(b);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Count"><a href="#Count" class="headerlink" title="Count"></a>Count</h3><p>Count 還是可以被簡單地分成幾個步驟。假設我要數的數字為 v 。</p>
+<ul>
+<li>將整棵樹(我都存在 rt 指標中) 切成小於等於 v 和大於 v 的兩棵樹 rt, b</li>
+<li>再將 rt 指向的樹切成小於等於 v-1 和大於 v-1 的兩棵樹 rt, a</li>
+<li>用一個變數將 a 的 size 存起來</li>
+<li>合併 rt 和 a ，並將合併後的樹給 rt </li>
+<li>合併 rt 和 b ，並將合併後的樹給 rt</li>
+</ul>
+<h4 id="實作-8"><a href="#實作-8" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">count</span><span class="params">(<span class="type">int</span> v)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">split</span>(rt,rt,b,v);</span><br><span class="line">    <span class="built_in">split</span>(rt,rt,a,v<span class="number">-1</span>);<span class="comment">// or v-eps</span></span><br><span class="line">    <span class="type">int</span> ret=<span class="built_in">fs</span>(a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Kth-Small-Element"><a href="#Kth-Small-Element" class="headerlink" title="Kth Small Element"></a>Kth Small Element</h3><p>假設我要找第 p 小的數字。</p>
+<ul>
+<li>將整棵樹(我都存在 rt 指標中) 切成左邊 p 個元素，剩下都放右邊的 rt, b </li>
+<li>再將 rt 指向的樹切成左邊 p-1 個元素，剩下都放右邊的 rt, a </li>
+<li>用一個變數將 a 的值存起來</li>
+<li>合併 rt 和 a ，並將合併後的樹給 rt </li>
+<li>合併 rt 和 b ，並將合併後的樹給 rt</li>
+</ul>
+<h4 id="實作-9"><a href="#實作-9" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">kth</span><span class="params">(<span class="type">int</span> v)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,b,p);</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,a,p<span class="number">-1</span>);</span><br><span class="line">    <span class="type">int</span> ret=a-&gt;key;</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>你以為只是平衡樹嗎？不不不，祂可厲害了</strong></p>
+</blockquote>
+<h2 id="進階功能"><a href="#進階功能" class="headerlink" title="進階功能"></a>進階功能</h2><p>如果我們將整棵樹的中序遍歷當成序列的順序的話(如下圖)，我們可以實現需多更強大的功能。可以說，線段樹能做到的事 Treap 都可以做到，但 Treap 甚至可以做到許多線段樹做不到的事。</p>
+<img src="https://live.staticflickr.com/65535/51903502674_6ba5e3979e_o.png" width="769" height="722" alt="Treap">
+
+<p>而且，此時我們可以把 key 拔掉。然後只使用 splitSz 和 merge 。</p>
+<h3 id="Insert-1"><a href="#Insert-1" class="headerlink" title="Insert"></a>Insert</h3><p>假設我希望插入的數字位於第 p 個，且值為 v 。</p>
+<ul>
+<li>將整棵樹(我都存在 rt 指標中) 切 p-1 個給 rt ，其他剩下的分給 b </li>
+<li>另外用 v new 一個節點 a(v) 出來</li>
+<li>合併 rt 和 a ，並將合併後的樹給 rt </li>
+<li>合並 rt 和 b ，並將合併後的樹給 rt</li>
+</ul>
+<h4 id="實作-10"><a href="#實作-10" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> p,<span class="type">int</span> v)</span></span>&#123;</span><br><span class="line">    node *a=<span class="keyword">new</span> <span class="built_in">node</span>(v),*b;</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,b,p<span class="number">-1</span>);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Erase-1"><a href="#Erase-1" class="headerlink" title="Erase"></a>Erase</h3><p>假設我要刪除第 p 個數 </p>
+<ul>
+<li>將整棵樹(我都存在 rt 指標中) 切 p-1 個給 rt ，其他給 b</li>
+<li>再將 b 指向的樹切一個給 b 剩下給 a</li>
+<li>刪除 a </li>
+<li>合併 rt 和 b ，並將合併後的樹給 rt</li>
+</ul>
+<h4 id="實作-11"><a href="#實作-11" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">erase</span><span class="params">(<span class="type">int</span> p)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,b,p<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">splitSz</span>(b,b,a,<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">delete</span>(b);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="區間操作"><a href="#區間操作" class="headerlink" title="區間操作"></a>區間操作</h3><p>在介紹區間操作之前，我們還需要在節點上加入更多的資訊和函式，所以 node 裡面會有更多程式碼。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> INF=<span class="number">0x3f3f3f3f</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> Treap&#123;</span><br><span class="line">    <span class="keyword">struct</span> node&#123;</span><br><span class="line">        <span class="comment">// 此節點的值</span></span><br><span class="line">        <span class="type">int</span> val;</span><br><span class="line">        <span class="comment">// 維持 Treap 的性質</span></span><br><span class="line">        <span class="type">int</span> pri,sz;</span><br><span class="line">        <span class="comment">// 用在區間查詢</span></span><br><span class="line">        <span class="type">int</span> sum,mx,mn;</span><br><span class="line">        <span class="comment">// 可以支援區間反轉</span></span><br><span class="line">        <span class="type">bool</span> rev_tag;</span><br><span class="line">        <span class="comment">// 可以支援區間加值</span></span><br><span class="line">        <span class="type">int</span> add_tag;</span><br><span class="line">        <span class="comment">// 左右子樹</span></span><br><span class="line">        node *lch,*rch;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">node</span>(<span class="type">int</span> _val)&#123;</span><br><span class="line">            val=sum=mx=mn=_val;</span><br><span class="line">            lch=rch=<span class="literal">nullptr</span>;</span><br><span class="line">            sz=<span class="number">1</span>;</span><br><span class="line">            pri=<span class="built_in">rng</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">pull</span><span class="params">()</span></span>&#123;</span><br><span class="line">            sz=<span class="number">1</span>;</span><br><span class="line">            sum=mx=mn=val;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(lch)&#123;</span><br><span class="line">                sz+=lch-&gt;sz;</span><br><span class="line">                sum+=lch-&gt;sum;</span><br><span class="line">                mx=<span class="built_in">max</span>(mx,lch-&gt;mx);</span><br><span class="line">                mn=<span class="built_in">min</span>(mn,lch-&gt;mn);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(rch)&#123;</span><br><span class="line">                sz+=rch-&gt;sz;</span><br><span class="line">                sum+=rch-&gt;sum;</span><br><span class="line">                mx=<span class="built_in">max</span>(mx,rch-&gt;mx);</span><br><span class="line">                mn=<span class="built_in">min</span>(mn,rch-&gt;mn);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 讓他底下的區間都反轉</span></span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">rev</span><span class="params">()</span></span>&#123;</span><br><span class="line">            rev_tag=!rev_tag;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 再更改節點前用</span></span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(rev_tag)&#123;</span><br><span class="line">                <span class="built_in">swap</span>(lch,rch);</span><br><span class="line">                <span class="keyword">if</span>(lch)</span><br><span class="line">                    lch-&gt;tag=<span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">if</span>(rch)</span><br><span class="line">                    rch-&gt;tag=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(lch)</span><br><span class="line">                lch-&gt;add_tag+=add_tag;</span><br><span class="line">            <span class="keyword">if</span>(rch)</span><br><span class="line">                rch-&gt;add_tag+=add_tag;</span><br><span class="line">            add_tag=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>同時，我們在原來的 merge&#x2F;split 操作程式碼中，都要加上 push ，具體位置如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Treap</span>&#123;</span><br><span class="line">    <span class="function">node *<span class="title">merge</span><span class="params">(node *a,node *b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!a || !b) <span class="keyword">return</span> a ? a : b;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(a-&gt;pri &lt; b-&gt;pri)&#123;</span><br><span class="line">            a-&gt;<span class="built_in">push</span>();</span><br><span class="line">            a-&gt;rch=<span class="built_in">merge</span>(a-&gt;rch,b);</span><br><span class="line">            <span class="keyword">return</span> a;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            b-&gt;<span class="built_in">push</span>();</span><br><span class="line">            b-&gt;lch=<span class="built_in">merge</span>(a,b-&gt;lch);</span><br><span class="line">            <span class="keyword">return</span> b;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">splitSz</span><span class="params">(node *T,node *&amp;a,node *&amp;b,<span class="type">int</span> s)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!T)&#123;</span><br><span class="line">            a=b=<span class="literal">nullptr</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        T-&gt;<span class="built_in">push</span>();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">fs</span>(T-&gt;lch)&lt;s)&#123;</span><br><span class="line">            a=T;</span><br><span class="line">            <span class="built_in">splitSz</span>(T-&gt;rch,a-&gt;rch,b,s-<span class="built_in">fs</span>(T-&gt;lch)<span class="number">-1</span>);</span><br><span class="line">            a-&gt;<span class="built_in">pull</span>();</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            b=T;</span><br><span class="line">            <span class="built_in">splitSz</span>(T-&gt;lch,a,b-&gt;lch,s);</span><br><span class="line">            b-&gt;<span class="built_in">pull</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>接下來的操作都是把區間切下來，做完我要做的事，再接回去就可以了。</p>
+<h3 id="區間查詢-極值、總和"><a href="#區間查詢-極值、總和" class="headerlink" title="區間查詢(極值、總和)"></a>區間查詢(極值、總和)</h3><p>假設現在要查詢 l~r 的區間</p>
+<ul>
+<li>從 rt 切下 r 個節點給 rt ，其它給 b </li>
+<li>接著從 rt 切下 l-1 個節點給 rt ，其餘給 a</li>
+<li>此時 a 就存有區間 \([ ; l, , r ; ]\) ，而他上面的 sum, mx, mn 就會是這個區間的總和、最大值，以及最小值</li>
+<li>最後先按照順序把它合併，再回傳答案即可</li>
+</ul>
+<h4 id="實作-12"><a href="#實作-12" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,b,r);</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,a,l<span class="number">-1</span>);</span><br><span class="line">    <span class="comment">// 下一行放 sum, mx, mn 看需求</span></span><br><span class="line">    <span class="type">int</span> ret=a-&gt;sum;</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 單點查詢就用查詢長度為 1 的區間重復利用函式就可以了</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">get</span><span class="params">(<span class="type">int</span> p)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">query</span>(p,p); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="單點修改"><a href="#單點修改" class="headerlink" title="單點修改"></a>單點修改</h3><p>先將所要修改的位置切下來，在修改完後記得要 push 。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> p,<span class="type">int</span> v)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,a,p<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">splitSz</span>(a,a,b,<span class="number">1</span>);</span><br><span class="line">    a-&gt;val=v;</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="區間操作-1"><a href="#區間操作-1" class="headerlink" title="區間操作"></a>區間操作</h3><p>假設現在要對 l~r 的區間進行操作</p>
+<ul>
+<li>從 rt 切下 r 個節點給 rt ，其它給 b </li>
+<li>接著從 rt 切下 l-1 個節點給 rt ，其餘給 a</li>
+<li>此時 a 就存有區間 \([ ; l, , r ; ]\) ，直接對他操作就可以了</li>
+<li>最後先按照順序把它合併</li>
+</ul>
+<h4 id="實作-13"><a href="#實作-13" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 區間反轉</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">reverse</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,b,r);</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,a,l<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">if</span>(a) a-&gt;<span class="built_in">rev</span>();</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 區間加值</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r,<span class="type">int</span> v)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,b,r);</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,a,l<span class="number">-1</span>);</span><br><span class="line">    a-&gt;val+=v;</span><br><span class="line">    a-&gt;<span class="built_in">push</span>();</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="特殊功能"><a href="#特殊功能" class="headerlink" title="特殊功能"></a>特殊功能</h2><h3 id="Count-l-r"><a href="#Count-l-r" class="headerlink" title="Count \([ ; l, , r ; ]\)"></a>Count \([ ; l, , r ; ]\)</h3><p>在一棵作為二元搜尋樹的 Treap 中，計算介於 l 到 r 的元素數量</p>
+<p>基本上就跟上面區間查詢相同。只是切割依據不同。</p>
+<h4 id="實作-14"><a href="#實作-14" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">count</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">split</span>(rt,rt,b,r);</span><br><span class="line">    <span class="built_in">split</span>(rt,rt,a,l<span class="number">-1</span>);</span><br><span class="line">    <span class="comment">// 下一行依據要插尋的內容放 sz(數量) 或 sum(總和)</span></span><br><span class="line">    <span class="type">int</span> ret=a-&gt;sz;</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sum-l-r-rank"><a href="#Sum-l-r-rank" class="headerlink" title="Sum \([ ; l, , r ; ]\) (rank)"></a>Sum \([ ; l, , r ; ]\) (rank)</h3><p>在一棵作為二元搜尋樹的 Treap 中，計算介於第 l 小到第 r 小的元素總和</p>
+<p>同樣就跟上面區間查詢相同。只是元素排列方式不同。</p>
+<h4 id="實作-15"><a href="#實作-15" class="headerlink" title="實作"></a>實作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Sum</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    node *a,*b;</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,b,r);</span><br><span class="line">    <span class="built_in">splitSz</span>(rt,rt,a,l<span class="number">-1</span>);</span><br><span class="line">    <span class="comment">// 下一行依據要插尋的內容放 sum(總和) 或 xor 值</span></span><br><span class="line">    <span class="type">int</span> ret=a-&gt;sum;</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,a);</span><br><span class="line">    rt=<span class="built_in">merge</span>(rt,b);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="解構式"><a href="#解構式" class="headerlink" title="解構式"></a>解構式</h3><p>對於多筆測資，可能會需要釋放記憶體。由於 Treap 二元樹的特性，可以透過遞迴刪除整棵樹</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Treap</span>&#123;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">        <span class="type">int</span> val;</span><br><span class="line">        node *lch,*rch;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    node *rt=<span class="literal">nullptr</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">DeleteTree</span><span class="params">(node *n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n-&gt;lch) <span class="built_in">DeleteTree</span>(n-&gt;lch);</span><br><span class="line">        <span class="keyword">if</span>(n-&gt;rch) <span class="built_in">DeleteTree</span>(n-&gt;rch);</span><br><span class="line">        <span class="built_in">delete</span>(n);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    ~<span class="built_in">Treap</span>()&#123;</span><br><span class="line">        <span class="keyword">if</span>(rt) <span class="built_in">DeleteTree</span>(n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="重載輸入輸出"><a href="#重載輸入輸出" class="headerlink" title="重載輸入輸出"></a>重載輸入輸出</h3><p>要前中後序都可以</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">(node *n,ostream &amp;output)</span></span>&#123;</span><br><span class="line">    n-&gt;<span class="built_in">push</span>();</span><br><span class="line">    <span class="keyword">if</span>(n-&gt;lch) <span class="built_in">print</span>(n-&gt;lch,output);</span><br><span class="line">    <span class="comment">// 下面這一行放的位置會決定他是前中後序</span></span><br><span class="line">    output&lt;&lt;n-&gt;val&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="keyword">if</span>(n-&gt;rch) <span class="built_in">print</span>(n-&gt;rch,output);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">friend</span> ostream &amp;<span class="keyword">operator</span>&lt;&lt;(ostream &amp;output,PowerfulArray &amp;a)&#123;</span><br><span class="line">    a.<span class="built_in">print</span>(a.rt,output);</span><br><span class="line">    <span class="keyword">return</span> output;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="一些-STL-的常見函式"><a href="#一些-STL-的常見函式" class="headerlink" title="一些 STL 的常見函式"></a>一些 STL 的常見函式</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">size</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">fs</span>(rt);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">empty</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">size</span>()==<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">push_back</span><span class="params">(num v)</span></span>&#123;</span><br><span class="line">    <span class="built_in">insert</span>(<span class="built_in">size</span>()+<span class="number">1</span>,v);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">push_front</span><span class="params">(num v)</span></span>&#123;</span><br><span class="line">    <span class="built_in">insert</span>(<span class="number">1</span>,v);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pop_back</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">erase</span>(<span class="built_in">size</span>()+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pop_front</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">erase</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">resize</span><span class="params">(<span class="type">int</span> sz)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">size</span>()&lt;sz)&#123;</span><br><span class="line">        <span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">size</span>()&gt;sz)&#123;</span><br><span class="line">        <span class="built_in">pop_back</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">resize</span><span class="params">(<span class="type">int</span> sz,num v)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">size</span>()&lt;sz)&#123;</span><br><span class="line">        <span class="built_in">push_back</span>(v);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">size</span>()&gt;sz)&#123;</span><br><span class="line">        <span class="built_in">pop_back</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="建構式"><a href="#建構式" class="headerlink" title="建構式"></a>建構式</h3><p>有了上述的 STL 常見函式之後，就可以很方便的寫建構式了。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Treap</span>()&#123; &#125;</span><br><span class="line"><span class="built_in">Treap</span>(<span class="type">int</span> sz)&#123;</span><br><span class="line">    <span class="built_in">resize</span>(sz);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Treap</span>(<span class="type">int</span> sz,<span class="type">int</span> v)&#123;</span><br><span class="line">    <span class="built_in">resize</span>(sz,v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/apcs/" rel="tag"># apcs</a>
+              <a href="/tags/APCS%E8%88%87%E7%AB%B6%E8%B3%BD%E5%85%A5%E9%96%80/" rel="tag"># APCS與競賽入門</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/apple/final-descision-about-buying-macbook-air-m2-or-m3/" rel="prev" title="關於購買 Macbook Air M2 或 M3 的最終決定">
+      <i class="fa fa-chevron-left"></i> 關於購買 Macbook Air M2 或 M3 的最終決定
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%BA%90%E8%B5%B7-%E8%AA%AA%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">源起 &amp; 說明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%9C%E8%80%85%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">作者序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%B9%E7%8B%80%E6%A8%B9%E7%B5%84-BIT"><span class="nav-number">3.</span> <span class="nav-text">樹狀樹組-BIT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E9%A1%A7"><span class="nav-number">3.1.</span> <span class="nav-text">回顧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E9%80%94-%E6%A6%82%E5%BF%B5"><span class="nav-number">3.2.</span> <span class="nav-text">用途 &amp; 概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C"><span class="nav-number">3.3.</span> <span class="nav-text">實作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E9%80%B2%E4%BD%8D%E8%A1%A8"><span class="nav-number">3.3.1.</span> <span class="nav-text">二進位表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lowbit"><span class="nav-number">3.3.2.</span> <span class="nav-text">lowbit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E8%A9%A2"><span class="nav-number">3.3.3.</span> <span class="nav-text">查詢</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9"><span class="nav-number">3.3.4.</span> <span class="nav-text">修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">3.3.5.</span> <span class="nav-text">程式碼</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BF%92%E9%A1%8C"><span class="nav-number">3.4.</span> <span class="nav-text">習題</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-13-1-%E5%8D%80%E5%9F%9F%E8%AA%BF%E6%9F%A5-POJ-1195-Mobile-phones-%E6%94%B9%E7%B7%A8"><span class="nav-number">3.4.1.</span> <span class="nav-text">Q-13-1 區域調查(POJ.1195 Mobile phones 改編)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E6%95%98%E8%BF%B0"><span class="nav-number">3.4.1.1.</span> <span class="nav-text">題目敘述 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%85%A5%E8%AA%AA%E6%98%8E"><span class="nav-number">3.4.1.2.</span> <span class="nav-text">輸入說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%87%BA%E8%AA%AA%E6%98%8E"><span class="nav-number">3.4.1.3.</span> <span class="nav-text">輸出說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%85%A5-1"><span class="nav-number">3.4.1.4.</span> <span class="nav-text">範例輸入 1 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%87%BA-1"><span class="nav-number">3.4.1.5.</span> <span class="nav-text">範例輸出 1 :</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-13-2-2D-rank-finding-problem-98%E5%AD%B8%E5%B9%B4%E5%BA%A6%E4%B8%AD%E6%8A%95%E5%8D%80%E8%B3%87%E8%A8%8A%E5%AD%B8%E7%A7%91%E8%83%BD%E5%8A%9B%E7%AB%B6%E8%B3%BD"><span class="nav-number">3.4.2.</span> <span class="nav-text">Q-13-2 2D rank finding problem(98學年度中投區資訊學科能力競賽)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E6%95%98%E8%BF%B0-1"><span class="nav-number">3.4.2.1.</span> <span class="nav-text">題目敘述 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%85%A5%E8%AA%AA%E6%98%8E-1"><span class="nav-number">3.4.2.2.</span> <span class="nav-text">輸入說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%87%BA%E8%AA%AA%E6%98%8E-1"><span class="nav-number">3.4.2.3.</span> <span class="nav-text">輸出說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%85%A5-1-1"><span class="nav-number">3.4.2.4.</span> <span class="nav-text">範例輸入 1 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%87%BA-1-1"><span class="nav-number">3.4.2.5.</span> <span class="nav-text">範例輸出 1 :</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-13-3-%E4%BD%8E%E5%9C%B0%E8%B7%9D%E9%9B%A2-2020%E5%B9%B410%E6%9C%88APCS"><span class="nav-number">3.4.3.</span> <span class="nav-text">Q-13-3 低地距離(2020年10月APCS)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E6%95%98%E8%BF%B0-2"><span class="nav-number">3.4.3.1.</span> <span class="nav-text">題目敘述 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%85%A5%E8%AA%AA%E6%98%8E-2"><span class="nav-number">3.4.3.2.</span> <span class="nav-text">輸入說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%87%BA%E8%AA%AA%E6%98%8E-2"><span class="nav-number">3.4.3.3.</span> <span class="nav-text">輸出說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%85%A5-1-2"><span class="nav-number">3.4.3.4.</span> <span class="nav-text">範例輸入 1 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%87%BA-1-2"><span class="nav-number">3.4.3.5.</span> <span class="nav-text">範例輸出 1 :</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B7%9A%E6%AE%B5%E6%A8%B9"><span class="nav-number">4.</span> <span class="nav-text">線段樹</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E6%B3%95-%E6%A6%82%E5%BF%B5"><span class="nav-number">4.1.</span> <span class="nav-text">用法 &amp; 概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-1"><span class="nav-number">4.2.</span> <span class="nav-text">實作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E6%A8%99%E5%9E%8B"><span class="nav-number">4.2.1.</span> <span class="nav-text">指標型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%A3%E5%88%97%E5%9E%8B"><span class="nav-number">4.2.2.</span> <span class="nav-text">陣列型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%87%B6%E4%BA%BA%E6%A8%99%E8%A8%98"><span class="nav-number">4.3.</span> <span class="nav-text">懶人標記</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-2"><span class="nav-number">4.3.1.</span> <span class="nav-text">實作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E6%A8%99%E5%9E%8B-1"><span class="nav-number">4.3.1.1.</span> <span class="nav-text">指標型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BF%92%E9%A1%8C-1"><span class="nav-number">4.4.</span> <span class="nav-text">習題</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Segment-Tree-%E7%B7%B4%E7%BF%92-ZJe409"><span class="nav-number">4.4.1.</span> <span class="nav-text">Segment Tree 練習(ZJe409)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0"><span class="nav-number">4.4.1.1.</span> <span class="nav-text">題目概述 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%85%A5%E8%AA%AA%E6%98%8E-3"><span class="nav-number">4.4.1.2.</span> <span class="nav-text">輸入說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%87%BA%E8%AA%AA%E6%98%8E-3"><span class="nav-number">4.4.1.3.</span> <span class="nav-text">輸出說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%85%A5-1-3"><span class="nav-number">4.4.1.4.</span> <span class="nav-text">範例輸入 1 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%87%BA-1-3"><span class="nav-number">4.4.1.5.</span> <span class="nav-text">範例輸出 1 :</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%B0%E8%A1%93%E8%B3%87%E6%96%99%E5%BA%AB-110%E5%AE%9C%E4%B8%AD%E8%B3%87%E8%A8%8A%E7%A4%BE%E6%A0%A1%E5%85%A7%E8%B3%BDpF"><span class="nav-number">4.4.2.</span> <span class="nav-text">戰術資料庫(110宜中資訊社校內賽pF)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E6%95%98%E8%BF%B0-3"><span class="nav-number">4.4.2.1.</span> <span class="nav-text">題目敘述 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%85%A5%E8%AA%AA%E6%98%8E-4"><span class="nav-number">4.4.2.2.</span> <span class="nav-text">輸入說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BC%B8%E5%87%BA%E8%AA%AA%E6%98%8E-4"><span class="nav-number">4.4.2.3.</span> <span class="nav-text">輸出說明 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%85%A5-1-4"><span class="nav-number">4.4.2.4.</span> <span class="nav-text">範例輸入 1 :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%87%BA-1-4"><span class="nav-number">4.4.2.5.</span> <span class="nav-text">範例輸出 1 :</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%B9%E5%A0%86-Treap"><span class="nav-number">5.</span> <span class="nav-text">樹堆(Treap)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%8F%E5%89%87%E8%88%87%E5%89%8D%E7%BD%AE%E4%BD%9C%E6%A5%AD"><span class="nav-number">5.1.</span> <span class="nav-text">規則與前置作業</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Safe-Sorter"><span class="nav-number">5.1.1.</span> <span class="nav-text">Safe Sorter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Merge"><span class="nav-number">5.1.2.</span> <span class="nav-text">Merge</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-3"><span class="nav-number">5.1.2.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Split"><span class="nav-number">5.1.3.</span> <span class="nav-text">Split</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-4"><span class="nav-number">5.1.3.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8D%E6%AC%A1%E6%A8%B9"><span class="nav-number">5.1.4.</span> <span class="nav-text">名次樹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SplitBySize"><span class="nav-number">5.1.5.</span> <span class="nav-text">SplitBySize</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-5"><span class="nav-number">5.1.5.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%A8%E6%A9%9F%E6%95%B8"><span class="nav-number">5.1.6.</span> <span class="nav-text">隨機數</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD"><span class="nav-number">5.2.</span> <span class="nav-text">基本功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Insert"><span class="nav-number">5.2.1.</span> <span class="nav-text">Insert</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-6"><span class="nav-number">5.2.1.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Erase"><span class="nav-number">5.2.2.</span> <span class="nav-text">Erase</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%88%AA%E9%99%A4%E6%89%80%E6%9C%89%E7%AD%89%E6%96%BC-v-%E7%9A%84%E6%95%B8-%E6%95%B4%E6%95%B8%E6%89%8D%E5%8F%AF%E4%BB%A5"><span class="nav-number">5.2.2.1.</span> <span class="nav-text">1. 刪除所有等於 v 的數(整數才可以)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%AA%E9%99%A4%E4%B8%80%E5%80%8B%E7%AD%89%E6%96%BC-v-%E7%9A%84%E6%95%B8-%E6%95%B4%E6%95%B8%E6%89%8D%E5%8F%AF%E4%BB%A5"><span class="nav-number">5.2.2.2.</span> <span class="nav-text">2. 刪除一個等於 v 的數(整數才可以)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-7"><span class="nav-number">5.2.2.3.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Count"><span class="nav-number">5.2.3.</span> <span class="nav-text">Count</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-8"><span class="nav-number">5.2.3.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kth-Small-Element"><span class="nav-number">5.2.4.</span> <span class="nav-text">Kth Small Element</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-9"><span class="nav-number">5.2.4.1.</span> <span class="nav-text">實作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%B2%E9%9A%8E%E5%8A%9F%E8%83%BD"><span class="nav-number">5.3.</span> <span class="nav-text">進階功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Insert-1"><span class="nav-number">5.3.1.</span> <span class="nav-text">Insert</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-10"><span class="nav-number">5.3.1.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Erase-1"><span class="nav-number">5.3.2.</span> <span class="nav-text">Erase</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-11"><span class="nav-number">5.3.2.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%80%E9%96%93%E6%93%8D%E4%BD%9C"><span class="nav-number">5.3.3.</span> <span class="nav-text">區間操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%80%E9%96%93%E6%9F%A5%E8%A9%A2-%E6%A5%B5%E5%80%BC%E3%80%81%E7%B8%BD%E5%92%8C"><span class="nav-number">5.3.4.</span> <span class="nav-text">區間查詢(極值、總和)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-12"><span class="nav-number">5.3.4.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%96%AE%E9%BB%9E%E4%BF%AE%E6%94%B9"><span class="nav-number">5.3.5.</span> <span class="nav-text">單點修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%80%E9%96%93%E6%93%8D%E4%BD%9C-1"><span class="nav-number">5.3.6.</span> <span class="nav-text">區間操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-13"><span class="nav-number">5.3.6.1.</span> <span class="nav-text">實作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD"><span class="nav-number">5.4.</span> <span class="nav-text">特殊功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Count-l-r"><span class="nav-number">5.4.1.</span> <span class="nav-text">Count \([ ; l, , r ; ]\)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-14"><span class="nav-number">5.4.1.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sum-l-r-rank"><span class="nav-number">5.4.2.</span> <span class="nav-text">Sum \([ ; l, , r ; ]\) (rank)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-15"><span class="nav-number">5.4.2.1.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E6%A7%8B%E5%BC%8F"><span class="nav-number">5.4.3.</span> <span class="nav-text">解構式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E8%BC%89%E8%BC%B8%E5%85%A5%E8%BC%B8%E5%87%BA"><span class="nav-number">5.4.4.</span> <span class="nav-text">重載輸入輸出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B-STL-%E7%9A%84%E5%B8%B8%E8%A6%8B%E5%87%BD%E5%BC%8F"><span class="nav-number">5.4.5.</span> <span class="nav-text">一些 STL 的常見函式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E6%A7%8B%E5%BC%8F"><span class="nav-number">5.4.6.</span> <span class="nav-text">建構式</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Q1. 程式交易題目連結：h081: 1. 程式交易 - 高中生程式解題系統">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APCS 2022&#x2F;1&#x2F;9">
+<meta property="og:url" content="http://mtmatt.one/apcs/apcspracticaltest/apcs-2022-1-9/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="Q1. 程式交易題目連結：h081: 1. 程式交易 - 高中生程式解題系統">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-01-10T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-21T15:51:50.767Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="apcs">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://mtmatt.one/apcs/apcspracticaltest/apcs-2022-1-9/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>APCS 2022/1/9 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/apcs/apcspracticaltest/apcs-2022-1-9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          APCS 2022/1/9
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-01-10 08:00:00" itemprop="dateCreated datePublished" datetime="2022-01-10T08:00:00+08:00">2022-01-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/apcs/" itemprop="url" rel="index"><span itemprop="name">apcs</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/apcs/apcspracticaltest/" itemprop="url" rel="index"><span itemprop="name">apcspracticaltest</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>6.1k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>11 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Q1-程式交易"><a href="#Q1-程式交易" class="headerlink" title="Q1. 程式交易"></a>Q1. 程式交易</h2><h3 id="題目連結：h081-1-程式交易-高中生程式解題系統"><a href="#題目連結：h081-1-程式交易-高中生程式解題系統" class="headerlink" title="題目連結：h081: 1. 程式交易 - 高中生程式解題系統"></a>題目連結：<a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=h081">h081: 1. 程式交易 - 高中生程式解題系統</a></h3><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>第一天先買，維護一個 bool 變數，分為有持股與無持股兩種情況。</p>
+<ol>
+<li>有持股-&gt;若當前價格&gt;&#x3D;當初買的價格(tp)+D，賣掉，tp 改為當前股價</li>
+<li>無持股-&gt;若當前價格&lt;&#x3D;當初賣的價格(tp)-D，買起來，tp 改為當前股價</li>
+</ol>
+<h4 id="細節"><a href="#細節" class="headerlink" title="細節"></a>細節</h4><p>若交易結束仍持有股票，則不考慮該股票買進的成本 -&gt; 賣掉的時候再加上獲利</p>
+<h3 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> iss=<span class="literal">true</span>;</span><br><span class="line"><span class="type">int</span> n,sum,d,tp;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;n&gt;&gt;d&gt;&gt;tp;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;n;++i)&#123;</span><br><span class="line">        <span class="type">int</span> now;</span><br><span class="line">        cin&gt;&gt;now;</span><br><span class="line">        <span class="keyword">if</span>(iss &amp;&amp; tp+d&lt;=now)&#123;</span><br><span class="line">            sum+=now-tp;</span><br><span class="line">            tp=now;</span><br><span class="line">            iss=<span class="literal">false</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(!iss &amp;&amp; tp-d&gt;=now)&#123;</span><br><span class="line">            tp=now;</span><br><span class="line">            iss=<span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;sum&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Q2-贏家預測"><a href="#Q2-贏家預測" class="headerlink" title="Q2. 贏家預測"></a>Q2. 贏家預測</h2><h3 id="題目連結：h082-2-贏家預測-高中生程式解題系統"><a href="#題目連結：h082-2-贏家預測-高中生程式解題系統" class="headerlink" title="題目連結：h082. 2. 贏家預測 - 高中生程式解題系統"></a>題目連結：<a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=h082">h082. 2. 贏家預測 - 高中生程式解題系統</a></h3><h3 id="想法-1"><a href="#想法-1" class="headerlink" title="想法"></a>想法</h3><p>將輸贏判斷抽象化，方便除錯。其餘依照題目用 vector 模擬即可。</p>
+<h3 id="實作-1"><a href="#實作-1" class="headerlink" title="實作"></a>實作</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> siz(v) ((int)v.size())</span></span><br><span class="line"><span class="keyword">using</span> ll=<span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">player</span>&#123;</span><br><span class="line"><span class="comment">//  s, t, fail times</span></span><br><span class="line">    ll s,t,f;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">player ps[<span class="number">1005</span>];</span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">battle</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="type">bool</span> ret=(ps[a].s*ps[a].t)&gt;=(ps[b].s*ps[b].t);</span><br><span class="line">    <span class="keyword">if</span>(ret)&#123;</span><br><span class="line">        ll tps=ps[a].s+(ps[b].s*ps[b].t)/(<span class="number">2</span>*ps[a].t);</span><br><span class="line">        ll tpt=ps[a].t+(ps[b].s*ps[b].t)/(<span class="number">2</span>*ps[a].s);</span><br><span class="line">        ps[a].s=tps;</span><br><span class="line">        ps[a].t=tpt;</span><br><span class="line"></span><br><span class="line">        ps[b].s+=ps[b].s&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        ps[b].t+=ps[b].t&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        ps[b].f++;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        ll tps=ps[b].s+(ps[a].s*ps[a].t)/(<span class="number">2</span>*ps[b].t);</span><br><span class="line">        ll tpt=ps[b].t+(ps[a].s*ps[a].t)/(<span class="number">2</span>*ps[b].s);</span><br><span class="line">        ps[b].s=tps;</span><br><span class="line">        ps[b].t=tpt;</span><br><span class="line"></span><br><span class="line">        ps[a].s+=ps[a].s&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        ps[a].t+=ps[a].t&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        ps[a].f++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i) cin&gt;&gt;ps[i].s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i) cin&gt;&gt;ps[i].t;</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">bt</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;++i) cin&gt;&gt;bt[i];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">siz</span>(bt)&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; vt,fl;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">siz</span>(bt);i+=<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i==<span class="built_in">siz</span>(bt)<span class="number">-1</span>)&#123;</span><br><span class="line">                vt.<span class="built_in">emplace_back</span>(bt[i]);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">battle</span>(bt[i],bt[i+<span class="number">1</span>]))&#123;</span><br><span class="line">                    vt.<span class="built_in">emplace_back</span>(bt[i]);</span><br><span class="line">                    <span class="keyword">if</span>(ps[bt[i+<span class="number">1</span>]].f&lt;m) fl.<span class="built_in">emplace_back</span>(bt[i+<span class="number">1</span>]);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span>(ps[bt[i]].f&lt;m) fl.<span class="built_in">emplace_back</span>(bt[i]);</span><br><span class="line">                    vt.<span class="built_in">emplace_back</span>(bt[i+<span class="number">1</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(bt.<span class="built_in">size</span>()) bt.<span class="built_in">pop_back</span>();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:vt) bt.<span class="built_in">emplace_back</span>(i);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:fl) bt.<span class="built_in">emplace_back</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;bt.<span class="built_in">front</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Q3-數位占卜"><a href="#Q3-數位占卜" class="headerlink" title="Q3. 數位占卜"></a>Q3. 數位占卜</h2><h3 id="題目連結：h083-3-數位占卜-高中生程式解題系統"><a href="#題目連結：h083-3-數位占卜-高中生程式解題系統" class="headerlink" title="題目連結：h083. 3. 數位占卜 - 高中生程式解題系統"></a>題目連結：<a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=h083">h083. 3. 數位占卜 - 高中生程式解題系統</a></h3><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這是我唯一沒有滿分的題目，要用 <code>set&lt;long long&gt;</code> 陣列，還要 rolling hash 。 參考資料：<a target="_blank" rel="noopener" href="https://hackmd.io/@thanksone/APCS20220109#%E6%95%B8%E4%BD%8D%E5%8D%A0%E5%8D%9C">2022 01&#x2F;09 APCS 題解 - HackMD</a></p>
+<h3 id="實作-2"><a href="#實作-2" class="headerlink" title="實作"></a>實作</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> ll=<span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="type">const</span> ll MOD=<span class="number">2147483647</span>;</span><br><span class="line"><span class="type">const</span> ll X=<span class="number">29</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// pwt[i]=29^i%MOD</span></span><br><span class="line"><span class="comment">// inv[i]=pwt[i] 在 MOD 的反元素</span></span><br><span class="line">ll pwt[<span class="number">105</span>],inv[<span class="number">105</span>];</span><br><span class="line"><span class="comment">// hash value</span></span><br><span class="line">ll h[<span class="number">50010</span>][<span class="number">105</span>];</span><br><span class="line"><span class="comment">// 原始資料</span></span><br><span class="line">string s[<span class="number">50010</span>];</span><br><span class="line"><span class="comment">// 對於長度為 i 的字串的 hash 值</span></span><br><span class="line">set&lt;ll&gt; ss[<span class="number">105</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 快速冪</span></span><br><span class="line"><span class="function">ll <span class="title">POW</span><span class="params">(ll a,ll x)</span></span>&#123;</span><br><span class="line">    ll ret=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(x&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&amp;<span class="number">1</span>) ret=ret*a%MOD;</span><br><span class="line">        a=a*a%MOD;</span><br><span class="line">        x&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">()</span></span>&#123;</span><br><span class="line">    pwt[<span class="number">0</span>]=inv[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">101</span>;i++)&#123;</span><br><span class="line"><span class="comment">//      X^i%MOD</span></span><br><span class="line">        pwt[i]=X*pwt[i<span class="number">-1</span>]%MOD;</span><br><span class="line"><span class="comment">//      模逆元</span></span><br><span class="line">        inv[i]=<span class="built_in">POW</span>(pwt[i],MOD<span class="number">-2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">hah</span><span class="params">(string &amp;tp,ll p)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> m=tp.<span class="built_in">size</span>();</span><br><span class="line"><span class="comment">//  不加 1 的話 a, aa, aaa 會被視為相同</span></span><br><span class="line">    h[p][<span class="number">0</span>]=tp[<span class="number">0</span>]-<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;m;++i)&#123;</span><br><span class="line">        h[p][i]=(h[p][i<span class="number">-1</span>]+(tp[i]-<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span>)*pwt[i])%MOD;</span><br><span class="line">    &#125;</span><br><span class="line">    ss[m].<span class="built_in">insert</span>(h[p][m<span class="number">-1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第 p 個字串的 [l,r] hash 前綴和的值</span></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll p,ll l,ll r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> l==<span class="number">0</span> ? h[p][r] : (h[p][r]-h[p][l<span class="number">-1</span>]+MOD)%MOD*inv[l]%MOD;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">solve</span><span class="params">(<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;++i)&#123;</span><br><span class="line">        ll m=s[i].<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;m;++j)&#123;</span><br><span class="line"><span class="comment">//          從中間開始</span></span><br><span class="line">            <span class="keyword">if</span>(j*<span class="number">2</span>&lt;=m) <span class="keyword">continue</span>;</span><br><span class="line"><span class="comment">//          若第 i 個字串的 [0,m-j-1] 與 [j,m-1] 相同</span></span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">query</span>(i,<span class="number">0</span>,m-j<span class="number">-1</span>)==<span class="built_in">query</span>(i,j,m<span class="number">-1</span>))&#123;</span><br><span class="line"><span class="comment">//              尋找匹配字串，(j*2-m) 補齊字串長度</span></span><br><span class="line">                <span class="keyword">if</span>(ss[j*<span class="number">2</span>-m].<span class="built_in">count</span>(<span class="built_in">query</span>(i,m-j,j<span class="number">-1</span>)))</span><br><span class="line">                    ans++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="built_in">build</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;++i)&#123;</span><br><span class="line">        cin&gt;&gt;s[i];</span><br><span class="line">        <span class="built_in">hah</span>(s[i],i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;<span class="built_in">solve</span>(n)&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Q4-牆上海報"><a href="#Q4-牆上海報" class="headerlink" title="Q4. 牆上海報"></a>Q4. 牆上海報</h2><h3 id="題目連結：h084-4-牆上海報-高中生程式解題系統"><a href="#題目連結：h084-4-牆上海報-高中生程式解題系統" class="headerlink" title="題目連結：h084. 4. 牆上海報 - 高中生程式解題系統"></a>題目連結：<a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=h084">h084. 4. 牆上海報 - 高中生程式解題系統</a></h3><h3 id="想法-2"><a href="#想法-2" class="headerlink" title="想法"></a>想法</h3><p>Greedy + 二分搜。避免有人不知道要搜什麼，是搜尋高度。因為從題目中我們可以發現 -&gt; 越高的地方可以放東西的區間越來越破碎，也越來越少。且若 x 是可以放的下的高度，選 x\‘&lt; x 都不會更好(題目要求越高越好)。這樣就可以一次刪除一半的區間。</p>
+<p>那 Greedy 呢？因為有規定擺放順序，因此能放就放，這個區間放不下就移至下個區間。沒有區間可以放就表示這個高度不合法。</p>
+<h3 id="實作-3"><a href="#實作-3" class="headerlink" title="實作"></a>實作</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,k;</span><br><span class="line"><span class="type">int</span> h[<span class="number">200010</span>],bd[<span class="number">50010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> psum=<span class="number">0</span>;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; len;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(h[i]&gt;=x)&#123;</span><br><span class="line">            psum++;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            len.<span class="built_in">emplace_back</span>(psum);</span><br><span class="line">            psum=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//  0也無所謂</span></span><br><span class="line">    len.<span class="built_in">emplace_back</span>(psum);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>,j=<span class="number">0</span>;i&lt;=k;++i)&#123;</span><br><span class="line">        <span class="keyword">while</span>(len[j]&lt;bd[i])&#123;</span><br><span class="line">            j++;</span><br><span class="line">            <span class="keyword">if</span>(j==len.<span class="built_in">size</span>()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        len[j]-=bd[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;n&gt;&gt;k;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i) cin&gt;&gt;h[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=k;++i) cin&gt;&gt;bd[i];</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> l=<span class="number">0</span>,r=<span class="number">1073741824</span>;</span><br><span class="line">    <span class="keyword">while</span>(r-l&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="type">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">check</span>(mid))&#123;</span><br><span class="line">            l=mid;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            r=mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;l&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/apcs/" rel="tag"># apcs</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/installing-pop_os-20-04-lts-on-asus-m32cd/" rel="prev" title="在 ASUS M32CD 上安裝 Pop!_OS 20.04 LTS">
+      <i class="fa fa-chevron-left"></i> 在 ASUS M32CD 上安裝 Pop!_OS 20.04 LTS
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/unpack/acer-aspire-tc-1660-desktop-feat-cooler-master/" rel="next" title="開箱 Acer Aspire TC-1660 Desktop feat. Cooler Master">
+      開箱 Acer Aspire TC-1660 Desktop feat. Cooler Master <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q1-%E7%A8%8B%E5%BC%8F%E4%BA%A4%E6%98%93"><span class="nav-number">1.</span> <span class="nav-text">Q1. 程式交易</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E9%80%A3%E7%B5%90%EF%BC%9Ah081-1-%E7%A8%8B%E5%BC%8F%E4%BA%A4%E6%98%93-%E9%AB%98%E4%B8%AD%E7%94%9F%E7%A8%8B%E5%BC%8F%E8%A7%A3%E9%A1%8C%E7%B3%BB%E7%B5%B1"><span class="nav-number">1.1.</span> <span class="nav-text">題目連結：h081: 1. 程式交易 - 高中生程式解題系統</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%B3%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">想法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B4%B0%E7%AF%80"><span class="nav-number">1.2.1.</span> <span class="nav-text">細節</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C"><span class="nav-number">1.3.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q2-%E8%B4%8F%E5%AE%B6%E9%A0%90%E6%B8%AC"><span class="nav-number">2.</span> <span class="nav-text">Q2. 贏家預測</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E9%80%A3%E7%B5%90%EF%BC%9Ah082-2-%E8%B4%8F%E5%AE%B6%E9%A0%90%E6%B8%AC-%E9%AB%98%E4%B8%AD%E7%94%9F%E7%A8%8B%E5%BC%8F%E8%A7%A3%E9%A1%8C%E7%B3%BB%E7%B5%B1"><span class="nav-number">2.1.</span> <span class="nav-text">題目連結：h082. 2. 贏家預測 - 高中生程式解題系統</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%B3%E6%B3%95-1"><span class="nav-number">2.2.</span> <span class="nav-text">想法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-1"><span class="nav-number">2.3.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q3-%E6%95%B8%E4%BD%8D%E5%8D%A0%E5%8D%9C"><span class="nav-number">3.</span> <span class="nav-text">Q3. 數位占卜</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E9%80%A3%E7%B5%90%EF%BC%9Ah083-3-%E6%95%B8%E4%BD%8D%E5%8D%A0%E5%8D%9C-%E9%AB%98%E4%B8%AD%E7%94%9F%E7%A8%8B%E5%BC%8F%E8%A7%A3%E9%A1%8C%E7%B3%BB%E7%B5%B1"><span class="nav-number">3.1.</span> <span class="nav-text">題目連結：h083. 3. 數位占卜 - 高中生程式解題系統</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">3.2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-2"><span class="nav-number">3.3.</span> <span class="nav-text">實作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q4-%E7%89%86%E4%B8%8A%E6%B5%B7%E5%A0%B1"><span class="nav-number">4.</span> <span class="nav-text">Q4. 牆上海報</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE%E9%80%A3%E7%B5%90%EF%BC%9Ah084-4-%E7%89%86%E4%B8%8A%E6%B5%B7%E5%A0%B1-%E9%AB%98%E4%B8%AD%E7%94%9F%E7%A8%8B%E5%BC%8F%E8%A7%A3%E9%A1%8C%E7%B3%BB%E7%B5%B1"><span class="nav-number">4.1.</span> <span class="nav-text">題目連結：h084. 4. 牆上海報 - 高中生程式解題系統</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%B3%E6%B3%95-2"><span class="nav-number">4.2.</span> <span class="nav-text">想法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C-3"><span class="nav-number">4.3.</span> <span class="nav-text">實作</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="轉換至 Garuda Linux 之 20 天後">
+<meta property="og:url" content="http://mtmatt.one/linux/20-days-after-shifting-to-garuda-linux/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52057937190_6a2d1a207a_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52057663123_ab88efab50.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058117535_bcb2685a09.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52057790052_5ff167b400_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058828301_490d121a1f.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52058117520_a1992aeb43.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52061257230_d73baa088f_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52061010394_8a47ba25f5_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52063821439_85011f3de3.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52057482153_4b35524041_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52057685494_343ce77ec7_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52056713562_ff99aaccae_n.jpg">
+<meta property="article:published_time" content="2022-05-08T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-24T09:15:03.046Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="archlinux">
+<meta property="article:tag" content="garudalinux">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52057937190_6a2d1a207a_b.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/linux/20-days-after-shifting-to-garuda-linux/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>轉換至 Garuda Linux 之 20 天後 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/linux/20-days-after-shifting-to-garuda-linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          轉換至 Garuda Linux 之 20 天後
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-05-08 08:00:00" itemprop="dateCreated datePublished" datetime="2022-05-08T08:00:00+08:00">2022-05-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>2.8k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>5 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52057937190/in/dateposted-public/" title="20DaysAfterShiftingtoGarudaLinuxEp1"><img src="https://live.staticflickr.com/65535/52057937190_6a2d1a207a_b.jpg" alt="20DaysAfterShiftingtoGarudaLinuxEp1"></a></p>
+<p>在 <a href="http://mtmatt.one/linux/quickrecap-of-garuda-linux-kde-dr460nized-edition/">快速回顧 Garuda Linux (KDE Dr460nized Edition)</a> 後，我便決定 <a href="http://mtmatt.one/linux/shifting-from-mx-linux-to-garuda-linux/">從 MX Linux 轉換到 Garuda Linux</a>，至今，已過了 20 天。</p>
+<p>20 天前，我在想「我認為自己做出正確的抉擇，接著，我也想再多花一點時間使用看看，搞不好，我可以因此寫一篇比『快速回顧』再深入一點的感想」；20 天之後，與其說自己能夠寫出更深入的，不如說有些事情是在「快速回顧」短短的時間內無法感受到的，卻能夠隨著相處時間拉長，而發現什麼似的。</p>
+<p>似乎，可以拿「交往」vs.「結婚」來當成比喻，「快速回顧」比較像在「交往」；「20 天之後」就像是「結婚」。</p>
+<hr>
+<h3 id="發現與感想"><a href="#發現與感想" class="headerlink" title="發現與感想"></a>發現與感想</h3><ul>
+<li><p>Setup Assistant：這個系統預設安裝的 App，可以說是新手 Friendly 的好幫手，真的很好用，尤其，在過程中針對亞洲語系國家的字體支援與輸入法安裝(透過 Fcitx5)，這一個部分，我認為是大加分的。有好幾支 Distro，都有類似這樣的 App，然而，我認為 Garuda Linux 在這一個點上的表現，以我的立場來看，是相對比較優秀的，為此，我錄下操作過程的影片，經過簡易後製給有興趣多瞭解的伙伴參考。 </p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/7bJVVoGQdUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">炫炮的必要性：這裡，主要是想談一下下，Garuda Linux 的 Eye Candy 與其他 Distro 相比之下，口味應該算是比較重的(獨樹一格的 ICON、啵亮的按鈕與果凍感的視窗…等等)，我一開始是有那麼點不習慣，隨著時間拉長後，除了對這樣的炫炮還滿能夠接受的以外，也發現這些炫炮後面，也有一些設計想法在裡面。Garuda Linux 說自己像 macOS，我的第一眼感覺是有那麼點像，但又有很多地方是有 Garuda 自己的思維在其中。比方我今天把程式放到最大後，我會想要直覺地從工作列直接把程式拉下來同時回復到放大前的大小，結果它還真的就是照我想的那樣做，也就是說我幾乎在任何時刻多能以「直覺」的方式操作，足以說服我自己：Garuda Linux 不只是炫炮而已。所以，儘管我不習慣炫炮，也沒有因此扣到分，甚至，我會認為有一定的必要性。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52057663123/in/dateposted-public/" title="20DaysAfterShiftingtoGarudaLinuxEp4"><img src="https://live.staticflickr.com/65535/52057663123_ab88efab50.jpg" alt="20DaysAfterShiftingtoGarudaLinuxEp4"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058117535/in/dateposted-public/" title="20DaysAfterShiftingtoGarudaLinuxEp5"><img src="https://live.staticflickr.com/65535/52058117535_bcb2685a09.jpg" alt="20DaysAfterShiftingtoGarudaLinuxEp5"></a></p>
+<p> (下圖)系統預設安裝 JamesDSP for Linux，我目前只透過 HDMI 從螢幕內建的揚聲器做音效輸出，比較難體會到這支 App 帶來的效果，但，相信對於遊戲玩家或是音效要求較高需求的使用者而言，應該有一定的加乘效果。只是，我也得說，音效的知識又是另外一個領域的專業，這方面我目前懂的不多，如果有伙伴也使用 Garuda Linux，或是實際使用過 JamesDSP for Linux，也非常歡迎分享使用心得。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52057790052/in/dateposted-public/" title="Screenshot_1"><img src="https://live.staticflickr.com/65535/52057790052_5ff167b400_b.jpg" alt="Screenshot_1"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058828301/in/dateposted-public/" title="Screenshot_JamesDSP for Linux_1"><img src="https://live.staticflickr.com/65535/52058828301_490d121a1f.jpg" alt="Screenshot_JamesDSP for Linux_1"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52058117520/in/dateposted-public/" title="20DaysAfterShiftingtoGarudaLinuxEp6"><img src="https://live.staticflickr.com/65535/52058117520_a1992aeb43.jpg" alt="20DaysAfterShiftingtoGarudaLinuxEp6"></a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Fcitx5：Garuda Linux 身為 Arch Linux 的衍生版本，延續很多 Arch Linux 優良的特性，我認為 Arch Linux 也是目前我個人在使用 Linux 當中，對於 Fcitx5 的套件支援度比較完整的一支 Distro，而 Fcitx5 目前的穩定度也越來越好，對於現階段仍以鍵盤輸入為主的電腦而言，只要會碰到中文文字輸入，沒有良好的輸入法框架支持，再怎麼厲害的 Distro 也不會被拿來當做是個人電腦系統。</span><br><span class="line"></span><br><span class="line">pacman：現時 Linux 的 Distro 當中，我比較不願意去碰的大概有 2 支，一支是 Gentoo，另外一支則是 Slackware。最直接的原因是我認為有點麻煩，以 Gentoo 而言，它的優點也正是它的缺點，那種兩面刃的特性實在太明顯，這裡，我特別引用 Gentoo Linux - 維基百科，自由的百科全書 的說明：「Gentoo Linux讓使用者自行設定和編譯軟體包的特性，使使用者的Gentoo Linux系統具有高度可塑性，但相比起其他常見的Linux發行版，Gentoo Linux的使用者也需要對Linux系統和電腦的運作有一定的認識，才能對其系統作出合適的設定。」至於 Slackware，我的印象是「軟體套件管理」不會主動處理依賴關係，但，這是我憑記憶所述，比較不能當成是現在的參考，只是這樣的刻板印象，竟然讓我裹足不前(…該檢討好像是我自己比較多 XD)。然而，pacman 所呈現出來的，還沒有跟其他的套件管理程式相比前，我就認為滿容易上手的，再比較之後，更讓我覺得簡單易懂。真要說有什麼缺點的話，應該就是執行 pacman 幫整個系統套件做定期更新的時候，比較不能在同一時間使用系統，硬要用的話，狀況會滿多的，只是我也得說，這個狀況在其他的套件管理程式也多半會發生。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52061257230/in/dateposted-public/" title="Screenshot_~ : fish_1"><img src="https://live.staticflickr.com/65535/52061257230_d73baa088f_o.png" alt="Screenshot_~ : fish_1"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52061010394/in/dateposted-public/" title="Screenshot_~ : fish_2"><img src="https://live.staticflickr.com/65535/52061010394_8a47ba25f5_o.png" alt="Screenshot_~ : fish_2"></a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>但，我慢慢也抓到這個狀況的相處與解決之道： (1)先按 Ctrl + Alt + F2，切換之後用帳號登入，再按 Ctrl + Alt + F1 切換回來。 (2)如果上面步驟無效，再按 Ctrl + Alt + F2，執行下列指令，再按 Ctrl + Alt + F1 切換回來。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># loginctl unlock-session 2</span><br></pre></td></tr></table></figure>
+
+<p>(3)如果還是不行，就再按 Ctrl + Alt + F2，直接下 <code>reboot</code> 指令重啟系統。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52063821439/in/dateposted-public/" title="Screenshot_4"><img src="https://live.staticflickr.com/65535/52063821439_85011f3de3.jpg" alt="Screenshot_4"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52057482153/in/dateposted-public/" title="20DaysAfterShiftingtoGarudaLinuxEp2"><img src="https://live.staticflickr.com/65535/52057482153_4b35524041_b.jpg" alt="20DaysAfterShiftingtoGarudaLinuxEp2"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52057685494/in/dateposted-public/" title="20DaysAfterShiftingtoGarudaLinuxEp3"><img src="https://live.staticflickr.com/65535/52057685494_343ce77ec7_c.jpg" alt="20DaysAfterShiftingtoGarudaLinuxEp3"></a></p>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>macOS：已經有好長一段時間，我沒有特別去注意 macOS 的發展，現在到 macOS 上，我最常使用的 App，就是 iMovie 與 Affinity Photo，不得不說，硬要再比較套件管理程式的話，macOS 上的系統、程式更新是相對比較優秀的，只是，這個比較已經有點牽強，要這樣比的話，可能要把所有 Unix-Like 都搬出來，做個表格，一項一項拿出來比一比才會是公平公正的做法，但，我是認為沒有必要弄到這麼累。在這裡，之所以會談到 macOS，主要是因為 Garuda Linux 主力版本強調「The workflow is mac-alike with the appmenu baked right into the top bar.」，讓我一時興起，多做一點思考與分享。</p>
+<p>Donation：截至目前為止，使用 Linux 的過程中，我只有跟 <a target="_blank" rel="noopener" href="https://web.archive.org/web/20100513091906/http://www.ubuntu.com/community/ubuntustory/foundation">The Ubuntu Foundation</a> 買過 ubuntu 週邊商品的經驗(我不確定是跟 The Ubuntu Foundation，還是跟 <a target="_blank" rel="noopener" href="https://canonical.com/">Canonical</a> 買的商品，總之就是跟 ubuntu 官方那邊買過週邊商品，當時推出的週邊商品，記得有馬克杯、T 恤之類的用品)，至今從未考慮過要捐款，然而，使用 Garuda Linux 期間，我不時會感受到這支 Distro 開發與維護人員的用心，要不是被圖形重置打斷，我認為自己應該已經量力而為地捐了一些款項，期待這支 Distro 能夠持續走下去。換一個角度來看，如果希望圖形重置這樣的狀況，減少發生次數，甚至就不再發生的話，似乎更應該以實際行動支持。(且讓我再想想…)</p>
+<p><img src="https://live.staticflickr.com/65535/52056713562_ff99aaccae_n.jpg"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/archlinux/" rel="tag"># archlinux</a>
+              <a href="/tags/garudalinux/" rel="tag"># garudalinux</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/boshiamy/arcolinuxl-and-boshiamy/" rel="prev" title="ArcoLinuxL 與嘸蝦米">
+      <i class="fa fa-chevron-left"></i> ArcoLinuxL 與嘸蝦米
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/reviews/how-heavy-are-the-dumbbells-you-lift-on-netflix/" rel="next" title="流汗吧！健身少女">
+      流汗吧！健身少女 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BC%E7%8F%BE%E8%88%87%E6%84%9F%E6%83%B3"><span class="nav-number">2.</span> <span class="nav-text">發現與感想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">3.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

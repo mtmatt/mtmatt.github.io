@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言這一篇貼文，主要是紀錄我在 Windows 11 上面做一些與嘸蝦米輸入法相關設定的流程，我將設定大致分為 2 個方向：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我在 Windows 11 上面設定嘸蝦米的筆記">
+<meta property="og:url" content="http://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-11/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言這一篇貼文，主要是紀錄我在 Windows 11 上面做一些與嘸蝦米輸入法相關設定的流程，我將設定大致分為 2 個方向：">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873614369_079007a47b_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873614359_5f30af7d6e_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873614339_160eed938a_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873936500_3be127050e_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873370118_3db80f7015_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873370078_150c6b6035_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873614274_a5d4671742_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873296271_0f8871114c_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873936405_a283750dfc_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873296221_6ab0a4e5e9_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51874001410_2c93914604_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51884166250_191d3a28c3_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873361821_2642f921f1_b.jpg">
+<meta property="article:published_time" content="2022-02-10T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-17T01:53:39.123Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="windows10">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png">
+
+<link rel="canonical" href="http://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-11/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>我在 Windows 11 上面設定嘸蝦米的筆記 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          我在 Windows 11 上面設定嘸蝦米的筆記
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-02-10 08:00:00" itemprop="dateCreated datePublished" datetime="2022-02-10T08:00:00+08:00">2022-02-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/boshiamy/" itemprop="url" rel="index"><span itemprop="name">boshiamy</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>2 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇貼文，主要是紀錄我在 Windows 11 上面做一些與嘸蝦米輸入法相關設定的流程，我將設定大致分為 2 個方向：</p>
+<ol>
+<li>設定嘸蝦米為預設且唯一的中文輸入法</li>
+<li>保留其他中文輸入法，設定嘸蝦米為「預設輸入法」</li>
+</ol>
+<p>※本篇貼文內，使用的嘸蝦米版本是<strong>「嘸蝦米 J」</strong>。(2022 年 9 月 20 日更新) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873296441/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"><img src="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"></a></p>
+<hr>
+<h3 id="設定嘸蝦米為預設且唯一的中文輸入法"><a href="#設定嘸蝦米為預設且唯一的中文輸入法" class="headerlink" title="設定嘸蝦米為預設且唯一的中文輸入法"></a>設定嘸蝦米為預設且唯一的中文輸入法</h3><ol>
+<li><p>(↓)【開始】→【設定】，跳出以下畫面。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873614369/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep2"><img src="https://live.staticflickr.com/65535/51873614369_079007a47b_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep2"></a></p>
+</li>
+<li><p>(↓)點左側的【時間與語言】，再點該項目下的【輸入】。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873614359/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep3"><img src="https://live.staticflickr.com/65535/51873614359_5f30af7d6e_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep3"></a></p>
+</li>
+<li><p>(↓)接著，再點【輸入】項下的【語言與地區】，並且進到【語言與地區】的設定細項。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873614339/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep4"><img src="https://live.staticflickr.com/65535/51873614339_160eed938a_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep4"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873936500/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep5"><img src="https://live.staticflickr.com/65535/51873936500_3be127050e_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep5"></a></p>
+</li>
+<li><p>(↓)點【中文(繁體，台灣)】右邊的【．．．】(就是【點點點】)，跳出並點擊【…語言選項】。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873370118/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep6"><img src="https://live.staticflickr.com/65535/51873370118_3db80f7015_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep6"></a></p>
+</li>
+<li><p>(↓)或許，大家有注意到，安裝完嘸蝦米輸入法之後，並不會出現在【已安裝的鍵盤】裡。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873370078/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep8"><img src="https://live.staticflickr.com/65535/51873370078_150c6b6035_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep8"></a></p>
+</li>
+<li><p>(↓)沒有關係，點【新增鍵盤】，把【嘸蝦米輸入法】加進來。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873614274/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep7"><img src="https://live.staticflickr.com/65535/51873614274_a5d4671742_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep7"></a></p>
+</li>
+<li><p>(↓)加完嘸蝦米輸入法，因為我只留嘸蝦米輸入法，所以，就移除掉【微軟注音輸入法】。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873296271/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep10"><img src="https://live.staticflickr.com/65535/51873296271_0f8871114c_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep10"></a></p>
+</li>
+<li><p>(↓)回到桌面上的工作列右下角，找到【英】或【中】，點右鍵跳出嘸蝦米輸入法的設定選單，然後點選單上的【設定】。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873936405/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep11"><img src="https://live.staticflickr.com/65535/51873936405_a283750dfc_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep11"></a></p>
+</li>
+<li><p>(↓)這一部電腦，我想要一進系統以【英數模式】為預設輸入模式，並且不要【繼承系統輸入法狀態】，也不要【使用 Shift 切換「中文&#x2F;英文」模式】。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873296221/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep12"><img src="https://live.staticflickr.com/65535/51873296221_6ab0a4e5e9_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep12"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="保留其他中文輸入法，設定嘸蝦米為「預設輸入法」"><a href="#保留其他中文輸入法，設定嘸蝦米為「預設輸入法」" class="headerlink" title="保留其他中文輸入法，設定嘸蝦米為「預設輸入法」"></a>保留其他中文輸入法，設定嘸蝦米為「預設輸入法」</h3><ol>
+<li><p>(↓)在 Windows 11 上面，排在「第一個」的輸入法並不是所謂的「預設輸入法」，所以，下圖可見嘸蝦米輸入法好像在排序上是「第一個」，卻不會因此成為「預設輸入法」。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51874001410/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep13"><img src="https://live.staticflickr.com/65535/51874001410_2c93914604_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep13"></a></p>
+</li>
+<li><p>以微軟注音輸入法與嘸蝦米輸入法共存為例，我有 2 個做法：2. (↓)其一，【設定】→【時間與語言】→【進階鍵盤設定】→【覆寫預設輸入法】(也可以在【設定】介面裡的【尋找設定】，直接用關鍵字把設定找出來)，調整為嘸蝦米輸入法。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51884166250/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep15"><img src="https://live.staticflickr.com/65535/51884166250_191d3a28c3_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep15"></a></p>
+</li>
+<li><p>(↓)其二，進入【微軟注音輸入法】的設定，把【預設輸入模式】改為【英數字元】，這樣的做法是讓登入系統時以「英數字元」為預設值，需要切換到嘸蝦米輸入法時，就用 Win+Space 做切換。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873361821/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep14"><img src="https://live.staticflickr.com/65535/51873361821_2642f921f1_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep14"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>與 <a target="_blank" rel="noopener" href="https://mtmatt.page/windows/making-boshiamy-be-the-default-chinese-input-method-on-windows-10/">Windows 10 預設為嘸蝦米輸入法之設定方式</a> 相比，就可以發現嘸蝦米輸入法本身的設定是一樣的，不同的是【設定】介面的部分， Windows 11 與 Windows 10 有所不同。</li>
+<li>題外話…，隨著不少新的電腦已搭載 Windows 11 出貨，我相信目前的 Windows 11 已經有一定的穩定度，而我此次更新到 Windows 11 後，會持續觀注系統補丁，而且不一定每一個補丁釋出，都立馬跟著更新，主要是希望，這一回升級到 Windows 11 至少要能夠穩穩用個 1 年。</li>
+<li><a target="_blank" rel="noopener" href="https://mtmatt.page/boshiamy/about-my-settings-of-boshiamy-on-windows-10/">我在 Windows 10 上面設定嘸蝦米的筆記</a></li>
+<li><a target="_blank" rel="noopener" href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/windows/" rel="tag"># windows</a>
+              <a href="/tags/windows10/" rel="tag"># windows10</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/boshiamy/making-boshiamy-be-the-default-chinese-input-method-on-windows-10/" rel="prev" title="在 Windows 10 將嘸蝦米設定為預設中文輸入法">
+      <i class="fa fa-chevron-left"></i> 在 Windows 10 將嘸蝦米設定為預設中文輸入法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/boshiamy/manjaro-xfce-21-2-2-and-boshiamy-feat-fcitx5/" rel="next" title="Manjaro XFCE 21.2.2 與嘸蝦米 (feat. Fcitx5)">
+      Manjaro XFCE 21.2.2 與嘸蝦米 (feat. Fcitx5) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9A%E5%98%B8%E8%9D%A6%E7%B1%B3%E7%82%BA%E9%A0%90%E8%A8%AD%E4%B8%94%E5%94%AF%E4%B8%80%E7%9A%84%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">設定嘸蝦米為預設且唯一的中文輸入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E7%95%99%E5%85%B6%E4%BB%96%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%EF%BC%8C%E8%A8%AD%E5%AE%9A%E5%98%B8%E8%9D%A6%E7%B1%B3%E7%82%BA%E3%80%8C%E9%A0%90%E8%A8%AD%E8%BC%B8%E5%85%A5%E6%B3%95%E3%80%8D"><span class="nav-number">3.</span> <span class="nav-text">保留其他中文輸入法，設定嘸蝦米為「預設輸入法」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

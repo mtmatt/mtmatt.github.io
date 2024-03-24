@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言這一篇貼文，主要是紀錄與分享 risiOS：一支期待可以讓使用者更輕鬆愉快地使用 Fedora 的衍生 Distro。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="來玩 risiOS 37.1.1">
+<meta property="og:url" content="http://mtmatt.one/linux/risios-37-1-1/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言這一篇貼文，主要是紀錄與分享 risiOS：一支期待可以讓使用者更輕鬆愉快地使用 Fedora 的衍生 Distro。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651223107_891da03443_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52652198383_4d3fd64f77_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651713226_a20a4ff4d9_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651986154_10ec0ff6e2_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651223267_b9b18a73a7_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651223362_587c444d59_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651223362_587c444d59_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52652198068_ced1ae51d1_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651223317_a67f3601d5_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651223317_a67f3601d5_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52652198203_eb74c080ae_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52652157270_21e5252efc_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52652157245_33506cd835_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651712991_e1ceece736_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52652198103_7d17534ace_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52651223112_66487c7904_c.jpg">
+<meta property="article:published_time" content="2023-01-27T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-29T12:46:58.424Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="fedora">
+<meta property="article:tag" content="risios">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52651223107_891da03443_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/linux/risios-37-1-1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>來玩 risiOS 37.1.1 | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/linux/risios-37-1-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          來玩 risiOS 37.1.1
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-01-27 08:00:00" itemprop="dateCreated datePublished" datetime="2023-01-27T08:00:00+08:00">2023-01-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇貼文，主要是紀錄與分享 risiOS：一支期待可以讓使用者更輕鬆愉快地使用 Fedora 的衍生 Distro。</p>
+<p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651223107/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp33"><img src="https://live.staticflickr.com/65535/52651223107_891da03443_c.jpg" alt="risiOS37.1.1onVirtualBoxEp33"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<hr>
+<h3 id="快速回顧與感想"><a href="#快速回顧與感想" class="headerlink" title="快速回顧與感想"></a>快速回顧與感想</h3><ol>
+<li><p>安裝與初始設定：一樣用 VirtualBox 搭配 ISO 檔進入系統，而且進入後，稍加注意一下，就會發現 Fedora 的影子還滿明顯的。比方說，Live CD 的桌面左上角，仍然可以看到「Welcome to Fedora」的字樣。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52652198383/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp01"><img src="https://live.staticflickr.com/65535/52652198383_4d3fd64f77_c.jpg" alt="risiOS37.1.1onVirtualBoxEp01"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>在 VirtualBox 上的預設解析度。 (↓)800x600 很顯然是不夠用的，建議至少要調整到 1024x768，圖片所示的是 1280x960。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651713226/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp06"><img src="https://live.staticflickr.com/65535/52651713226_a20a4ff4d9_c.jpg" alt="risiOS37.1.1onVirtualBoxEp06"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p> (↓)安裝完成，進入初始安裝好的系統時，解析度會再跳回 800x600，多數而言，都會想要調整一下。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651986154/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp08"><img src="https://live.staticflickr.com/65535/52651986154_10ec0ff6e2_c.jpg" alt="risiOS37.1.1onVirtualBoxEp08"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>risiWelcome。 這是 risiOS 的重點之一，這個 App 在 FirstSteps 裡面，幾個項目主要是可以處理 Nvidia 驅動程式、影音解碼與 FlatHub 設定等等，有這些設定，確實提升系統使用上的完整度與便利性。我發現已經有不少 Linux 會這麼做，也許有人也會有跟我一樣的疑問：「怎麼不乾脆在安裝的時候，直接全部納入。」我後來想想，應該也是有 Linux 在安裝之初就收錄並安裝好給使用者，但，Linux 畢竟有比較高的自由度，以我自己而言，越來越喜歡把基本的安裝好，其他的，我想要的時候再加進來的使用習慣，所以，我個人認為保留給使用者自己決定與取捨，仍不失為一個好的系統使用設計方式。</p>
+<p> QuickSteps 項目裡，則是比較偏向影音娛樂與編輯、遊戲、辦公室(或學校)運用相關的 App 安裝，從這些項目來看，risiOS 目前有比較多的企圖，應該是要讓使用者感受到 Linux 處理這些日常，都是 OK 的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651223267/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp23"><img src="https://live.staticflickr.com/65535/52651223267_b9b18a73a7_c.jpg" alt="risiOS37.1.1onVirtualBoxEp23"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p> (↓)原本，我以為走完這個設定就結束，一時之間，也不知道這樣跟 Fedora 有什麼太大的差別。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651223362/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp14"><img src="https://live.staticflickr.com/65535/52651223362_587c444d59_c.jpg" alt="risiOS37.1.1onVirtualBoxEp14"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p> (↓)隨著 risiWelcome 親臨駕到，這個想法不久就被扭轉。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651223362/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp14"><img src="https://live.staticflickr.com/65535/52651223362_587c444d59_c.jpg" alt="risiOS37.1.1onVirtualBoxEp14"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>risiTweaks：risiOS 另外一個重點，便是這個 App。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52652198068/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp30"><img src="https://live.staticflickr.com/65535/52652198068_ced1ae51d1_c.jpg" alt="risiOS37.1.1onVirtualBoxEp30"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p> (↓)進入後，就會看到總共分為 4 個頁籤，其中一個頁籤：risiScripts，也是 risiOS 的重點，點進去的話，則是一些瀏覽器安裝的 Scripts。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651223317/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp20"><img src="https://live.staticflickr.com/65535/52651223317_a67f3601d5_c.jpg" alt="risiOS37.1.1onVirtualBoxEp20"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p> (↓)我選用安裝 Chrome 的 Script，確實可以順利服用，沒有問題。而這次的試用，我並沒有自己試著使用 risiOS 裡面的工作，編寫自己想要的 Script，但，據官方說明，risiOS 已經試著讓自行編寫 Script 這件事變得容易，若真是如此，改天我也會試著在上頭編寫看看。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651223317/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp20"><img src="https://live.staticflickr.com/65535/52651223317_a67f3601d5_c.jpg" alt="risiOS37.1.1onVirtualBoxEp20"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52652198203/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp21"><img src="https://live.staticflickr.com/65535/52652198203_eb74c080ae_c.jpg" alt="risiOS37.1.1onVirtualBoxEp21"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52652157270/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp22"><img src="https://live.staticflickr.com/65535/52652157270_21e5252efc_c.jpg" alt="risiOS37.1.1onVirtualBoxEp22"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52652157245/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp26"><img src="https://live.staticflickr.com/65535/52652157245_33506cd835_c.jpg" alt="risiOS37.1.1onVirtualBoxEp26"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651712991/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp27"><img src="https://live.staticflickr.com/65535/52651712991_e1ceece736_c.jpg" alt="risiOS37.1.1onVirtualBoxEp27"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="中文支援、設定與中文輸入法框架的使用心得"><a href="#中文支援、設定與中文輸入法框架的使用心得" class="headerlink" title="中文支援、設定與中文輸入法框架的使用心得"></a>中文支援、設定與中文輸入法框架的使用心得</h3><ol>
+<li><p>中文支援：有 Fedora 深厚的功力在，基本上中文支援在 Linux 裡面，應該說是前段班並不為過。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52652198103/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp28"><img src="https://live.staticflickr.com/65535/52652198103_7d17534ace_c.jpg" alt="risiOS37.1.1onVirtualBoxEp28"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>中文輸入法框架：我沒有特別去安裝或做設定，只是下一個指令找找看 fcitx5-table-extra 這支套件。我相信，原則上，應該是可以直接參考 <a href="https://mtmatt.one/boshiamy/fedora-35-and-boshiamy-feat-fcitx5/">Fedora 35 與嘸蝦米 (feat. Fcitx5)</a> 這一篇貼文。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52651223112/in/dateposted-public/" title="risiOS37.1.1onVirtualBoxEp32"><img src="https://live.staticflickr.com/65535/52651223112_66487c7904_c.jpg" alt="risiOS37.1.1onVirtualBoxEp32"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 risiOS-Live-37-1-1-20230105.iso。</li>
+<li>相較於 Arch Linux、Debian 與 ubuntu，Fedora 的衍生 Distro 就顯得不是那麼百花齊放。</li>
+<li>risiOS 在官網提到，系統在 Virtual Machine 上的執行效率並不是很好，然而，我這次在 VirtualBox 上面執行，整體而言，並不會覺得效能特別差。當然，我也得說，因為我在使用比較偏試用性質，也沒有特地再去拿效能、壓力測試軟體去把系統與硬體搭配的效能整個壓出來瞧瞧，所以，嚴格而言，頂多就只能當成是文書機的使用心得。</li>
+<li><a target="_blank" rel="noopener" href="https://risi.io/">RisiOS</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/fedora/" rel="tag"># fedora</a>
+              <a href="/tags/risios/" rel="tag"># risios</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/archlabs-linux-2023-01-20/" rel="prev" title="來玩 ArchLabs Linux 2023.01.20">
+      <i class="fa fa-chevron-left"></i> 來玩 ArchLabs Linux 2023.01.20
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/boshiamy/ibus-with-boshiamy-on-legacyos-2023/" rel="next" title="在 LegacyOS 2023 用 iBus 搭配嘸蝦米">
+      在 LegacyOS 2023 用 iBus 搭配嘸蝦米 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%A7%E8%88%87%E6%84%9F%E6%83%B3"><span class="nav-number">2.</span> <span class="nav-text">快速回顧與感想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E6%94%AF%E6%8F%B4%E3%80%81%E8%A8%AD%E5%AE%9A%E8%88%87%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%A1%86%E6%9E%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97"><span class="nav-number">3.</span> <span class="nav-text">中文支援、設定與中文輸入法框架的使用心得</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

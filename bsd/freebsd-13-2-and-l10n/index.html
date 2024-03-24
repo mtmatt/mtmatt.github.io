@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言這幾天，心血來潮找小惡魔玩。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FreeBSD 13.2 安裝與中文化(含安裝嘸蝦米、新酷音輸入法 feat. Fcitx5)">
+<meta property="og:url" content="http://mtmatt.one/bsd/freebsd-13-2-and-l10n/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言這幾天，心血來潮找小惡魔玩。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53276262974_92d1717070_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53276189743_ae7961da26_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53281559675_d625f4ae0d_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53274592768_589b5b0c4e_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53274592723_388277f2d4_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53274666544_cc175c43ef_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53274592693_91c24c428c_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53274666529_66614fd6eb_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53274592678_39257449d2_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53274666554_effc089d34_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53274318066_5e07c6e47a_c.jpg">
+<meta property="article:published_time" content="2023-10-21T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-17T02:08:13.363Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="fcitx5">
+<meta property="article:tag" content="freebsd">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/53276262974_92d1717070_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/bsd/freebsd-13-2-and-l10n/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>FreeBSD 13.2 安裝與中文化(含安裝嘸蝦米、新酷音輸入法 feat. Fcitx5) | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/bsd/freebsd-13-2-and-l10n/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          FreeBSD 13.2 安裝與中文化(含安裝嘸蝦米、新酷音輸入法 feat. Fcitx5)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-10-21 08:00:00" itemprop="dateCreated datePublished" datetime="2023-10-21T08:00:00+08:00">2023-10-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/bsd/" itemprop="url" rel="index"><span itemprop="name">bsd</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>2.3k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>4 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這幾天，心血來潮找小惡魔玩。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53276262974/in/dateposted-public/" title="FreeBSD13.2onVirtualBoxEp2"><img src="https://live.staticflickr.com/65535/53276262974_92d1717070_c.jpg" width="800" height="500" alt="FreeBSD13.2onVirtualBoxEp2"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<hr>
+<h3 id="安裝系統的心得與建議"><a href="#安裝系統的心得與建議" class="headerlink" title="安裝系統的心得與建議"></a>安裝系統的心得與建議</h3><ol>
+<li>本次安裝是在 VirtualBox 上進行。</li>
+<li>可能是最近才安裝過 Slackware，安裝 FreeBSD 的過程，同樣有一種親切感。</li>
+<li>安裝的過程一樣都是英文，我也沒有特別去看看是不是也支援其他語系介面。</li>
+<li>安裝畫面來到「Distribution Select」這個介面時，記得選擇將「ports」與「src」安裝進來。 <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53276189743/in/dateposted-public/" title="FreeBSD13.2onVirtualBoxEp1"><img src="https://live.staticflickr.com/65535/53276189743_ae7961da26_c.jpg" width="800" height="600" alt="FreeBSD13.2onVirtualBoxEp1"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>由於我是打算拿來當桌面系統使用，所以硬碟規劃的部分，就讓系統的預設去跑。</li>
+<li>除了設定 root 密碼之外，我會新增至少一個使用者，由於後續會用到 X Window System，所以，除了 wheel 這個 Group 以外，我還會將使用者加入到 video 的 Group，如果忘記在這個步驟加入 wheel 或 video，後續可以用指令 <code>pw groupmod group(群組名稱) -m username(使用者帳號名稱)</code> 處理。</li>
+<li>在處理 X Window System 之前，我事先安裝 <code>doas</code> 與 <code>neofetch</code> 這 2 支套件，doas 在安裝完之後，記得把設定檔的部分搞定，最快的方式，就是拷貝 doas.conf.sample 來服用。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg install doas neofetch</span><br><span class="line">cp /usr/local/etc/doas.conf.sample /usr/local/etc/doas.conf</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="設定-X-Window-System-feat-XFCE"><a href="#設定-X-Window-System-feat-XFCE" class="headerlink" title="設定 X Window System(feat. XFCE)"></a>設定 X Window System(feat. XFCE)</h3><ol>
+<li>切換到 root 權限。</li>
+<li>安裝 xorg 等套件，下 <code>pkg install xorg xfce xf86-video-vmware</code> 這道指令。</li>
+<li>下 <code>exit</code> 這道指令，回到使用者後，再下 <code>ee ~/.xinitrc</code>，將 <code>exec xfce4-session</code> 寫入、存檔與離開 .xinitrc 的文字編輯。</li>
+<li>重新啟動系統：這個步驟非必要，只是我自己個人習慣這麼做。</li>
+<li>登入使用者後，下 <code>startx</code> 進入 X Window。</li>
+</ol>
+<hr>
+<h3 id="設定音效卡"><a href="#設定音效卡" class="headerlink" title="設定音效卡"></a>設定音效卡</h3><p><a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53281559675/in/dateposted-public/" title="FreeBSD13.2onVirtualBoxEp3"><img src="https://live.staticflickr.com/65535/53281559675_d625f4ae0d_c.jpg" width="800" height="500" alt="FreeBSD13.2onVirtualBoxEp3"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ol>
+<li>FreeBSD 似乎沒有在 VirtualBox 上，將音效卡模組(Sound card module)載入。</li>
+<li>我先試著在 root 權限下，執行 <code>kldload snd_driver</code> 後，音效就順利出現。</li>
+<li>接著將以下內容寫入 <code>/boot/loader.conf</code>。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">snd_driver_load=&quot;YES&quot;</span><br></pre></td></tr></table></figure></li>
+<li>我另外安裝 <code>mixer</code> 這支套件。</li>
+<li>目前聲音還有點小聲，由於我目前只是想讓它有點「動靜」而已，因此程序上就先走到這邊。</li>
+</ol>
+<hr>
+<h3 id="中文化-含中文輸入法-的安裝與處理過程"><a href="#中文化-含中文輸入法-的安裝與處理過程" class="headerlink" title="中文化(含中文輸入法)的安裝與處理過程"></a>中文化(含中文輸入法)的安裝與處理過程</h3><ol>
+<li><p>安裝中文字體。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install zh-CJKUnifonts zh-kcfonts zh-taipeisanstc-b</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安裝中文輸入法框架。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install fcitx5 fcitx5-configtool zh-fcitx5-chewing zh-fcitx5-chinese-addons zh-fcitx5-table-extra zh-fcitx5-table-other</span><br><span class="line">mkdir ~/.config/autostart</span><br><span class="line">cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>設定語系與中文輸入法框架：先處理 <code>~/.cshrc</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ee ~/.cshrc </span><br></pre></td></tr></table></figure>
+<p>寫入以下內容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setenv LANG zh_TW.UTF-8</span><br><span class="line">setenv LANGUAGE zh_TW.UTF-8</span><br><span class="line">setenv LC_CTYPE zh_TW.UTF-8 </span><br><span class="line">setenv LC_ALL zh_TW.UTF-8</span><br><span class="line">setenv MM_CHARSET zh_TW.UTF-8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>再處理 <code>/etc/csh.cshrc</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">doas ee /etc/csh.cshrc</span><br></pre></td></tr></table></figure>
+<p>寫入以下內容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setenv QT4_IM_MODULE fcitx</span><br><span class="line">setenv GTK_IM_MODULE fcitx</span><br><span class="line">setenv QT_IM_MODULE fcitx</span><br><span class="line">setenv GTK2_IM_MODULE fcitx</span><br><span class="line">setenv GTK3_IM_MODULE fcitx</span><br><span class="line">setenv XMODIFIERS @im=fcitx</span><br><span class="line">setenv LANG zh_TW.UTF-8</span><br><span class="line">setenv MM_CHARSET zh_TW.UTF-8</span><br><span class="line">setenv LC_CTYPE zh_TW.UTF-8</span><br><span class="line">setenv LC_ALL zh_TW.UTF-8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新啟動系統，讓中文語系與中文輸入法框架(即 Fcitx5)生效。</p>
+</li>
+<li><p>新酷音輸入法在預設的輸入法裡面。<br><a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53274592768/in/dateposted-public/" title="chineseInputMethodsAndFreeBSD13.2Ep (1)"><img src="https://live.staticflickr.com/65535/53274592768_589b5b0c4e_c.jpg" width="800" height="600" alt="chineseInputMethodsAndFreeBSD13.2Ep (1)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53274592723/in/dateposted-public/" title="chineseInputMethodsAndFreeBSD13.2Ep (2)"><img src="https://live.staticflickr.com/65535/53274592723_388277f2d4_c.jpg" width="800" height="600" alt="chineseInputMethodsAndFreeBSD13.2Ep (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53274666544/in/dateposted-public/" title="chineseInputMethodsAndFreeBSD13.2Ep (3)"><img src="https://live.staticflickr.com/65535/53274666544_cc175c43ef_c.jpg" width="800" height="600" alt="chineseInputMethodsAndFreeBSD13.2Ep (3)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+<li><p>嘸蝦米輸入法則是要另外手動添加。<br><a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53274592693/in/dateposted-public/" title="chineseInputMethodsAndFreeBSD13.2Ep (4)"><img src="https://live.staticflickr.com/65535/53274592693_91c24c428c_c.jpg" width="800" height="600" alt="chineseInputMethodsAndFreeBSD13.2Ep (4)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53274666529/in/dateposted-public/" title="chineseInputMethodsAndFreeBSD13.2Ep (5)"><img src="https://live.staticflickr.com/65535/53274666529_66614fd6eb_c.jpg" width="800" height="600" alt="chineseInputMethodsAndFreeBSD13.2Ep (5)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53274592678/in/dateposted-public/" title="chineseInputMethodsAndFreeBSD13.2Ep (6)"><img src="https://live.staticflickr.com/65535/53274592678_39257449d2_c.jpg" width="800" height="600" alt="chineseInputMethodsAndFreeBSD13.2Ep (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53274666554/in/dateposted-public/" title="chineseInputMethodsAndFreeBSD13.2Ep (8)"><img src="https://live.staticflickr.com/65535/53274666554_effc089d34_c.jpg" width="800" height="600" alt="chineseInputMethodsAndFreeBSD13.2Ep (8)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/53274318066/in/dateposted-public/" title="chineseInputMethodsAndFreeBSD13.2Ep (9)"><img src="https://live.staticflickr.com/65535/53274318066_5e07c6e47a_c.jpg" width="800" height="600" alt="chineseInputMethodsAndFreeBSD13.2Ep (9)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 FreeBSD-13.2-RELEASE-amd64-dvd1.iso。</li>
+<li><a target="_blank" rel="noopener" href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
+<li><a target="_blank" rel="noopener" href="http://chewing.im/">新酷音輸入法</a></li>
+</ol>
+<hr>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://docs.freebsd.org/en/books/handbook/x11/">Chapter 5. The X Window System | FreeBSD Documentation Portal</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.freebsd.org/zh-tw/books/handbook/basics/">章 3. FreeBSD 基礎 | FreeBSD Documentation Portal</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.freebsd.org/zh-tw/books/handbook/l10n/">章 22. 在地化 - i18n&#x2F;L10n 使用與安裝 | FreeBSD Documentation Portal</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_56418482/article/details/127181750">FreeBSD安装中文字体和中文输入法_freebsd 中文字体_一朝乐的博客-CSDN博客</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
+              <a href="/tags/freebsd/" rel="tag"># freebsd</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/slackware-15-0/" rel="prev" title="來玩 Slackware 15.0">
+      <i class="fa fa-chevron-left"></i> 來玩 Slackware 15.0
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/boshiamy/opensuse-tumbleweed-snapshot20231018-and-boshiamy/" rel="next" title="openSUSE Tumbleweed Snapshot20231018 與嘸蝦米 (feat. Fcitx5)">
+      openSUSE Tumbleweed Snapshot20231018 與嘸蝦米 (feat. Fcitx5) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E7%B3%BB%E7%B5%B1%E7%9A%84%E5%BF%83%E5%BE%97%E8%88%87%E5%BB%BA%E8%AD%B0"><span class="nav-number">2.</span> <span class="nav-text">安裝系統的心得與建議</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9A-X-Window-System-feat-XFCE"><span class="nav-number">3.</span> <span class="nav-text">設定 X Window System(feat. XFCE)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9A%E9%9F%B3%E6%95%88%E5%8D%A1"><span class="nav-number">4.</span> <span class="nav-text">設定音效卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E5%8C%96-%E5%90%AB%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95-%E7%9A%84%E5%AE%89%E8%A3%9D%E8%88%87%E8%99%95%E7%90%86%E9%81%8E%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">中文化(含中文輸入法)的安裝與處理過程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">6.</span> <span class="nav-text">後記</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="nav-number">7.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

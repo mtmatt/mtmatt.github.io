@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言YouTube 上的廣告似乎越來越多，電腦版上的 YouTube 廣告，找支 Adblock 就可以搞定，但，我還有 Apple TV 與 Google Chromecast(支援 Google TV)，要無廣告順順、爽爽觀賞，就有點麻煩。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Hola VPN 從土耳其跨區訂閱 YouTube Premium">
+<meta property="og:url" content="http://mtmatt.one/web/hola-vpn-and-youtube-premium/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言YouTube 上的廣告似乎越來越多，電腦版上的 YouTube 廣告，找支 Adblock 就可以搞定，但，我還有 Apple TV 與 Google Chromecast(支援 Google TV)，要無廣告順順、爽爽觀賞，就有點麻煩。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52759511706_39d4fb38a9_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52759481551_08619d096e_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52758936497_1ac9f1ce5d_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52758936497_1ac9f1ce5d_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52758936457_b901a4c32f_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52759481746_248fa88d62_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52759729184_5c83a29f22_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52759729174_e0edd6be08_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52759481696_b820f1cce0_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52760055463_a5a9d3532e_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52759729089_92b524c7c5_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52759965208_026a7ac13f_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52759481551_08619d096e_c.jpg">
+<meta property="article:published_time" content="2023-03-20T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-16T12:56:00.883Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="google">
+<meta property="article:tag" content="holavpn">
+<meta property="article:tag" content="youtube">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52759511706_39d4fb38a9_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/web/hola-vpn-and-youtube-premium/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>使用 Hola VPN 從土耳其跨區訂閱 YouTube Premium | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/web/hola-vpn-and-youtube-premium/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用 Hola VPN 從土耳其跨區訂閱 YouTube Premium
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-03-20 08:00:00" itemprop="dateCreated datePublished" datetime="2023-03-20T08:00:00+08:00">2023-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>YouTube 上的廣告似乎越來越多，電腦版上的 YouTube 廣告，找支 Adblock 就可以搞定，但，我還有 Apple TV 與 Google Chromecast(支援 Google TV)，要無廣告順順、爽爽觀賞，就有點麻煩。</p>
+<p>花錢，購買 YouTube Premium 就成為比較容易處理的方式。</p>
+<p>然而，要以相對划算的價格達到無廣告的目的，網路上提供的解決之道，關鍵就在於使用 VPN 軟體，跨區到相對比較便宜的國家進行購買訂閱的動作，而本篇貼文，主要就是我嘗試爬文後，參考做法後的心得，以及現階段比較可行的方式與實做過程。</p>
+<hr>
+<h3 id="多數-VPN-要註冊、要安裝獨立程式、要錢"><a href="#多數-VPN-要註冊、要安裝獨立程式、要錢" class="headerlink" title="多數 VPN 要註冊、要安裝獨立程式、要錢"></a>多數 VPN 要註冊、要安裝獨立程式、要錢</h3><ol>
+<li><p>要註冊：比方說，我自己在使用 Windscribe 的時候，發現還得先註冊一個帳號才給用，…也太累。</p>
+</li>
+<li><p>要安裝獨立程式：要另外安裝獨立程式，對我來說，並不是很棒的選擇，倒不如直接在瀏覽器上面安裝擴充功能或插件就可以使用，來得方便。</p>
+</li>
+<li><p>要錢：為了訂閱便宜的 YouTube Premium 想方設法，找到方法後，卻要先花一筆錢訂閱 VPN 服務，那我不如先繼續花一點點時間，看看有沒有免費的方案。除非，免費的讓我花超過 1 小時以上，那我就會考慮在 3 美元以內訂閱有效的 VPN 服務，嘗試達成效果。簡單說，非不得已，我是不會想要先花錢訂閱 VPN 服務的。</p>
+</li>
+</ol>
+<hr>
+<h3 id="不用註冊、不用安裝獨立程式、免費的處理方式"><a href="#不用註冊、不用安裝獨立程式、免費的處理方式" class="headerlink" title="不用註冊、不用安裝獨立程式、免費的處理方式"></a>不用註冊、不用安裝獨立程式、免費的處理方式</h3><ol>
+<li><p>使用前的提醒：由於 Google 似乎會擋走 VPN 去收費相對便宜的國家訂閱的使用者，因此，今天介紹的 VPN 是我確定還可以使用的，但並不保證一定持續可用，所以，下單前請放亮眼睛，別賠了夫人又折兵。下圖所示，就是使用 Windscribe 走到土耳其，卻被收加幣(CA) 的例子。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52759511706/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (12)"><img src="https://live.staticflickr.com/65535/52759511706_39d4fb38a9_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (12)"></a></p>
+</li>
+<li><p>Hola VPN：截至發文前，我親自跑一趟，確定 Hola VPN 仍是可行的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52759481551/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (9)"><img src="https://live.staticflickr.com/65535/52759481551_08619d096e_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (9)"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="安裝使用-Hola-VPN-與訂閱-YouTube-Premium"><a href="#安裝使用-Hola-VPN-與訂閱-YouTube-Premium" class="headerlink" title="安裝使用 Hola VPN 與訂閱 YouTube Premium"></a>安裝使用 Hola VPN 與訂閱 YouTube Premium</h3><ol>
+<li><p>Hola VPN 讓我欣嘗的地方，就是它能夠透過 Google Chrome 的「擴充功能」安裝進來。本次演示，我則是選擇在 Microsoft Edge 完成。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52758936497/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (1)"><img src="https://live.staticflickr.com/65535/52758936497_1ac9f1ce5d_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (1)"></a></p>
+</li>
+<li><p>安裝 Hola VPN：步驟如下圖串。</p>
+<p> (↓)點 Microsoft Edge 工具列的「．．．」(對，就是這個在微軟近幾年的系統介面裡，很常看到的「點點點」)。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52758936497/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (1)"><img src="https://live.staticflickr.com/65535/52758936497_1ac9f1ce5d_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (1)"></a></p>
+<p> (↓)點「開啟 Microsoft Edge 外掛程式網站」。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52758936457/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (2)"><img src="https://live.staticflickr.com/65535/52758936457_b901a4c32f_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (2)"></a></p>
+<p> (↓)搜尋關鍵字「hola」。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52759481746/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (3)"><img src="https://live.staticflickr.com/65535/52759481746_248fa88d62_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (3)"></a></p>
+<p> (↓)找到「Hola Free VPN Proxy Unblocker - Best VPN」，點按旁邊的「取得」鈕。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52759729184/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (4)"><img src="https://live.staticflickr.com/65535/52759729184_5c83a29f22_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (4)"></a></p>
+<p> (↓)安裝完成的畫面，我會建議從「擴充功能」裡面，設定為「在工具列顯示」，…因為等一下就會用到，顯示出來我自己是覺得比較方便做事。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52759729174/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (5)"><img src="https://live.staticflickr.com/65535/52759729174_e0edd6be08_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (5)"></a></p>
+</li>
+<li><p>進入 YouTube 網站後，啟動 Hola VPN。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52759481696/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (6)"><img src="https://live.staticflickr.com/65535/52759481696_b820f1cce0_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (6)"></a></p>
+</li>
+<li><p>承上圖，點一下中間國旗旁的「▼」(倒三角)，搜尋關鍵字「turkey」，下圖是我打到「tur」就已經把 Turkey 找出來，記得點一下找出來的「Turkey」。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52760055463/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (13)"><img src="https://live.staticflickr.com/65535/52760055463_a5a9d3532e_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (13)"></a></p>
+</li>
+<li><p>走到這邊，都沒有問題的話，就可以看到 Turkey 顯示成彩色，這樣的話，大致就沒有問題。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52759729089/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (7)"><img src="https://live.staticflickr.com/65535/52759729089_92b524c7c5_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (7)"></a></p>
+</li>
+<li><p>找到網頁左手邊的「YouTube Premium」，並且直接給它點下去。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52759965208/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (8)"><img src="https://live.staticflickr.com/65535/52759965208_026a7ac13f_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (8)"></a></p>
+</li>
+<li><p>如果更面顯示 TRY 29.99(截稿前是這個價格)，基本上就沒有問題。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/joyopen/52759481551/in/dateposted-public/" title="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (9)"><img src="https://live.staticflickr.com/65535/52759481551_08619d096e_c.jpg" alt="howtoBuyYouTubePremiumfromTurkeywithHolaVPNep (9)"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>當我看到「TRY」字樣，雖然知道它指的是「新土耳其里拉」，仍不免覺得 Google 似乎有玩梗的嫌疑。</li>
+<li>入手價格：我下單的時候，花費 491 元新台幣(不含信用卡手續費)，再怎麼算都划算。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/google/" rel="tag"># google</a>
+              <a href="/tags/holavpn/" rel="tag"># holavpn</a>
+              <a href="/tags/youtube/" rel="tag"># youtube</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/upgrade-to-ubuntu-22-04-2-lts-from-ubuntu-22-04-1-lts/" rel="prev" title="從 ubuntu 22.04.1 LTS 升級到 ubuntu 22.04.2 LTS">
+      <i class="fa fa-chevron-left"></i> 從 ubuntu 22.04.1 LTS 升級到 ubuntu 22.04.2 LTS
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/linux/garuda-dr460nized-gaming-linux-zen-230311/" rel="next" title="來玩 Garuda Dr460nized Gaming Linux Zen 230311">
+      來玩 Garuda Dr460nized Gaming Linux Zen 230311 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%95%B8-VPN-%E8%A6%81%E8%A8%BB%E5%86%8A%E3%80%81%E8%A6%81%E5%AE%89%E8%A3%9D%E7%8D%A8%E7%AB%8B%E7%A8%8B%E5%BC%8F%E3%80%81%E8%A6%81%E9%8C%A2"><span class="nav-number">2.</span> <span class="nav-text">多數 VPN 要註冊、要安裝獨立程式、要錢</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E7%94%A8%E8%A8%BB%E5%86%8A%E3%80%81%E4%B8%8D%E7%94%A8%E5%AE%89%E8%A3%9D%E7%8D%A8%E7%AB%8B%E7%A8%8B%E5%BC%8F%E3%80%81%E5%85%8D%E8%B2%BB%E7%9A%84%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">不用註冊、不用安裝獨立程式、免費的處理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E4%BD%BF%E7%94%A8-Hola-VPN-%E8%88%87%E8%A8%82%E9%96%B1-YouTube-Premium"><span class="nav-number">4.</span> <span class="nav-text">安裝使用 Hola VPN 與訂閱 YouTube Premium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">5.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>

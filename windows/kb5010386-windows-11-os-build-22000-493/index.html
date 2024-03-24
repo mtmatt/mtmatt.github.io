@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言隨著不少新的電腦已搭載 Windows 11 出貨，我相信目前的 Windows 11 已經有一定的穩定度，而我此次更新到 Windows 11 後，會持續觀注系統補丁，而且不一定每一個補丁釋出，都立馬跟著更新，主要是希望，這一回升級到 Windows 11 至少要能夠穩穩用個 1 年。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[版本更新] 快速回顧 微軟發布 KB5010386 (Windows 11 作業系統組建 22000.493)">
+<meta property="og:url" content="http://mtmatt.one/windows/kb5010386-windows-11-os-build-22000-493/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言隨著不少新的電腦已搭載 Windows 11 出貨，我相信目前的 Windows 11 已經有一定的穩定度，而我此次更新到 Windows 11 後，會持續觀注系統補丁，而且不一定每一個補丁釋出，都立馬跟著更新，主要是希望，這一回升級到 Windows 11 至少要能夠穩穩用個 1 年。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51877193562_642406362d_k.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51878159441_a97a9528d9_k.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51878272751_10c4cd754d_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51878159421_947f7c1d4a_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51877307902_631cb39483_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51878474374_51daf7e314_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51878802275_6254cf0d43_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51878474334_5b69a4ab68_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51878368078_66624f22a6_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51877325702_4b3b343512_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51878944845_6f38bff6f8_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51878385608_b83f3c8814_o.png">
+<meta property="article:published_time" content="2022-02-13T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-01T09:49:48.797Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="windows11">
+<meta property="article:tag" content="windowsupdate">
+<meta property="article:tag" content="quickrecap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png">
+
+<link rel="canonical" href="http://mtmatt.one/windows/kb5010386-windows-11-os-build-22000-493/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>[版本更新] 快速回顧 微軟發布 KB5010386 (Windows 11 作業系統組建 22000.493) | mtmatt</title>
+  
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/windows/kb5010386-windows-11-os-build-22000-493/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [版本更新] 快速回顧 微軟發布 KB5010386 (Windows 11 作業系統組建 22000.493)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-02-13 08:00:00" itemprop="dateCreated datePublished" datetime="2022-02-13T08:00:00+08:00">2022-02-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/windows/" itemprop="url" rel="index"><span itemprop="name">windows</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>隨著不少新的電腦已搭載 Windows 11 出貨，我相信目前的 Windows 11 已經有一定的穩定度，而我此次更新到 Windows 11 後，會持續觀注系統補丁，而且不一定每一個補丁釋出，都立馬跟著更新，主要是希望，這一回升級到 Windows 11 至少要能夠穩穩用個 1 年。</p>
+<p>今天升級的機器，已經經歷過一次 Windows 11 升級，升級後掛點前，機器上的韌體更新了幾次，考量到微軟也陸續提供系統補丁，就在前天，注意到 Windows 11 推動的升級訊息時，我就前面幾點的考量後，便決定再次將系統升級到 Windows 11(花費大概 1 小時 15 分鐘)。恰巧的是我完成 Windows 11 升級的當天，正好碰上微軟釋出 <a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-2-%E6%9C%88-8-%E6%97%A5-kb5010386-os-build-22000-493-3c018e73-a58a-4fca-be69-8a93dd6fedbd">2022 年 2 月 8 日 —KB5010386 (OS Build 22000.493)</a> 這支補丁，並且，直到今天才收到更新的通知。</p>
+<p>說真的，這樣也好，通常更新跑第一，都需要一點冒險精神，這次升級到 Windows 11，我求的是穩定度，不會想要賭一把。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51873296441/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"><img src="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"></a></p>
+<hr>
+<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><p>我先讀過 <a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-2-%E6%9C%88-8-%E6%97%A5-kb5010386-os-build-22000-493-3c018e73-a58a-4fca-be69-8a93dd6fedbd">2022 年 2 月 8 日 —KB5010386 (OS Build 22000.493)</a> 裡的說明。</p>
+<p>我特別注意到 2 個部分： 其一，中文輸入法的可靠性(Reliability)：可能是我中字打字還不夠多，也可能是我在 Windows 11 的機器上，搭配使用的 App 也不夠多元與廣泛，我自己並沒有發現任何中文輸入法不夠可靠的問題，另外，我使用的是嘸蝦米輸入法是否包涵在這次的更新範圍(…這麼說好了，我個人不太能夠從微軟的說明裡，具體地瞭解到更新「中文輸入法可靠性」指的是什麼)。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51877193562/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep1"><img src="https://live.staticflickr.com/65535/51877193562_642406362d_k.jpg" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep1"></a></p>
+<p>其二，Your Microsoft Account 與 HelpWith：這 2 個地方，應屬介面上的更新，HelpWith 會提供一些說明連結供使用者在需要時點傳送門上網瀏覽。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51878159441/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep2"><img src="https://live.staticflickr.com/65535/51878159441_a97a9528d9_k.jpg" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep2"></a></p>
+<hr>
+<h3 id="更新過程與更新後的觀察"><a href="#更新過程與更新後的觀察" class="headerlink" title="更新過程與更新後的觀察"></a>更新過程與更新後的觀察</h3><p>更新之前，我先跑一趟 Microsoft Account 與【系統〉顯示器】，去看原本的模樣。</p>
+<p>Microsoft Account 的部分，我總覺得更新之前，就跟影片介面的樣子，沒有太大差別。這個部分，可以就下面 2 張圖做比較。</p>
+<p>(↓)這張是影片介紹截圖。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51878272751/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep9"><img src="https://live.staticflickr.com/65535/51878272751_10c4cd754d_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep9"></a></p>
+<p>(↓)這張則是我的機器上的螢幕截圖。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51878159421/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep4"><img src="https://live.staticflickr.com/65535/51878159421_947f7c1d4a_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep4"></a></p>
+<p>【系統〉顯示器】，拉到最底下，英文的部分，會看到「Help with Display」，中文就不知道會怎麼翻譯。同樣地，我也截了 2 張圖做比較。</p>
+<p>(↓)這張是影片介紹截圖。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51877307902/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep10"><img src="https://live.staticflickr.com/65535/51877307902_631cb39483_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep10"></a></p>
+<p>(↓)這張則是我的機器上的螢幕截圖。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51878474374/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep3"><img src="https://live.staticflickr.com/65535/51878474374_51daf7e314_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep3"></a></p>
+<p>看一下更新的時間後，也讓另外一支補丁，一併安裝進來。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51878802275/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep5"><img src="https://live.staticflickr.com/65535/51878802275_6254cf0d43_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep5"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51878474334/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep6"><img src="https://live.staticflickr.com/65535/51878474334_5b69a4ab68_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep6"></a></p>
+<p>更新很快就完成，我特別先跑一趟 Microsoft Account 與【系統〉顯示器】，想看看更新之後長什麼樣？</p>
+<p>答案是「都沒有變」(…呃，詳見下圖)。我在更新完幾個小時後，還重開機確認是沒有，這個部分，Microsoft Account 的部分，好像更新就長這樣，而 HelpWith 的部分，可能要另外開啟，或是中文版的部分，還不在這次的更新補丁裡…吧…？！ <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51878368078/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep12"><img src="https://live.staticflickr.com/65535/51878368078_66624f22a6_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep12"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51877325702/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep11"><img src="https://live.staticflickr.com/65535/51877325702_4b3b343512_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep11"></a></p>
+<p>剛更新完時，我特別先再去看一下，系統是不是順利將補丁更新上來。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51878944845/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep7"><img src="https://live.staticflickr.com/65535/51878944845_6f38bff6f8_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep7"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/51878385608/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep8"><img src="https://live.staticflickr.com/65535/51878385608_b83f3c8814_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep8"></a></p>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>關於 KB5010386 補丁的更新內容，也可參考 <a target="_blank" rel="noopener" href="https://www.ithome.com/0/602/192.htm">微软 Win11 Build 22000.493 (KB5010386) 发布：修复 SSD 硬盘性能 Bug，设置新增管理订阅</a>，但我這次沒有特別針對 SSD 讀取速度去做測試，不確定這支補丁是不是真的讓 SSD 的讀取速度改善，就我目前的使用上，感覺也並不是那麼特別明顯。</p>
+<p>另外，服務堆疊更新 (SSU) 是什麼？有興趣的伙伴可以自行上網搜尋，或是參考 <a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-tw/topic/%E6%9C%8D%E5%8B%99%E5%A0%86%E7%96%8A%E6%9B%B4%E6%96%B0-ssu-%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E9%9B%86-06b62771-1cb0-368c-09cf-87c4efc4f2fe">服務堆疊更新 (SSU)：常見問題集</a>。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/windows/" rel="tag"># windows</a>
+              <a href="/tags/windows11/" rel="tag"># windows11</a>
+              <a href="/tags/windowsupdate/" rel="tag"># windowsupdate</a>
+              <a href="/tags/quickrecap/" rel="tag"># quickrecap</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/boshiamy/manjaro-xfce-21-2-2-with-ibus-and-boshiamy/" rel="prev" title="Manjaro XFCE 21.2.2 with iBus 與嘸蝦米">
+      <i class="fa fa-chevron-left"></i> Manjaro XFCE 21.2.2 with iBus 與嘸蝦米
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/windows/kb5010414-windows-11-os-build-22000-527/" rel="next" title="[版本更新] 快速回顧 微軟發布 KB5010414 (Windows 11 作業系統組建 22000.527)">
+      [版本更新] 快速回顧 微軟發布 KB5010414 (Windows 11 作業系統組建 22000.527) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%89%8D%E5%85%A7%E5%AE%B9%E6%A6%82%E8%A6%BD"><span class="nav-number">2.</span> <span class="nav-text">更新前內容概覽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E9%81%8E%E7%A8%8B%E8%88%87%E6%9B%B4%E6%96%B0%E5%BE%8C%E7%9A%84%E8%A7%80%E5%AF%9F"><span class="nav-number">3.</span> <span class="nav-text">更新過程與更新後的觀察</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">291</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">226</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">401k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">12:09</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>
