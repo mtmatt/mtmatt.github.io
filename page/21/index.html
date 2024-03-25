@@ -210,94 +210,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-array-3-new-year-chaos/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="mtmatt">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mtmatt">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/ojques/hacker-rank-array-3-new-year-chaos/" class="post-title-link" itemprop="url">HackerRank Array 3.New Year Chaos</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2021-07-13 08:00:00" itemprop="dateCreated datePublished" datetime="2021-07-13T08:00:00+08:00">2021-07-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ojques/" itemprop="url" rel="index"><span itemprop="name">ojques</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="文章字數">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">文章字數：</span>
-              <span>401</span>
-            </span>
-            <span class="post-meta-item" title="所需閱讀時間">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>1 分鐘</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="題目連結：New-Year-Chaos-HackerRank"><a href="#題目連結：New-Year-Chaos-HackerRank" class="headerlink" title="題目連結：New Year Chaos | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/new-year-chaos/">New Year Chaos | HackerRank</a></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">minimumBribes</span><span class="params">(vector&lt;<span class="type">int</span>&gt; q)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=q.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(q[i]-(i+<span class="number">1</span>)&gt;<span class="number">2</span>)&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;Too chaotic\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="built_in">max</span>(<span class="number">0</span>,q[i]<span class="number">-2</span>);j&lt;i;j++)</span><br><span class="line">            <span class="keyword">if</span>(q[j]&gt;q[i])ans++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/ojques/hacker-rank-array-3-new-year-chaos/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-array-4-minimum-swaps-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -363,94 +275,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/ojques/hacker-rank-array-4-minimum-swaps-2/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-array-5-array-manipulation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="mtmatt">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mtmatt">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/ojques/hacker-rank-array-5-array-manipulation/" class="post-title-link" itemprop="url">HackerRank Array 5.Array Manipulation</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2021-07-13 08:00:00" itemprop="dateCreated datePublished" datetime="2021-07-13T08:00:00+08:00">2021-07-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ojques/" itemprop="url" rel="index"><span itemprop="name">ojques</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="文章字數">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">文章字數：</span>
-              <span>630</span>
-            </span>
-            <span class="post-meta-item" title="所需閱讀時間">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>1 分鐘</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="題目連結：Array-Manipulation-HackerRank"><a href="#題目連結：Array-Manipulation-HackerRank" class="headerlink" title="題目連結：Array Manipulation | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/crush/">Array Manipulation | HackerRank</a></h3><p>只要算開始與結束即可</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/ojques/hacker-rank-array-5-array-manipulation/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -562,7 +386,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-set-and-map-2-two-strings/">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-array-3-new-year-chaos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -576,7 +400,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/ojques/hacker-rank-set-and-map-2-two-strings/" class="post-title-link" itemprop="url">HackerRank Set And Map 2.Two Strings</a>
+            <a href="/ojques/hacker-rank-array-3-new-year-chaos/" class="post-title-link" itemprop="url">HackerRank Array 3.New Year Chaos</a>
         </h2>
 
         <div class="post-meta">
@@ -604,7 +428,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>352</span>
+              <span>401</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
@@ -623,10 +447,98 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="題目連結：Two-Strings-HackerRank"><a href="#題目連結：Two-Strings-HackerRank" class="headerlink" title="題目連結：Two Strings | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/two-strings/">Two Strings | HackerRank</a></h3><p>用unordered_set比較快O(N) vs O(NlogN)</p>
+          <h3 id="題目連結：New-Year-Chaos-HackerRank"><a href="#題目連結：New-Year-Chaos-HackerRank" class="headerlink" title="題目連結：New Year Chaos | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/new-year-chaos/">New Year Chaos | HackerRank</a></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">minimumBribes</span><span class="params">(vector&lt;<span class="type">int</span>&gt; q)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=q.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(q[i]-(i+<span class="number">1</span>)&gt;<span class="number">2</span>)&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;Too chaotic\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="built_in">max</span>(<span class="number">0</span>,q[i]<span class="number">-2</span>);j&lt;i;j++)</span><br><span class="line">            <span class="keyword">if</span>(q[j]&gt;q[i])ans++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/ojques/hacker-rank-set-and-map-2-two-strings/#more" rel="contents">
+              <a class="btn" href="/ojques/hacker-rank-array-3-new-year-chaos/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-array-5-array-manipulation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ojques/hacker-rank-array-5-array-manipulation/" class="post-title-link" itemprop="url">HackerRank Array 5.Array Manipulation</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-07-13 08:00:00" itemprop="dateCreated datePublished" datetime="2021-07-13T08:00:00+08:00">2021-07-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ojques/" itemprop="url" rel="index"><span itemprop="name">ojques</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>630</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>1 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="題目連結：Array-Manipulation-HackerRank"><a href="#題目連結：Array-Manipulation-HackerRank" class="headerlink" title="題目連結：Array Manipulation | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/crush/">Array Manipulation | HackerRank</a></h3><p>只要算開始與結束即可</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/ojques/hacker-rank-array-5-array-manipulation/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -738,7 +650,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-warm-up-1-sales-by-match/">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-set-and-map-2-two-strings/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -752,7 +664,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/ojques/hacker-rank-warm-up-1-sales-by-match/" class="post-title-link" itemprop="url">HackerRank Warm-up 1.Sales by Match, in C++</a>
+            <a href="/ojques/hacker-rank-set-and-map-2-two-strings/" class="post-title-link" itemprop="url">HackerRank Set And Map 2.Two Strings</a>
         </h2>
 
         <div class="post-meta">
@@ -780,7 +692,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>307</span>
+              <span>352</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
@@ -799,10 +711,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="題目連結：Sales-by-Match-HackerRank"><a href="#題目連結：Sales-by-Match-HackerRank" class="headerlink" title="題目連結：Sales by Match | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/sock-merchant/">Sales by Match | HackerRank</a></h3><p>因應HackerRank系統，而分享 Coding 核心部分</p>
+          <h3 id="題目連結：Two-Strings-HackerRank"><a href="#題目連結：Two-Strings-HackerRank" class="headerlink" title="題目連結：Two Strings | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/two-strings/">Two Strings | HackerRank</a></h3><p>用unordered_set比較快O(N) vs O(NlogN)</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/ojques/hacker-rank-warm-up-1-sales-by-match/#more" rel="contents">
+              <a class="btn" href="/ojques/hacker-rank-set-and-map-2-two-strings/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -1002,7 +914,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-warm-up-4-repeated-string/">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hacker-rank-warm-up-1-sales-by-match/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1016,7 +928,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/ojques/hacker-rank-warm-up-4-repeated-string/" class="post-title-link" itemprop="url">HackerRank Warm-up 4.Repeated String, in C++</a>
+            <a href="/ojques/hacker-rank-warm-up-1-sales-by-match/" class="post-title-link" itemprop="url">HackerRank Warm-up 1.Sales by Match, in C++</a>
         </h2>
 
         <div class="post-meta">
@@ -1044,7 +956,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>349</span>
+              <span>307</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
@@ -1063,10 +975,98 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="題目連結：Repeated-String-HackerRank"><a href="#題目連結：Repeated-String-HackerRank" class="headerlink" title="題目連結：Repeated String | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/repeated-string/">Repeated String | HackerRank</a></h3><p>如果TLE的話請回憶你的數學，相信可以找到解</p>
+          <h3 id="題目連結：Sales-by-Match-HackerRank"><a href="#題目連結：Sales-by-Match-HackerRank" class="headerlink" title="題目連結：Sales by Match | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/sock-merchant/">Sales by Match | HackerRank</a></h3><p>因應HackerRank系統，而分享 Coding 核心部分</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/ojques/hacker-rank-warm-up-4-repeated-string/#more" rel="contents">
+              <a class="btn" href="/ojques/hacker-rank-warm-up-1-sales-by-match/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/ojques/hackerrank-set-and-map-5-frequency-queries/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ojques/hackerrank-set-and-map-5-frequency-queries/" class="post-title-link" itemprop="url">HackerRank Set And Map 4.Frequency Queries</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-07-13 08:00:00" itemprop="dateCreated datePublished" datetime="2021-07-13T08:00:00+08:00">2021-07-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ojques/" itemprop="url" rel="index"><span itemprop="name">ojques</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>606</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>1 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="題目連結：Frequency-Queries-HackerRank"><a href="#題目連結：Frequency-Queries-HackerRank" class="headerlink" title="題目連結：Frequency Queries | HackerRank"></a>題目連結：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/frequency-queries/">Frequency Queries | HackerRank</a></h3><p>最後我是用兩個map，一個存數字，另一個存數量變化</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/ojques/hackerrank-set-and-map-5-frequency-queries/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>

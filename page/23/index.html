@@ -570,7 +570,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/contest/cpp-taichung-106-2/">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/contest/cpp-taichung-106-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -584,7 +584,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/contest/cpp-taichung-106-2/" class="post-title-link" itemprop="url">C++ 台中區 106-2 算帳</a>
+            <a href="/contest/cpp-taichung-106-1/" class="post-title-link" itemprop="url">C++ 台中區 106-1 計算多個整數的平均值、最大值、最小值</a>
         </h2>
 
         <div class="post-meta">
@@ -612,14 +612,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>990</span>
+              <span>597</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>2 分鐘</span>
+              <span>1 分鐘</span>
             </span>
 
         </div>
@@ -631,7 +631,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    map&lt;string,<span class="type">double</span>&gt; s,amount;</span><br><span class="line">    string p;</span><br><span class="line">    <span class="type">double</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;p &amp;&amp; p!=<span class="string">&quot;0000000000&quot;</span>)&#123;</span><br><span class="line">        <span class="type">int</span> a,pr;</span><br><span class="line">        cin&gt;&gt;pr&gt;&gt;a;</span><br><span class="line">        s[p]=pr;</span><br><span class="line">        amount[p]+=a;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(map&lt;string,<span class="type">double</span>&gt;::iterator t=s.<span class="built_in">begin</span>();t!=s.<span class="built_in">end</span>();t++)&#123;</span><br><span class="line">        pair&lt;string,<span class="type">double</span>&gt; a=*t;</span><br><span class="line">        sum+=a.S*amount[a.F];</span><br><span class="line">        <span class="keyword">switch</span>(a.F[<span class="number">0</span>])&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;X&#x27;</span>:</span><br><span class="line">                <span class="keyword">if</span>(amount[a.F]&gt;=<span class="number">2</span>)</span><br><span class="line">                    sum-=a.S*<span class="built_in">floor</span>(amount[a.F]*<span class="number">0.5</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;Y&#x27;</span>:</span><br><span class="line">                <span class="keyword">if</span>(amount[a.F]&gt;=<span class="number">2</span>)</span><br><span class="line">                    sum-=a.S*<span class="built_in">floor</span>(amount[a.F]*<span class="number">0.5</span>)*<span class="number">0.5</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;sum&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INF 1000000000</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">round</span><span class="params">(<span class="type">long</span> <span class="type">long</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (a+<span class="number">5</span>)/<span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> n,sum=<span class="number">0</span>,mx=-INF,mn=INF,t;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;t;</span><br><span class="line">        mx=<span class="built_in">max</span>(mx,t);</span><br><span class="line">        mn=<span class="built_in">min</span>(mn,t);</span><br><span class="line">        sum+=t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> aver=<span class="built_in">round</span>(sum*<span class="number">1000</span>/n);</span><br><span class="line">    cout&lt;&lt;aver/<span class="number">100</span>&lt;&lt;<span class="string">&quot;.&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%02lld\n&quot;</span>,aver%<span class="number">100</span>);</span><br><span class="line">    cout&lt;&lt;mx&lt;&lt;<span class="string">&quot;\n&quot;</span>&lt;&lt;mn&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -732,6 +732,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/contest/cpp-taichung-106-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/contest/cpp-taichung-106-2/" class="post-title-link" itemprop="url">C++ 台中區 106-2 算帳</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-06-19 08:00:00" itemprop="dateCreated datePublished" datetime="2021-06-19T08:00:00+08:00">2021-06-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/contest/" itemprop="url" rel="index"><span itemprop="name">contest</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>990</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>2 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    map&lt;string,<span class="type">double</span>&gt; s,amount;</span><br><span class="line">    string p;</span><br><span class="line">    <span class="type">double</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;p &amp;&amp; p!=<span class="string">&quot;0000000000&quot;</span>)&#123;</span><br><span class="line">        <span class="type">int</span> a,pr;</span><br><span class="line">        cin&gt;&gt;pr&gt;&gt;a;</span><br><span class="line">        s[p]=pr;</span><br><span class="line">        amount[p]+=a;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(map&lt;string,<span class="type">double</span>&gt;::iterator t=s.<span class="built_in">begin</span>();t!=s.<span class="built_in">end</span>();t++)&#123;</span><br><span class="line">        pair&lt;string,<span class="type">double</span>&gt; a=*t;</span><br><span class="line">        sum+=a.S*amount[a.F];</span><br><span class="line">        <span class="keyword">switch</span>(a.F[<span class="number">0</span>])&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;X&#x27;</span>:</span><br><span class="line">                <span class="keyword">if</span>(amount[a.F]&gt;=<span class="number">2</span>)</span><br><span class="line">                    sum-=a.S*<span class="built_in">floor</span>(amount[a.F]*<span class="number">0.5</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;Y&#x27;</span>:</span><br><span class="line">                <span class="keyword">if</span>(amount[a.F]&gt;=<span class="number">2</span>)</span><br><span class="line">                    sum-=a.S*<span class="built_in">floor</span>(amount[a.F]*<span class="number">0.5</span>)*<span class="number">0.5</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;sum&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="http://mtmatt.one/contest/cpp-taichung-106-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -795,95 +876,6 @@
       
           <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">string str;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> sum=<span class="number">0</span>,tmp=<span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;str;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;str.<span class="built_in">size</span>()/<span class="number">3</span>*<span class="number">3</span>;i+=<span class="number">3</span>)&#123;</span><br><span class="line">        tmp=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(i&amp;<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">2</span>;j&gt;=<span class="number">0</span>;j--)&#123;</span><br><span class="line">                tmp=<span class="built_in">int</span>(str[i+j]-<span class="string">&#x27;0&#x27;</span>)+<span class="number">10</span>*tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;<span class="number">3</span>;j++)&#123;</span><br><span class="line">                tmp=<span class="built_in">int</span>(str[i+j]-<span class="string">&#x27;0&#x27;</span>)+<span class="number">10</span>*tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sum=(sum+tmp)%<span class="number">997</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    tmp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>((str.<span class="built_in">size</span>()/<span class="number">3</span>*<span class="number">3</span>)&amp;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=str.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=str.<span class="built_in">size</span>()/<span class="number">3</span>*<span class="number">3</span>;i--)&#123;</span><br><span class="line">            tmp=<span class="built_in">int</span>(str[i]-<span class="string">&#x27;0&#x27;</span>)+<span class="number">10</span>*tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=str.<span class="built_in">size</span>()/<span class="number">3</span>*<span class="number">3</span>;i&lt;str.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            tmp=<span class="built_in">int</span>(str[i]-<span class="string">&#x27;0&#x27;</span>)+<span class="number">10</span>*tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    sum=(sum+tmp)%<span class="number">997</span>;</span><br><span class="line">    cout&lt;&lt;sum;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/contest/cpp-taichung-106-5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="mtmatt">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mtmatt">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/contest/cpp-taichung-106-5/" class="post-title-link" itemprop="url">C++ 台中區 106-5 以價格的移動平均值判斷買賣時機</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2021-06-19 08:00:00" itemprop="dateCreated datePublished" datetime="2021-06-19T08:00:00+08:00">2021-06-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/contest/" itemprop="url" rel="index"><span itemprop="name">contest</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="文章字數">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">文章字數：</span>
-              <span>1k</span>
-            </span>
-            <span class="post-meta-item" title="所需閱讀時間">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>2 分鐘</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>基本上就是照著題目敘述稀里糊塗寫在 if 裡面就可以了，我還用了前綴和，這樣比較方便算區間和。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> k[<span class="number">20</span>]=&#123;<span class="number">0</span>&#125;,p[<span class="number">20</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">15</span>;i++)&#123;</span><br><span class="line">        cin&gt;&gt;k[i];</span><br><span class="line">        p[i]=p[i<span class="number">-1</span>]+k[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">11</span>;i&lt;=<span class="number">15</span>;i++)&#123;</span><br><span class="line">        cout&lt;&lt;k[i];</span><br><span class="line">        <span class="keyword">if</span>((p[i]-p[i<span class="number">-10</span>]) &gt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-10</span>]) &amp;&amp;</span><br><span class="line">          (p[i]-p[i<span class="number">-5</span>]) &gt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-5</span>]) &amp;&amp;</span><br><span class="line">          (k[i]*<span class="number">5</span>&gt; (p[i]-p[i<span class="number">-5</span>]) &amp;&amp; (p[i]-p[i<span class="number">-5</span>])*<span class="number">2</span> &gt; (p[i]-p[i<span class="number">-10</span>])) &amp;&amp;</span><br><span class="line">          (<span class="number">5</span>*k[i]*<span class="number">10</span> &lt; <span class="number">6</span>*(p[i]-p[i<span class="number">-10</span>])*<span class="number">10</span>/<span class="number">10</span>)  )&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;B&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="number">5</span>*k[i]*<span class="number">10</span> &gt; <span class="number">6</span>*(p[i]-p[i<span class="number">-10</span>])*<span class="number">10</span>/<span class="number">10</span> ||</span><br><span class="line">          (k[i]*<span class="number">10</span>&lt; (p[i]-p[i<span class="number">-5</span>])*<span class="number">10</span>/<span class="number">5</span> &amp;&amp; (p[i]-p[i<span class="number">-5</span>])*<span class="number">2</span> &lt; (p[i]-p[i<span class="number">-10</span>])) ||</span><br><span class="line">          (p[i]-p[i<span class="number">-10</span>]) &lt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-10</span>]) )&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;S&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;N&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/contest/cpp-taichung-106-5/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -990,7 +982,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/contest/cpp-taichung-106-1/">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/contest/cpp-taichung-106-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1004,7 +996,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/contest/cpp-taichung-106-1/" class="post-title-link" itemprop="url">C++ 台中區 106-1 計算多個整數的平均值、最大值、最小值</a>
+            <a href="/contest/cpp-taichung-106-5/" class="post-title-link" itemprop="url">C++ 台中區 106-5 以價格的移動平均值判斷買賣時機</a>
         </h2>
 
         <div class="post-meta">
@@ -1032,14 +1024,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>597</span>
+              <span>1k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>1 分鐘</span>
+              <span>2 分鐘</span>
             </span>
 
         </div>
@@ -1051,8 +1043,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INF 1000000000</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">round</span><span class="params">(<span class="type">long</span> <span class="type">long</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (a+<span class="number">5</span>)/<span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> n,sum=<span class="number">0</span>,mx=-INF,mn=INF,t;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        cin&gt;&gt;t;</span><br><span class="line">        mx=<span class="built_in">max</span>(mx,t);</span><br><span class="line">        mn=<span class="built_in">min</span>(mn,t);</span><br><span class="line">        sum+=t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> aver=<span class="built_in">round</span>(sum*<span class="number">1000</span>/n);</span><br><span class="line">    cout&lt;&lt;aver/<span class="number">100</span>&lt;&lt;<span class="string">&quot;.&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%02lld\n&quot;</span>,aver%<span class="number">100</span>);</span><br><span class="line">    cout&lt;&lt;mx&lt;&lt;<span class="string">&quot;\n&quot;</span>&lt;&lt;mn&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <p>基本上就是照著題目敘述稀里糊塗寫在 if 裡面就可以了，我還用了前綴和，這樣比較方便算區間和。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> k[<span class="number">20</span>]=&#123;<span class="number">0</span>&#125;,p[<span class="number">20</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">15</span>;i++)&#123;</span><br><span class="line">        cin&gt;&gt;k[i];</span><br><span class="line">        p[i]=p[i<span class="number">-1</span>]+k[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">11</span>;i&lt;=<span class="number">15</span>;i++)&#123;</span><br><span class="line">        cout&lt;&lt;k[i];</span><br><span class="line">        <span class="keyword">if</span>((p[i]-p[i<span class="number">-10</span>]) &gt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-10</span>]) &amp;&amp;</span><br><span class="line">          (p[i]-p[i<span class="number">-5</span>]) &gt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-5</span>]) &amp;&amp;</span><br><span class="line">          (k[i]*<span class="number">5</span>&gt; (p[i]-p[i<span class="number">-5</span>]) &amp;&amp; (p[i]-p[i<span class="number">-5</span>])*<span class="number">2</span> &gt; (p[i]-p[i<span class="number">-10</span>])) &amp;&amp;</span><br><span class="line">          (<span class="number">5</span>*k[i]*<span class="number">10</span> &lt; <span class="number">6</span>*(p[i]-p[i<span class="number">-10</span>])*<span class="number">10</span>/<span class="number">10</span>)  )&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;B&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="number">5</span>*k[i]*<span class="number">10</span> &gt; <span class="number">6</span>*(p[i]-p[i<span class="number">-10</span>])*<span class="number">10</span>/<span class="number">10</span> ||</span><br><span class="line">          (k[i]*<span class="number">10</span>&lt; (p[i]-p[i<span class="number">-5</span>])*<span class="number">10</span>/<span class="number">5</span> &amp;&amp; (p[i]-p[i<span class="number">-5</span>])*<span class="number">2</span> &lt; (p[i]-p[i<span class="number">-10</span>])) ||</span><br><span class="line">          (p[i]-p[i<span class="number">-10</span>]) &lt; (p[i<span class="number">-1</span>]-p[i<span class="number">-1</span><span class="number">-10</span>]) )&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;S&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;N&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/contest/cpp-taichung-106-5/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
