@@ -695,7 +695,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-boshiamy-table-for-fcitx-on-debian-10-10/</loc>
+    <loc>http://mtmatt.one/boshiamy/installing-debian-11-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -704,7 +704,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-debian-11-and-boshiamy/</loc>
+    <loc>http://mtmatt.one/boshiamy/installing-boshiamy-table-for-fcitx-on-debian-10-10/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -1567,6 +1567,13 @@
   </url>
   
   <url>
+    <loc>http://mtmatt.one/tags/archlabs/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://mtmatt.one/tags/archcraft/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -1588,13 +1595,6 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/archlabs/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://mtmatt.one/tags/arcolinux/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -1610,20 +1610,6 @@
   
   <url>
     <loc>http://mtmatt.one/tags/fcitx5-table-extra/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://mtmatt.one/tags/ibus/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://mtmatt.one/tags/lubuntu/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1658,6 +1644,27 @@
   </url>
   
   <url>
+    <loc>http://mtmatt.one/tags/ibus/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mtmatt.one/tags/lubuntu/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mtmatt.one/tags/scim/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://mtmatt.one/tags/highsierra/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -1673,27 +1680,6 @@
   
   <url>
     <loc>http://mtmatt.one/tags/mojave/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://mtmatt.one/tags/microsoftupdatecatalog/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://mtmatt.one/tags/windowsupdate/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://mtmatt.one/tags/scim/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1722,6 +1708,20 @@
   
   <url>
     <loc>http://mtmatt.one/tags/virtualbox/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mtmatt.one/tags/microsoftupdatecatalog/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mtmatt.one/tags/windowsupdate/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1917,13 +1917,6 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/legacyos/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://mtmatt.one/tags/appstore/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -1960,6 +1953,13 @@
   
   <url>
     <loc>http://mtmatt.one/tags/xcode/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mtmatt.one/tags/legacyos/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2043,6 +2043,13 @@
   </url>
   
   <url>
+    <loc>http://mtmatt.one/tags/usbhdd/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://mtmatt.one/tags/macmini/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -2072,13 +2079,6 @@
   
   <url>
     <loc>http://mtmatt.one/tags/grub/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://mtmatt.one/tags/usbhdd/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2127,7 +2127,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/windowsxp/</loc>
+    <loc>http://mtmatt.one/tags/windowsvista/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2141,7 +2141,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/windowsvista/</loc>
+    <loc>http://mtmatt.one/tags/windowsxp/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2155,14 +2155,14 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/swupd/</loc>
+    <loc>http://mtmatt.one/tags/vscode/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/vscode/</loc>
+    <loc>http://mtmatt.one/tags/swupd/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2183,14 +2183,14 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/wintousb/</loc>
+    <loc>http://mtmatt.one/tags/quickrecap/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/quickrecap/</loc>
+    <loc>http://mtmatt.one/tags/wintousb/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2407,13 +2407,6 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/zorinos/</loc>
-    <lastmod>2024-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://mtmatt.one/tags/shell/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -2422,6 +2415,13 @@
   
   <url>
     <loc>http://mtmatt.one/tags/zsh/</loc>
+    <lastmod>2024-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mtmatt.one/tags/zorinos/</loc>
     <lastmod>2024-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
