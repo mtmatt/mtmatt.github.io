@@ -29,13 +29,13 @@
 <meta property="og:site_name" content="mtmatt">
 <meta property="og:description" content="前言我在 Linux Mint 22 Beta 版的試用過程中，嘗試安裝過嘸蝦米，這一篇主要是將安裝嘸蝦米輸入法的部分，單獨分出來。另外，對於新酷音輸入法的使用者，相信本篇也應該有一定的參考度。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://live.staticflickr.com/65535/53890696513_36434c4234_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53889540792_84ed23f888_o.png">
 <meta property="og:image" content="https://live.staticflickr.com/65535/53890775589_1466be4e45_o.png">
 <meta property="og:image" content="https://live.staticflickr.com/65535/53890436731_e9452364ff_o.png">
 <meta property="og:image" content="https://live.staticflickr.com/65535/53890793859_dd42f45747_o.png">
-<meta property="og:image" content="https://live.staticflickr.com/65535/53889540792_84ed23f888_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53890696513_36434c4234_o.png">
 <meta property="article:published_time" content="2024-07-29T00:00:00.000Z">
-<meta property="article:modified_time" content="2024-07-30T06:04:20.452Z">
+<meta property="article:modified_time" content="2024-07-30T06:10:02.625Z">
 <meta property="article:author" content="mtmatt">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="boshiamy">
@@ -43,7 +43,7 @@
 <meta property="article:tag" content="fcitx5-table-extra">
 <meta property="article:tag" content="linuxmint">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://live.staticflickr.com/65535/53890696513_36434c4234_o.png">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/53889540792_84ed23f888_o.png">
 
 <link rel="canonical" href="http://mtmatt.one/boshiamy/linux-mint-22-and-boshiamy-feat-fcitx5-table-extra/">
 
@@ -272,7 +272,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>874</span>
+              <span>870</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
@@ -291,7 +291,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我在 Linux Mint 22 Beta 版的試用過程中，嘗試安裝過嘸蝦米，這一篇主要是將安裝嘸蝦米輸入法的部分，單獨分出來。另外，對於新酷音輸入法的使用者，相信本篇也應該有一定的參考度。 <img src="https://live.staticflickr.com/65535/53890696513_36434c4234_o.png" alt="linuxMint22CinnamonAndFcitx5Ep (3)"/></p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我在 Linux Mint 22 Beta 版的試用過程中，嘗試安裝過嘸蝦米，這一篇主要是將安裝嘸蝦米輸入法的部分，單獨分出來。另外，對於新酷音輸入法的使用者，相信本篇也應該有一定的參考度。 <img src="https://live.staticflickr.com/65535/53889540792_84ed23f888_o.png" alt="linuxMint22CinnamonAndFcitx5Ep (4)"/></p>
 <hr>
 <h3 id="中文輸入法的安裝建議與程序"><a href="#中文輸入法的安裝建議與程序" class="headerlink" title="中文輸入法的安裝建議與程序"></a>中文輸入法的安裝建議與程序</h3><ol>
 <li><p>本篇紀錄要推薦的輸入法框架，自然就是 Fcitx5。</p>
@@ -302,8 +302,9 @@
 </li>
 <li><p>新酷音輸入法：重點就是<code>fcitx5-chewing</code>這支套件。 <img src="https://live.staticflickr.com/65535/53890436731_e9452364ff_o.png" alt="linuxMint22CinnamonAndFcitx5Ep (2)"/></p>
 </li>
-<li><p>如果想要「Fcitx5 + 嘸蝦米輸入法 + 新酷音輸入法」全套組的話，直接一道指令就把全部需要的套件都安裝進來，參考指令如下。待系統重新啟動之後，「新酷音」會是預設的中文輸入法，「嘸蝦米」的部分，需要從圖形介面額外再加進來。</p>
+<li><p>如果想要「Fcitx5 + 嘸蝦米輸入法 + 新酷音輸入法」全套組的話，直接一道指令就把全部需要的套件都安裝進來，參考指令如下。待系統重新啟動之後，「新酷音」會是預設的中文輸入法，「嘸蝦米」的部分，需要從圖形介面額外再加進來。下列的「Fcitx5 + 嘸蝦米輸入法 + 新酷音輸入法」全套組安裝過程的影片是在 Linux Mint 22 Beta 版時安裝與錄製完成，然而，在正式版的服用方式，並沒有什麼差異，因此，還是可以參考。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx5-table-extra fcitx5-chewing</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H87aRGhcaU0?si=dpb1X91bBhplIkri" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </li>
 <li><p>若單純只要「新酷音」的話，那麼要下的指令，參考如下。同樣地，待系統重新啟動之後，「新酷音」就會是預設的中文輸入法。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx5-chewing</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
@@ -311,12 +312,9 @@
 </li>
 <li><p>若單純只要「嘸蝦米」的話，基本上都要在下完指令與重新啟動系統後，再跑一趟設定，手動將「嘸蝦米」加進輸入法，才算完成。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx5-table-extra</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<p><img src="https://live.staticflickr.com/65535/53890793859_dd42f45747_o.png" alt="linuxMint22CinnamonAndFcitx5Ep (5)"/> <img src="https://live.staticflickr.com/65535/53889540792_84ed23f888_o.png" alt="linuxMint22CinnamonAndFcitx5Ep (4)"/></p>
-</li>
-<li><p>雖然，下列的「Fcitx5 + 嘸蝦米輸入法 + 新酷音輸入法」全套組安裝過程的影片是在 Linux Mint 22 Beta 版時安裝與錄製完成，然而，在正式版的服用方式，並沒有什麼差異，因此，還是可以參考。 <iframe width="560" height="315" src="https://www.youtube.com/embed/H87aRGhcaU0?si=dpb1X91bBhplIkri" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><img src="https://live.staticflickr.com/65535/53890793859_dd42f45747_o.png" alt="linuxMint22CinnamonAndFcitx5Ep (5)"/> <img src="https://live.staticflickr.com/65535/53890696513_36434c4234_o.png" alt="linuxMint22CinnamonAndFcitx5Ep (3)"/></p>
 </li>
 </ol>
-<hr>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
 <li>隨著程式的迭代更新，我認為，Fcitx5 的時代，幾乎可以說是全面來臨。</li>
 <li>本次安裝使用的 ISO 檔是 linuxmint-22-cinnamon-64bit-beta.iso。</li>
