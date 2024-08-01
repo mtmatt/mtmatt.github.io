@@ -24,14 +24,14 @@
 
   <meta name="description" content="前言本篇文章的主角：Fctix，中文名稱是「小企鵝輸入法」，而談到 Fcitx 的話，我個人會用 fcitx(4) 與 Fcitx5 來區分這 2 代的輸入法框架。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在 Linux 上輕鬆安裝 Fcitx 與嘸蝦米 (2024 年 5 月 1 日更新)">
+<meta property="og:title" content="在 Linux 上輕鬆安裝 Fcitx 與嘸蝦米 (2024 年 8 月 1 日更新)">
 <meta property="og:url" content="http://mtmatt.one/boshiamy/my-review-of-installing-fcitx-with-boshiamy-table-on-linux/index.html">
 <meta property="og:site_name" content="mtmatt">
 <meta property="og:description" content="前言本篇文章的主角：Fctix，中文名稱是「小企鵝輸入法」，而談到 Fcitx 的話，我個人會用 fcitx(4) 與 Fcitx5 來區分這 2 代的輸入法框架。">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://live.staticflickr.com/65535/53690555272_1d6d1b734c_b.jpg">
 <meta property="article:published_time" content="2021-07-16T00:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-03T12:37:44.872Z">
+<meta property="article:modified_time" content="2024-08-01T10:53:50.624Z">
 <meta property="article:author" content="mtmatt">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="boshiamy">
@@ -55,7 +55,7 @@
   };
 </script>
 
-  <title>在 Linux 上輕鬆安裝 Fcitx 與嘸蝦米 (2024 年 5 月 1 日更新) | mtmatt</title>
+  <title>在 Linux 上輕鬆安裝 Fcitx 與嘸蝦米 (2024 年 8 月 1 日更新) | mtmatt</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
     <script data-pjax>
@@ -241,7 +241,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          在 Linux 上輕鬆安裝 Fcitx 與嘸蝦米 (2024 年 5 月 1 日更新)
+          在 Linux 上輕鬆安裝 Fcitx 與嘸蝦米 (2024 年 8 月 1 日更新)
         </h1>
 
         <div class="post-meta">
@@ -269,14 +269,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>1.8k</span>
+              <span>2.1k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>3 分鐘</span>
+              <span>4 分鐘</span>
             </span>
 
         </div>
@@ -289,11 +289,16 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇文章的主角：Fctix，中文名稱是「小企鵝輸入法」，而談到 Fcitx 的話，我個人會用 fcitx(4) 與 Fcitx5 來區分這 2 代的輸入法框架。<br><img src="https://live.staticflickr.com/65535/53690555272_1d6d1b734c_b.jpg"></p>
-<p>以下，我試著把各大發行版分類，大致整理出幾支發行版安裝 Fcitx 與嘸蝦米的建議。</p>
+<p>本篇從 2021 年 7 月，持續追縱各個發行版收錄 fcitx(4) 或 Fcitx5 相關套件情形至今(2024 年 8 月)已有 3 年餘，除了少數幾支發行版，還是安裝與使用 fcitx(4) 較為方便之外，套件收錄已經日趨完整 Fcitx5，將會是中文輸入法框架主要的選擇。</p>
+<p>無論如何，在這個時間點，我仍想試著把各大發行版分類，整理出安裝 Fcitx 與嘸蝦米時的紀錄與建議。</p>
 <hr>
-<h3 id="Debian-與-ubuntu-及衍生發行版"><a href="#Debian-與-ubuntu-及衍生發行版" class="headerlink" title="Debian 與 ubuntu 及衍生發行版"></a>Debian 與 ubuntu 及衍生發行版</h3><h4 id="▼Fcitx5"><a href="#▼Fcitx5" class="headerlink" title="▼Fcitx5"></a>▼Fcitx5</h4><p>Tip：如果選用 Fcitx5，除了 ubuntu 24.04 LTS 以外，現階段大部分的發行版必須自行處理與服用 <code>fcitx5-table-extra</code>(這裡的方法是跑一趟 pkgs.org)。</p>
+<h3 id="Debian-與-ubuntu-及其衍生發行版"><a href="#Debian-與-ubuntu-及其衍生發行版" class="headerlink" title="Debian 與 ubuntu 及其衍生發行版"></a>Debian 與 ubuntu 及其衍生發行版</h3><h4 id="▼Fcitx5-可直接從軟體庫安裝-fcitx5-table-extra"><a href="#▼Fcitx5-可直接從軟體庫安裝-fcitx5-table-extra" class="headerlink" title="▼Fcitx5(可直接從軟體庫安裝 fcitx5-table-extra)"></a>▼Fcitx5(可直接從軟體庫安裝 <code>fcitx5-table-extra</code>)</h4><p>Tip：<code>ubuntu 24.04 LTS</code> 及其衍生發行版，已經將 <code>fcitx5-table-extra</code> 收納至軟體庫，所以，先是一道指令將套件安裝進來，接著可以從圖形介面新增「嘸蝦米」就能搞定。</p>
 <ol>
 <li><a href="https://mtmatt.one/boshiamy/ubuntu-24-04-lts-and-boshiamy/">ubuntu 24.04 LTS 與嘸蝦米</a></li>
+<li><a href="https://mtmatt.one/boshiamy/linux-mint-22-and-boshiamy-feat-fcitx5-table-extra/">Linux Mint 22 與嘸蝦米 (feat. fcitx5-table-extra)</a></li>
+</ol>
+<h4 id="▼Fcitx5-可直接從軟體庫安裝-fcitx5-table-extra-1"><a href="#▼Fcitx5-可直接從軟體庫安裝-fcitx5-table-extra-1" class="headerlink" title="▼Fcitx5(可直接從軟體庫安裝 fcitx5-table-extra)"></a>▼Fcitx5(可直接從軟體庫安裝 <code>fcitx5-table-extra</code>)</h4><p>Tip：<code>fcitx5-table-extra</code> 需要自行處理與服用，本篇貼文運用的方法是跑一趟 pkgs.org，下載相關檔案後再做一些處理，同樣可以服用，只是過程比較麻煩一些。</p>
+<ol>
 <li><a href="https://mtmatt.one/boshiamy/debian-12-and-boshiamy">Debian 12 與嘸蝦米</a></li>
 <li><a href="https://mtmatt.one/boshiamy/fcitx5-with-fcitx5-table-extra-on-ubuntu-22-04-1-lts/">在 ubuntu 22.04.1 LTS 上用 Fcitx5 搭配嘸蝦米 (feat. fcitx5-table-extra)</a></li>
 <li><a href="https://mtmatt.one/boshiamy/linux-mint-21-1-and-boshiamy-feat-fcitx5-table-extra/">Linux Mint 21.1 與嘸蝦米 (feat. fcitx5-table-extra)</a></li>
@@ -309,7 +314,7 @@
 <li><a href="https://mtmatt.one/linux/lmde-5/">來玩 LMDE 5</a></li>
 </ol>
 <hr>
-<h3 id="Arch-Linux-及衍生發行版"><a href="#Arch-Linux-及衍生發行版" class="headerlink" title="Arch Linux 及衍生發行版"></a>Arch Linux 及衍生發行版</h3><p>Tip：Fcitx5 是首選。</p>
+<h3 id="Arch-Linux-及其衍生發行版"><a href="#Arch-Linux-及其衍生發行版" class="headerlink" title="Arch Linux 及其衍生發行版"></a>Arch Linux 及其衍生發行版</h3><p>Tip：可以優先考慮 Fcitx5。</p>
 <ol>
 <li><a href="https://mtmatt.one/boshiamy/installing-arch-linux-and-boshiamy/">安裝 Arch Linux 與嘸蝦米</a></li>
 <li><a href="https://mtmatt.one/boshiamy/manjaro-xfce-23-0-and-boshiamy/">Manjaro XFCE 23.0 與嘸蝦米</a></li>
@@ -318,7 +323,7 @@
 <li><a href="https://mtmatt.one/boshiamy/arcolinuxl-and-boshiamy">ArcoLinuxL 與嘸蝦米</a></li>
 </ol>
 <hr>
-<h3 id="Fedora-及衍生發行版"><a href="#Fedora-及衍生發行版" class="headerlink" title="Fedora 及衍生發行版"></a>Fedora 及衍生發行版</h3><p>Tip：Fcitx5 是首選，在 Terminal 下 <code>sudo yum install fcitx5*</code> 或 <code>sudo dnf install fcitx5*</code> 指令來服用。</p>
+<h3 id="Fedora-及其衍生發行版"><a href="#Fedora-及其衍生發行版" class="headerlink" title="Fedora 及其衍生發行版"></a>Fedora 及其衍生發行版</h3><p>Tip：Fcitx5 是首選，在 Terminal 下 <code>sudo yum install fcitx5*</code> 或 <code>sudo dnf install fcitx5*</code> 指令來服用。</p>
 <ol>
 <li><a href="https://mtmatt.one/boshiamy/fedora-39-and-boshiamy/">Fedora 39 與嘸蝦米</a></li>
 <li><a href="https://mtmatt.one/linux/risios-37-1-1/">來玩 risiOS 37.1.1</a></li>
@@ -452,7 +457,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian-%E8%88%87-ubuntu-%E5%8F%8A%E8%A1%8D%E7%94%9F%E7%99%BC%E8%A1%8C%E7%89%88"><span class="nav-number">2.</span> <span class="nav-text">Debian 與 ubuntu 及衍生發行版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%96%BCFcitx5"><span class="nav-number">2.1.</span> <span class="nav-text">▼Fcitx5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%96%BCfcitx-4"><span class="nav-number">2.2.</span> <span class="nav-text">▼fcitx(4)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arch-Linux-%E5%8F%8A%E8%A1%8D%E7%94%9F%E7%99%BC%E8%A1%8C%E7%89%88"><span class="nav-number">3.</span> <span class="nav-text">Arch Linux 及衍生發行版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fedora-%E5%8F%8A%E8%A1%8D%E7%94%9F%E7%99%BC%E8%A1%8C%E7%89%88"><span class="nav-number">4.</span> <span class="nav-text">Fedora 及衍生發行版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#openSUSE"><span class="nav-number">5.</span> <span class="nav-text">openSUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Slackware"><span class="nav-number">6.</span> <span class="nav-text">Slackware</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">7.</span> <span class="nav-text">後記</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80"><span class="nav-number">8.</span> <span class="nav-text">延伸閱讀</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian-%E8%88%87-ubuntu-%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%99%BC%E8%A1%8C%E7%89%88"><span class="nav-number">2.</span> <span class="nav-text">Debian 與 ubuntu 及其衍生發行版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%96%BCFcitx5-%E5%8F%AF%E7%9B%B4%E6%8E%A5%E5%BE%9E%E8%BB%9F%E9%AB%94%E5%BA%AB%E5%AE%89%E8%A3%9D-fcitx5-table-extra"><span class="nav-number">2.1.</span> <span class="nav-text">▼Fcitx5(可直接從軟體庫安裝 fcitx5-table-extra)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%96%BCFcitx5-%E5%8F%AF%E7%9B%B4%E6%8E%A5%E5%BE%9E%E8%BB%9F%E9%AB%94%E5%BA%AB%E5%AE%89%E8%A3%9D-fcitx5-table-extra-1"><span class="nav-number">2.2.</span> <span class="nav-text">▼Fcitx5(可直接從軟體庫安裝 fcitx5-table-extra)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%96%BCfcitx-4"><span class="nav-number">2.3.</span> <span class="nav-text">▼fcitx(4)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arch-Linux-%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%99%BC%E8%A1%8C%E7%89%88"><span class="nav-number">3.</span> <span class="nav-text">Arch Linux 及其衍生發行版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fedora-%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%99%BC%E8%A1%8C%E7%89%88"><span class="nav-number">4.</span> <span class="nav-text">Fedora 及其衍生發行版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#openSUSE"><span class="nav-number">5.</span> <span class="nav-text">openSUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Slackware"><span class="nav-number">6.</span> <span class="nav-text">Slackware</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">7.</span> <span class="nav-text">後記</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80"><span class="nav-number">8.</span> <span class="nav-text">延伸閱讀</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -533,13 +538,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">總字數：</span>
-    <span title="總字數">187k</span>
+    <span title="總字數">188k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">5:40</span>
+    <span title="所需總閱讀時間">5:41</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
   </div>
