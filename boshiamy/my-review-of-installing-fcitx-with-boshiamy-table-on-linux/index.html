@@ -31,7 +31,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://live.staticflickr.com/65535/53690555272_1d6d1b734c_b.jpg">
 <meta property="article:published_time" content="2021-07-16T00:00:00.000Z">
-<meta property="article:modified_time" content="2024-08-01T11:57:11.104Z">
+<meta property="article:modified_time" content="2024-08-02T03:26:59.748Z">
 <meta property="article:author" content="mtmatt">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="boshiamy">
@@ -269,7 +269,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>2.1k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
@@ -289,9 +289,9 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇文章的主角：Fctix，中文名稱是「小企鵝輸入法」，而談到 Fcitx 的話，我個人會用 fcitx(4) 與 Fcitx5 來區分這 2 代的輸入法框架。<br><img src="https://live.staticflickr.com/65535/53690555272_1d6d1b734c_b.jpg"></p>
-<p>本篇從 2021 年 7 月，持續追縱各個發行版收錄 fcitx(4) 或 Fcitx5 相關套件情形至今(2024 年 8 月)已有 3 年餘。這一路走來，我的觀察與發現是除了少數幾支發行版，還是安裝與使用 fcitx(4) 較為方便之外，套件收錄已經日趨完整 Fcitx5，將會是中文輸入法框架主要的選擇。</p>
-<p>無論如何，在這個時間點，我仍想試著把各大發行版分類，整理出安裝 Fcitx 與嘸蝦米時的紀錄與建議。</p>
-<hr>
+<p>本文從 2021 年 7 月開始，持續追縱各個發行版收錄 fcitx(4) 或 Fcitx5 相關套件情形至今，已有 3 年餘。</p>
+<p>這一路走來，我的觀察與發現是隨著每支發行版的迭代更新，截至 2024 年 8 月 1 日，除了少數幾支發行版，還是以安裝與使用 fcitx(4) 較為方便之外，相信，套件收錄已經日趨完整的 Fcitx5，將會是中文輸入法框架主要的選擇。</p>
+<p>無論如何，在這個時間點，我還是試著把各大發行版分類，再分別整理出 Fcitx 與嘸蝦米時的安裝過程紀錄與建議，希望這樣的紀錄，對有需要的伙伴，有一定的參考度。</p>
 <h3 id="Debian-與-ubuntu-及其衍生發行版"><a href="#Debian-與-ubuntu-及其衍生發行版" class="headerlink" title="Debian 與 ubuntu 及其衍生發行版"></a>Debian 與 ubuntu 及其衍生發行版</h3><h4 id="▼Fcitx5-可直接從軟體庫安裝-fcitx5-table-extra"><a href="#▼Fcitx5-可直接從軟體庫安裝-fcitx5-table-extra" class="headerlink" title="▼Fcitx5(可直接從軟體庫安裝 fcitx5-table-extra)"></a>▼Fcitx5(可直接從軟體庫安裝 <code>fcitx5-table-extra</code>)</h4><p>Tip：「ubuntu 24.04 LTS」及其衍生發行版，已經將 <code>fcitx5-table-extra</code> 收納至軟體庫，所以，先是一道指令將套件安裝進來，接著可以從圖形介面新增「嘸蝦米」就能搞定。</p>
 <ol>
 <li><a href="https://mtmatt.one/boshiamy/ubuntu-24-04-lts-and-boshiamy/">ubuntu 24.04 LTS 與嘸蝦米</a></li>
@@ -313,7 +313,6 @@
 <li><a href="https://mtmatt.one/boshiamy/zorin-os-16-3-core-and-boshiamy/">Zorin OS 16.3 Core 與嘸蝦米</a></li>
 <li><a href="https://mtmatt.one/linux/lmde-5/">來玩 LMDE 5</a></li>
 </ol>
-<hr>
 <h3 id="Arch-Linux-及其衍生發行版"><a href="#Arch-Linux-及其衍生發行版" class="headerlink" title="Arch Linux 及其衍生發行版"></a>Arch Linux 及其衍生發行版</h3><p>Tip：可以優先考慮 Fcitx5。</p>
 <ol>
 <li><a href="https://mtmatt.one/boshiamy/installing-arch-linux-and-boshiamy/">安裝 Arch Linux 與嘸蝦米</a></li>
@@ -322,24 +321,20 @@
 <li><a href="https://mtmatt.one/linux/garuda-linux-kde-dr460nized-edition/">來玩 Garuda Linux (KDE Dr460nized Edition)</a></li>
 <li><a href="https://mtmatt.one/boshiamy/arcolinuxl-and-boshiamy">ArcoLinuxL 與嘸蝦米</a></li>
 </ol>
-<hr>
 <h3 id="Fedora-及其衍生發行版"><a href="#Fedora-及其衍生發行版" class="headerlink" title="Fedora 及其衍生發行版"></a>Fedora 及其衍生發行版</h3><p>Tip：Fcitx5 是首選，在 Terminal 下 <code>sudo yum install fcitx5*</code> 或 <code>sudo dnf install fcitx5*</code> 指令來服用。</p>
 <ol>
 <li><a href="https://mtmatt.one/boshiamy/fedora-39-and-boshiamy/">Fedora 39 與嘸蝦米</a></li>
 <li><a href="https://mtmatt.one/linux/risios-37-1-1/">來玩 risiOS 37.1.1</a></li>
 </ol>
-<hr>
 <h3 id="openSUSE"><a href="#openSUSE" class="headerlink" title="openSUSE"></a>openSUSE</h3><p>Tip：Fcitx5 是首選，同時，非常建議使用 YaST 圖形介面模式去安裝套件。</p>
 <ol>
 <li><a href="https://mtmatt.one/boshiamy/opensuse-leap-15-5-and-boshiamy/">openSUSE Leap 15.5 與嘸蝦米 (feat. Fcitx5)</a></li>
 <li><a href="https://mtmatt.one/boshiamy/opensuse-tumbleweed-snapshot20231018-and-boshiamy/">openSUSE Tumbleweed Snapshot20231018 與嘸蝦米 (feat. Fcitx5)</a></li>
 </ol>
-<hr>
 <h3 id="Slackware"><a href="#Slackware" class="headerlink" title="Slackware"></a>Slackware</h3><p>Tip：原則上，fcitx(4) 與 <code>fcitx-table-boshiamy</code> 都不用再另外安裝，使用者要做的是一點點設定。</p>
 <ul>
 <li><a href="https://mtmatt.one/linux/slackware-15-0/">來玩 Slackware 15.0</a></li>
 </ul>
-<hr>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
 <li><p>Linux 上的嘸蝦米輸入法走過不少輸入法平台，其中 SCIM 與 gcin 似乎已然是過去式。近幾年，比較為人所用的主要就是 iBus 與 Fcitx。選用 iBus 的話，拿行易有限公司官網的表格檔服用，肯定是最佳的選擇。</p>
 </li>
@@ -348,7 +343,6 @@
 <li><p>暫且先不論合法授權的問題的話，我想，透過 Fcitx 在 Linux 上面所呈現的，正好是我曾經設想過的畫面：作業系統(也包含 macOS 與 Windows)直接內建嘸蝦米，我要做的事就是去新增嘸蝦米輸入法就好。那麼，是不是更能夠把行易有限公司提到的理想延伸到更遠的地方去：讓更多人體會到嘸蝦米「創造一個易學、快速又快樂的中文輸入環境」。</p>
 </li>
 </ol>
-<hr>
 <h3 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h3><ol>
 <li><p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E8%BC%B8%E5%85%A5%E6%B3%95%E5%B9%B3%E5%8F%B0">輸入法平台 - 維基百科，自由的百科全書</a></p>
 </li>
