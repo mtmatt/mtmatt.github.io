@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言種種原因讓 mtmatt 進駐 GitHub。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="讓 mtmatt 上線 GitHub feat. Hexo">
+<meta property="og:url" content="http://mtmatt.one/github/mtmatt-on-github-feat-hexo/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言種種原因讓 mtmatt 進駐 GitHub。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-08-03T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-24T15:32:39.439Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="latex">
+<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="wordpress">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://mtmatt.one/github/mtmatt-on-github-feat-hexo/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>讓 mtmatt 上線 GitHub feat. Hexo | mtmatt</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EFZSE1ET2D');
+      }
+    </script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/github/mtmatt-on-github-feat-hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          讓 mtmatt 上線 GitHub feat. Hexo
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-08-03 08:00:00" itemprop="dateCreated datePublished" datetime="2023-08-03T08:00:00+08:00">2023-08-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/github/" itemprop="url" rel="index"><span itemprop="name">github</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>種種原因讓 mtmatt 進駐 GitHub。</p>
+<p>選用 Hexo 的原因，一方面，Hexo 支援所有 GitHub Flavored Markdown 的功能；另一方面，則是曾有過一段使用經驗，印象是好的。</p>
+<p>只是，日前曾經寫下的紀錄貼文，已經不知散落何方，今次只能當做是砍掉重練。再者，後續在 mtmatt 上面，有幾篇貼文使用上 LaTeX，這是之前沒有做過的設定，這一次也必須一起練上來。</p>
+<hr>
+<h3 id="歷程紀錄與感想"><a href="#歷程紀錄與感想" class="headerlink" title="歷程紀錄與感想"></a>歷程紀錄與感想</h3><p>我們將本次練功分成 3 階段。第 1 階段，先讓 Demo 版的 mtmatt 可以在 GitHub 上 On 起來；第 2 階段，處理 LaTeX；第 3 階段，盡可能地優化之前的貼文。</p>
+<h4 id="第-1-階段，先讓-Demo-版的-mtmatt-可以在-GitHub-上-On-起來"><a href="#第-1-階段，先讓-Demo-版的-mtmatt-可以在-GitHub-上-On-起來" class="headerlink" title="第 1 階段，先讓 Demo 版的 mtmatt 可以在 GitHub 上 On 起來"></a>第 1 階段，先讓 Demo 版的 mtmatt 可以在 GitHub 上 On 起來</h4><ol>
+<li>這一個階段算是最簡單的部分，原則上，我們是參考 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/">文件 | Hexo</a> 裡面的說明按表操課，我們選擇在 Windows 系統上處理，分別下載 Node.js 與 Git 的版本時，Node.js 選擇下載 Recommended For Most Users 的版本(即 18.17.0 LTS)；Git 則是下載 Latest source Release 的版本(即 2.41.0)。</li>
+<li>參考 <a target="_blank" rel="noopener" href="https://daext.com/blog/convert-wordpress-articles-to-markdown/">Convert WordPress articles to Markdown - DAEXT</a> 這篇貼文，將 WordPress 文章匯出後，再於本機將文章轉為單篇的 MarkDown。</li>
+<li>設定好，讓文章在 mtmatt.github.io 這個域名上先做一些 Demo 與測試，這個階段就算造一段落。</li>
+</ol>
+<h4 id="第-2-階段，處理-LaTeX"><a href="#第-2-階段，處理-LaTeX" class="headerlink" title="第 2 階段，處理 LaTeX"></a>第 2 階段，處理 LaTeX</h4><ol>
+<li>處理 LaTeX 是我們過去沒有的經驗，我們走了一段路，最終是使用以下的方式成功。</li>
+<li>使用 Google 挖出不少參考文章，主要是參考 <a target="_blank" rel="noopener" href="https://linkinpark213.com/2018/04/24/mathjax/">MathJax - Use Math in Hexo, Just Like Tex! (Including Common Issue Solutions) | Longing for sth New</a> 這一篇貼文而成功。</li>
+<li>服用上，除了安裝 hexo-math 外，幾次設定都無法順利達成。最後是把需要顯示 LaTeX 的貼文，加上下列 Code 才順利顯示 LaTeX。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&#x27;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM\_CHTML&#x27;</span> <span class="attr">async</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="第-3-階段，盡可能地優化之前的貼文"><a href="#第-3-階段，盡可能地優化之前的貼文" class="headerlink" title="第 3 階段，盡可能地優化之前的貼文"></a>第 3 階段，盡可能地優化之前的貼文</h4><ol>
+<li>這個階段，主要是我們在轉換時才發現，可能因為我們在 WordPress 安裝一些外掛，再加上文章的格式被轉來轉去，有些貼文失去本來應該要呈現的模樣。</li>
+<li>我們決定處理的優先順序上，先把嚴重走鐘的文章(尤其是該有的 Code 變成一整坨屎的那種)，行有餘力再去把之前的貼文排版做優化。</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本來為了 Demo 與測試用的網址：mtmatt.github.io，在完成一定程度的轉換後，要把域名設定為 mtmatt，除了在 GitHub 上完成設定外，還要在本機 Hexo 下的 source 路徑底下，摸(新增)一個 CNAME 檔(檔名就是 CNAME，不需要再加副檔名)，檔案的內容就寫一行 mtmatt，大致上就可以先收工。</li>
+<li>事實上，我們打算慢慢地讓一個部落格網站該有的功能，例如：文章搜尋、標籤雲等都完整化。如果要把這件事也放到流程裡的話，在這一次的轉換過程，肯定是 Final Step，並且同樣是在行有餘力的時候再說。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/github/" rel="tag"># github</a>
+              <a href="/tags/latex/" rel="tag"># latex</a>
+              <a href="/tags/markdown/" rel="tag"># markdown</a>
+              <a href="/tags/wordpress/" rel="tag"># wordpress</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/linux-mint-21-2/" rel="prev" title="來玩 Linux Mint 21.2">
+      <i class="fa fa-chevron-left"></i> 來玩 Linux Mint 21.2
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/windows/github-account-and-accessing-credential-manager/" rel="next" title="使用「存取認證管理員」進行 GitHub 認證帳號切換">
+      使用「存取認證管理員」進行 GitHub 認證帳號切換 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%B7%E7%A8%8B%E7%B4%80%E9%8C%84%E8%88%87%E6%84%9F%E6%83%B3"><span class="nav-number">2.</span> <span class="nav-text">歷程紀錄與感想</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC-1-%E9%9A%8E%E6%AE%B5%EF%BC%8C%E5%85%88%E8%AE%93-Demo-%E7%89%88%E7%9A%84-mtmatt-%E5%8F%AF%E4%BB%A5%E5%9C%A8-GitHub-%E4%B8%8A-On-%E8%B5%B7%E4%BE%86"><span class="nav-number">2.1.</span> <span class="nav-text">第 1 階段，先讓 Demo 版的 mtmatt 可以在 GitHub 上 On 起來</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC-2-%E9%9A%8E%E6%AE%B5%EF%BC%8C%E8%99%95%E7%90%86-LaTeX"><span class="nav-number">2.2.</span> <span class="nav-text">第 2 階段，處理 LaTeX</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC-3-%E9%9A%8E%E6%AE%B5%EF%BC%8C%E7%9B%A1%E5%8F%AF%E8%83%BD%E5%9C%B0%E5%84%AA%E5%8C%96%E4%B9%8B%E5%89%8D%E7%9A%84%E8%B2%BC%E6%96%87"><span class="nav-number">2.3.</span> <span class="nav-text">第 3 階段，盡可能地優化之前的貼文</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">3.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">189k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">5:44</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言在 Mac OS 9 的時代，在輸入法中英文模式切換的部分，我最常用到的切換快速鍵是 ⌘+空白鍵(Space)，這個習慣一直延用到 MAC OS X，但是，卻必須去更改 Spotlight 搜尋預設的快速鍵，印象中，大概是上了 El Captain 之後，我便決定習慣新的設定。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我在 Windows 10 上面設定嘸蝦米的筆記">
+<meta property="og:url" content="http://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-10/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言在 Mac OS 9 的時代，在輸入法中英文模式切換的部分，我最常用到的切換快速鍵是 ⌘+空白鍵(Space)，這個習慣一直延用到 MAC OS X，但是，卻必須去更改 Spotlight 搜尋預設的快速鍵，印象中，大概是上了 El Captain 之後，我便決定習慣新的設定。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51275659076_c55768a260.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51275796993_240730e8cb_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51274879212_cbcb69ec71_k.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51276652100_a00a1fcf8a_k.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51276652055_e5f801553b_k.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51275626816_31f074dcae_k.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51274879132_0f673820db_k.jpg">
+<meta property="article:published_time" content="2021-06-28T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-15T13:07:15.963Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="apple">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="macos">
+<meta property="article:tag" content="macosx">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="windows10">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/51275659076_c55768a260.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-10/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>我在 Windows 10 上面設定嘸蝦米的筆記 | mtmatt</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EFZSE1ET2D');
+      }
+    </script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          我在 Windows 10 上面設定嘸蝦米的筆記
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-06-28 08:00:00" itemprop="dateCreated datePublished" datetime="2021-06-28T08:00:00+08:00">2021-06-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/boshiamy/" itemprop="url" rel="index"><span itemprop="name">boshiamy</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>2 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在 Mac OS 9 的時代，在輸入法中英文模式切換的部分，我最常用到的切換快速鍵是 ⌘+空白鍵(Space)，這個習慣一直延用到 MAC OS X，但是，卻必須去更改 Spotlight 搜尋預設的快速鍵，印象中，大概是上了 El Captain 之後，我便決定習慣新的設定。</p>
+<p>在 Windows 上面呢？</p>
+<p>我一直停在 Windows 7 之前的設定方式，Windows 7 之後的系統，我接觸的並不多，Windows 10 是因著孩子們上學與遊戲上的需求，買了機器之後才碰到，也因為是孩子們的機器，孩子們並沒有在用嘸蝦米輸入法，裝上嘸蝦米是我在用，所以，我基本上就是試著適應 Windows 10 上面的設定，比方說用 Win+空白鍵(Space) 切換不同的輸入法，按 Shift 切換中文&#x2F;英文輸入模式。</p>
+<p>最近，因為跟孩子們一起玩 Windows 10 上面的遊戲，在鍵盤操作時，不慎碰到 Shift 鍵就會切入嘸蝦米的中文輸入模式，…然後，明明正跟 Boss 打得火熱，畫面卻突然不停出現：「五」、「對」、「三」與「的」四個若隱若現的中文字，只能眼睜睜地看著主角原地不動被 K 爆(氣)。</p>
+<p>這樣的狀況，逼得我認真地去瞭解一下 Windows 10 輸入法的相關設定，而以下就是我的筆記。</p>
+<h3 id="先處理一下-Shift-鍵的問題"><a href="#先處理一下-Shift-鍵的問題" class="headerlink" title="先處理一下 Shift 鍵的問題"></a>先處理一下 Shift 鍵的問題</h3><ol>
+<li><p>用右鍵點一下工具列上的圖示「嘸」左邊的中(或英)，再點一下【設定】，就可以進到設定的介面。(下圖) <img src="https://live.staticflickr.com/65535/51275659076_c55768a260.jpg" title="settingofBoshiamyonWindows10part0"></p>
+</li>
+<li><p>進到設定介面後，取消【使用 Shift 切換「中文&#x2F;英文」模式】核取，就搞定。(下圖) <img src="https://live.staticflickr.com/65535/51275796993_240730e8cb_b.jpg" title="settingofBoshiamyonWindows10part1"> ※PS. 這個設定好之後，要切換的話，就要用 Ctrl+空白鍵(Space) 切換「中文&#x2F;英文」模式，這樣的設定就會跟蘋果的環境比較接近。</p>
+</li>
+</ol>
+<h3 id="設定成使用-Win-空白鍵-Space-切換中英文輸入模式"><a href="#設定成使用-Win-空白鍵-Space-切換中英文輸入模式" class="headerlink" title="設定成使用 Win+空白鍵(Space) 切換中英文輸入模式"></a>設定成使用 Win+空白鍵(Space) 切換中英文輸入模式</h3><p>大致上幾個設定步驟如下：</p>
+<ol>
+<li><p>從【Windows 設定】，點進【時間與語言】，再進入到【語言】的設定介面，點一下【新增語言】，去把【English (United States)】加進來, 就會看到下圖的【英文 (美國)】。(下圖) <img src="https://live.staticflickr.com/65535/51274879212_cbcb69ec71_k.jpg" title="settingofBoshiamyonWindows10part2"></p>
+</li>
+<li><p>接著，點一下【英文 (美國)】，再點一下【選項】，就進到【語言選項:英文 (美國)】這個介面，找到並點下【新增鍵盤】，把【US QWERTY】加進來。(下圖) <img src="https://live.staticflickr.com/65535/51276652100_a00a1fcf8a_k.jpg" title="settingofBoshiamyonWindows10part3"></p>
+</li>
+<li><p>回到【語言】的設定介面，找到【鍵盤】並點入，會看到【覆寫預設輸入法】，我就直接設定成【英文 (美國)-US】。(下圖) <img src="https://live.staticflickr.com/65535/51276652055_e5f801553b_k.jpg" title="settingofBoshiamyonWindows10part4"></p>
+</li>
+<li><p>最後，點一下【中文 (繁體，台灣)】，再點一下【選項】，就進到【語言選項:中文 (繁體，台灣)】這個介面，確定只留下【嘸蝦米輸入法】就好。(下圖) <img src="https://live.staticflickr.com/65535/51275626816_31f074dcae_k.jpg" title="settingofBoshiamyonWindows10part5"></p>
+</li>
+<li><p>在 Windows 7 以前，我還會設定其他的快速鍵，但是我在 Windows 10，走完上面的流程後，已經不存在其他的中文輸入法，這個設定似乎就不是那麼重要了。(下圖) <img src="https://live.staticflickr.com/65535/51274879132_0f673820db_k.jpg" title="settingofBoshiamyonWindows10part6"></p>
+</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><p>「設定成使用 Win+空白鍵(Space) 切換中英文輸入模式」所記下來的步驟，是為了滿足我在使用 Windows 時，在某些時空會有這樣的需求，因為，步驟較多且跟以往的 Windows 系統的設定不太一樣，所以再額外筆記下來給自己，以備不時之需。</p>
+</li>
+<li><p>延伸閱讀：<a href="https://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-11/">我在 Windows 11 上面設定嘸蝦米的筆記</a>(更新日期：2022 年 2 月 10 日)。</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/apple/" rel="tag"># apple</a>
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/macos/" rel="tag"># macos</a>
+              <a href="/tags/macosx/" rel="tag"># macosx</a>
+              <a href="/tags/windows/" rel="tag"># windows</a>
+              <a href="/tags/windows10/" rel="tag"># windows10</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/apple/how-to-get-old-versions-of-macos/" rel="prev" title="如何取得舊版 macOS？">
+      <i class="fa fa-chevron-left"></i> 如何取得舊版 macOS？
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/linux/installing-fcitx-with-boshiamy-table-on-ubuntu-21-04/" rel="next" title="在 ubuntu 21.04 上輕鬆安裝嘸蝦米 (2024 年 5 月 25 日更新)">
+      在 ubuntu 21.04 上輕鬆安裝嘸蝦米 (2024 年 5 月 25 日更新) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%88%E8%99%95%E7%90%86%E4%B8%80%E4%B8%8B-Shift-%E9%8D%B5%E7%9A%84%E5%95%8F%E9%A1%8C"><span class="nav-number">2.</span> <span class="nav-text">先處理一下 Shift 鍵的問題</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9A%E6%88%90%E4%BD%BF%E7%94%A8-Win-%E7%A9%BA%E7%99%BD%E9%8D%B5-Space-%E5%88%87%E6%8F%9B%E4%B8%AD%E8%8B%B1%E6%96%87%E8%BC%B8%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">設定成使用 Win+空白鍵(Space) 切換中英文輸入模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">189k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">5:44</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

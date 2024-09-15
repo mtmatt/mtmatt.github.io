@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言Garuda Linux 是 Arch Linux 的衍生版本，目前在 DistroWatch 上的「網頁參觀排名」是第 7 名。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="來玩 Garuda Linux (KDE Dr460nized Edition)">
+<meta property="og:url" content="http://mtmatt.one/linux/garuda-linux-kde-dr460nized-edition/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言Garuda Linux 是 Arch Linux 的衍生版本，目前在 DistroWatch 上的「網頁參觀排名」是第 7 名。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52003946711_9e462bdfb2_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004471460_185f2e0fea_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004471415_1aae3c9d0f_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52003946796_70fae4328f_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004471410_0581948a1b_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004471385_146c908512_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52003946606_fc8fb47756_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004471275_5e4988e04f_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52003946591_0be6bf40bb_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004008153_3333bbde24_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004008153_3333bbde24_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52003946576_7333eb0554_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004008303_e2fa8d6365_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004200019_21ec017ede_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52002926037_3abf7c5eaa_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004199914_10000d7ba3_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004199904_dc5006bf4c_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52002925977_85f312e0aa_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52004199879_57ab6649cb_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52003946626_ef6d3fa9c6_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52002925957_6cab00332f_b.jpg">
+<meta property="article:published_time" content="2022-04-14T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-17T02:04:28.588Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="archlinux">
+<meta property="article:tag" content="garudalinux">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="fcitx5">
+<meta property="article:tag" content="fcitx5-table-extra">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52003946711_9e462bdfb2_b.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/linux/garuda-linux-kde-dr460nized-edition/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>來玩 Garuda Linux (KDE Dr460nized Edition) | mtmatt</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EFZSE1ET2D');
+      }
+    </script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/linux/garuda-linux-kde-dr460nized-edition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          來玩 Garuda Linux (KDE Dr460nized Edition)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-04-14 08:00:00" itemprop="dateCreated datePublished" datetime="2022-04-14T08:00:00+08:00">2022-04-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>3k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>5 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Garuda Linux 是 Arch Linux 的衍生版本，目前在 DistroWatch 上的「網頁參觀排名」是第 7 名。</p>
+<p>這一支 Distro 應該是 DistroWatch 「網頁參觀排名」前 10 名當中，我感到最陌生的一支。</p>
+<hr>
+<h3 id="安裝過程"><a href="#安裝過程" class="headerlink" title="安裝過程"></a>安裝過程</h3><ol>
+<li><p>跟 LMDE 5、EndeavourOS 一樣，不把 ISO 下載時間算進來的話，光就整個安裝過程來算，大約 15 分鐘就搞定，可見，這一點，似乎已經可以說是各大 Distro 的基本盤。 由下圖可知，從 Terminal 可以看到本次運行的機器上的 CPU 品牌與型號：Intel(R) Core(TM) i5-6400。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52003946711/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp7"><img src="https://live.staticflickr.com/65535/52003946711_9e462bdfb2_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp7"></a></p>
+</li>
+<li><p>下圖是本次安裝 Garuda KDE Dr460nized 的 VirtualBox 設定。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004471460/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp0"><img src="https://live.staticflickr.com/65535/52004471460_185f2e0fea_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp0"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="快速回顧與感想"><a href="#快速回顧與感想" class="headerlink" title="快速回顧與感想"></a>快速回顧與感想</h3><ol>
+<li><p>非常多元的桌面環境選擇：相較於 EndeavourOS 已經特別強調有不少桌面環境，供使用者選用與安裝，用誇張可能已經不足以形容 Garuda Linux 的支援度，我數算了一下，總共支援 13 款桌面環境(詳可見：<a target="_blank" rel="noopener" href="https://garudalinux.org/downloads.html">Garuda Linux | Download</a>)，主打的 KDE Dr460nized edition，還有 3 種不同特性調整的版本，也就是說，總共有 15 款任君選用。我這次只有測試主打的版本，但印象中，其他 Linux 上面也曾有支援不少桌面環境的狀況，卻只有主打的運作比較穩定，其他版本就是剛安裝好的時候讓人感到開心，用沒多久就整個系統崩潰。我目前沒有打算一款一款試到底，如果有伙伴有其他款的使用經驗，也歡迎分享。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004471415/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp4"><img src="https://live.staticflickr.com/65535/52004471415_1aae3c9d0f_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp4"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>預設支援 BTRFS 與 Zstandard：關於這 2 項技術，有興趣的人可以到維基百科，科普一下。這 2 項技術，最近還滿常出現在我面前的，但，實際在系統安裝時，就預設支援的 Linux 應該不多，而 Garuda Linux 就直接拿來當成是一個賣點，一種讓人走在很前面的感覺，附帶一提的是所使用的 Linux Kernel 版本也算是非常新的版本。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52003946796/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp1"><img src="https://live.staticflickr.com/65535/52003946796_70fae4328f_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp1"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>炫炮的 RGB 桌面環境視覺設計：官網在介紹 Garuda KDE Dr460nized Edition 時提到「The dr460nized editions of Garuda Linux offer a dark, blurry and fully immersive Plasma experience. The workflow is mac-alike with the appmenu baked right into the top bar.」然而，我安裝完之後，反而是先注意到濃濃的 RGB 味。我個人會認為，這一點算是 Garuda Linux 也想要走出不一樣的路，視覺衝擊是非常快速的做法，而各項功能正常發揮的前提下，這樣炫炮的畫面，讓人不注意是非常難的。只不過，我也相信不見得每個人的眼睛都吃得下這種口味的 Eye Candy，因此，反應上可能會偏兩極。</p>
+</li>
+<li><p>專為 Linux Gamer 調校的桌面環境與預設軟體安裝：官網在介紹 Garuda KDE Dr460nized Gaming Edition 時提到「The Gaming edition has the same tweaks and looks as the regular dr460nized edition. It comes preinstalled with lot of software that a linux gamer might need.」關於這一點，以我目前接觸到的 Linux 而言，應該是唯一針對遊戲調校與設計的 Distro。當然，如果延續上面提到的濃濃 RBG 桌面環境設計而言，也確實不會讓人太意外。</p>
+</li>
+<li><p>火狐(Firefox)變火龍(FireDragon)：在 Dock 上的圖示，一方面，讓我半信半疑；一方面，有點老花的我，也看成 FileDragon，也因此遲疑了半天，想說…，現在應該比較不可能有系統在預設安裝裡面，沒有把瀏覽器擺進來呀！？所以，我又繞到「應用程式啟動器」(在 Windows 裡稱做是「開始功能表」)去找，看個仔細才頓悟，這個名為 FireDragon 的 App，骨子裡應該就是 Firefox。…也太中二了吧！(這樣的形容，不曉得對不對？)除了中二的名號外，我並沒有深入使用，搞不好，還真的像「關於我轉生變成史萊姆這檔事」裡的史萊姆一樣「龍化」了。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004471410/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp5"><img src="https://live.staticflickr.com/65535/52004471410_0581948a1b_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp5"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004471385/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp6"><img src="https://live.staticflickr.com/65535/52004471385_146c908512_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp6"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>VirtualBox 好裝好使：這一點跟 MX Linux 一樣，我之前常用的 Fedora 與 Clear Linux，以及 macOS，要搞定 VirtualBox 並不像在 Windows 那麼簡單(詳可見：<a href="http://mtmatt.one/linux/installing-virtualbox-6-1-26-on-clear-linux/">在 Clear Linux 上安裝 VirtualBox 6.1.26</a>)，因此，如果您跟我一樣，也用慣了 VirtualBox，那麼，這支 Distro 是值得參考的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52003946606/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp15"><img src="https://live.staticflickr.com/65535/52003946606_fc8fb47756_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp15"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004471275/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp16"><img src="https://live.staticflickr.com/65535/52004471275_5e4988e04f_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp16"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52003946591/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp17"><img src="https://live.staticflickr.com/65535/52003946591_0be6bf40bb_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp17"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004008153/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp18"><img src="https://live.staticflickr.com/65535/52004008153_3333bbde24_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp18"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>螢幕最佳顯示比例，應該是「16:9」：畢竟這是目前的螢幕比例的主流規格，這點倒是不讓人意外，儘管如此，我也是在安裝與啟動 VirtualBox 後，從工作列上擠在一塊兒，可以說是重疊起來的字發現的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004008153/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp18"><img src="https://live.staticflickr.com/65535/52004008153_3333bbde24_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp18"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  切換比例之後，就可以正常顯示。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52003946576/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp19"><img src="https://live.staticflickr.com/65535/52003946576_7333eb0554_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp19"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="嘸蝦米輸入法的安裝與設定"><a href="#嘸蝦米輸入法的安裝與設定" class="headerlink" title="嘸蝦米輸入法的安裝與設定"></a>嘸蝦米輸入法的安裝與設定</h3><ol>
+<li><p>以嘸蝦米而言，我比較推薦合法使用的 iBus 版本，但，如果要快速地使用，fcitx 是一個不錯的選擇，而且 Arch Linux 的 Fcitx5 相關套件非常完整，可以直接用指令把嘸蝦米安裝進來。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004008303/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp2"><img src="https://live.staticflickr.com/65535/52004008303_e2fa8d6365_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp2"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004200019/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp3"><img src="https://live.staticflickr.com/65535/52004200019_21ec017ede_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp3"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p><code>sudo pacman -S fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-table-extra</code>(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52002926037/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp8"><img src="https://live.staticflickr.com/65535/52002926037_3abf7c5eaa_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp8"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p><code>sudo pacman -S vim</code>，把 vim 先安裝進去。(其實，也可以跟著上一個步驟，把 vim 加到指令最後，一併安裝進來)。 <code>sudo vim /etc/environment</code>，寫入以下資料，再儲存離開。(下圖) <code>GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx</code> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004199914/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp9"><img src="https://live.staticflickr.com/65535/52004199914_10000d7ba3_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp9"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>重開機，進入「Fcitx 設定」(有幾個方式，下圖所示是從工作列找到【鍵盤】圖示，按右鍵進入「Fcitx 設定」，用「bosh」當關鍵字(下圖是用「boshi」，少個「i」還是找得到的)，把嘸蝦米找出並選用，以完成設定。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004199904/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp10"><img src="https://live.staticflickr.com/65535/52004199904_dc5006bf4c_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp10"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<p>點右下的【新增輸入法】。「嘸蝦米」的字樣排在很前頭，因此，不用「bosh」或「boshi」的關鍵字，去把嘸蝦米找出來，就可以以完成設定。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52002925977/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp11"><img src="https://live.staticflickr.com/65535/52002925977_85f312e0aa_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp11"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52004199879/" title="garudaDr460nizedLinuxZenonVirtualBoxEp12"><img src="https://live.staticflickr.com/65535/52004199879_57ab6649cb_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp12"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52003946626/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp13"><img src="https://live.staticflickr.com/65535/52003946626_ef6d3fa9c6_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp13"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<ol start="11">
+<li><p>最後，找個程式來測試一下，看能不能順利使用嘸蝦米輸入法。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52002925957/in/dateposted-public/" title="garudaDr460nizedLinuxZenonVirtualBoxEp14"><img src="https://live.staticflickr.com/65535/52002925957_6cab00332f_b.jpg" alt="garudaDr460nizedLinuxZenonVirtualBoxEp14"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>寫到這裡，我想另外分享一下：我現在在 MX Linux 上使用 Fcitx5，好像時不時就會發生輸入法無法中英文切換，有點 Hang 在那邊的情況，我使用的解決方式，是將鼠標滑到紅色「嘸」字上頭點一下左鍵，通常就可以讓嘸蝦米回神過來。</p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 garuda-dr460nized-linux-zen-220329.iso。</li>
+<li><a target="_blank" rel="noopener" href="https://garudalinux.org/index.html">Garuda Linux</a></li>
+<li><a target="_blank" rel="noopener" href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/archlinux/" rel="tag"># archlinux</a>
+              <a href="/tags/garudalinux/" rel="tag"># garudalinux</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
+              <a href="/tags/fcitx5-table-extra/" rel="tag"># fcitx5-table-extra</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/endeavouros-apollo-22-1/" rel="prev" title="來玩 EndeavourOS Apollo 22.1">
+      <i class="fa fa-chevron-left"></i> 來玩 EndeavourOS Apollo 22.1
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/linux/shifting-from-mx-linux-to-garuda-linux/" rel="next" title="從 MX Linux 轉換到 Garuda Linux">
+      從 MX Linux 轉換到 Garuda Linux <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E9%81%8E%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">安裝過程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%A7%E8%88%87%E6%84%9F%E6%83%B3"><span class="nav-number">3.</span> <span class="nav-text">快速回顧與感想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%98%B8%E8%9D%A6%E7%B1%B3%E8%BC%B8%E5%85%A5%E6%B3%95%E7%9A%84%E5%AE%89%E8%A3%9D%E8%88%87%E8%A8%AD%E5%AE%9A"><span class="nav-number">4.</span> <span class="nav-text">嘸蝦米輸入法的安裝與設定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">5.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">189k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">5:44</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

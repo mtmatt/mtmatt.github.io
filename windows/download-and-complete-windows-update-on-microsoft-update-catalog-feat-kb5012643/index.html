@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言其實，寫在 [版本更新] 快速回顧 微軟發布 KB5012643 (Windows 11 作業系統組建 22000.652) 的不久前，我也給自己每天都會用到的機器，升級到 Windows 11。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="從 Microsoft Update Catalog 下載與完成 Windows Update (feat. KB5012643)">
+<meta property="og:url" content="http://mtmatt.one/windows/download-and-complete-windows-update-on-microsoft-update-catalog-feat-kb5012643/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言其實，寫在 [版本更新] 快速回顧 微軟發布 KB5012643 (Windows 11 作業系統組建 22000.652) 的不久前，我也給自己每天都會用到的機器，升級到 Windows 11。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52045407777_bd684fc7a5_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52045407702_e924bb60c2.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52046452041_1ec45e46e1_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52046704809_919df10c4f_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52046503378_74fe6ab305.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52046561668_50cf29d272_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52046503258_54dcc73394_n.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52046704709_51c4b004be_n.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52046962090_3d0b86b679_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52046503148_7e4f00f72f.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52046451901_7be3483b05.jpg">
+<meta property="article:published_time" content="2022-05-03T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-05T11:42:34.916Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="windows11">
+<meta property="article:tag" content="microsoftupdatecatalog">
+<meta property="article:tag" content="windowsupdate">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52045407777_bd684fc7a5_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/windows/download-and-complete-windows-update-on-microsoft-update-catalog-feat-kb5012643/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>從 Microsoft Update Catalog 下載與完成 Windows Update (feat. KB5012643) | mtmatt</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EFZSE1ET2D');
+      }
+    </script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/windows/download-and-complete-windows-update-on-microsoft-update-catalog-feat-kb5012643/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          從 Microsoft Update Catalog 下載與完成 Windows Update (feat. KB5012643)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-05-03 08:00:00" itemprop="dateCreated datePublished" datetime="2022-05-03T08:00:00+08:00">2022-05-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/windows/" itemprop="url" rel="index"><span itemprop="name">windows</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>915</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>2 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>其實，寫在 <a target="_blank" rel="noopener" href="http://addsalt.fr/windows/quickrecap-of-kb5012643-windows-11-os-build-22000-652/">[版本更新] 快速回顧 微軟發布 KB5012643 (Windows 11 作業系統組建 22000.652)</a> 的不久前，我也給自己每天都會用到的機器，升級到 Windows 11。</p>
+<p>這部機器應該還不到更新推送的時間點上，因此，一早我跑系統內建的 Windows Update 時，顯示的是並不是目前最新的更新。(詳見下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52045407777/in/dateposted-public/" title="windows11UpdateKB5012643Ep (1)"><img src="https://live.staticflickr.com/65535/52045407777_bd684fc7a5_c.jpg" alt="windows11UpdateKB5012643Ep (1)"></a></p>
+<p>我另外在 CMD 下一道指令，確認目前機器上運作的 Windows 11 版本與 OS 組建。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52045407702/in/dateposted-public/" title="windows11UpdateKB5012643Ep (2)"><img src="https://live.staticflickr.com/65535/52045407702_e924bb60c2.jpg" alt="windows11UpdateKB5012643Ep (2)"></a></p>
+<p>由於是工作要用的機器，使用的頻率與時間佔比相當高，我會認為，再怎麼樣都得硬著頭皮更新(這麼說來，更不更新確實是讓人感到矛盾的一件事)。</p>
+<hr>
+<h3 id="Microsoft-Update-Catalog"><a href="#Microsoft-Update-Catalog" class="headerlink" title="Microsoft Update Catalog"></a>Microsoft Update Catalog</h3><p>有段時間，官方的更新獨立套件，在各個網站流傳，通常都是給個連結，我個人認為直接下載的風險是高的。</p>
+<p>而，微軟官方的 <a target="_blank" rel="noopener" href="https://www.catalog.update.microsoft.com/home.aspx">Microsoft Update Catalog</a> 是相對比較安全的選擇，…有趣的是這個網站，在我印象中，應該是微軟的網站介面設計中，相當簡潔的一個。(詳見下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52046452041/in/dateposted-public/" title="windows11UpdateKB5012643Ep (6)"><img src="https://live.staticflickr.com/65535/52046452041_1ec45e46e1_c.jpg" alt="windows11UpdateKB5012643Ep (6)"></a></p>
+<p>拿關鍵字「KB5012643」餵 Search Bar，就可以找到想要載下來的獨立更新套件。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52046704809/in/dateposted-public/" title="windows11UpdateKB5012643Ep (3)"><img src="https://live.staticflickr.com/65535/52046704809_919df10c4f_c.jpg" alt="windows11UpdateKB5012643Ep (3)"></a></p>
+<p>我今天要升級的機器，要用的是「基於 x64 系統」版，確認沒有問題，就點連結 Download 回家。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52046503378/in/dateposted-public/" title="windows11UpdateKB5012643Ep (4)"><img src="https://live.staticflickr.com/65535/52046503378_74fe6ab305.jpg" alt="windows11UpdateKB5012643Ep (4)"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52046561668/in/dateposted-public/" title="windows11UpdateKB5012643Ep (5)"><img src="https://live.staticflickr.com/65535/52046561668_50cf29d272_c.jpg" alt="windows11UpdateKB5012643Ep (5)"></a></p>
+<p>後續，就是點 2 下，然後非常有名的「下一步」、「是」搞定一切(更新套件的話，可能需要禱告一下)。(下圖) <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52046503258/in/dateposted-public/" title="windows11UpdateKB5012643Ep (7)"><img src="https://live.staticflickr.com/65535/52046503258_54dcc73394_n.jpg" alt="windows11UpdateKB5012643Ep (7)"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52046704709/in/dateposted-public/" title="windows11UpdateKB5012643Ep (8)"><img src="https://live.staticflickr.com/65535/52046704709_51c4b004be_n.jpg" alt="windows11UpdateKB5012643Ep (8)"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52046962090/in/dateposted-public/" title="windows11UpdateKB5012643Ep (9)"><img src="https://live.staticflickr.com/65535/52046962090_3d0b86b679_b.jpg" alt="windows11UpdateKB5012643Ep (9)"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52046503148/in/dateposted-public/" title="windows11UpdateKB5012643Ep (10)"><img src="https://live.staticflickr.com/65535/52046503148_7e4f00f72f.jpg" alt="windows11UpdateKB5012643Ep (10)"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52046451901/in/dateposted-public/" title="windows11UpdateKB5012643Ep (11)"><img src="https://live.staticflickr.com/65535/52046451901_7be3483b05.jpg" alt="windows11UpdateKB5012643Ep (11)"></a></p>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>今天主要的重點是透過這次的獨立更新，帶到 Microsoft Update Catalog 這個微軟官方的網站。</p>
+<p>至於，更新後有沒有什麼狀況，…文截至目前為止，我使用的時間還不超過 2 個小時，恐怕不具備任何參考價值，後續，如果有災情發生(希望是不要，工作用的機器，出狀況實在很麻煩)，我再來分享。</p>
+<p>以自行處理更新這件事來說，比較完備的更新過程，至少還得先做一次更新前的備份比較好，當然，也有另外一個做法：先拿同樣規格的機器，測試過一段時間之後，再安裝到工作用或主力機器上，只是這樣真的非常耗時間與精力，更何況，真要這麼做的話，還得先要有那樣的一部機器(一下這樣，一下那樣的說明，我都快被自己搞昏頭了)。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/windows/" rel="tag"># windows</a>
+              <a href="/tags/windows11/" rel="tag"># windows11</a>
+              <a href="/tags/microsoftupdatecatalog/" rel="tag"># microsoftupdatecatalog</a>
+              <a href="/tags/windowsupdate/" rel="tag"># windowsupdate</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/windows/kb5012643-windows-11-os-build-22000-652/" rel="prev" title="[版本更新] 快速回顧 微軟發布 KB5012643 (Windows 11 作業系統組建 22000.652)">
+      <i class="fa fa-chevron-left"></i> [版本更新] 快速回顧 微軟發布 KB5012643 (Windows 11 作業系統組建 22000.652)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/boshiamy/arcolinuxl-and-boshiamy/" rel="next" title="ArcoLinuxL 與嘸蝦米">
+      ArcoLinuxL 與嘸蝦米 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Microsoft-Update-Catalog"><span class="nav-number">2.</span> <span class="nav-text">Microsoft Update Catalog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">3.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">189k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">5:44</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

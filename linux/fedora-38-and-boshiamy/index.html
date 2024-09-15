@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言Fedora 38 目前在 DistroWatch 上的「網頁參觀排名」是第 5 名，上次開箱的 Fedora 37 在 DistroWatch 上的「網頁參觀排名」是第 6 名，又再爬了 1 個名次。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fedora 38 與嘸蝦米">
+<meta property="og:url" content="http://mtmatt.one/linux/fedora-38-and-boshiamy/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言Fedora 38 目前在 DistroWatch 上的「網頁參觀排名」是第 5 名，上次開箱的 Fedora 37 在 DistroWatch 上的「網頁參觀排名」是第 6 名，又再爬了 1 個名次。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52879295409_f5a5bf46de_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52879511890_f2569494c0_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52879511895_607d916f70_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52879295514_d4f8292af8_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53161536434_363b1b90d2_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53161819018_e1654574a9_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53161326511_977b171862_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53161346576_daf0cf2628_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53161775525_485d7736b6_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53160761262_2a82ae14ed_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53161840043_0c15d5aa1c_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53160761127_3de86f3b02_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53160761132_6ed805ef17_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53161840048_0570047f32_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52879295424_466412e4d1_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52879134541_4d1d500d97_c.jpg">
+<meta property="article:published_time" content="2023-05-08T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-19T21:19:03.445Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="fcitx5">
+<meta property="article:tag" content="fcitx5-table-extra">
+<meta property="article:tag" content="fedora">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52879295409_f5a5bf46de_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/linux/fedora-38-and-boshiamy/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>Fedora 38 與嘸蝦米 | mtmatt</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EFZSE1ET2D');
+      }
+    </script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/linux/fedora-38-and-boshiamy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Fedora 38 與嘸蝦米
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-05-08 08:00:00" itemprop="dateCreated datePublished" datetime="2023-05-08T08:00:00+08:00">2023-05-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>3 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Fedora 38 目前在 DistroWatch 上的「網頁參觀排名」是第 5 名，上次開箱的 Fedora 37 在 DistroWatch 上的「網頁參觀排名」是第 6 名，又再爬了 1 個名次。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52879295409/in/dateposted-public/" title="playingFedora38onVirtualBoxEp (5)"><img src="https://live.staticflickr.com/65535/52879295409_f5a5bf46de_c.jpg" alt="playingFedora38onVirtualBoxEp (5)"></a></p>
+<hr>
+<h3 id="快速回顧與感想"><a href="#快速回顧與感想" class="headerlink" title="快速回顧與感想"></a>快速回顧與感想</h3><ol>
+<li><p>安裝與初始設定：我認為，對於拿 Fedora 來當桌面系統使用的人來說，安裝的過程應該是沒有難度可言的。整個 UI 設計上，目前所呈現的，要說 Fedora 比肩 macOS 或 Windows，應該不過份。但是，這是不是每 Linux End User 所想要的，就不一定，畢竟，還是有人會希望在安裝過程多做一些設定。可以想見 Fedora Project 就是要把 Fedora Workstation 定位在 Desktop 或 Workstation 這樣的角色上，不然，做個 Advanced(進階選項)，應該不是一件困難的事。</p>
+</li>
+<li><p>安裝完的首次更新：我這次選擇立即更新，中間曾跳出錯誤訊息，但也很貼心讓使用者可以從錯誤訊息找到解法，所以，基本上，也並沒有太大的問題。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52879511890/in/dateposted-public/" title="playingFedora38onVirtualBoxEp (3)"><img src="https://live.staticflickr.com/65535/52879511890_f2569494c0_c.jpg" alt="playingFedora38onVirtualBoxEp (3)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52879511895/in/dateposted-public/" title="playingFedora38onVirtualBoxEp (4)"><img src="https://live.staticflickr.com/65535/52879511895_607d916f70_c.jpg" alt="playingFedora38onVirtualBoxEp (4)"></a></p>
+</li>
+<li><p>GNOME 44 桌面環境：一些細節優化之外，我自己覺得比較好的更新是對語言的支持。例如：「設定值」底下的「多工作業」，若我沒有記錯，來到這一版才做中文化。以桌面系統而言，我會認為語言支持應是基本的，這一點相較於 macOS 與 Windows，就顯得遜色了點。話說回來，macOS 也是從 Mac OS X 開始，對語言的支持才一下子超車不少作業系統，以前的 macOS 的語言支持，…我個人認為是有那麼點慘。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52879295514/in/dateposted-public/" title="playingFedora38onVirtualBoxEp (1)"><img src="https://live.staticflickr.com/65535/52879295514_d4f8292af8_c.jpg" alt="playingFedora38onVirtualBoxEp (1)"></a></p>
+</li>
+<li><p>Apple M1&#x2F;M2 處理器：網路上已有人分享自己試著用 VMWare 安裝 Fedora 到搭載 Apple M1&#x2F;M2 處理器上的機器，我手邊沒有這樣的機器，所以，就沒有辦法測試。然而，透過 VMWare、Parallels Desktop 與 VirtualBox 等程式，應該都是應急之道，我認為，對於有需求的伙伴而言，能夠輕鬆以原生安裝的方式是更好的。而，我提出這一點看法，不是為了從雞蛋裡挑出什麼，因為，我自己也沒有在用搭載 Apple M1&#x2F;M2 處理器的機器，只是以 Fedora 與蘋果電腦的契合度而言，若能夠由官方提供支持會更棒。</p>
+</li>
+</ol>
+<hr>
+<h3 id="Fcitx5-搭配嘸蝦米的安裝步驟"><a href="#Fcitx5-搭配嘸蝦米的安裝步驟" class="headerlink" title="Fcitx5 搭配嘸蝦米的安裝步驟"></a>Fcitx5 搭配嘸蝦米的安裝步驟</h3><ol>
+<li><p>下一道指令：<code>sudo dnf install fcitx5*</code>  <img src="https://live.staticflickr.com/65535/53161536434_363b1b90d2_b.jpg" width="1024" height="559" alt="boshiamyAndFedora38Ep (1)"/></p>
+</li>
+<li><p>確認一下有沒有 fcitx5-table-extra  <img src="https://live.staticflickr.com/65535/53161819018_e1654574a9_b.jpg" width="1024" height="559" alt="boshiamyAndFedora38Ep (2)"/> <img src="https://live.staticflickr.com/65535/53161326511_977b171862_b.jpg" width="1024" height="576" alt="boshiamyAndFedora38Ep (3)"/></p>
+</li>
+<li><p>重新登入系統</p>
+</li>
+<li><p>「概覽」→「Fcitx 5 設定」  <img src="https://live.staticflickr.com/65535/53161346576_daf0cf2628_b.jpg" width="1024" height="768" alt="boshiamyAndFedora38Ep (4)"/></p>
+</li>
+<li><p>在「Fcitx 設定」介面裡，「可用輸入法：」下的搜尋框，用關鍵字「bosh」，找出「嘸蝦米」並新增至「目前輸入法：」，【套用】後【關閉】「Fcitx 設定」介面。  <img src="https://live.staticflickr.com/65535/53161775525_485d7736b6_b.jpg" width="1024" height="768" alt="boshiamyAndFedora38Ep (5)"/>  <img src="https://live.staticflickr.com/65535/53160761262_2a82ae14ed_b.jpg" width="1024" height="768" alt="boshiamyAndFedora38Ep (6)"/></p>
+</li>
+<li><p>習慣上，我會開啟 LibreOffice，試試看能否順利吃蝦。要注意的是如果按以上程序，「新酷音輸入法」會比「嘸蝦米輸入法」還要早安裝進來，若沒有在設定過程刪除「新酷音輸入法」或是更改輸入法的順序，使用 Ctrl+Space 切換輸入法時，會先切換到「新酷音輸入法」。  <img src="https://live.staticflickr.com/65535/53161840043_0c15d5aa1c_b.jpg" width="1024" height="768" alt="boshiamyAndFedora38Ep (7)"/>  <img src="https://live.staticflickr.com/65535/53160761127_3de86f3b02_b.jpg" width="1024" height="768" alt="boshiamyAndFedora38Ep (8)"/></p>
+</li>
+<li><p>可以使用 Ctrl+Shift 再進行一次切換，就會順利切換到「嘸蝦米輸入法」。  <img src="https://live.staticflickr.com/65535/53160761132_6ed805ef17_b.jpg" width="1024" height="768" alt="boshiamyAndFedora38Ep (9)"/>  <img src="https://live.staticflickr.com/65535/53161840048_0570047f32_b.jpg" width="1024" height="768" alt="boshiamyAndFedora38Ep (10)"/></p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 Fedora-Workstation-Live-x86_64-38-1.6.iso。</li>
+<li>系統預設的中文輸入法框架是 iBus，我個人是還滿推薦使用 Fcitx5 的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52879295424/in/dateposted-public/" title="playingFedora38onVirtualBoxEp (7)"><img src="https://live.staticflickr.com/65535/52879295424_466412e4d1_c.jpg" alt="playingFedora38onVirtualBoxEp (7)"></a>  </li>
+<li>至於 fcitx(4)，我個人反而是比較不建議優先採用的選項，原因是…我找不到 fcitx-table-boshiamy 這支套件，再加上我有點懶，況且有新版的 Fcitx5 可以直接服用，何樂不為。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52879134541/in/dateposted-public/" title="playingFedora38onVirtualBoxEp (6)"><img src="https://live.staticflickr.com/65535/52879134541_4d1d500d97_c.jpg" alt="playingFedora38onVirtualBoxEp (6)"></a></li>
+<li><a target="_blank" rel="noopener" href="https://getfedora.org/">Fedora</a></li>
+<li><a target="_blank" rel="noopener" href="https://fcitx-im.org/wiki/Fcitx_5">Fcitx 5 - Fcitx</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Fedora_(%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1)">Fedora (作業系統) - 維基百科，自由的百科全書</a>。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
+              <a href="/tags/fcitx5-table-extra/" rel="tag"># fcitx5-table-extra</a>
+              <a href="/tags/fedora/" rel="tag"># fedora</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/upgrade-to-manjaro-linux-22-1-0-from-manjaro-linux-22-0-5/" rel="prev" title="從 Manjaro Linux 22.0.5 升級到 Manjaro Linux 22.1.0">
+      <i class="fa fa-chevron-left"></i> 從 Manjaro Linux 22.0.5 升級到 Manjaro Linux 22.1.0
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/linux/gufw-firewall-feat-manjaro/" rel="next" title="gufw Firewall (Linux 上圖形使用者介面的防火牆程式) feat. Manjaro">
+      gufw Firewall (Linux 上圖形使用者介面的防火牆程式) feat. Manjaro <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%A7%E8%88%87%E6%84%9F%E6%83%B3"><span class="nav-number">2.</span> <span class="nav-text">快速回顧與感想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fcitx5-%E6%90%AD%E9%85%8D%E5%98%B8%E8%9D%A6%E7%B1%B3%E7%9A%84%E5%AE%89%E8%A3%9D%E6%AD%A5%E9%A9%9F"><span class="nav-number">3.</span> <span class="nav-text">Fcitx5 搭配嘸蝦米的安裝步驟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">189k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">5:44</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

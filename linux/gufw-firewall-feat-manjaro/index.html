@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言Linux 上面的防火牆，多數使用者應該會想到「IP 桌子」(iptables)，而 Linux 上大部分的防火牆，也多半就跟 iptables 一樣，要在 Terminal 上做設定，敲敲鍵盤設定，固然是有那麼點帥氣，但，我總覺得以桌面系統而言，經由圖形使用介面(GUI) 來搞定會是另外一個重要的選項。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gufw Firewall (Linux 上圖形使用者介面的防火牆程式) feat. Manjaro">
+<meta property="og:url" content="http://mtmatt.one/linux/gufw-firewall-feat-manjaro/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言Linux 上面的防火牆，多數使用者應該會想到「IP 桌子」(iptables)，而 Linux 上大部分的防火牆，也多半就跟 iptables 一樣，要在 Terminal 上做設定，敲敲鍵盤設定，固然是有那麼點帥氣，但，我總覺得以桌面系統而言，經由圖形使用介面(GUI) 來搞定會是另外一個重要的選項。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52884519677_296c2c469b_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52884519752_81852f4e20_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885260584_6c49cd72d6_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885093646_65e62dba27_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885538703_98e4339c03_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885093631_5da5394be3_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52884519742_060d49461c_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885093591_4dc6dc17f9_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52884519632_4163a071ee_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52884519677_296c2c469b_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885093491_e8cb65e767_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885538563_453ca4b5d5_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885538433_155cb080dc_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52884519492_db76ef131b_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885093426_575b5f0612_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885260324_2893c62f8e_c.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52885470360_23f4c19e58_c.jpg">
+<meta property="article:published_time" content="2023-05-09T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-05T11:51:29.384Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="firewalls">
+<meta property="article:tag" content="gufw">
+<meta property="article:tag" content="manjaro">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52884519677_296c2c469b_c.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/linux/gufw-firewall-feat-manjaro/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>gufw Firewall (Linux 上圖形使用者介面的防火牆程式) feat. Manjaro | mtmatt</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EFZSE1ET2D');
+      }
+    </script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/linux/gufw-firewall-feat-manjaro/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          gufw Firewall (Linux 上圖形使用者介面的防火牆程式) feat. Manjaro
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-05-09 08:00:00" itemprop="dateCreated datePublished" datetime="2023-05-09T08:00:00+08:00">2023-05-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>985</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>2 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Linux 上面的防火牆，多數使用者應該會想到「IP 桌子」(iptables)，而 Linux 上大部分的防火牆，也多半就跟 iptables 一樣，要在 Terminal 上做設定，敲敲鍵盤設定，固然是有那麼點帥氣，但，我總覺得以桌面系統而言，經由圖形使用介面(GUI) 來搞定會是另外一個重要的選項。</p>
+<p>這一篇貼文，主要就是我多花一點時間，多認識 gufw 這支 App 的過程。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52884519677/in/dateposted-public/" title="gufwonManjaroEp (12)"><img src="https://live.staticflickr.com/65535/52884519677_296c2c469b_c.jpg" alt="gufwonManjaroEp (12)"></a></p>
+<hr>
+<h3 id="安裝程式"><a href="#安裝程式" class="headerlink" title="安裝程式"></a>安裝程式</h3><ol>
+<li><p>說到 gufw，我記得在 MX-Linux 上，gufw 是預設安裝就會放進來的防火牆程式，我試著在最近安裝好的 Manjaro 上找尋一番，並沒有找到。這個問題是好解決，直接先下一道指令把程式安裝進來就可以，這道指令是 <code>pamac install gufw</code>。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52884519752/in/dateposted-public/" title="gufwonManjaroEp (4)"><img src="https://live.staticflickr.com/65535/52884519752_81852f4e20_c.jpg" alt="gufwonManjaroEp (4)"></a></p>
+</li>
+<li><p>gufw 的程式並不會很大，下圖所示是我有幾天沒有更新，下完指令會一併把要這些要更新的程式與所需要的空間，都列算進來。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885260584/in/dateposted-public/" title="gufwonManjaroEp (5)"><img src="https://live.staticflickr.com/65535/52885260584_6c49cd72d6_c.jpg" alt="gufwonManjaroEp (5)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885093646/in/dateposted-public/" title="gufwonManjaroEp (6)"><img src="https://live.staticflickr.com/65535/52885093646_65e62dba27_c.jpg" alt="gufwonManjaroEp (6)"></a></p>
+</li>
+<li><p>一併要更新的東西有點多，而且要求重開機，我也就跟著重新開機。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885538703/in/dateposted-public/" title="gufwonManjaroEp (7)"><img src="https://live.staticflickr.com/65535/52885538703_98e4339c03_c.jpg" alt="gufwonManjaroEp (7)"></a></p>
+</li>
+<li><p>進到系統後，找到「防火牆設定」，如果順利的話，點下去程式就會出現。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885093631/in/dateposted-public/" title="gufwonManjaroEp (8)"><img src="https://live.staticflickr.com/65535/52885093631_5da5394be3_c.jpg" alt="gufwonManjaroEp (8)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52884519742/in/dateposted-public/" title="gufwonManjaroEp (9)"><img src="https://live.staticflickr.com/65535/52884519742_060d49461c_c.jpg" alt="gufwonManjaroEp (9)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885093591/in/dateposted-public/" title="gufwonManjaroEp (10)"><img src="https://live.staticflickr.com/65535/52885093591_4dc6dc17f9_c.jpg" alt="gufwonManjaroEp (10)"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="進入程式，初步瞭解一下相關設定"><a href="#進入程式，初步瞭解一下相關設定" class="headerlink" title="進入程式，初步瞭解一下相關設定"></a>進入程式，初步瞭解一下相關設定</h3><ol>
+<li><p>為了多認識一下這支 App，我先透過 Terminal 繞路去看一下路徑 <code>/etc/gufw</code> 裡面的東西，我特意去看一下 profile 檔，並且用 <code>cat</code> 把 profile 檔裡面的東西秀出來，在這裡，我注意到 Home.profile 下的 status 是 disabled。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52884519632/in/dateposted-public/" title="gufwonManjaroEp (11)"><img src="https://live.staticflickr.com/65535/52884519632_4163a071ee_c.jpg" alt="gufwonManjaroEp (11)"></a></p>
+</li>
+<li><p>我回到圖形介面，把「狀態」做個切換，下圖所示，應該就是已經 On 上去。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52884519677/in/dateposted-public/" title="gufwonManjaroEp (12)"><img src="https://live.staticflickr.com/65535/52884519677_296c2c469b_c.jpg" alt="gufwonManjaroEp (12)"></a></p>
+</li>
+<li><p>既然「狀態」是 On 上，我想 Home.profile 檔的內容肯定會跟著變動，事實證明也是如此(詳見下圖)。也就是說，如果還是想直接用 Terminal 去做設定，原則上也是可以的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885093491/in/dateposted-public/" title="gufwonManjaroEp (13)"><img src="https://live.staticflickr.com/65535/52885093491_e8cb65e767_c.jpg" alt="gufwonManjaroEp (13)"></a></p>
+</li>
+<li><p>預設的 profile 檔，總共有 Home、Public 與 Office 三個，如果想要客製化的話，可以透過程式介面，點「+」號按鈕，去做新增「規則」的動作。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885538563/in/dateposted-public/" title="gufwonManjaroEp (14)"><img src="https://live.staticflickr.com/65535/52885538563_453ca4b5d5_c.jpg" alt="gufwonManjaroEp (14)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885538433/in/dateposted-public/" title="gufwonManjaroEp (15)"><img src="https://live.staticflickr.com/65535/52885538433_155cb080dc_c.jpg" alt="gufwonManjaroEp (15)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52884519492/in/dateposted-public/" title="gufwonManjaroEp (16)"><img src="https://live.staticflickr.com/65535/52884519492_db76ef131b_c.jpg" alt="gufwonManjaroEp (16)"></a></p>
+</li>
+<li><p>此外，程式也提供「報告」與「紀錄」給使用者，算是滿完整的。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885093426/in/dateposted-public/" title="gufwonManjaroEp (17)"><img src="https://live.staticflickr.com/65535/52885093426_575b5f0612_c.jpg" alt="gufwonManjaroEp (17)"></a></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885260324/in/dateposted-public/" title="gufwonManjaroEp (18)"><img src="https://live.staticflickr.com/65535/52885260324_2893c62f8e_c.jpg" alt="gufwonManjaroEp (18)"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>有興趣的伙伴，可以跑一趟開發者在 GitHub 上的 Project 專頁：<a target="_blank" rel="noopener" href="https://costales.github.io/projects/gufw/">Gufw Firewall • Marcos Costales</a>。</li>
+<li>因為，截至本篇文章，貼出來之前，gufw 的官網還在維護中(很有可能不會再 On 上來)。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/boxplay/52885470360/in/dateposted-public/" title="gufwonManjaroEp (1)"><img src="https://live.staticflickr.com/65535/52885470360_23f4c19e58_c.jpg" alt="gufwonManjaroEp (1)"></a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/firewalls/" rel="tag"># firewalls</a>
+              <a href="/tags/gufw/" rel="tag"># gufw</a>
+              <a href="/tags/manjaro/" rel="tag"># manjaro</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/fedora-38-and-boshiamy/" rel="prev" title="Fedora 38 與嘸蝦米">
+      <i class="fa fa-chevron-left"></i> Fedora 38 與嘸蝦米
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/boshiamy/linux-mint-21-1-and-boshiamy-feat-fcitx5-table-extra/" rel="next" title="Linux Mint 21.1 與嘸蝦米 (feat. fcitx5-table-extra)">
+      Linux Mint 21.1 與嘸蝦米 (feat. fcitx5-table-extra) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E7%A8%8B%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">安裝程式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%B2%E5%85%A5%E7%A8%8B%E5%BC%8F%EF%BC%8C%E5%88%9D%E6%AD%A5%E7%9E%AD%E8%A7%A3%E4%B8%80%E4%B8%8B%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A"><span class="nav-number">3.</span> <span class="nav-text">進入程式，初步瞭解一下相關設定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">189k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">5:44</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

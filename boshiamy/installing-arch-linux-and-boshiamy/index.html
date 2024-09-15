@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言如果，能讓我再一次從頭開始學 Linux，我可能會選 Arch Linux。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安裝 Arch Linux 與嘸蝦米">
+<meta property="og:url" content="http://mtmatt.one/boshiamy/installing-arch-linux-and-boshiamy/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言如果，能讓我再一次從頭開始學 Linux，我可能會選 Arch Linux。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/51439239511_a86044938b_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53161349045_b6b6c8687c_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53160332902_bc53c128bb_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/53160332987_df5ba7d509_b.jpg">
+<meta property="article:published_time" content="2021-08-22T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-24T23:39:56.962Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="archlinux">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="boshiamy">
+<meta property="article:tag" content="fcitx5">
+<meta property="article:tag" content="fcitx5-table-extra">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/51439239511_a86044938b_b.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/boshiamy/installing-arch-linux-and-boshiamy/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>安裝 Arch Linux 與嘸蝦米 | mtmatt</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EFZSE1ET2D');
+      }
+    </script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/boshiamy/installing-arch-linux-and-boshiamy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          安裝 Arch Linux 與嘸蝦米
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-08-22 08:00:00" itemprop="dateCreated datePublished" datetime="2021-08-22T08:00:00+08:00">2021-08-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/boshiamy/" itemprop="url" rel="index"><span itemprop="name">boshiamy</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>4k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>7 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>如果，能讓我再一次從頭開始學 Linux，我可能會選 Arch Linux。 <img src="https://live.staticflickr.com/65535/51439239511_a86044938b_b.jpg" width="1024" height="576" alt="archLinuxoniMacEp5"/></p>
+<p>這篇貼文大致分成 2 個部分的筆記：「安裝 Arch Linux」、「在 Arch Linux 上安裝及使用嘸蝦米」。</p>
+<hr>
+<h3 id="安裝-Arch-Linux"><a href="#安裝-Arch-Linux" class="headerlink" title="安裝 Arch Linux"></a>安裝 Arch Linux</h3><ol>
+<li><p>VirtualBox 上的硬體設定：1 CPU、ICH9 晶片組、啟用 EFI、4GB Ram、128MB VRAM、20GB Vdi HDD。</p>
+</li>
+<li><p>下面是我下的指令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">lsblk</span><br><span class="line">gdisk /dev/sda</span><br><span class="line">n</span><br><span class="line">Partition number: [Enter]</span><br><span class="line">First sector: [Enter]</span><br><span class="line">Last sector: +200MB</span><br><span class="line">Hex code or GUID: ef00</span><br><span class="line">n</span><br><span class="line">Partition number: [Enter]</span><br><span class="line">First sector: [Enter]</span><br><span class="line">Last sector: [Enter]</span><br><span class="line">Hex code or GUID: [Enter]</span><br><span class="line">w</span><br><span class="line">Do you want to proceed? Y</span><br><span class="line">lsblk</span><br><span class="line">mkfs.fat -F32 /dev/sda1</span><br><span class="line">mkfs.ext4 /dev/sda2</span><br><span class="line">lsblk</span><br><span class="line">mount /dev/sda2 /mnt</span><br><span class="line">mkdir -p /mnt/boot</span><br><span class="line">mount /dev/sda1 /mnt/boot</span><br><span class="line">lsblk</span><br><span class="line">pacstrap /mnt base linux linux-firmware vim</span><br><span class="line">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span><br><span class="line">cat /mnt/etc/fstab</span><br><span class="line">arch-chroot /mnt</span><br><span class="line">dd if=/dev/zero of=/swapfile bs=1G count=2 status=progress</span><br><span class="line">chmod 600 /swapfile</span><br><span class="line">mkswap /swapfile</span><br><span class="line">swapon /swapfile</span><br><span class="line">vim /etc/fstab</span><br><span class="line">i</span><br><span class="line">寫入 /swapfile none swap defaults 0 0</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">timedatectl set-ntp true</span><br><span class="line">timedatectl list-timezones | grep Taipei</span><br><span class="line">ln -sf /usr/share/zoneinfo/Asia/Taipei /etc/localtime</span><br><span class="line">hwclock --systohc</span><br><span class="line">vim /etc/locale.gen</span><br><span class="line">i</span><br><span class="line">找到「en_US.UTF-8 UTF-8」這一列，把最前面的「#」號刪除</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">locale-gen</span><br><span class="line">echo LANG=en_US.UTF-8 &gt;&gt; /etc/locale.conf</span><br><span class="line">echo KEYMAP=zh &gt;&gt; /etc/vconsole.conf</span><br><span class="line">vim /etc/hostname</span><br><span class="line">i</span><br><span class="line">寫入 archlinux-virtualbox (hostname 可以在命名規範內，取一個自己喜歡的名字)</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">vim /etc/hosts</span><br><span class="line">i</span><br><span class="line">寫入以下訊息</span><br><span class="line">127.0.0.1   localhost</span><br><span class="line">::1         localhost</span><br><span class="line">127.0.1.1   archlinux-virtualbox.localdomain archlinux-virtualbox</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">passwd</span><br><span class="line">New password: 輸入密碼</span><br><span class="line">Retype new password: 再輸入密碼(密碼同上)</span><br><span class="line">pacman -S grub efibootmgr networkmanager network-manager-applet dialog os-prober mtools dosfstools base-devel linux-headers cups reflector openssh git xdg-utils xdg-user-dirs virtualbox-guest-utils</span><br><span class="line">Enter a selection (default=all): [Enter]</span><br><span class="line">:: Proceed with installation? [Y/n] [Enter]</span><br><span class="line">grub-install --target=x86_64-efi --efi-directory=boot --bootloader-id=GRUB</span><br><span class="line">grub-mkconfig -o /boot/grub/grub.cfg</span><br><span class="line">systemctl enable NetworkManager</span><br><span class="line">systemctl enable cups</span><br><span class="line">useradd -mG wheel &lt;username&gt;[&lt;username&gt; 要輸入自己想要設定的使用者名稱]</span><br><span class="line">passwd &lt;username&gt;[&lt;username&gt; 就是上面所輸入的使用者名稱]</span><br><span class="line">New password: 輸入密碼</span><br><span class="line">Retype new password: 再輸入密碼(密碼同上)</span><br><span class="line">EDITOR=vim visudo</span><br><span class="line">i</span><br><span class="line">找到「%wheel ALL=(ALL) NOPASSWD: ALL」這一列，把最前面的「#」號刪除</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">exit</span><br><span class="line">umount -a</span><br><span class="line">reboot</span><br><span class="line">重開機進入 GRUB 選單，確認選到預設值：「*Arch Linux」後，直接按 [Enter]</span><br><span class="line">archlinux-virtualbox login: 輸入之前設定的使用者名稱後按 [Enter]</span><br><span class="line">Password: 輸密碼入後 [Enter]</span><br><span class="line">ip a</span><br><span class="line">ping mtmatt.one</span><br><span class="line">sudo pacman -S xf86-video-vmware xorg lightdm lightdm-gtk-greeter xfce4 xfce4-goodies firefox materia-gtk-theme papirus-icon-theme</span><br><span class="line">Enter a selection: [Enter]</span><br><span class="line">Enter a selection: [Enter]</span><br><span class="line">Enter a selection: [Enter]</span><br><span class="line">Enter a number: [Enter]</span><br><span class="line">:: Proceed with installation? [Y/n] [Enter]</span><br><span class="line">sudo systemctl enable lightdm</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<p> 順利的話，應該就可以看到下面的畫面。 <img src="https://live.staticflickr.com/65535/53161349045_b6b6c8687c_b.jpg" width="1024" height="768" alt="installingarchlinuxonvirtualboxep-8"/></p>
+</li>
+<li><p>處理繁體中文化 (Localization)：重開機進入系統後，啟動 Terminal (按 Ctrl+Alt+T)</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/locale.conf</span><br><span class="line">i</span><br><span class="line">把「en_US.UTF-8」改成「zh_TW.UTF-8」</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">sudo pacman -S wqy-bitmapfont wqy-zenhei ttf-arphic-ukai ttf-arphic-uming opendesktop-fonts wqy-microhei wqy-microhei-lite</span><br><span class="line">:: Proceed with installation? [Y/n] [Enter]</span><br><span class="line">sudo vim /etc/locale.gen</span><br><span class="line">i</span><br><span class="line">找到「en_US.UTF-8 UTF-8」這一列，在最前面把「#」號加回去</span><br><span class="line">找到「zh_TW.UTF-8 UTF-8」這一列，把最前面的「#」號刪除</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">sudo locale-gen</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="在-Arch-Linux-上安裝及使用嘸蝦米"><a href="#在-Arch-Linux-上安裝及使用嘸蝦米" class="headerlink" title="在 Arch Linux 上安裝及使用嘸蝦米"></a>在 Arch Linux 上安裝及使用嘸蝦米</h3><ol>
+<li><p>這次我只安裝 Fcitx 5。</p>
+</li>
+<li><p>重開機進入系統後，啟動 Terminal (Ctrl+Alt+T)：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-table-extra</span><br><span class="line">Enter a selection: [Enter]</span><br><span class="line">:: Proceed with installation? [Y/n] [Enter]</span><br><span class="line">sudo vim /etc/environment</span><br><span class="line">i</span><br><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>「應用程式」→「設定值」→「Fcitx 5 設定」，進入下列畫面，由於還沒有中文輸入，所以我打關鍵字：「boshi」，把嘸蝦米找出來與加入。 <img src="https://live.staticflickr.com/65535/53160332902_bc53c128bb_b.jpg" width="1024" height="768" alt="installingfcitx5andboshiamyonarchlinuxep1"/></p>
+</li>
+<li><p>這次沒有安裝 LibreOffice，找個「小筆記」來試試，確認可以輸入沒有問題。 <img src="https://live.staticflickr.com/65535/53160332987_df5ba7d509_b.jpg" width="1024" height="768" alt="installingfcitx5andboshiamyonarchlinuxep2"/></p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 archlinux-2021.08.01-x86_64.iso。</li>
+<li>儘管，我老早就知道 Arch Linux，但，這是我第一次安裝 Arch Linux，遲遲沒有安裝是因為我想用桌面環境，只想在幾個步驟，就讓安裝程式把所有的東西都安裝好，但是，隨著近日嘗試過幾支 Distro 之後，我反而對於太自動就安裝好的，不一定都能夠接受。只能說，自動有自動的好處，手動也有手動的優勢，而 Arch Linux 就是一個幾乎都要手動的 Linux，…就我所知，應該僅次於 Gentoo Linux 吧！</li>
+<li>以一個新手而言，如果想要對 Linux 建立起較紮實的觀念，從 Arch Linux 真的可以學到很多。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/archlinux/" rel="tag"># archlinux</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/boshiamy/" rel="tag"># boshiamy</a>
+              <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
+              <a href="/tags/fcitx5-table-extra/" rel="tag"># fcitx5-table-extra</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/boshiamy/using-fcitx-5-with-boshiamy-on-debian-11/" rel="prev" title="在 Debian 11 上直接用 Fcitx 5 與嘸蝦米 (2023 年 9 月 17 日更新)">
+      <i class="fa fa-chevron-left"></i> 在 Debian 11 上直接用 Fcitx 5 與嘸蝦米 (2023 年 9 月 17 日更新)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/windows/installing-visual-studio-code-on-windows-ep3/" rel="next" title="在 Windows 10 上安裝 Visual Studio Code EP3">
+      在 Windows 10 上安裝 Visual Studio Code EP3 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-Arch-Linux"><span class="nav-number">2.</span> <span class="nav-text">安裝 Arch Linux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-Arch-Linux-%E4%B8%8A%E5%AE%89%E8%A3%9D%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%98%B8%E8%9D%A6%E7%B1%B3"><span class="nav-number">3.</span> <span class="nav-text">在 Arch Linux 上安裝及使用嘸蝦米</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text">後記</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">189k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">5:44</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

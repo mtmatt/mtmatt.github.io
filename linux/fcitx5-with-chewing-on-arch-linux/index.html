@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言本次分享的是 Arch Linux 的衍生發行版：Garuda Linux 的安裝方式，ubuntu 的部分，我另外寫一篇安裝過程紀錄：在 ubuntu 22.04 LTS 上用 Fcitx5 搭配新酷音。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Arch Linux 衍生發行版上用 Fcitx5 搭配新酷音">
+<meta property="og:url" content="http://mtmatt.one/linux/fcitx5-with-chewing-on-arch-linux/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言本次分享的是 Arch Linux 的衍生發行版：Garuda Linux 的安裝方式，ubuntu 的部分，我另外寫一篇安裝過程紀錄：在 ubuntu 22.04 LTS 上用 Fcitx5 搭配新酷音。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52083649798_ab9ea042cb_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52068396883_c8a889bbcb_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52073743552_616a53c45b_o.png">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52074810029_7cf75e9e3a_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52075062620_8806282204_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52074580761_3f958f77a9_b.jpg">
+<meta property="article:published_time" content="2022-05-12T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-17T02:10:34.254Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="fcitx5">
+<meta property="article:tag" content="fcitx">
+<meta property="article:tag" content="fcitx5-chewing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52083649798_ab9ea042cb_b.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/linux/fcitx5-with-chewing-on-arch-linux/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>在 Arch Linux 衍生發行版上用 Fcitx5 搭配新酷音 | mtmatt</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EFZSE1ET2D');
+      }
+    </script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/linux/fcitx5-with-chewing-on-arch-linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在 Arch Linux 衍生發行版上用 Fcitx5 搭配新酷音
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-05-12 08:00:00" itemprop="dateCreated datePublished" datetime="2022-05-12T08:00:00+08:00">2022-05-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>2 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本次分享的是 Arch Linux 的衍生發行版：Garuda Linux 的安裝方式，ubuntu 的部分，我另外寫一篇安裝過程紀錄：<a target="_blank" rel="noopener" href="https://mtmatt.page/linux/fcitx5-with-chewing-on-ubuntu-22-04-lts/">在 ubuntu 22.04 LTS 上用 Fcitx5 搭配新酷音</a>。</p>
+<p>在 Garuda Linux 上，透過 Setup Assistant 安裝與使用 Fcitx5 搭配嘸蝦米是非常方便的事，也是我個人目前接觸到的 Arch Linux 衍生發行版當中，最便利的。</p>
+<p>但是，不是每個人都用嘸蝦米，對於不少微軟新注音的使用者而言，也會想要在 Linux 上面使用相對比較熟悉的輸入法。</p>
+<p>我忘記，自己是怎麼得知「新酷音輸入法」的，不過，總覺得或許是一個可行的方案。</p>
+<hr>
+<h3 id="安裝-Fcitx5-搭配「新酷音輸入法」"><a href="#安裝-Fcitx5-搭配「新酷音輸入法」" class="headerlink" title="安裝 Fcitx5 搭配「新酷音輸入法」"></a>安裝 Fcitx5 搭配「新酷音輸入法」</h3><ol>
+<li>Arch Linux 及其衍生發行版，幾乎都可以透過下指令的方式(詳見第 4 點)，將 Fcitx5 配「新酷音輸入法」，一併安裝到系統裡。</li>
+<li>重開機之後，因為只安裝「新酷音輸入法」，所以，需要中文輸入的時候，直接用 Ctrl+Space 就可以切換到「新酷音輸入法」。</li>
+<li>Garuda Linux 也可以，只不過，使用 Garuda Linux 一段時間後，我建議伙伴，可以試著透過 Setup Assistant 安裝。</li>
+<li>參考指令(如下)</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo pacman -S fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-chewing</span><br><span class="line">Enter a selection: [Enter]</span><br><span class="line">:: Proceed with installation? [Y/n] [Enter]</span><br><span class="line">sudo vim /etc/environment</span><br><span class="line">i</span><br><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br><span class="line">[Esc]</span><br><span class="line">:wq</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>我把執行上述指令的過程，截圖放到下面的 Flickr 相簿，給有需要的伙伴參考。<br><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/albums/72177720299077189" title="installingFcitx5andfctix5-chewingonArcoLinuxL"><img src="https://live.staticflickr.com/65535/52083649798_ab9ea042cb_b.jpg" alt="installingFcitx5andfctix5-chewingonArcoLinuxL"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="已經有-Fcitx5，另外安裝「新酷音輸入法」"><a href="#已經有-Fcitx5，另外安裝「新酷音輸入法」" class="headerlink" title="已經有 Fcitx5，另外安裝「新酷音輸入法」"></a>已經有 Fcitx5，另外安裝「新酷音輸入法」</h3><p>已經有 Fcitx5 的伙伴，只要再安裝「新酷音輸入法」的話，就是把表格檔與相依套件載回來，再進入設定的畫面把「新酷音輸入法」加進來，就搞定。</p>
+<p>以下紀錄，是我自己走過的程序。</p>
+<p>首先，在 Terminal 下一道指令(如下)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx5-chewing</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52068396883/in/dateposted-public/" title="Screenshot_~ : fish_4"><img src="https://live.staticflickr.com/65535/52068396883_c8a889bbcb_o.png" alt="Screenshot_~ : fish_4"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>接著，重新啟動 Fcitx5。要完成這個步驟，有 2 個方式可以達成。</p>
+<ol>
+<li><p>可以用指令(如下)。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fcitx5 -rd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>也可以用圖形介面的方式進行(下圖)。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52073743552/in/dateposted-public/" title="Screenshot_garuda-dr460nized-linux-zen-220329_1"><img src="https://live.staticflickr.com/65535/52073743552_616a53c45b_o.png" alt="Screenshot_garuda-dr460nized-linux-zen-220329_1"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="加入「新酷音輸入法」"><a href="#加入「新酷音輸入法」" class="headerlink" title="加入「新酷音輸入法」"></a>加入「新酷音輸入法」</h3><p>進到 Fcitx5 的設定，就會看到「新酷音輸入法」已經出現在「繁體中文(台灣)」的列表當中，新增之後套用，基本上就可以搞定。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52074810029/in/dateposted-public/" title="Screenshot_輸入法 *_1"><img src="https://live.staticflickr.com/65535/52074810029_7cf75e9e3a_b.jpg" alt="Screenshot_輸入法 *_1"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52075062620/in/dateposted-public/" title="Screenshot_輸入法 _1"><img src="https://live.staticflickr.com/65535/52075062620_8806282204_b.jpg" alt="Screenshot_輸入法 _1"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52074580761/in/dateposted-public/" title="Screenshot_輸入法 _2"><img src="https://live.staticflickr.com/65535/52074580761_3f958f77a9_b.jpg" alt="Screenshot_輸入法 _2"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>至於使用上的心得，…我問了一下借用我電腦的人(純 Windows User)，他認為在智慧選字的部分，還是比不上微軟新注音，算是勉強可以用的。我自己簡單測試幾個字詞，也發現雖然一開始不一定能夠智慧選字，但學過 1 次就容易順起來。</p>
+<hr>
+<h3 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h3><ol>
+<li><a target="_blank" rel="noopener" href="http://chewing.im/">新酷音輸入法</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E6%96%B0%E9%85%B7%E9%9F%B3%E8%BC%B8%E5%85%A5%E6%B3%95">新酷音輸入法 - 維基百科，自由的百科全書</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/fcitx5/" rel="tag"># fcitx5</a>
+              <a href="/tags/fcitx/" rel="tag"># fcitx</a>
+              <a href="/tags/fcitx5-chewing/" rel="tag"># fcitx5-chewing</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/20-days-after-shifting-to-garuda-linux/" rel="prev" title="轉換至 Garuda Linux 之 20 天後">
+      <i class="fa fa-chevron-left"></i> 轉換至 Garuda Linux 之 20 天後
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/windows/kb5013943-windows-11-os-build-22000-675/" rel="next" title="[版本更新] 快速回顧 微軟發布 KB5013943 (Windows 11 作業系統組建 22000.675)">
+      [版本更新] 快速回顧 微軟發布 KB5013943 (Windows 11 作業系統組建 22000.675) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-Fcitx5-%E6%90%AD%E9%85%8D%E3%80%8C%E6%96%B0%E9%85%B7%E9%9F%B3%E8%BC%B8%E5%85%A5%E6%B3%95%E3%80%8D"><span class="nav-number">2.</span> <span class="nav-text">安裝 Fcitx5 搭配「新酷音輸入法」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%B2%E7%B6%93%E6%9C%89-Fcitx5%EF%BC%8C%E5%8F%A6%E5%A4%96%E5%AE%89%E8%A3%9D%E3%80%8C%E6%96%B0%E9%85%B7%E9%9F%B3%E8%BC%B8%E5%85%A5%E6%B3%95%E3%80%8D"><span class="nav-number">3.</span> <span class="nav-text">已經有 Fcitx5，另外安裝「新酷音輸入法」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%85%A5%E3%80%8C%E6%96%B0%E9%85%B7%E9%9F%B3%E8%BC%B8%E5%85%A5%E6%B3%95%E3%80%8D"><span class="nav-number">4.</span> <span class="nav-text">加入「新酷音輸入法」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">5.</span> <span class="nav-text">後記</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80"><span class="nav-number">6.</span> <span class="nav-text">延伸閱讀</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">189k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">5:44</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mtmatt.one","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言手上一部升級到 Windows 11 的機器，可以說幾乎是閒著的電腦，不久前的功能就是拿來寫寫 Windows 11 更新後觀察的文章所用，而今，受到疫情影響，這部機器可能要忙一陣子，所以，我認為還是得硬著頭皮更新。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[版本更新] 快速回顧 微軟發布 KB5012592 (Windows 11 作業系統組建 22000.613)">
+<meta property="og:url" content="http://mtmatt.one/windows/kb5012592-windows-11-os-build-22000-613/index.html">
+<meta property="og:site_name" content="mtmatt">
+<meta property="og:description" content="前言手上一部升級到 Windows 11 的機器，可以說幾乎是閒著的電腦，不久前的功能就是拿來寫寫 Windows 11 更新後觀察的文章所用，而今，受到疫情影響，這部機器可能要忙一陣子，所以，我認為還是得硬著頭皮更新。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52006062479_2bef425bd0_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52005869373_c520610e50_b.jpg">
+<meta property="og:image" content="https://live.staticflickr.com/65535/52005805576_18e87279d6_b.jpg">
+<meta property="article:published_time" content="2022-04-16T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-01T09:49:48.794Z">
+<meta property="article:author" content="mtmatt">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="windows11">
+<meta property="article:tag" content="windowsupdate">
+<meta property="article:tag" content="quickrecap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/52006062479_2bef425bd0_b.jpg">
+
+<link rel="canonical" href="http://mtmatt.one/windows/kb5012592-windows-11-os-build-22000-613/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>[版本更新] 快速回顧 微軟發布 KB5012592 (Windows 11 作業系統組建 22000.613) | mtmatt</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFZSE1ET2D"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EFZSE1ET2D');
+      }
+    </script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-4821894216366631',
+          enable_page_level_ads: true
+     });
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">mtmatt</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">One</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://mtmatt.one/windows/kb5012592-windows-11-os-build-22000-613/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mtmatt">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mtmatt">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [版本更新] 快速回顧 微軟發布 KB5012592 (Windows 11 作業系統組建 22000.613)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-04-16 08:00:00" itemprop="dateCreated datePublished" datetime="2022-04-16T08:00:00+08:00">2022-04-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/windows/" itemprop="url" rel="index"><span itemprop="name">windows</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>893</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>2 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>手上一部升級到 Windows 11 的機器，可以說幾乎是閒著的電腦，不久前的功能就是拿來寫寫 Windows 11 更新後觀察的文章所用，而今，受到疫情影響，這部機器可能要忙一陣子，所以，我認為還是得硬著頭皮更新。</p>
+<p>也因此，Windows Update 走完更新後，來到 KB5012592 (作業系統組建 22000.613) 這裡。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52006062479/in/dateposted-public/" title="KB5012592"><img src="https://live.staticflickr.com/65535/52006062479_2bef425bd0_b.jpg" alt="KB5012592"></a></p>
+<hr>
+<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><p><a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-4-%E6%9C%88-12-%E6%97%A5-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%B5%84%E5%BB%BA-22000-613-kb5012592-41d0d345-0b27-4388-9681-3ed7e8e76d6d">2022 年 4 月 12 日 - (作業系統組建 22000.613) KB5012592</a> 是微軟官方的說明文件，只不過，坦白說，這一次我沒有細讀、更沒有等待太久，就把這支補丁打上去。</p>
+<p>原因是…，最近幾支更新都算穩定，而讓我有點鬆懈。</p>
+<p>然而，這次更新其實是有狀況的(詳可讀：<a target="_blank" rel="noopener" href="https://www.kocpc.com.tw/archives/435889">Windows 11、Windows 10 更新先緩緩，最新版本爆 Chrome、Edge 無法使用災情 - 電腦王阿達</a>)，只能說，我這次的運氣還不錯，這些災情沒有發生在我所使用的機器上。</p>
+<hr>
+<h3 id="一併打上其他的補丁"><a href="#一併打上其他的補丁" class="headerlink" title="一併打上其他的補丁"></a>一併打上其他的補丁</h3><p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52005869373/in/dateposted-public/" title="KB5012121andKB890830"><img src="https://live.staticflickr.com/65535/52005869373_c520610e50_b.jpg" alt="KB5012121andKB890830"></a></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/topic/april-12-2022-kb5012121-cumulative-update-for-net-framework-3-5-and-4-8-for-windows-11-47b5686b-33e6-4782-be83-e7d7b2648892">April 12, 2022-KB5012121 Cumulative Update for .NET Framework 3.5 and 4.8 for Windows 11</a></li>
+<li><a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-tw/topic/%E4%BD%BF%E7%94%A8-windows-%E6%83%A1%E6%84%8F%E8%BB%9F%E9%AB%94%E7%A7%BB%E9%99%A4%E5%B7%A5%E5%85%B7%E7%A7%BB%E9%99%A4%E7%89%B9%E5%AE%9A%E7%9A%84%E5%B8%B8%E8%A6%8B%E6%83%A1%E6%84%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0">使用 Windows 惡意軟體移除工具移除特定的常見惡意程式碼 (KB890830)</a></li>
+<li>也包括上次我先不打上去的補丁：<a target="_blank" rel="noopener" href="http://addsalt.fr/windows/kb5011563-windows-11-os-build-22000-593/">[版本更新] 快速回顧 微軟發布 KB5011563 (Windows 11 作業系統組建 22000.593)</a></li>
+<li>附帶一提的是打完 KB5011563 這支補丁後，我特別去測試新功能：「當您搜尋設定小工具時，會返回對應的頁面。」也證實了我自己真的跟 Windows 11 實在太不熟，搞不清楚「返回對應的頁面」究竟幫了我什麼。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/194265827@N08/52005805576/in/dateposted-public/" title="KB5011563"><img src="https://live.staticflickr.com/65535/52005805576_18e87279d6_b.jpg" alt="KB5011563"></a></li>
+</ol>
+<hr>
+<h3 id="後記：期盼更好與共好能夠併存"><a href="#後記：期盼更好與共好能夠併存" class="headerlink" title="後記：期盼更好與共好能夠併存"></a>後記：期盼更好與共好能夠併存</h3><p>做為個人電腦市佔率最高之作業系統，更新只要一有災情，影響的人是比較多的。</p>
+<p>這次我算運氣好，但，我也不是常常運氣好。</p>
+<p>我能夠理解，當一支程式或一套作業系統，發展到一定的程度時，要在每一次的更新出擊都達到完美，並不是那麼容易。</p>
+<p>只是，做為一個 End User 而言，期待穩定、好使力的作業系統，應該不是太過份的期望。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/windows/" rel="tag"># windows</a>
+              <a href="/tags/windows11/" rel="tag"># windows11</a>
+              <a href="/tags/windowsupdate/" rel="tag"># windowsupdate</a>
+              <a href="/tags/quickrecap/" rel="tag"># quickrecap</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/linux/shifting-from-mx-linux-to-garuda-linux/" rel="prev" title="從 MX Linux 轉換到 Garuda Linux">
+      <i class="fa fa-chevron-left"></i> 從 MX Linux 轉換到 Garuda Linux
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/windows/kb5012643-windows-11-os-build-22000-652/" rel="next" title="[版本更新] 快速回顧 微軟發布 KB5012643 (Windows 11 作業系統組建 22000.652)">
+      [版本更新] 快速回顧 微軟發布 KB5012643 (Windows 11 作業系統組建 22000.652) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%89%8D%E5%85%A7%E5%AE%B9%E6%A6%82%E8%A6%BD"><span class="nav-number">2.</span> <span class="nav-text">更新前內容概覽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BD%B5%E6%89%93%E4%B8%8A%E5%85%B6%E4%BB%96%E7%9A%84%E8%A3%9C%E4%B8%81"><span class="nav-number">3.</span> <span class="nav-text">一併打上其他的補丁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98%EF%BC%9A%E6%9C%9F%E7%9B%BC%E6%9B%B4%E5%A5%BD%E8%88%87%E5%85%B1%E5%A5%BD%E8%83%BD%E5%A4%A0%E4%BD%B5%E5%AD%98"><span class="nav-number">4.</span> <span class="nav-text">後記：期盼更好與共好能夠併存</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">mtmatt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      <!--google_adsense-->
+      
+        <div class="links-of-blogroll-title">
+          <i class="fab fa-google"></i> Google AdSense
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4821894216366631"
+              data-ad-slot="8006458540"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      
+      <!--/google_adsense-->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mtmatt</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">總字數：</span>
+    <span title="總字數">189k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">5:44</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
