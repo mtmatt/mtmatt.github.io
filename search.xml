@@ -137,61 +137,6 @@
       </tags>
   </entry>
   <entry>
-    <title>我在 Windows 11 上面設定嘸蝦米的筆記</title>
-    <url>/boshiamy/about-my-settings-of-boshiamy-on-windows-11/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇貼文，主要是紀錄我在 Windows 11 上面做一些與嘸蝦米輸入法相關設定的流程，我將設定大致分為 2 個方向：</p>
-<ol>
-<li>設定嘸蝦米為預設且唯一的中文輸入法</li>
-<li>保留其他中文輸入法，設定嘸蝦米為「預設輸入法」</li>
-</ol>
-<p>※本篇貼文內，使用的嘸蝦米版本是<strong>「嘸蝦米 J」</strong>。(2022 年 9 月 20 日更新) <a href="https://www.flickr.com/photos/194265827@N08/51873296441/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"><img src="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"></a></p>
-<hr>
-<h3 id="設定嘸蝦米為預設且唯一的中文輸入法"><a href="#設定嘸蝦米為預設且唯一的中文輸入法" class="headerlink" title="設定嘸蝦米為預設且唯一的中文輸入法"></a>設定嘸蝦米為預設且唯一的中文輸入法</h3><ol>
-<li><p>(↓)【開始】→【設定】，跳出以下畫面。 <a href="https://www.flickr.com/photos/194265827@N08/51873614369/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep2"><img src="https://live.staticflickr.com/65535/51873614369_079007a47b_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep2"></a></p>
-</li>
-<li><p>(↓)點左側的【時間與語言】，再點該項目下的【輸入】。 <a href="https://www.flickr.com/photos/194265827@N08/51873614359/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep3"><img src="https://live.staticflickr.com/65535/51873614359_5f30af7d6e_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep3"></a></p>
-</li>
-<li><p>(↓)接著，再點【輸入】項下的【語言與地區】，並且進到【語言與地區】的設定細項。 <a href="https://www.flickr.com/photos/194265827@N08/51873614339/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep4"><img src="https://live.staticflickr.com/65535/51873614339_160eed938a_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep4"></a></p>
-<p>  <a href="https://www.flickr.com/photos/194265827@N08/51873936500/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep5"><img src="https://live.staticflickr.com/65535/51873936500_3be127050e_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep5"></a></p>
-</li>
-<li><p>(↓)點【中文(繁體，台灣)】右邊的【．．．】(就是【點點點】)，跳出並點擊【…語言選項】。 <a href="https://www.flickr.com/photos/194265827@N08/51873370118/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep6"><img src="https://live.staticflickr.com/65535/51873370118_3db80f7015_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep6"></a></p>
-</li>
-<li><p>(↓)或許，大家有注意到，安裝完嘸蝦米輸入法之後，並不會出現在【已安裝的鍵盤】裡。 <a href="https://www.flickr.com/photos/194265827@N08/51873370078/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep8"><img src="https://live.staticflickr.com/65535/51873370078_150c6b6035_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep8"></a></p>
-</li>
-<li><p>(↓)沒有關係，點【新增鍵盤】，把【嘸蝦米輸入法】加進來。 <a href="https://www.flickr.com/photos/194265827@N08/51873614274/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep7"><img src="https://live.staticflickr.com/65535/51873614274_a5d4671742_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep7"></a></p>
-</li>
-<li><p>(↓)加完嘸蝦米輸入法，因為我只留嘸蝦米輸入法，所以，就移除掉【微軟注音輸入法】。 <a href="https://www.flickr.com/photos/194265827@N08/51873296271/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep10"><img src="https://live.staticflickr.com/65535/51873296271_0f8871114c_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep10"></a></p>
-</li>
-<li><p>(↓)回到桌面上的工作列右下角，找到【英】或【中】，點右鍵跳出嘸蝦米輸入法的設定選單，然後點選單上的【設定】。 <a href="https://www.flickr.com/photos/194265827@N08/51873936405/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep11"><img src="https://live.staticflickr.com/65535/51873936405_a283750dfc_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep11"></a></p>
-</li>
-<li><p>(↓)這一部電腦，我想要一進系統以【英數模式】為預設輸入模式，並且不要【繼承系統輸入法狀態】，也不要【使用 Shift 切換「中文&#x2F;英文」模式】。 <a href="https://www.flickr.com/photos/194265827@N08/51873296221/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep12"><img src="https://live.staticflickr.com/65535/51873296221_6ab0a4e5e9_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep12"></a></p>
-</li>
-</ol>
-<hr>
-<h3 id="保留其他中文輸入法，設定嘸蝦米為「預設輸入法」"><a href="#保留其他中文輸入法，設定嘸蝦米為「預設輸入法」" class="headerlink" title="保留其他中文輸入法，設定嘸蝦米為「預設輸入法」"></a>保留其他中文輸入法，設定嘸蝦米為「預設輸入法」</h3><ol>
-<li><p>(↓)在 Windows 11 上面，排在「第一個」的輸入法並不是所謂的「預設輸入法」，所以，下圖可見嘸蝦米輸入法好像在排序上是「第一個」，卻不會因此成為「預設輸入法」。 <a href="https://www.flickr.com/photos/194265827@N08/51874001410/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep13"><img src="https://live.staticflickr.com/65535/51874001410_2c93914604_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep13"></a></p>
-</li>
-<li><p>以微軟注音輸入法與嘸蝦米輸入法共存為例，原則上有下列 2 種做法。<br>(↓)其一，【設定】→【時間與語言】→【進階鍵盤設定】→【覆寫預設輸入法】(也可以在【設定】介面裡的【尋找設定】，直接用關鍵字把設定找出來)，調整為嘸蝦米輸入法。 <a href="https://www.flickr.com/photos/194265827@N08/51884166250/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep15"><img src="https://live.staticflickr.com/65535/51884166250_191d3a28c3_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep15"></a><br>(↓)其二，進入【微軟注音輸入法】的設定，把【預設輸入模式】改為【英數字元】，這樣的做法是讓登入系統時以「英數字元」為預設值，需要切換到嘸蝦米輸入法時，就用 Win+Space 做切換。 <a href="https://www.flickr.com/photos/194265827@N08/51873361821/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep14"><img src="https://live.staticflickr.com/65535/51873361821_2642f921f1_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep14"></a></p>
-</li>
-</ol>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>與 <a href="https://mtmatt.page/windows/making-boshiamy-be-the-default-chinese-input-method-on-windows-10/">Windows 10 預設為嘸蝦米輸入法之設定方式</a> 相比，就可以發現嘸蝦米輸入法本身的設定是一樣的，不同的是【設定】介面的部分， Windows 11 與 Windows 10 有所不同。</li>
-<li>題外話…，隨著不少新的電腦已搭載 Windows 11 出貨，我相信目前的 Windows 11 已經有一定的穩定度，而我此次更新到 Windows 11 後，會持續觀注系統補丁，而且不一定每一個補丁釋出，都立馬跟著更新，主要是希望，這一回升級到 Windows 11 至少要能夠穩穩用個 1 年。</li>
-<li><a href="https://mtmatt.page/boshiamy/about-my-settings-of-boshiamy-on-windows-10/">我在 Windows 10 上面設定嘸蝦米的筆記</a></li>
-<li><a href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>boshiamy</tag>
-        <tag>windows</tag>
-        <tag>windows10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>關於「嘸蝦米輸入法PRO」(Android 版) 的設定</title>
     <url>/boshiamy/about-the-setting-of-boshiamy-ime-professional-android/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>延續 <a href="https://mtmatt.one/boshiamy/my-review-of-using-boshiamy-on-the-smartphone/">智慧型手機上的嘸蝦米使用心得</a> 這一篇，本篇貼文主要是以截圖搭配文字的方式，紀錄 <a href="https://play.google.com/store/apps/details?id=com.boshiamy.boshiamyime.professional">嘸蝦米輸入法PRO (Android 版)</a> 的設定介面等。</p>
@@ -293,6 +238,95 @@
       </tags>
   </entry>
   <entry>
+    <title>我在 Windows 11 上面設定嘸蝦米的筆記</title>
+    <url>/boshiamy/about-my-settings-of-boshiamy-on-windows-11/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇貼文，主要是紀錄我在 Windows 11 上面做一些與嘸蝦米輸入法相關設定的流程，我將設定大致分為 2 個方向：</p>
+<ol>
+<li>設定嘸蝦米為預設且唯一的中文輸入法</li>
+<li>保留其他中文輸入法，設定嘸蝦米為「預設輸入法」</li>
+</ol>
+<p>※本篇貼文內，使用的嘸蝦米版本是<strong>「嘸蝦米 J」</strong>。(2022 年 9 月 20 日更新) <a href="https://www.flickr.com/photos/194265827@N08/51873296441/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"><img src="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"></a></p>
+<hr>
+<h3 id="設定嘸蝦米為預設且唯一的中文輸入法"><a href="#設定嘸蝦米為預設且唯一的中文輸入法" class="headerlink" title="設定嘸蝦米為預設且唯一的中文輸入法"></a>設定嘸蝦米為預設且唯一的中文輸入法</h3><ol>
+<li><p>(↓)【開始】→【設定】，跳出以下畫面。 <a href="https://www.flickr.com/photos/194265827@N08/51873614369/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep2"><img src="https://live.staticflickr.com/65535/51873614369_079007a47b_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep2"></a></p>
+</li>
+<li><p>(↓)點左側的【時間與語言】，再點該項目下的【輸入】。 <a href="https://www.flickr.com/photos/194265827@N08/51873614359/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep3"><img src="https://live.staticflickr.com/65535/51873614359_5f30af7d6e_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep3"></a></p>
+</li>
+<li><p>(↓)接著，再點【輸入】項下的【語言與地區】，並且進到【語言與地區】的設定細項。 <a href="https://www.flickr.com/photos/194265827@N08/51873614339/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep4"><img src="https://live.staticflickr.com/65535/51873614339_160eed938a_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep4"></a></p>
+<p>  <a href="https://www.flickr.com/photos/194265827@N08/51873936500/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep5"><img src="https://live.staticflickr.com/65535/51873936500_3be127050e_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep5"></a></p>
+</li>
+<li><p>(↓)點【中文(繁體，台灣)】右邊的【．．．】(就是【點點點】)，跳出並點擊【…語言選項】。 <a href="https://www.flickr.com/photos/194265827@N08/51873370118/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep6"><img src="https://live.staticflickr.com/65535/51873370118_3db80f7015_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep6"></a></p>
+</li>
+<li><p>(↓)或許，大家有注意到，安裝完嘸蝦米輸入法之後，並不會出現在【已安裝的鍵盤】裡。 <a href="https://www.flickr.com/photos/194265827@N08/51873370078/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep8"><img src="https://live.staticflickr.com/65535/51873370078_150c6b6035_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep8"></a></p>
+</li>
+<li><p>(↓)沒有關係，點【新增鍵盤】，把【嘸蝦米輸入法】加進來。 <a href="https://www.flickr.com/photos/194265827@N08/51873614274/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep7"><img src="https://live.staticflickr.com/65535/51873614274_a5d4671742_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep7"></a></p>
+</li>
+<li><p>(↓)加完嘸蝦米輸入法，因為我只留嘸蝦米輸入法，所以，就移除掉【微軟注音輸入法】。 <a href="https://www.flickr.com/photos/194265827@N08/51873296271/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep10"><img src="https://live.staticflickr.com/65535/51873296271_0f8871114c_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep10"></a></p>
+</li>
+<li><p>(↓)回到桌面上的工作列右下角，找到【英】或【中】，點右鍵跳出嘸蝦米輸入法的設定選單，然後點選單上的【設定】。 <a href="https://www.flickr.com/photos/194265827@N08/51873936405/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep11"><img src="https://live.staticflickr.com/65535/51873936405_a283750dfc_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep11"></a></p>
+</li>
+<li><p>(↓)這一部電腦，我想要一進系統以【英數模式】為預設輸入模式，並且不要【繼承系統輸入法狀態】，也不要【使用 Shift 切換「中文&#x2F;英文」模式】。 <a href="https://www.flickr.com/photos/194265827@N08/51873296221/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep12"><img src="https://live.staticflickr.com/65535/51873296221_6ab0a4e5e9_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep12"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="保留其他中文輸入法，設定嘸蝦米為「預設輸入法」"><a href="#保留其他中文輸入法，設定嘸蝦米為「預設輸入法」" class="headerlink" title="保留其他中文輸入法，設定嘸蝦米為「預設輸入法」"></a>保留其他中文輸入法，設定嘸蝦米為「預設輸入法」</h3><ol>
+<li><p>(↓)在 Windows 11 上面，排在「第一個」的輸入法並不是所謂的「預設輸入法」，所以，下圖可見嘸蝦米輸入法好像在排序上是「第一個」，卻不會因此成為「預設輸入法」。 <a href="https://www.flickr.com/photos/194265827@N08/51874001410/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep13"><img src="https://live.staticflickr.com/65535/51874001410_2c93914604_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep13"></a></p>
+</li>
+<li><p>以微軟注音輸入法與嘸蝦米輸入法共存為例，原則上有下列 2 種做法。<br>(↓)其一，【設定】→【時間與語言】→【進階鍵盤設定】→【覆寫預設輸入法】(也可以在【設定】介面裡的【尋找設定】，直接用關鍵字把設定找出來)，調整為嘸蝦米輸入法。 <a href="https://www.flickr.com/photos/194265827@N08/51884166250/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep15"><img src="https://live.staticflickr.com/65535/51884166250_191d3a28c3_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep15"></a><br>(↓)其二，進入【微軟注音輸入法】的設定，把【預設輸入模式】改為【英數字元】，這樣的做法是讓登入系統時以「英數字元」為預設值，需要切換到嘸蝦米輸入法時，就用 Win+Space 做切換。 <a href="https://www.flickr.com/photos/194265827@N08/51873361821/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep14"><img src="https://live.staticflickr.com/65535/51873361821_2642f921f1_b.jpg" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep14"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>與 <a href="https://mtmatt.page/windows/making-boshiamy-be-the-default-chinese-input-method-on-windows-10/">Windows 10 預設為嘸蝦米輸入法之設定方式</a> 相比，就可以發現嘸蝦米輸入法本身的設定是一樣的，不同的是【設定】介面的部分， Windows 11 與 Windows 10 有所不同。</li>
+<li>題外話…，隨著不少新的電腦已搭載 Windows 11 出貨，我相信目前的 Windows 11 已經有一定的穩定度，而我此次更新到 Windows 11 後，會持續觀注系統補丁，而且不一定每一個補丁釋出，都立馬跟著更新，主要是希望，這一回升級到 Windows 11 至少要能夠穩穩用個 1 年。</li>
+<li><a href="https://mtmatt.page/boshiamy/about-my-settings-of-boshiamy-on-windows-10/">我在 Windows 10 上面設定嘸蝦米的筆記</a></li>
+<li><a href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>boshiamy</tag>
+        <tag>windows</tag>
+        <tag>windows10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>升級與使用 Windows 11 與嘸蝦米幾個小時後</title>
+    <url>/boshiamy/after-upgrading-and-using-windows-11-and-boshiamy-for-several-hours/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ol>
+<li><p>由於我不想等待微軟推送升級通知，所以，我是自己去官網把 Windows 11 升級所需要的，通通下載下來。最後，我決定用 Windows11InstallationAssistant.exe 完成家裡其中一部電腦的系統升級。 <img src="https://live.staticflickr.com/65535/51564826661_437ccc7f6e_o.png"></p>
+</li>
+<li><p>系統從 Windows 10 升級至 Windows 11 後，原本的嘸蝦米 J 是可以直接繼續延用的。 <img src="https://live.staticflickr.com/65535/51565089558_85bdc75159_o.jpg"></p>
+</li>
+</ol>
+<hr>
+<h3 id="不一樣的設定選單與介面設計"><a href="#不一樣的設定選單與介面設計" class="headerlink" title="不一樣的設定選單與介面設計"></a>不一樣的設定選單與介面設計</h3><p>對比一下 Windows 10 上面的介面：<a href="https://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-10/">我在 Windows 10 上面設定嘸蝦米的筆記</a>，不難發現 Windows 11 上，整個設定選單與介面(下圖)，已經重新設計過，我個人在使用上是覺得 Windows 11 的設計比較直覺，Windows 10 給我的印象是的設定路徑並不容易找，每每都像是在尋寶一樣，倒不如直接下指令處理還比較快，而且相較於更早之前的 Windows 版本，我認為 Windows 10 真的比較不直覺。 <img src="https://live.staticflickr.com/65535/51565085143_902a680784_o.jpg"> <img src="https://live.staticflickr.com/65535/51565085133_ae3573ef7c_o.jpg"></p>
+<hr>
+<h3 id="應該是跑掉的設定"><a href="#應該是跑掉的設定" class="headerlink" title="應該是跑掉的設定"></a>應該是跑掉的設定</h3><ol>
+<li>要進入嘸蝦米本身的設定，方法並沒有改變。 <img src="https://live.staticflickr.com/65535/51564898896_3e97729eb2_o.jpg"></li>
+<li>不過，我原本在 Windows 10 上面做好的設定：取消勾選「繼承系統輸入法狀態（忽略上方預設狀態設定）」，升級後被自動勾回來。 <img src="https://live.staticflickr.com/65535/51565144298_99e604688b_o.png"></li>
+<li>其餘設定，我就不多言，可以參考：<a href="https://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-11/" title="我在 Windows 10 上面設定嘸蝦米的筆記">我在 Windows 11 上面設定嘸蝦米的筆記</a>。</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>隨著迭代更新至今，升級 Windows 已經不會太困難，也不容易遇到難以處理的茶包 (Trouble)，家裡目前也只有 2 部電腦可以升級到 Windows 11，而我是拿手上非工作用的電腦做升級，先感受一下新系統帶來的不同氣象。</li>
+<li>我目前感受時間並不長久，最多的時間是拿來寫部落格，所以，上述的設定選單與介面設計部分，僅針對語言與輸入法相關而言，其餘部分，我還不確定使用起來的感受如何。</li>
+</ol>
+<hr>
+<h3 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h3><p>本來是擺在 <a href="https://mtmatt.one/windows/after-upgrading-and-using-windows-11-and-boshiamy-for-several-hours/">升級與使用 Windows 11 與嘸蝦米幾個小時後</a> 這一篇的前言之前，由於陸陸續續已累積到 12 篇之多，放在本篇的前言之前，會佔掉不少版本。因此，我把這些後續貼文的連結，另外開一篇 <a href="https://mtmatt.one/windows/list-of-windows-update-for-windows-11/">Windows 11 的更新列表</a> 做紀錄。</p>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>boshiamy</tag>
+        <tag>windows</tag>
+        <tag>windows11</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>來玩 ArchLabs Linux 2023.01.20</title>
     <url>/linux/archlabs-linux-2023-01-20/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>ArchLabs 是一支 Arch Linux 的衍生發行版(從字面上就滿容易辨識的)，目前在 DistroWatch 上的「網頁參觀排名」是第 80 名。 <a href="https://www.flickr.com/photos/194265827@N08/52648106429/in/album-72177720305511178/" title="archlabs2023.01.20onVirtualBoxEp01"><img src="https://live.staticflickr.com/65535/52648106429_4efa98d9c5_c.jpg" alt="archlabs2023.01.20onVirtualBoxEp01"></a></p>
@@ -330,29 +364,6 @@
         <tag>archlinux</tag>
         <tag>linux</tag>
         <tag>archlabs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Linux Apps] auto-cpufreq</title>
-    <url>/linux/auto-cpufreq/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>auto-cpufreq，一支在 Terminal 就可以檢視 CPU 溫度的 App。<br><img src="https://live.staticflickr.com/65535/53651019323_ff5f4e0d6e_o.png"></p>
-<hr>
-<h3 id="安裝-auto-cpufreq"><a href="#安裝-auto-cpufreq" class="headerlink" title="安裝 auto-cpufreq"></a>安裝 auto-cpufreq</h3><p>這次，我使用的 Linux Distro 是 MX-Linux MX-23.2_x64，安裝步驟參考官網大致如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/AdnanHodzic/auto-cpufreq.git</span><br><span class="line">cd auto-cpufreq &amp;&amp; sudo ./auto-cpufreq-installer</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="執行-auto-cpufreq"><a href="#執行-auto-cpufreq" class="headerlink" title="執行 auto-cpufreq"></a>執行 auto-cpufreq</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo auto-cpufreq --monitor</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h3><p><a href="https://github.com/AdnanHodzic/auto-cpufreq">AdnanHodzic&#x2F;auto-cpufreq: Automatic CPU speed &amp; power optimizer for Linux</a></p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>linuxapps</tag>
-        <tag>mxlinux</tag>
       </tags>
   </entry>
   <entry>
@@ -408,40 +419,6 @@
         <tag>android</tag>
         <tag>boshiamy</tag>
         <tag>ios</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>升級與使用 Windows 11 與嘸蝦米幾個小時後</title>
-    <url>/boshiamy/after-upgrading-and-using-windows-11-and-boshiamy-for-several-hours/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ol>
-<li><p>由於我不想等待微軟推送升級通知，所以，我是自己去官網把 Windows 11 升級所需要的，通通下載下來。最後，我決定用 Windows11InstallationAssistant.exe 完成家裡其中一部電腦的系統升級。 <img src="https://live.staticflickr.com/65535/51564826661_437ccc7f6e_o.png"></p>
-</li>
-<li><p>系統從 Windows 10 升級至 Windows 11 後，原本的嘸蝦米 J 是可以直接繼續延用的。 <img src="https://live.staticflickr.com/65535/51565089558_85bdc75159_o.jpg"></p>
-</li>
-</ol>
-<hr>
-<h3 id="不一樣的設定選單與介面設計"><a href="#不一樣的設定選單與介面設計" class="headerlink" title="不一樣的設定選單與介面設計"></a>不一樣的設定選單與介面設計</h3><p>對比一下 Windows 10 上面的介面：<a href="https://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-10/">我在 Windows 10 上面設定嘸蝦米的筆記</a>，不難發現 Windows 11 上，整個設定選單與介面(下圖)，已經重新設計過，我個人在使用上是覺得 Windows 11 的設計比較直覺，Windows 10 給我的印象是的設定路徑並不容易找，每每都像是在尋寶一樣，倒不如直接下指令處理還比較快，而且相較於更早之前的 Windows 版本，我認為 Windows 10 真的比較不直覺。 <img src="https://live.staticflickr.com/65535/51565085143_902a680784_o.jpg"> <img src="https://live.staticflickr.com/65535/51565085133_ae3573ef7c_o.jpg"></p>
-<hr>
-<h3 id="應該是跑掉的設定"><a href="#應該是跑掉的設定" class="headerlink" title="應該是跑掉的設定"></a>應該是跑掉的設定</h3><ol>
-<li>要進入嘸蝦米本身的設定，方法並沒有改變。 <img src="https://live.staticflickr.com/65535/51564898896_3e97729eb2_o.jpg"></li>
-<li>不過，我原本在 Windows 10 上面做好的設定：取消勾選「繼承系統輸入法狀態（忽略上方預設狀態設定）」，升級後被自動勾回來。 <img src="https://live.staticflickr.com/65535/51565144298_99e604688b_o.png"></li>
-<li>其餘設定，我就不多言，可以參考：<a href="https://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-11/" title="我在 Windows 10 上面設定嘸蝦米的筆記">我在 Windows 11 上面設定嘸蝦米的筆記</a>。</li>
-</ol>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>隨著迭代更新至今，升級 Windows 已經不會太困難，也不容易遇到難以處理的茶包 (Trouble)，家裡目前也只有 2 部電腦可以升級到 Windows 11，而我是拿手上非工作用的電腦做升級，先感受一下新系統帶來的不同氣象。</li>
-<li>我目前感受時間並不長久，最多的時間是拿來寫部落格，所以，上述的設定選單與介面設計部分，僅針對語言與輸入法相關而言，其餘部分，我還不確定使用起來的感受如何。</li>
-</ol>
-<hr>
-<h3 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h3><p>本來是擺在 <a href="https://mtmatt.one/windows/after-upgrading-and-using-windows-11-and-boshiamy-for-several-hours/">升級與使用 Windows 11 與嘸蝦米幾個小時後</a> 這一篇的前言之前，由於陸陸續續已累積到 12 篇之多，放在本篇的前言之前，會佔掉不少版本。因此，我把這些後續貼文的連結，另外開一篇 <a href="https://mtmatt.one/windows/list-of-windows-update-for-windows-11/">Windows 11 的更新列表</a> 做紀錄。</p>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>boshiamy</tag>
-        <tag>windows</tag>
-        <tag>windows11</tag>
       </tags>
   </entry>
   <entry>
@@ -541,6 +518,29 @@
       </tags>
   </entry>
   <entry>
+    <title>[Linux Apps] auto-cpufreq</title>
+    <url>/linux/auto-cpufreq/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>auto-cpufreq，一支在 Terminal 就可以檢視 CPU 溫度的 App。<br><img src="https://live.staticflickr.com/65535/53651019323_ff5f4e0d6e_o.png"></p>
+<hr>
+<h3 id="安裝-auto-cpufreq"><a href="#安裝-auto-cpufreq" class="headerlink" title="安裝 auto-cpufreq"></a>安裝 auto-cpufreq</h3><p>這次，我使用的 Linux Distro 是 MX-Linux MX-23.2_x64，安裝步驟參考官網大致如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/AdnanHodzic/auto-cpufreq.git</span><br><span class="line">cd auto-cpufreq &amp;&amp; sudo ./auto-cpufreq-installer</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="執行-auto-cpufreq"><a href="#執行-auto-cpufreq" class="headerlink" title="執行 auto-cpufreq"></a>執行 auto-cpufreq</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo auto-cpufreq --monitor</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h3><p><a href="https://github.com/AdnanHodzic/auto-cpufreq">AdnanHodzic&#x2F;auto-cpufreq: Automatic CPU speed &amp; power optimizer for Linux</a></p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linuxapps</tag>
+        <tag>mxlinux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在 Lubuntu 18.04 上安裝嘸蝦米輸入法</title>
     <url>/boshiamy/boshiamy-chinese-input-method-on-lubuntu-18-04/</url>
     <content><![CDATA[<ol>
@@ -559,6 +559,36 @@
         <tag>linux</tag>
         <tag>ibus</tag>
         <tag>lubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Linux Apps] Caprine</title>
+    <url>/linux/caprine/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Caprine 算是一個 Facebook Messenger 非官方 App 的替代方案。<br><img src="https://live.staticflickr.com/65535/53652450803_4d7eaa87ee_o.png"></p>
+<hr>
+<h3 id="安裝過程"><a href="#安裝過程" class="headerlink" title="安裝過程"></a>安裝過程</h3><p>這次，我使用的 Linux Distro 是 MX-Linux MX-23.2_x64，以 GUI 介面：「MX 軟體安裝工具」安裝。</p>
+<ol>
+<li><p>開啟「MX 軟體安裝工具」後，點到 Flatpaks 這個頁籤，如果沒有安裝，就會跳出以下訊息，點按鈕[是]就可以進行安裝。<br><img src="https://live.staticflickr.com/65535/53651888017_a268d00429_o.png"><br><img src="https://live.staticflickr.com/65535/53653139825_8a3e87fb06_o.png"></p>
+</li>
+<li><p>安裝 Flatpaks 的最後一個步驟，對話框跳出提醒，若我沒有解讀錯誤，意思應該是透過 Flatpaks 安裝的程式，需要重新登入，才能夠在開始功能選單(menu)裡看到。<br><img src="https://live.staticflickr.com/65535/53652761181_3439cddafa_o.png"></p>
+</li>
+<li><p>搜尋關鍵字：「caprine」。找出 Caprine 後，勾選核取方塊，並且點下[安裝]按鈕。<br><img src="https://live.staticflickr.com/65535/53652450753_2ed6a279c7_o.png"></p>
+</li>
+<li><p>讓安裝程序跑完。<br><img src="https://live.staticflickr.com/65535/53652231481_87f4f7650e_o.png"></p>
+</li>
+<li><p>重新登入系統，就可以從開始功能表的應用程式裡面找到 Caprine。</p>
+</li>
+</ol>
+<hr>
+<h3 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h3><p><a href="https://github.com/sindresorhus/caprine">Asindresorhus&#x2F;caprine: Elegant Facebook Messenger desktop app</a></p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linuxapps</tag>
+        <tag>mxlinux</tag>
       </tags>
   </entry>
   <entry>
@@ -650,51 +680,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[Linux Apps] Caprine</title>
-    <url>/linux/caprine/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Caprine 算是一個 Facebook Messenger 非官方 App 的替代方案。<br><img src="https://live.staticflickr.com/65535/53652450803_4d7eaa87ee_o.png"></p>
-<hr>
-<h3 id="安裝過程"><a href="#安裝過程" class="headerlink" title="安裝過程"></a>安裝過程</h3><p>這次，我使用的 Linux Distro 是 MX-Linux MX-23.2_x64，以 GUI 介面：「MX 軟體安裝工具」安裝。</p>
-<ol>
-<li><p>開啟「MX 軟體安裝工具」後，點到 Flatpaks 這個頁籤，如果沒有安裝，就會跳出以下訊息，點按鈕[是]就可以進行安裝。<br><img src="https://live.staticflickr.com/65535/53651888017_a268d00429_o.png"><br><img src="https://live.staticflickr.com/65535/53653139825_8a3e87fb06_o.png"></p>
-</li>
-<li><p>安裝 Flatpaks 的最後一個步驟，對話框跳出提醒，若我沒有解讀錯誤，意思應該是透過 Flatpaks 安裝的程式，需要重新登入，才能夠在開始功能選單(menu)裡看到。<br><img src="https://live.staticflickr.com/65535/53652761181_3439cddafa_o.png"></p>
-</li>
-<li><p>搜尋關鍵字：「caprine」。找出 Caprine 後，勾選核取方塊，並且點下[安裝]按鈕。<br><img src="https://live.staticflickr.com/65535/53652450753_2ed6a279c7_o.png"></p>
-</li>
-<li><p>讓安裝程序跑完。<br><img src="https://live.staticflickr.com/65535/53652231481_87f4f7650e_o.png"></p>
-</li>
-<li><p>重新登入系統，就可以從開始功能表的應用程式裡面找到 Caprine。</p>
-</li>
-</ol>
-<hr>
-<h3 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h3><p><a href="https://github.com/sindresorhus/caprine">Asindresorhus&#x2F;caprine: Elegant Facebook Messenger desktop app</a></p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>linuxapps</tag>
-        <tag>mxlinux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>轉出 SCIM 專用的嘸蝦米表格檔</title>
-    <url>/boshiamy/converting-the-table-of-boshiamy-for-scim/</url>
-    <content><![CDATA[<p>我在 ubuntu 7.10 轉換原版嘸蝦米 Table 檔的步驟，經驗上，轉換的過程大致上應該不會有什麼問題，我並沒有下 scim-restart 這道指令，而是點選右上角的 SCIM 圖示，將 SCIM 重新啟動。  </p>
-<p>假設沒有看到紅色的嘸字，走一趟 SCIM 的全域設定，確認嘸蝦米有沒有勾選是必要的，再不然就使出系統登出登入大絕招，應該就可以招到病除。</p>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>boshiamy</tag>
-        <tag>linux</tag>
-        <tag>scim</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Debian 12 與嘸蝦米</title>
     <url>/boshiamy/debian-12-and-boshiamy/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Fcitx5 是 Debian 12 預先安裝好的中文輸入法，目前，無法在 Debian 12 上直接透過 <code>apt install fcitx5-table-extra fcitx5-table-other</code> 把其他的中文輸入法安裝進來。</p>
@@ -733,6 +718,21 @@
         <tag>fcitx5</tag>
         <tag>fcitx5-table-extra</tag>
         <tag>debian</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>轉出 SCIM 專用的嘸蝦米表格檔</title>
+    <url>/boshiamy/converting-the-table-of-boshiamy-for-scim/</url>
+    <content><![CDATA[<p>我在 ubuntu 7.10 轉換原版嘸蝦米 Table 檔的步驟，經驗上，轉換的過程大致上應該不會有什麼問題，我並沒有下 scim-restart 這道指令，而是點選右上角的 SCIM 圖示，將 SCIM 重新啟動。  </p>
+<p>假設沒有看到紅色的嘸字，走一趟 SCIM 的全域設定，確認嘸蝦米有沒有勾選是必要的，再不然就使出系統登出登入大絕招，應該就可以招到病除。</p>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>boshiamy</tag>
+        <tag>linux</tag>
+        <tag>scim</tag>
       </tags>
   </entry>
   <entry>
@@ -832,6 +832,39 @@
       </tags>
   </entry>
   <entry>
+    <title>在 Windows 10 上透過 CMD 啟用 AHCI</title>
+    <url>/windows/enable-ahci-on-windows-10-via-cmd/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>啟用 AHCI 要做什麼？</p>
+<p>我的話，主要是為了在機器上安裝 Linux + Windows 10 Pro 雙系統。</p>
+<h3 id="啟用-AHCI"><a href="#啟用-AHCI" class="headerlink" title="啟用 AHCI"></a>啟用 AHCI</h3><p>數算一下，在 Windows 10 啟用 AHCI，我知道的方法有 3 種，分別是透過【「裝置管理員」安裝】、【「Regedit 編輯器」修改】以及我個人比較偏好的【「CMD 指令 + 安全模式」自動安裝】。</p>
+<p>【「CMD 指令 + 安全模式」自動安裝】的流程如下：</p>
+<ol>
+<li><p>【以系統管理員身份執行】CMD。 <a href="https://www.flickr.com/photos/194265827@N08/51904424023/in/dateposted-public/" title="enableAHCIonWindows10viaCMDEp1"><img src="https://live.staticflickr.com/65535/51904424023_f5cc1d0203_o.png" alt="enableAHCIonWindows10viaCMDEp1"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>將 <code>bcdedit /set &#123;current&#125; safeboot minimal</code> 這串指令打進去(記得 Enter)。</p>
+</li>
+<li><p>重開機，進入 BIOS 設定，找到並啟用 AHCI 設定。各家、各廠牌或各版本等等主機板的設定位置，可能會不太一樣，以今天我設定的機器而言，是在 Advanced\SATA Configuration 這個地方。 <a href="https://www.flickr.com/photos/194265827@N08/51904424008/in/dateposted-public/" title="enableAHCIonWindows10viaCMDEp2"><img src="https://live.staticflickr.com/65535/51904424008_9ff4e64708_o.jpg" alt="enableAHCIonWindows10viaCMDEp2"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</li>
+<li><p>跳出 BIOS 設定後，原則上會進入「安全模式」，在「安全模式」下，將 <code>bcdedit /deletevalue &#123;current&#125; safeboot</code> 這串指令打進去(一樣，要記得 Enter)。</p>
+</li>
+<li><p>再次重開機，而且重開機之後，原則上就會支援 AHCI。</p>
+</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>AHCI 是什麼？</p>
+<p>有興趣的人，可以去 <a href="https://zh.wikipedia.org/zh-tw/AHCI">AHCI - 維基百科，自由的百科全書</a> 科普一下。</p>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>windows10</tag>
+        <tag>linux</tag>
+        <tag>bios</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>來玩 elementary OS 7.1</title>
     <url>/linux/elementary-os-7-1/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>elementary OS 7.1 (Horus) 釋出後幾天，我決定也來安裝看看。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53241162717/in/dateposted-public/" title="elementaryOS7.1andBoshiamyEp (1)"><img src="https://live.staticflickr.com/65535/53241162717_bc54022a64_c.jpg" width="800" height="500" alt="elementaryOS7.1andBoshiamyEp (1)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
@@ -863,39 +896,6 @@
         <tag>fcitx</tag>
         <tag>virtualbox</tag>
         <tag>fcitx-table-boshiamy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在 Windows 10 上透過 CMD 啟用 AHCI</title>
-    <url>/windows/enable-ahci-on-windows-10-via-cmd/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>啟用 AHCI 要做什麼？</p>
-<p>我的話，主要是為了在機器上安裝 Linux + Windows 10 Pro 雙系統。</p>
-<h3 id="啟用-AHCI"><a href="#啟用-AHCI" class="headerlink" title="啟用 AHCI"></a>啟用 AHCI</h3><p>數算一下，在 Windows 10 啟用 AHCI，我知道的方法有 3 種，分別是透過【「裝置管理員」安裝】、【「Regedit 編輯器」修改】以及我個人比較偏好的【「CMD 指令 + 安全模式」自動安裝】。</p>
-<p>【「CMD 指令 + 安全模式」自動安裝】的流程如下：</p>
-<ol>
-<li><p>【以系統管理員身份執行】CMD。 <a href="https://www.flickr.com/photos/194265827@N08/51904424023/in/dateposted-public/" title="enableAHCIonWindows10viaCMDEp1"><img src="https://live.staticflickr.com/65535/51904424023_f5cc1d0203_o.png" alt="enableAHCIonWindows10viaCMDEp1"></a></p>
- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-</li>
-<li><p>將 <code>bcdedit /set &#123;current&#125; safeboot minimal</code> 這串指令打進去(記得 Enter)。</p>
-</li>
-<li><p>重開機，進入 BIOS 設定，找到並啟用 AHCI 設定。各家、各廠牌或各版本等等主機板的設定位置，可能會不太一樣，以今天我設定的機器而言，是在 Advanced\SATA Configuration 這個地方。 <a href="https://www.flickr.com/photos/194265827@N08/51904424008/in/dateposted-public/" title="enableAHCIonWindows10viaCMDEp2"><img src="https://live.staticflickr.com/65535/51904424008_9ff4e64708_o.jpg" alt="enableAHCIonWindows10viaCMDEp2"></a></p>
- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-</li>
-<li><p>跳出 BIOS 設定後，原則上會進入「安全模式」，在「安全模式」下，將 <code>bcdedit /deletevalue &#123;current&#125; safeboot</code> 這串指令打進去(一樣，要記得 Enter)。</p>
-</li>
-<li><p>再次重開機，而且重開機之後，原則上就會支援 AHCI。</p>
-</li>
-</ol>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>AHCI 是什麼？</p>
-<p>有興趣的人，可以去 <a href="https://zh.wikipedia.org/zh-tw/AHCI">AHCI - 維基百科，自由的百科全書</a> 科普一下。</p>
-]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows10</tag>
-        <tag>linux</tag>
-        <tag>bios</tag>
       </tags>
   </entry>
   <entry>
@@ -1057,6 +1057,38 @@
       </tags>
   </entry>
   <entry>
+    <title>在 ArchLabs Linux 2023.01.20 上用 Fcitx5 搭配新酷音與嘸蝦米</title>
+    <url>/boshiamy/fcitx5-with-boshiamy-and-chewing-on-archlabs-linux-2023-01-20/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近 Arch Linux 的衍生發行版好不熱鬧，今天再來一篇，紀錄新酷音與嘸蝦米中文輸入法在另外一支衍生發行版：ArchLabs 上的設定過程。 <a href="https://www.flickr.com/photos/194265827@N08/52648106184/in/dateposted-public/" title="archlabs2023.01.20onVirtualBoxEp34"><img src="https://live.staticflickr.com/65535/52648106184_6755041dda_c.jpg" alt="archlabs2023.01.20onVirtualBoxEp34"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<hr>
+<h3 id="安裝流程"><a href="#安裝流程" class="headerlink" title="安裝流程"></a>安裝流程</h3><ol>
+<li><p>第一道指令，安裝 Fcitx5 相關套件：<code>sudo pacman -S fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-chewing fcitx5-table-extra</code>。</p>
+</li>
+<li><p>第二道指令：<code>sudo vim /etc/enviroment</code>，並將以下資料寫入檔案裡(可以複製貼上XD)。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br><span class="line">SDL_IM_MODULE=fcitx</span><br><span class="line">GLFW_IM_MODULE=ibus</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第三道指令：<code>sudo vim ~/.xprofile</code>，在檔案最後寫入 <code>fcitx5 -d</code>，然後重新開機，原則上，Fcitx5 就會隨著系統啟動而自動執行。 <a href="https://www.flickr.com/photos/194265827@N08/52648279740/in/dateposted-public/" title="archlabs2023.01.20onVirtualBoxEp33"><img src="https://live.staticflickr.com/65535/52648279740_176b21d0d5_c.jpg" alt="archlabs2023.01.20onVirtualBoxEp33"></a></p>
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>※參考資料：<a href="https://wiki.archlinuxcn.org/zh-tw/Fcitx5">Fcitx5 - Arch Linux 中文维基</a></p>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>boshiamy</tag>
+        <tag>archlinux</tag>
+        <tag>linux</tag>
+        <tag>archlabs</tag>
+        <tag>fcitx5</tag>
+        <tag>fcitx5-table-extra</tag>
+        <tag>fcitx5-chewing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在 Archcraft 2023.01.01 上用 Fcitx5 搭配嘸蝦米</title>
     <url>/boshiamy/fcitx5-with-boshiamy-on-archcraft-2023-01-01/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>同樣身為 Arch Linux 的衍生發行版，Archcraft 夾帶 Openbox 與 bspwm 的特性，也可以使用 Fcitx5 讓新酷音與嘸蝦米活起來，在設定上略有不同，這一篇文章，就是紀錄我在設定上的過程。 <a href="https://www.flickr.com/photos/jutedev/52647135917/in/photostream/" title="archcraft2023.01.01onVirtualBoxEp (14)"><img src="https://live.staticflickr.com/65535/52647135917_c9bf52cabe_c.jpg" alt="archcraft2023.01.01onVirtualBoxEp (14)"></a></p>
@@ -1186,38 +1218,6 @@
         <tag>linux</tag>
         <tag>fcitx5</tag>
         <tag>fcitx</tag>
-        <tag>fcitx5-chewing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在 ArchLabs Linux 2023.01.20 上用 Fcitx5 搭配新酷音與嘸蝦米</title>
-    <url>/boshiamy/fcitx5-with-boshiamy-and-chewing-on-archlabs-linux-2023-01-20/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近 Arch Linux 的衍生發行版好不熱鬧，今天再來一篇，紀錄新酷音與嘸蝦米中文輸入法在另外一支衍生發行版：ArchLabs 上的設定過程。 <a href="https://www.flickr.com/photos/194265827@N08/52648106184/in/dateposted-public/" title="archlabs2023.01.20onVirtualBoxEp34"><img src="https://live.staticflickr.com/65535/52648106184_6755041dda_c.jpg" alt="archlabs2023.01.20onVirtualBoxEp34"></a></p>
-<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-
-<hr>
-<h3 id="安裝流程"><a href="#安裝流程" class="headerlink" title="安裝流程"></a>安裝流程</h3><ol>
-<li><p>第一道指令，安裝 Fcitx5 相關套件：<code>sudo pacman -S fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-chewing fcitx5-table-extra</code>。</p>
-</li>
-<li><p>第二道指令：<code>sudo vim /etc/enviroment</code>，並將以下資料寫入檔案裡(可以複製貼上XD)。</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">GTK_IM_MODULE=fcitx</span><br><span class="line">QT_IM_MODULE=fcitx</span><br><span class="line">XMODIFIERS=@im=fcitx</span><br><span class="line">SDL_IM_MODULE=fcitx</span><br><span class="line">GLFW_IM_MODULE=ibus</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>第三道指令：<code>sudo vim ~/.xprofile</code>，在檔案最後寫入 <code>fcitx5 -d</code>，然後重新開機，原則上，Fcitx5 就會隨著系統啟動而自動執行。 <a href="https://www.flickr.com/photos/194265827@N08/52648279740/in/dateposted-public/" title="archlabs2023.01.20onVirtualBoxEp33"><img src="https://live.staticflickr.com/65535/52648279740_176b21d0d5_c.jpg" alt="archlabs2023.01.20onVirtualBoxEp33"></a></p>
- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-</ol>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>※參考資料：<a href="https://wiki.archlinuxcn.org/zh-tw/Fcitx5">Fcitx5 - Arch Linux 中文维基</a></p>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>boshiamy</tag>
-        <tag>archlinux</tag>
-        <tag>linux</tag>
-        <tag>archlabs</tag>
-        <tag>fcitx5</tag>
-        <tag>fcitx5-table-extra</tag>
         <tag>fcitx5-chewing</tag>
       </tags>
   </entry>
@@ -1380,6 +1380,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Fedora 10 Live USB</title>
+    <url>/linux/fedora-10-live-usb/</url>
+    <content><![CDATA[<p>跟前幾個版本的 Fedora 比較，今次我算是玩得晚的乙次…  </p>
+<p>在 <a href="https://jutedev.com/fedora-9-make-waves/">Fedora 9. Make Waves.</a> 的時候，我就想拿隨身碟來玩，在 Fedora 10 釋出前，透過 Fedora LiveUSB Creator 小玩一下下，結果並不如預期。  </p>
+<p>今兒個在下載 Fedora 10，難得我勤勞地想檢查 ISO 檔，卻一下子找不到 SHA1，所幸 <a href="https://fedorahosted.org/liveusb-creator/wiki">liveusb-creator - Trac</a> 提供此一功能（詳可閱 <a href="https://fedorahosted.org/liveusb-creator/wiki">liveusb-creator - Trac</a> 的 Features 部分）。  </p>
+<p>今次，我沒有客製化 LiveUSB 的打算，純綷想試試而已，所以直接就拿 Fedora 10 的 ISO 來玩，大致上我試玩了以下幾個部分。  </p>
+<p>本次的電腦硬體所使用的是 NVIDIA GeForce 7300 GT，之前的經驗所使用的是 SIS 內建的顯卡，當時並沒有進入 X，今次我讓電腦從隨身碟開機後，就去給寶貝們泡牛奶，再洗奶瓶等，回到電腦前，已經在 X 裡頭，索性開個 Desktop Effects，結果是一片空白。  </p>
+<p>若電腦上沒有二部以上的光碟機，拿 Live CD 開機，要再聽 Music CD 是不可能的事，用 Live USB 開機，我就想來聽聽音樂，不知怎麼搞的，音樂放下去，我就不想重開機，讓音樂放著，也讓連日來的疲累有個出口。  </p>
+<p>最後，想說的是很可惜在語系的支援部分稍弱一些（或許有支援，在我惟一可能錯過的登入畫面處），而 <a href="https://fedorahosted.org/liveusb-creator/wiki">liveusb-creator - Trac</a> 實在是簡單易用，完全無痛。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>fedora</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>來玩 Fedora 35</title>
     <url>/linux/fedora-35/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Fedora，我認為是一支具有指標性意義的 Distro。<br><img src="https://live.staticflickr.com/65535/51652417495_ce6b97a152_b.jpg"></p>
@@ -1501,15 +1520,51 @@
       </tags>
   </entry>
   <entry>
-    <title>Fedora 10 Live USB</title>
-    <url>/linux/fedora-10-live-usb/</url>
-    <content><![CDATA[<p>跟前幾個版本的 Fedora 比較，今次我算是玩得晚的乙次…  </p>
-<p>在 <a href="https://jutedev.com/fedora-9-make-waves/">Fedora 9. Make Waves.</a> 的時候，我就想拿隨身碟來玩，在 Fedora 10 釋出前，透過 Fedora LiveUSB Creator 小玩一下下，結果並不如預期。  </p>
-<p>今兒個在下載 Fedora 10，難得我勤勞地想檢查 ISO 檔，卻一下子找不到 SHA1，所幸 <a href="https://fedorahosted.org/liveusb-creator/wiki">liveusb-creator - Trac</a> 提供此一功能（詳可閱 <a href="https://fedorahosted.org/liveusb-creator/wiki">liveusb-creator - Trac</a> 的 Features 部分）。  </p>
-<p>今次，我沒有客製化 LiveUSB 的打算，純綷想試試而已，所以直接就拿 Fedora 10 的 ISO 來玩，大致上我試玩了以下幾個部分。  </p>
-<p>本次的電腦硬體所使用的是 NVIDIA GeForce 7300 GT，之前的經驗所使用的是 SIS 內建的顯卡，當時並沒有進入 X，今次我讓電腦從隨身碟開機後，就去給寶貝們泡牛奶，再洗奶瓶等，回到電腦前，已經在 X 裡頭，索性開個 Desktop Effects，結果是一片空白。  </p>
-<p>若電腦上沒有二部以上的光碟機，拿 Live CD 開機，要再聽 Music CD 是不可能的事，用 Live USB 開機，我就想來聽聽音樂，不知怎麼搞的，音樂放下去，我就不想重開機，讓音樂放著，也讓連日來的疲累有個出口。  </p>
-<p>最後，想說的是很可惜在語系的支援部分稍弱一些（或許有支援，在我惟一可能錯過的登入畫面處），而 <a href="https://fedorahosted.org/liveusb-creator/wiki">liveusb-creator - Trac</a> 實在是簡單易用，完全無痛。</p>
+    <title>Fedora 40</title>
+    <url>/linux/fedora-40/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Fedora 40 有什麼樣的更新？<br><img src="https://live.staticflickr.com/65535/53695785926_96f264a117_b.jpg"></p>
+<h3 id="What’s-New"><a href="#What’s-New" class="headerlink" title="What’s New"></a>What’s New</h3><p>從 RedHat 官網讀到這則訊息：<a href="https://www.redhat.com/zh-tw/blog/announcing-fedora-linux-40">Announcing Fedora Linux 40</a>。</p>
+<p>我試著把這則訊息裡的標題整理出來，得到下列這些內容。</p>
+<ol>
+<li><p>CentOS Stream 10 &amp; RHEL 10 branch point</p>
+</li>
+<li><p>Introducing Fedora Atomic Desktops</p>
+</li>
+<li><p>Bootable IoT containers</p>
+</li>
+<li><p>AI advancements</p>
+</li>
+<li><p>Porting to modern C</p>
+</li>
+<li><p>Individual, stable MAC address assignment for Wi-Fi</p>
+</li>
+<li><p>Cloud Edition images now built with Kiwi</p>
+</li>
+</ol>
+<p>另外，這則訊息裡面，特別整理 Feature Updates(如下)。</p>
+<ol>
+<li><p>New compilers and tools</p>
+</li>
+<li><p>KDE Plasma 6</p>
+</li>
+<li><p>Podman 5</p>
+</li>
+<li><p>Faster package updates</p>
+</li>
+<li><p>Python 3.7 retiring</p>
+</li>
+</ol>
+<h3 id="玩轉-1-小時的心得"><a href="#玩轉-1-小時的心得" class="headerlink" title="玩轉 1 小時的心得"></a>玩轉 1 小時的心得</h3><ol>
+<li><p>顯示卡驅動應該有點狀況：在 VirtualBox 安裝完並進入系統的那一刻，顯示的部分，不是那麼正常(如下圖)。<br><img src="https://live.staticflickr.com/65535/53694889562_e530ca71b0_o.png"></p>
+</li>
+<li><p>不一定要馬上更新：這一點，倒不能全然都說是 Fedora 的問題，除非是想要「新版本號」，不然，如果跟我一樣，只是拿來當桌面系統使用，其實不太需要更新。畢竟，其他功能，我用不到，自然也就碰不到，更不會注意更新與否。</p>
+</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 Fedora-Workstation-Live-x86_64-40-1.14.iso。</li>
+<li><a href="https://getfedora.org/">Fedora</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Fedora_(%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1)">Fedora (作業系統) - 維基百科，自由的百科全書</a></li>
+</ol>
 ]]></content>
       <categories>
         <category>linux</category>
@@ -1605,51 +1660,32 @@
       </tags>
   </entry>
   <entry>
-    <title>Fedora 40</title>
-    <url>/linux/fedora-40/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Fedora 40 有什麼樣的更新？<br><img src="https://live.staticflickr.com/65535/53695785926_96f264a117_b.jpg"></p>
-<h3 id="What’s-New"><a href="#What’s-New" class="headerlink" title="What’s New"></a>What’s New</h3><p>從 RedHat 官網讀到這則訊息：<a href="https://www.redhat.com/zh-tw/blog/announcing-fedora-linux-40">Announcing Fedora Linux 40</a>。</p>
-<p>我試著把這則訊息裡的標題整理出來，得到下列這些內容。</p>
+    <title>Fedora 9. Make Waves.</title>
+    <url>/linux/fedora-9-make-waves/</url>
+    <content><![CDATA[<p><strong>Fedora 9. Make Waves.</strong> 我喜歡這樣的說法… (( 簡體中文的頁面，翻譯為<strong>引領潮流</strong>，我喜歡用<strong>興風作浪</strong>，感覺比較囂張。 ))  </p>
+<p>在下載的過程中，我以往的作法是去魔獸世界閒晃或是在網頁之間盡情衝浪 (( 因為英文通常會用 Surf 來表達網路瀏覽行為，又逢 Fedora 9 的 Slogan 跟浪花有關，所以我就亂搭一番，更詳細的字彙解譯，可參考Yahoo!奇摩字典，網址為 <a href="http://tw.dictionary.yahoo.com/search?ei=UTF-8&p=surf"></a><a href="http://tw.dictionary.yahoo.com/search?ei=UTF-8&p=surf">http://tw.dictionary.yahoo.com/search?ei=UTF-8&p=surf</a> )) ，而今則是先去讀一下 <a href="http://docs.fedoraproject.org/release-notes/f9/">Released Notes</a> 。  </p>
+<p>以下是我試著將 Release Highlights 所提及的<strong>特性</strong>部分整理出來 (( 不要傳達錯誤訊息是我在寫資訊相關部落格時的基本原則，但也礙於能力有限，若仍有錯誤之處，煩請告知，我會馬上修正。 )) ：</p>
 <ol>
-<li><p>CentOS Stream 10 &amp; RHEL 10 branch point</p>
-</li>
-<li><p>Introducing Fedora Atomic Desktops</p>
-</li>
-<li><p>Bootable IoT containers</p>
-</li>
-<li><p>AI advancements</p>
-</li>
-<li><p>Porting to modern C</p>
-</li>
-<li><p>Individual, stable MAC address assignment for Wi-Fi</p>
-</li>
-<li><p>Cloud Edition images now built with Kiwi</p>
-</li>
+<li>GNOME 2.22：GNOME 中新加入的套裝軟體 Cheese 可以利用網路攝像頭，創作照片和視頻。其他改進包括，改進的網路檔系統支援，新的國際化時鐘小程式， Evolution 中對 Google 日曆和自定義標籤的支持，新的遠端桌面查看器，增強的輔助特性，以及對 PolicyKit 的整合。</li>
+<li>KDE 4.0.3：據了解有可良好的整合與更優質的美術設計，讓人眼睛為之一亮。</li>
+<li>Xfce 4.4.2：坦白說，我只安裝過乙次，對它了解不深，只知道相較於 GNOME 與 KDE ，它可以在效能較差的機器上運轉自如。</li>
+<li>NetworkManager 0.7：將提供更好的 Wireless 支援，包括 GSM 和 CDMA 設備的支援，以及對多設備和特別網路共用連接的支援。NetworkManager 自此在被預設為啟用狀態，不用再下指令或是另外啟用之。</li>
+<li>Anaconda：Fedora 的安裝程式，將直接支援 ext2&#x2F;3、NTFS 檔案系統，並以 FirstAidKit 改進 Rescue Mode ，重新設計過的 netboot.iso 也因此變得比較大隻點。</li>
+<li>Live USB 映象檔：現在支援永久性的改變，也就是說在使用過程中動到的設定與資料的讀出及寫入等，在重新開機後將會保留著，而不是跳回預設值。</li>
+<li>PackageKit：新的管理套裝軟體的圖形和命令行工具，並且提供跨平臺軟體管理的支援。在本次發行中，Pirut 被其替換，更新程式的部分將 Pup 替換。在背景作業的 Yum 性能也大幅提高。</li>
+<li>FreeIPA：提供更簡便的 Web 介面的伺服器管理方式，提供一個功能強大的 Fedora 目錄伺服器、FreeRaDIUS、MIT Kerberos、NTP 和 DNS 整合性解決方案。</li>
+<li>Ext4：Ext3 的後起之秀，擁有較高效能、較大容量的存取能力等令人振奮的特性。</li>
+<li>Upstart：將取代 &#x2F;sbin&#x2F;init 這支老 Daemon (( 更詳盡的部分可先參考 <a href="http://upstart.ubuntu.com/">upstart - event-based init daemon</a> )) 。</li>
+<li>Firefox 3：新外觀，其原本功能中的 Bookmarks 也被 Places 取而代之。</li>
+<li>OpenJDK 6：完全自由開放的 OpenJDK 6 成為預設安裝的 Java 運作環境，IcedTea 7 不再是預設安裝的套件，GCJ 仍是 PowerPC 架構下的預設套件。</li>
+<li>OpenOffice.org 2.4：應不用多做說明，它將是 Fedora 9 重要的一部分。</li>
+<li>Perl 5.10.0：佔用更少的記憶體，在其他部分也有進步。</li>
+<li>TexLive：取代已不再被維持、更新的 TeX 套件。</li>
+<li>Kernel 2.6.25：Fedora 9 的核心。</li>
+<li>Kerneloops：Kernel 掛點，將會被友善的 Kerneloops 自動回報至 <a href="http://www.kerneloops.org/%20"></a><a href="http://www.kerneloops.org/">http://www.kerneloops.org/</a> 。</li>
+<li>X：開關機的程序將有明顯的效能改善。</li>
 </ol>
-<p>另外，這則訊息裡面，特別整理 Feature Updates(如下)。</p>
-<ol>
-<li><p>New compilers and tools</p>
-</li>
-<li><p>KDE Plasma 6</p>
-</li>
-<li><p>Podman 5</p>
-</li>
-<li><p>Faster package updates</p>
-</li>
-<li><p>Python 3.7 retiring</p>
-</li>
-</ol>
-<h3 id="玩轉-1-小時的心得"><a href="#玩轉-1-小時的心得" class="headerlink" title="玩轉 1 小時的心得"></a>玩轉 1 小時的心得</h3><ol>
-<li><p>顯示卡驅動應該有點狀況：在 VirtualBox 安裝完並進入系統的那一刻，顯示的部分，不是那麼正常(如下圖)。<br><img src="https://live.staticflickr.com/65535/53694889562_e530ca71b0_o.png"></p>
-</li>
-<li><p>不一定要馬上更新：這一點，倒不能全然都說是 Fedora 的問題，除非是想要「新版本號」，不然，如果跟我一樣，只是拿來當桌面系統使用，其實不太需要更新。畢竟，其他功能，我用不到，自然也就碰不到，更不會注意更新與否。</p>
-</li>
-</ol>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>本次安裝使用的 ISO 檔版本是 Fedora-Workstation-Live-x86_64-40-1.14.iso。</li>
-<li><a href="https://getfedora.org/">Fedora</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/Fedora_(%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1)">Fedora (作業系統) - 維基百科，自由的百科全書</a></li>
-</ol>
+<p>以上，整理的過程中，我已經決定以 Live USB 跟隨 Fedora 9 興風作浪 (( 語畢，下載 Fedora-9-i686-Live.iso 的進度已經來到 49%。 )) 。</p>
 ]]></content>
       <categories>
         <category>linux</category>
@@ -1701,42 +1737,6 @@
         <tag>fcitx-table-boshiamy</tag>
         <tag>ubuntu</tag>
         <tag>ferenos</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Fedora 9. Make Waves.</title>
-    <url>/linux/fedora-9-make-waves/</url>
-    <content><![CDATA[<p><strong>Fedora 9. Make Waves.</strong> 我喜歡這樣的說法… (( 簡體中文的頁面，翻譯為<strong>引領潮流</strong>，我喜歡用<strong>興風作浪</strong>，感覺比較囂張。 ))  </p>
-<p>在下載的過程中，我以往的作法是去魔獸世界閒晃或是在網頁之間盡情衝浪 (( 因為英文通常會用 Surf 來表達網路瀏覽行為，又逢 Fedora 9 的 Slogan 跟浪花有關，所以我就亂搭一番，更詳細的字彙解譯，可參考Yahoo!奇摩字典，網址為 <a href="http://tw.dictionary.yahoo.com/search?ei=UTF-8&p=surf"></a><a href="http://tw.dictionary.yahoo.com/search?ei=UTF-8&p=surf">http://tw.dictionary.yahoo.com/search?ei=UTF-8&p=surf</a> )) ，而今則是先去讀一下 <a href="http://docs.fedoraproject.org/release-notes/f9/">Released Notes</a> 。  </p>
-<p>以下是我試著將 Release Highlights 所提及的<strong>特性</strong>部分整理出來 (( 不要傳達錯誤訊息是我在寫資訊相關部落格時的基本原則，但也礙於能力有限，若仍有錯誤之處，煩請告知，我會馬上修正。 )) ：</p>
-<ol>
-<li>GNOME 2.22：GNOME 中新加入的套裝軟體 Cheese 可以利用網路攝像頭，創作照片和視頻。其他改進包括，改進的網路檔系統支援，新的國際化時鐘小程式， Evolution 中對 Google 日曆和自定義標籤的支持，新的遠端桌面查看器，增強的輔助特性，以及對 PolicyKit 的整合。</li>
-<li>KDE 4.0.3：據了解有可良好的整合與更優質的美術設計，讓人眼睛為之一亮。</li>
-<li>Xfce 4.4.2：坦白說，我只安裝過乙次，對它了解不深，只知道相較於 GNOME 與 KDE ，它可以在效能較差的機器上運轉自如。</li>
-<li>NetworkManager 0.7：將提供更好的 Wireless 支援，包括 GSM 和 CDMA 設備的支援，以及對多設備和特別網路共用連接的支援。NetworkManager 自此在被預設為啟用狀態，不用再下指令或是另外啟用之。</li>
-<li>Anaconda：Fedora 的安裝程式，將直接支援 ext2&#x2F;3、NTFS 檔案系統，並以 FirstAidKit 改進 Rescue Mode ，重新設計過的 netboot.iso 也因此變得比較大隻點。</li>
-<li>Live USB 映象檔：現在支援永久性的改變，也就是說在使用過程中動到的設定與資料的讀出及寫入等，在重新開機後將會保留著，而不是跳回預設值。</li>
-<li>PackageKit：新的管理套裝軟體的圖形和命令行工具，並且提供跨平臺軟體管理的支援。在本次發行中，Pirut 被其替換，更新程式的部分將 Pup 替換。在背景作業的 Yum 性能也大幅提高。</li>
-<li>FreeIPA：提供更簡便的 Web 介面的伺服器管理方式，提供一個功能強大的 Fedora 目錄伺服器、FreeRaDIUS、MIT Kerberos、NTP 和 DNS 整合性解決方案。</li>
-<li>Ext4：Ext3 的後起之秀，擁有較高效能、較大容量的存取能力等令人振奮的特性。</li>
-<li>Upstart：將取代 &#x2F;sbin&#x2F;init 這支老 Daemon (( 更詳盡的部分可先參考 <a href="http://upstart.ubuntu.com/">upstart - event-based init daemon</a> )) 。</li>
-<li>Firefox 3：新外觀，其原本功能中的 Bookmarks 也被 Places 取而代之。</li>
-<li>OpenJDK 6：完全自由開放的 OpenJDK 6 成為預設安裝的 Java 運作環境，IcedTea 7 不再是預設安裝的套件，GCJ 仍是 PowerPC 架構下的預設套件。</li>
-<li>OpenOffice.org 2.4：應不用多做說明，它將是 Fedora 9 重要的一部分。</li>
-<li>Perl 5.10.0：佔用更少的記憶體，在其他部分也有進步。</li>
-<li>TexLive：取代已不再被維持、更新的 TeX 套件。</li>
-<li>Kernel 2.6.25：Fedora 9 的核心。</li>
-<li>Kerneloops：Kernel 掛點，將會被友善的 Kerneloops 自動回報至 <a href="http://www.kerneloops.org/%20"></a><a href="http://www.kerneloops.org/">http://www.kerneloops.org/</a> 。</li>
-<li>X：開關機的程序將有明顯的效能改善。</li>
-</ol>
-<p>以上，整理的過程中，我已經決定以 Live USB 跟隨 Fedora 9 興風作浪 (( 語畢，下載 Fedora-9-i686-Live.iso 的進度已經來到 49%。 )) 。</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>fedora</tag>
       </tags>
   </entry>
   <entry>
@@ -1827,6 +1827,40 @@
       </tags>
   </entry>
   <entry>
+    <title>搞定在我的 iMac 上安裝 Windows 10 過程，出現的 ImageInstall 錯誤訊息</title>
+    <url>/apple/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/</url>
+    <content><![CDATA[<p>以前，我使用 Bootcamp(啟動切換) 都沒有遇到什麼大問題，想不到，今次來個大的：</p>
+<blockquote>
+<p>Windows 找不到在自動安裝回應檔案之 <code>&lt;ImageInstall&gt;</code> 設定中指定的磁碟與磁碟分割。請確定該設定參照到有效的磁碟分割，然後重新啟動安裝程式。</p>
+</blockquote>
+<p>這一個問題被我認為有點大，一方面，網路上的資料很少，有些是提到把 USB 外接儲存裝置移走就可以解決，這個解法對我來說並不適用；另外一方面，從大家的分享與回應來看，除了把 USB 外接儲存裝置移走就可以解決的，其他似乎都沒有被處理好。</p>
+<p>由於手上沒有厲害的硬碟工具，我用現有的工具，花了不少時間才搞定，幾個重點程序，在此紀錄下來：</p>
+<ol>
+<li>問題研判：從「Windows 找不到在自動安裝回應檔案之 <code>&lt;ImageInstall&gt;</code> 設定中指定的磁碟與磁碟分割。」這段話就可以知道，問題出在硬碟分割，有鑑於以往都可以輕鬆做完 Bootcamp，這一次不太容易，有比較大的可能是前不久安裝 Linux 去動到硬碟分割。</li>
+<li>備好 macOS Mojave 的可開機 SD 卡：之前我都是用 High Sierra，並沒有太大的問題，但是，這一次我製作裝有 macOS Mojave 的可開機 SD 卡，準備重新安裝。</li>
+<li>硬碟分割要完整重置：後再重新跑一趟全新安裝，我的做法是用 Windows 外接硬碟開機後，用 <code>diskmgmt.msc</code> 與 <code>diskpart</code> 搭配給硬碟「動手術」：把所有的分割表都刪除。 <img src="https://live.staticflickr.com/65535/51375311446_9a4967f2f5_o.png"></li>
+<li>重新安裝 macOS Mojave： (1)經過步驟 3，Fusion Drive 是被分開的，需要重新製作。 (2)做好 Fusion Drive 後，我再經過一道程序，把 Fusion Drive 的格式改為「Apple 檔案系統」(APFS)。 (3)安裝好 macOS 之後，要把 Mojave 能夠升級的升好升滿，升級好的 Bootcamp(啟動切換) 會判斷 iMac 上有沒有插著其他 USB 儲存裝置，以及辨識 Windows ISO 檔與 iMac 的相容性，說也奇怪，我用微軟官網上的「Windows 10 媒體建立工具」下載最新的 ISO 檔，會被 macOS Mojave 上最新版的 Bootcamp(啟動切換) 判定是不相容的，害我再三確認是不是 64 位元，下載 3 次之後都失敗就直接放棄。</li>
+<li>準備好要安裝的 Windows ISO 檔： (1)我試過最新的 21H1、之前的 20H2 都沒有成功，最後是用 1903 才搞定。 (2)成功之前，一直選用「Window 專業版」，最後一次，想著再不成功就不繼續在眼前的 iMac 搞 Bootcamp(啟動切換) ，而改用「Windows 家用版」順利安裝進去。 (3)或許，「Window 專業版」也能成功，只是，偏偏最後一次，我沒有嘗試。 <img src="https://live.staticflickr.com/65535/51376374135_87b2e020c6_o.jpg"> <img src="https://live.staticflickr.com/65535/51375600763_640e8e7c49_o.png"></li>
+</ol>
+<p>其實，應該有另外一種解決方式：<a href="https://docs.microsoft.com/zh-tw/windows-hardware/customize/desktop/unattend/microsoft-windows-setup-imageinstall" title="ImageInstall | Microsoft Docs">ImageInstall | Microsoft Docs</a>，我沒有嘗試是因為我認為依照蘋果的精神，一般是不會要使用者去用這樣的方式處理。</p>
+<p>再者，如果手上有硬碟相關的程式，應該可以省下不少時間。</p>
+]]></content>
+      <categories>
+        <category>apple</category>
+      </categories>
+      <tags>
+        <tag>macos</tag>
+        <tag>windows10</tag>
+        <tag>highsierra</tag>
+        <tag>mojave</tag>
+        <tag>apfs</tag>
+        <tag>bootcamp</tag>
+        <tag>diskmgmt</tag>
+        <tag>diskpart</tag>
+        <tag>fusiondrive</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FreeBSD 13.2 安裝與中文化(含安裝嘸蝦米、新酷音輸入法 feat. Fcitx5)</title>
     <url>/bsd/freebsd-13-2-and-l10n/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這幾天，心血來潮找小惡魔玩。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53276262974/in/dateposted-public/" title="FreeBSD13.2onVirtualBoxEp2"><img src="https://live.staticflickr.com/65535/53276262974_92d1717070_c.jpg" width="800" height="500" alt="FreeBSD13.2onVirtualBoxEp2"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
@@ -1903,40 +1937,6 @@
         <tag>boshiamy</tag>
         <tag>fcitx5</tag>
         <tag>freebsd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搞定在我的 iMac 上安裝 Windows 10 過程，出現的 ImageInstall 錯誤訊息</title>
-    <url>/apple/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/</url>
-    <content><![CDATA[<p>以前，我使用 Bootcamp(啟動切換) 都沒有遇到什麼大問題，想不到，今次來個大的：</p>
-<blockquote>
-<p>Windows 找不到在自動安裝回應檔案之 <code>&lt;ImageInstall&gt;</code> 設定中指定的磁碟與磁碟分割。請確定該設定參照到有效的磁碟分割，然後重新啟動安裝程式。</p>
-</blockquote>
-<p>這一個問題被我認為有點大，一方面，網路上的資料很少，有些是提到把 USB 外接儲存裝置移走就可以解決，這個解法對我來說並不適用；另外一方面，從大家的分享與回應來看，除了把 USB 外接儲存裝置移走就可以解決的，其他似乎都沒有被處理好。</p>
-<p>由於手上沒有厲害的硬碟工具，我用現有的工具，花了不少時間才搞定，幾個重點程序，在此紀錄下來：</p>
-<ol>
-<li>問題研判：從「Windows 找不到在自動安裝回應檔案之 <code>&lt;ImageInstall&gt;</code> 設定中指定的磁碟與磁碟分割。」這段話就可以知道，問題出在硬碟分割，有鑑於以往都可以輕鬆做完 Bootcamp，這一次不太容易，有比較大的可能是前不久安裝 Linux 去動到硬碟分割。</li>
-<li>備好 macOS Mojave 的可開機 SD 卡：之前我都是用 High Sierra，並沒有太大的問題，但是，這一次我製作裝有 macOS Mojave 的可開機 SD 卡，準備重新安裝。</li>
-<li>硬碟分割要完整重置：後再重新跑一趟全新安裝，我的做法是用 Windows 外接硬碟開機後，用 <code>diskmgmt.msc</code> 與 <code>diskpart</code> 搭配給硬碟「動手術」：把所有的分割表都刪除。 <img src="https://live.staticflickr.com/65535/51375311446_9a4967f2f5_o.png"></li>
-<li>重新安裝 macOS Mojave： (1)經過步驟 3，Fusion Drive 是被分開的，需要重新製作。 (2)做好 Fusion Drive 後，我再經過一道程序，把 Fusion Drive 的格式改為「Apple 檔案系統」(APFS)。 (3)安裝好 macOS 之後，要把 Mojave 能夠升級的升好升滿，升級好的 Bootcamp(啟動切換) 會判斷 iMac 上有沒有插著其他 USB 儲存裝置，以及辨識 Windows ISO 檔與 iMac 的相容性，說也奇怪，我用微軟官網上的「Windows 10 媒體建立工具」下載最新的 ISO 檔，會被 macOS Mojave 上最新版的 Bootcamp(啟動切換) 判定是不相容的，害我再三確認是不是 64 位元，下載 3 次之後都失敗就直接放棄。</li>
-<li>準備好要安裝的 Windows ISO 檔： (1)我試過最新的 21H1、之前的 20H2 都沒有成功，最後是用 1903 才搞定。 (2)成功之前，一直選用「Window 專業版」，最後一次，想著再不成功就不繼續在眼前的 iMac 搞 Bootcamp(啟動切換) ，而改用「Windows 家用版」順利安裝進去。 (3)或許，「Window 專業版」也能成功，只是，偏偏最後一次，我沒有嘗試。 <img src="https://live.staticflickr.com/65535/51376374135_87b2e020c6_o.jpg"> <img src="https://live.staticflickr.com/65535/51375600763_640e8e7c49_o.png"></li>
-</ol>
-<p>其實，應該有另外一種解決方式：<a href="https://docs.microsoft.com/zh-tw/windows-hardware/customize/desktop/unattend/microsoft-windows-setup-imageinstall" title="ImageInstall | Microsoft Docs">ImageInstall | Microsoft Docs</a>，我沒有嘗試是因為我認為依照蘋果的精神，一般是不會要使用者去用這樣的方式處理。</p>
-<p>再者，如果手上有硬碟相關的程式，應該可以省下不少時間。</p>
-]]></content>
-      <categories>
-        <category>apple</category>
-      </categories>
-      <tags>
-        <tag>macos</tag>
-        <tag>windows10</tag>
-        <tag>highsierra</tag>
-        <tag>mojave</tag>
-        <tag>apfs</tag>
-        <tag>bootcamp</tag>
-        <tag>diskmgmt</tag>
-        <tag>diskpart</tag>
-        <tag>fusiondrive</tag>
       </tags>
   </entry>
   <entry>
@@ -2154,48 +2154,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用「存取認證管理員」進行 GitHub 認證帳號切換</title>
-    <url>/windows/github-account-and-accessing-credential-manager/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>mtmatt 現在分成 2 個站，我們決定讓 mtmatt.page 與 mtmatt.one 分別由不同的帳號進行管理，所以，如果要在同一部本機上更新文章，就會面臨到 GitHub 帳號切換的問題。</p>
-<p>本篇貼文，就是紀錄我們在 Windows 上，可以使用 Microsoft 的「存取認證管理員」(即 Accessing Credential Manager) 來處理上述狀況。</p>
-<hr>
-<h3 id="過程紀錄"><a href="#過程紀錄" class="headerlink" title="過程紀錄"></a>過程紀錄</h3><ol>
-<li><p>下面這張圖呈現的是 mtmatt.page 剛做完更新。由於我們要切換帳號，記得先從預設瀏覽器把原本登入 GitHub.com 的帳號也一併登出。 <img src="https://live.staticflickr.com/65535/53094321197_5f38266834_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (1)"/></p>
-</li>
-<li><p>接下來，要更新 mtmatt.one 的話，以 Windows 11 而言，就是點出「開始」功能表，再進入「設定」，用「認證」這個關鍵字，把「管理 Windows 認證」呼喚出來。 <img src="https://live.staticflickr.com/65535/53096239476_1d804eb6e6_c.jpg" width="800" height="450" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (10)"/></p>
-</li>
-<li><p>見到下圖，就表示呼喚成功。 <img src="https://live.staticflickr.com/65535/53095283370_6ebd0939ae_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (2)"/></p>
-</li>
-<li><p>很快地，就能夠找到 GitHub 帳號認證。 <img src="https://live.staticflickr.com/65535/53094888521_770fea2518_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (3)"/></p>
-</li>
-<li><p>確認一下要移除的帳號(目前還是 mtmatt.page)後，再進行移除。這裡，只是把本機上的 Windows 認證移除掉，並不會讓 GitHub 上的帳號也跟著被移除，請放心處理。 <img src="https://live.staticflickr.com/65535/53094888541_9efe874be7_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (4)"/></p>
-</li>
-<li><p>移除後，就切換到 mtmatt.one 的本機資料夾裡面，執行 <code>hexo cl &amp; hexo g &amp; hexo d</code>。 <img src="https://live.staticflickr.com/65535/53095062319_6c3cee914e_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (5)"/></p>
-</li>
-<li><p>原則上，執行到一半，就會跳出「GitHub Sign in」的視窗。 <img src="https://live.staticflickr.com/65535/53095283345_81db79b1f9_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (6)"/></p>
-</li>
-<li><p>因為要切換帳號，因此改用 mtmatt.one 的帳號登入。 <img src="https://live.staticflickr.com/65535/53095283320_5a21fbf47f_w.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (7)"/></p>
-</li>
-<li><p>選擇「Sign in with your browser」，點下後，畫面會帶到系統的預設瀏覽器，開啟以下的頁面。 <img src="https://live.staticflickr.com/65535/53095376368_310d7b4183_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (8)"/></p>
-</li>
-<li><p>基本上，走到這邊，正確成功登入後，就沒有問題。</p>
-</li>
-</ol>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>如果，出現下圖，部署 (Deploy) 後，卻在最後出現紅底標註「FATAL」後面那一大段錯誤訊息，就表示沒有成功，而且只差臨門一腳。遇到這樣的狀況，有可能是原本瀏覽器內的 GitHub.com 裡的帳號沒有登出造成，只要先登出，再重新執行一次 <code>hexo d</code>，應該就沒有問題。 <img src="https://live.staticflickr.com/65535/53095283315_59f93d7912_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (9)"/></li>
-<li>考量到我們後續切換帳號有可能會來得頻繁一點，所以，我們就設定一個捷徑，方便後續使用。 <img src="https://live.staticflickr.com/65535/53095713392_a09a940383_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (11)"/></li>
-</ol>
-]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows11</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>gufw Firewall (Linux 上圖形使用者介面的防火牆程式) feat. Manjaro</title>
     <url>/linux/gufw-firewall-feat-manjaro/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Linux 上面的防火牆，多數使用者應該會想到「IP 桌子」(iptables)，而 Linux 上大部分的防火牆，也多半就跟 iptables 一樣，要在 Terminal 上做設定，敲敲鍵盤設定，固然是有那麼點帥氣，但，我總覺得以桌面系統而言，經由圖形使用介面(GUI) 來搞定會是另外一個重要的選項。</p>
@@ -2247,33 +2205,45 @@
       </tags>
   </entry>
   <entry>
-    <title>在 Linux 上使用圖形介面將檔案(解壓縮後)，拷貝至根目錄</title>
-    <url>/linux/how-to-copy-files-to-root-directory-on-linux-feat-thunar/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本編文章，主要是紀錄在 Linux 上不使用 CLI(亦稱 Terminal) 的方式，而是使用 GUI(也就是所謂的「圖形介面」)進行檔案拷貝(或移動)。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207492804/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (6)"><img src="https://live.staticflickr.com/65535/53207492804_6faae0a1ec_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+    <title>使用「存取認證管理員」進行 GitHub 認證帳號切換</title>
+    <url>/windows/github-account-and-accessing-credential-manager/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>mtmatt 現在分成 2 個站，我們決定讓 mtmatt.page 與 mtmatt.one 分別由不同的帳號進行管理，所以，如果要在同一部本機上更新文章，就會面臨到 GitHub 帳號切換的問題。</p>
+<p>本篇貼文，就是紀錄我們在 Windows 上，可以使用 Microsoft 的「存取認證管理員」(即 Accessing Credential Manager) 來處理上述狀況。</p>
 <hr>
-<h3 id="過程演示"><a href="#過程演示" class="headerlink" title="過程演示"></a>過程演示</h3><p>以解壓縮 fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz 這個檔案，並且將解壓縮後的檔案拷貝至該去的地方為例。</p>
-<ol>
-<li><p>CLI(亦稱 Terminal) 的方式，原則上，2 行指令就結束。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar xvf fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">sudo cp -r usr/share /usr/</span><br></pre></td></tr></table></figure>
+<h3 id="過程紀錄"><a href="#過程紀錄" class="headerlink" title="過程紀錄"></a>過程紀錄</h3><ol>
+<li><p>下面這張圖呈現的是 mtmatt.page 剛做完更新。由於我們要切換帳號，記得先從預設瀏覽器把原本登入 GitHub.com 的帳號也一併登出。 <img src="https://live.staticflickr.com/65535/53094321197_5f38266834_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (1)"/></p>
 </li>
-<li><p>GUI(也就是所謂的「圖形介面」)的流程，大致如下。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207492839/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (1)"><img src="https://live.staticflickr.com/65535/53207492839_d7a1549a52_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (1)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207113341/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (2)"><img src="https://live.staticflickr.com/65535/53207113341_0bd4247fb7_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207616610/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (3)"><img src="https://live.staticflickr.com/65535/53207616610_8e9498859e_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (3)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207113336/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (4)"><img src="https://live.staticflickr.com/65535/53207113336_35b4930a86_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (4)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207616590/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (5)"><img src="https://live.staticflickr.com/65535/53207616590_47989eb91e_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (5)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207492804/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (6)"><img src="https://live.staticflickr.com/65535/53207492804_6faae0a1ec_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207410598/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (7)"><img src="https://live.staticflickr.com/65535/53207410598_260eb87032_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (7)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207410588/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (8)"><img src="https://live.staticflickr.com/65535/53207410588_7d1a4aff0e_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (8)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<li><p>接下來，要更新 mtmatt.one 的話，以 Windows 11 而言，就是點出「開始」功能表，再進入「設定」，用「認證」這個關鍵字，把「管理 Windows 認證」呼喚出來。 <img src="https://live.staticflickr.com/65535/53096239476_1d804eb6e6_c.jpg" width="800" height="450" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (10)"/></p>
+</li>
+<li><p>見到下圖，就表示呼喚成功。 <img src="https://live.staticflickr.com/65535/53095283370_6ebd0939ae_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (2)"/></p>
+</li>
+<li><p>很快地，就能夠找到 GitHub 帳號認證。 <img src="https://live.staticflickr.com/65535/53094888521_770fea2518_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (3)"/></p>
+</li>
+<li><p>確認一下要移除的帳號(目前還是 mtmatt.page)後，再進行移除。這裡，只是把本機上的 Windows 認證移除掉，並不會讓 GitHub 上的帳號也跟著被移除，請放心處理。 <img src="https://live.staticflickr.com/65535/53094888541_9efe874be7_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (4)"/></p>
+</li>
+<li><p>移除後，就切換到 mtmatt.one 的本機資料夾裡面，執行 <code>hexo cl &amp; hexo g &amp; hexo d</code>。 <img src="https://live.staticflickr.com/65535/53095062319_6c3cee914e_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (5)"/></p>
+</li>
+<li><p>原則上，執行到一半，就會跳出「GitHub Sign in」的視窗。 <img src="https://live.staticflickr.com/65535/53095283345_81db79b1f9_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (6)"/></p>
+</li>
+<li><p>因為要切換帳號，因此改用 mtmatt.one 的帳號登入。 <img src="https://live.staticflickr.com/65535/53095283320_5a21fbf47f_w.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (7)"/></p>
+</li>
+<li><p>選擇「Sign in with your browser」，點下後，畫面會帶到系統的預設瀏覽器，開啟以下的頁面。 <img src="https://live.staticflickr.com/65535/53095376368_310d7b4183_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (8)"/></p>
+</li>
+<li><p>基本上，走到這邊，正確成功登入後，就沒有問題。</p>
 </li>
 </ol>
 <hr>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>本次演示，所使用的系統是 Linux Lite 6.6。</li>
-<li><a href="https://www.linuxliteos.com/">Linux Lite Easy to Use Free Linux Operating System</a></li>
-<li><a href="https://web.archive.org/web/20180927231718/http://linuxliteos.com/features.html">Free Operating System - Linux Lite</a></li>
-<li>CLI 與 GUI 之間，一直以來都有不同的擁護者，以我而言，自己認為好用是最重要的。</li>
+<li>如果，出現下圖，部署 (Deploy) 後，卻在最後出現紅底標註「FATAL」後面那一大段錯誤訊息，就表示沒有成功，而且只差臨門一腳。遇到這樣的狀況，有可能是原本瀏覽器內的 GitHub.com 裡的帳號沒有登出造成，只要先登出，再重新執行一次 <code>hexo d</code>，應該就沒有問題。 <img src="https://live.staticflickr.com/65535/53095283315_59f93d7912_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (9)"/></li>
+<li>考量到我們後續切換帳號有可能會來得頻繁一點，所以，我們就設定一個捷徑，方便後續使用。 <img src="https://live.staticflickr.com/65535/53095713392_a09a940383_c.jpg" alt="changingTheGithubAccountByAccessingCredentialManagerInWindows11Ep (11)"/></li>
 </ol>
 ]]></content>
       <categories>
-        <category>linux</category>
+        <category>windows</category>
       </categories>
       <tags>
-        <tag>linux</tag>
-        <tag>linuxlite</tag>
-        <tag>thunar</tag>
+        <tag>windows11</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -2326,6 +2296,36 @@
         <tag>monterey</tag>
         <tag>safari</tag>
         <tag>xcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在 Linux 上使用圖形介面將檔案(解壓縮後)，拷貝至根目錄</title>
+    <url>/linux/how-to-copy-files-to-root-directory-on-linux-feat-thunar/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本編文章，主要是紀錄在 Linux 上不使用 CLI(亦稱 Terminal) 的方式，而是使用 GUI(也就是所謂的「圖形介面」)進行檔案拷貝(或移動)。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207492804/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (6)"><img src="https://live.staticflickr.com/65535/53207492804_6faae0a1ec_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<hr>
+<h3 id="過程演示"><a href="#過程演示" class="headerlink" title="過程演示"></a>過程演示</h3><p>以解壓縮 fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz 這個檔案，並且將解壓縮後的檔案拷貝至該去的地方為例。</p>
+<ol>
+<li><p>CLI(亦稱 Terminal) 的方式，原則上，2 行指令就結束。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar xvf fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">sudo cp -r usr/share /usr/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>GUI(也就是所謂的「圖形介面」)的流程，大致如下。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207492839/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (1)"><img src="https://live.staticflickr.com/65535/53207492839_d7a1549a52_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (1)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207113341/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (2)"><img src="https://live.staticflickr.com/65535/53207113341_0bd4247fb7_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207616610/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (3)"><img src="https://live.staticflickr.com/65535/53207616610_8e9498859e_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (3)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207113336/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (4)"><img src="https://live.staticflickr.com/65535/53207113336_35b4930a86_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (4)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207616590/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (5)"><img src="https://live.staticflickr.com/65535/53207616590_47989eb91e_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (5)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207492804/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (6)"><img src="https://live.staticflickr.com/65535/53207492804_6faae0a1ec_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207410598/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (7)"><img src="https://live.staticflickr.com/65535/53207410598_260eb87032_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (7)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53207410588/in/dateposted-public/" title="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (8)"><img src="https://live.staticflickr.com/65535/53207410588_7d1a4aff0e_c.jpg" width="800" height="452" alt="howtoCopyFilestoRootDirectoryonLinuxFeatThunarEp (8)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次演示，所使用的系統是 Linux Lite 6.6。</li>
+<li><a href="https://www.linuxliteos.com/">Linux Lite Easy to Use Free Linux Operating System</a></li>
+<li><a href="https://web.archive.org/web/20180927231718/http://linuxliteos.com/features.html">Free Operating System - Linux Lite</a></li>
+<li>CLI 與 GUI 之間，一直以來都有不同的擁護者，以我而言，自己認為好用是最重要的。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linuxlite</tag>
+        <tag>thunar</tag>
       </tags>
   </entry>
   <entry>
@@ -2615,6 +2615,46 @@
       </tags>
   </entry>
   <entry>
+    <title>安裝 Amarok Linux 3.2 (21.10.14) 與嘸蝦米</title>
+    <url>/boshiamy/installing-amarok-linux-3-2-and-boshiamy/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Amarok Linux 是 Debian 的衍生發行版，通常這樣的發行版，都會有一定的特色，不然，就不太會有人想用。比方說，另外一個大家熟知，使用率也很高的 Debian 衍生發行版：ubuntu，就推得還算滿成功的。</p>
+<h3 id="安裝-Amarok-Linux"><a href="#安裝-Amarok-Linux" class="headerlink" title="安裝 Amarok Linux"></a>安裝 Amarok Linux</h3><ol>
+<li>安裝前，先下載自己想用的桌面環境，下載官網：<a href="https://amaroklinux.org/download/" title="Download | Amarok Linux">Download | Amarok Linux</a>雖然提到 Amarok Linux 支援 4 種，但從介紹的內容來看，明顯比較推 Xfce 與 Gnome，剛好，這兩個都是我滿習慣且愛用的桌面環境。</li>
+<li>圖形介面的安裝，但比較不好意思，這次我並沒有把安裝過程截圖下來。</li>
+</ol>
+<h3 id="安裝嘸蝦米"><a href="#安裝嘸蝦米" class="headerlink" title="安裝嘸蝦米"></a>安裝嘸蝦米</h3><ol>
+<li><p>要快速使用的話，我認為選 fcitx(4) 最快。</p>
+</li>
+<li><p>在 Terminal 下一道指令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install fcitx-table-boshiamy</span><br></pre></td></tr></table></figure>
+<p> <img src="https://live.staticflickr.com/65535/51638417284_590b5c3490_o.png"></p>
+</li>
+<li><p>從選單→系統，再點一下「啟動輸入法」，然後，重新開機。 <img src="https://live.staticflickr.com/65535/51636935537_c1feef370e_o.png"></p>
+</li>
+<li><p>使用 Ctrl+Space 切換到嘸蝦米，就能夠順利服用。 <img src="https://live.staticflickr.com/65535/51638417174_218af0940b_o.png"></p>
+</li>
+</ol>
+<h3 id="10-分鐘使用心得"><a href="#10-分鐘使用心得" class="headerlink" title="10 分鐘使用心得"></a>10 分鐘使用心得</h3><ol>
+<li>快：Amarok Linux 應該是 Debian 本身與目前我接觸過的衍生發行版本中，快到讓我印象深刻的。開機到進入系統，以及在系統內開啟初始安裝時內附 App，我沒有去計時，但是，就是有一種快速即時、不拖泥帶水的感覺。</li>
+<li>與眾不同的地方：官網有不少介紹，而我認為，剛安裝好，進入系統所呈現的視窗，大致也說明了一切。只可惜，我目前只使用 10 分鐘，無法對於這些功能多做說明。如果這些功能都能夠正常發揮，想見會是滿好用的 Distro。 <img src="https://live.staticflickr.com/65535/51638417409_1ba1fbca59_o.png"> <img src="https://live.staticflickr.com/65535/51637769631_b1c94c7ba1_o.png"> <img src="https://live.staticflickr.com/65535/51636935757_38690da88e_o.png"> <img src="https://live.staticflickr.com/65535/51638417274_40d5c26e73_o.png"></li>
+<li>「美中不足？」：虛擬機器的視訊記憶體，最多只能調整到 128 MB，預設安裝的佈景桌面圖像，點下去的反白，還真的是一片白，還好，這個只要到「設定值」裡的「外觀」選項改其他比較能夠正常顯示的，就可以解決。我猜，可能有一定的透明效果，只是虛擬機器的限制，讓它無法正常發揮，反而顯得有點怪怪的。 <img src="https://live.staticflickr.com/65535/51638417129_fa6ae413af_o.png"></li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 AmarokLinux-3.2-21.10.14-Xfce-amd64.hybrid.iso。</li>
+<li>官網：<a href="https://amaroklinux.org/" title="Amarok Linux">Amarok Linux</a>。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>boshiamy</tag>
+        <tag>linux</tag>
+        <tag>fcitx</tag>
+        <tag>amaroklinux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安裝與運作 Contest Management System (ubuntu Server 版)</title>
     <url>/linux/installing-and-running-contest-management-system-on-ubuntu-live-server/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本次紀錄所使用的是在 VirtualBox 上安裝的 ubuntu 18.04.6 LTS Live Server，本篇紀錄大致分為 3 個部分。 第一階段，在 VirtualBox 上安裝 ubuntu 18.04.6 LTS Live Server。 第二階段，在 ubuntu 18.04.6 LTS Live Server 上安裝 Contest Management System。 第三階段，執行並測試 Contest Management System。</p>
@@ -2734,46 +2774,6 @@
         <tag>ubuntu</tag>
         <tag>contest</tag>
         <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>安裝 Amarok Linux 3.2 (21.10.14) 與嘸蝦米</title>
-    <url>/boshiamy/installing-amarok-linux-3-2-and-boshiamy/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Amarok Linux 是 Debian 的衍生發行版，通常這樣的發行版，都會有一定的特色，不然，就不太會有人想用。比方說，另外一個大家熟知，使用率也很高的 Debian 衍生發行版：ubuntu，就推得還算滿成功的。</p>
-<h3 id="安裝-Amarok-Linux"><a href="#安裝-Amarok-Linux" class="headerlink" title="安裝 Amarok Linux"></a>安裝 Amarok Linux</h3><ol>
-<li>安裝前，先下載自己想用的桌面環境，下載官網：<a href="https://amaroklinux.org/download/" title="Download | Amarok Linux">Download | Amarok Linux</a>雖然提到 Amarok Linux 支援 4 種，但從介紹的內容來看，明顯比較推 Xfce 與 Gnome，剛好，這兩個都是我滿習慣且愛用的桌面環境。</li>
-<li>圖形介面的安裝，但比較不好意思，這次我並沒有把安裝過程截圖下來。</li>
-</ol>
-<h3 id="安裝嘸蝦米"><a href="#安裝嘸蝦米" class="headerlink" title="安裝嘸蝦米"></a>安裝嘸蝦米</h3><ol>
-<li><p>要快速使用的話，我認為選 fcitx(4) 最快。</p>
-</li>
-<li><p>在 Terminal 下一道指令：</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install fcitx-table-boshiamy</span><br></pre></td></tr></table></figure>
-<p> <img src="https://live.staticflickr.com/65535/51638417284_590b5c3490_o.png"></p>
-</li>
-<li><p>從選單→系統，再點一下「啟動輸入法」，然後，重新開機。 <img src="https://live.staticflickr.com/65535/51636935537_c1feef370e_o.png"></p>
-</li>
-<li><p>使用 Ctrl+Space 切換到嘸蝦米，就能夠順利服用。 <img src="https://live.staticflickr.com/65535/51638417174_218af0940b_o.png"></p>
-</li>
-</ol>
-<h3 id="10-分鐘使用心得"><a href="#10-分鐘使用心得" class="headerlink" title="10 分鐘使用心得"></a>10 分鐘使用心得</h3><ol>
-<li>快：Amarok Linux 應該是 Debian 本身與目前我接觸過的衍生發行版本中，快到讓我印象深刻的。開機到進入系統，以及在系統內開啟初始安裝時內附 App，我沒有去計時，但是，就是有一種快速即時、不拖泥帶水的感覺。</li>
-<li>與眾不同的地方：官網有不少介紹，而我認為，剛安裝好，進入系統所呈現的視窗，大致也說明了一切。只可惜，我目前只使用 10 分鐘，無法對於這些功能多做說明。如果這些功能都能夠正常發揮，想見會是滿好用的 Distro。 <img src="https://live.staticflickr.com/65535/51638417409_1ba1fbca59_o.png"> <img src="https://live.staticflickr.com/65535/51637769631_b1c94c7ba1_o.png"> <img src="https://live.staticflickr.com/65535/51636935757_38690da88e_o.png"> <img src="https://live.staticflickr.com/65535/51638417274_40d5c26e73_o.png"></li>
-<li>「美中不足？」：虛擬機器的視訊記憶體，最多只能調整到 128 MB，預設安裝的佈景桌面圖像，點下去的反白，還真的是一片白，還好，這個只要到「設定值」裡的「外觀」選項改其他比較能夠正常顯示的，就可以解決。我猜，可能有一定的透明效果，只是虛擬機器的限制，讓它無法正常發揮，反而顯得有點怪怪的。 <img src="https://live.staticflickr.com/65535/51638417129_fa6ae413af_o.png"></li>
-</ol>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>本次安裝使用的 ISO 檔版本是 AmarokLinux-3.2-21.10.14-Xfce-amd64.hybrid.iso。</li>
-<li>官網：<a href="https://amaroklinux.org/" title="Amarok Linux">Amarok Linux</a>。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>boshiamy</tag>
-        <tag>linux</tag>
-        <tag>fcitx</tag>
-        <tag>amaroklinux</tag>
       </tags>
   </entry>
   <entry>
@@ -3130,24 +3130,6 @@
       </tags>
   </entry>
   <entry>
-    <title>安裝 Fedora Core 4 PPC</title>
-    <url>/linux/installing-fedora-core-4-ppc/</url>
-    <content><![CDATA[<p>以下是我的安裝過程：  </p>
-<p>一、安裝光碟用吐司燒吧！我下的是CD版。<br>二、光碟開機後，進入圖形化安裝介面前，執行linux resolution&#x3D;1024X768，我裝的機子是iMac G4 700。<br>三、安裝時間不用太久，約半個小時至一個小時，視安裝元件多寡，我用自訂安裝，大致上跟Workstation的元件接近，只是又加了點Server的東西。  </p>
-<p>好像就這樣吧！覺得速度還挺快的，一下子就搞定。  </p>
-<p>※若要Multi OS，最好先用Disk Untiity來重新規劃硬碟，裝完OS X再裝Fedora，然後用Disk Druid劃分至少三個部分：Apple Bootstrap、swap、ext3。</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>fedora</tag>
-        <tag>mac</tag>
-        <tag>linuxppc</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>在 ubuntu 8.10 上面安裝 gcin 與嘸蝦米</title>
     <url>/boshiamy/installing-gcin-and-boshiamy-on-ubuntu-8-10/</url>
     <content><![CDATA[<p>對於 <a href="http://cle.linux.org.tw/trac">gcin</a> 的官方網站已經有非常詳盡的說明而言，再寫乙次在 ubuntu 8.10 上面安裝 gcin 與配搭的嘸蝦米表格，似乎是脫褲子放屁的事兒，對吧？  </p>
@@ -3250,6 +3232,24 @@
         <tag>linux</tag>
         <tag>mxlinux</tag>
         <tag>debian</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安裝 Fedora Core 4 PPC</title>
+    <url>/linux/installing-fedora-core-4-ppc/</url>
+    <content><![CDATA[<p>以下是我的安裝過程：  </p>
+<p>一、安裝光碟用吐司燒吧！我下的是CD版。<br>二、光碟開機後，進入圖形化安裝介面前，執行linux resolution&#x3D;1024X768，我裝的機子是iMac G4 700。<br>三、安裝時間不用太久，約半個小時至一個小時，視安裝元件多寡，我用自訂安裝，大致上跟Workstation的元件接近，只是又加了點Server的東西。  </p>
+<p>好像就這樣吧！覺得速度還挺快的，一下子就搞定。  </p>
+<p>※若要Multi OS，最好先用Disk Untiity來重新規劃硬碟，裝完OS X再裝Fedora，然後用Disk Druid劃分至少三個部分：Apple Bootstrap、swap、ext3。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>fedora</tag>
+        <tag>mac</tag>
+        <tag>linuxppc</tag>
       </tags>
   </entry>
   <entry>
@@ -3632,23 +3632,28 @@
       </tags>
   </entry>
   <entry>
-    <title>在 Windows 10 上安裝 Visual Studio Code EP2</title>
-    <url>/windows/installing-visual-studio-code-on-windows-ep2/</url>
+    <title>在 Windows 10 上安裝 Visual Studio Code EP3</title>
+    <url>/windows/installing-visual-studio-code-on-windows-ep3/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>寫程式，設定好 IDE，可以增加自己的效率，今天來紀錄一下安裝 Visual Studio Code (又稱 VSCode)，設定 C++ 的程式設計環境。</p>
 <p>我找了個從沒有安裝過的 Windows 10 上面完成安裝的，安裝後把紀錄大致分成幾個部分。</p>
 <p>EP 1：<a href="http://mtmatt.one/windows/installing-visual-studio-code-on-windows-ep1/" title="安裝 Visual Studio Code 主程式">安裝 Visual Studio Code 主程式</a><br>EP 2：<a href="http://mtmatt.one/windows/installing-visual-studio-code-on-windows-ep2/" title="安裝 MSYS2 與 MinGW">安裝 MSYS2 與 MinGW</a><br>EP 3：<a href="http://mtmatt.one/windows/installing-visual-studio-code-on-windows-ep3/" title="設定程式設計專案路徑，安裝 Visual Studio Code 語言套件與 C++ 相關套件">設定程式設計專案路徑，安裝 Visual Studio Code 語言套件與 C++ 相關套件</a></p>
-<h3 id="安裝-MSYS2-與-MinGW"><a href="#安裝-MSYS2-與-MinGW" class="headerlink" title="安裝 MSYS2 與 MinGW"></a>安裝 MSYS2 與 MinGW</h3><ol>
-<li><a href="https://www.msys2.org/">MSYS2</a> 網站就有滿詳盡的說明，我基本上也是照著說明服用。</li>
-<li>我這次是下載 msys2-x86_64-20210725.exe，安裝時就是一直「下一步」到「完成」，即使如此，也麻煩要特別注意一下 Installation Folder 這個步驟，確認一下安裝路徑，因為這個後續的環境設定會用到，我想，對於安裝與設定過其他程式設計環境的人，應該不陌生。 <img src="https://live.staticflickr.com/65535/51410186958_0235ff01d2_o.png"></li>
-<li>下 3 道命令，把 MinGW 裝起來。<br>(1)<code>pacman -Syu</code>：這個指令是為了更新系統的核心套件，更新完會關掉視窗，請至開始功能表找到並開啟 MSYS2 MSYS。 <img src="https://live.staticflickr.com/65535/51411644776_360dbe16e6_o.png"><br>(2)<code>pacman -Su</code>：更新其他基礎套件。<br>(3)<code>pacman -S --needed base-devel mingw-w64-x86_64-toolchain</code>：安裝 mingw-w64 GCC 與相關工具套件。</li>
-<li>接著，有二種走法。<br>(1)快速進入「系統內容」，就是開 Windows 的 Terminal (CMD) 或是按住「Win+R」，執行 <code>systempropertiesadvanced</code>。使用這個方法，就可以在執行完之後，直接走到下列步驟：第 5 點的第 (5) 項【也就是說，可以跳過 第 5 點的第 (1) 項至第 (4) 項這些步驟】。 <img src="https://live.staticflickr.com/65535/51412035993_93f59e4aac_o.png"><br>(2)對 Terminal (CMD) 或是按住「Win+R」不習慣的伙伴，可以從下列步驟：第 5 點的第 (1) 項開始按步驟操課服用，也行得通。</li>
-<li>如果不想影響 Windows 的 PATH 環境變數，可以使用 MinGW 終端機，但，我想把相對應的路徑加入 PATH 環境變數，這個部分，我不常設定，其實也找了一下，這次就筆記下來，方便以後好找、好設定。<br>(1)「開始功能表」→「設定」(齒輪圖示)→「Windows 設定」，再點一下「系統」。 <img src="https://live.staticflickr.com/65535/51412423034_8b09e95c4e_o.png"><br>(2)點「關於」。 <img src="https://live.staticflickr.com/65535/51410832467_168ab6a180_o.png"><br>(3)點「系統資訊」。 <img src="https://live.staticflickr.com/65535/51410832462_0026676783_o.png"><br>(4)進入「系統內容」後，點「進階系統設定」。 <img src="https://live.staticflickr.com/65535/51411575456_dc2f8429a6_o.png"><br>(5)點「環境變數」。 <img src="https://live.staticflickr.com/65535/51410832422_82a36470d6_o.png"><br>(6)從「系統變數」欄位中，找到「Path」，點選後，再點「編輯」。 <img src="https://live.staticflickr.com/65535/51411575416_d8007961a4_o.png"><br>(7)把「C:\msys64\mingw64\bin」這個路徑，新增進去吧！ <img src="https://live.staticflickr.com/65535/51410676684_a59aa77c03_o.png"></li>
-<li>如果有已開啟的 Windows Termial (CMD) 的話，關掉並重新啟動 Terminal，如果沒有，直接啟動一個新的，執行下列命令，確認安裝完成。<pre><code>g++ -v
-gdb -v
-</code></pre>
- <img src="https://live.staticflickr.com/65535/51409171467_5553f05524_o.png"></li>
+<h3 id="設定程式設計專案路徑"><a href="#設定程式設計專案路徑" class="headerlink" title="設定程式設計專案路徑"></a>設定程式設計專案路徑</h3><ol>
+<li>建立一個新的專案，只要下幾道指令就可以搞定，我的經驗是路徑命名要用英文，不要用中文。</li>
+<li>我要設定 C++ 的程式設計專案路徑，我下的指令如下。<br>(1)<code>mkdir cppP</code>：先開一個放所有專案的資料夾。<br>(2)<code>cd cppP</code>：進入剛才好開的資料夾(放所有專案)。<br>(3)<code>mkdir helloworld</code>：這個大家都懂，當然也可以命名為 test 之類的，高興就好。<br>(4)<code>cd helloworld</code>：進入 helloworld 這個資料夾。<br>(5)<code>code .</code>：啟動 VSCode。 <img src="https://live.staticflickr.com/65535/51410186768_e7c6bbea48_o.png"></li>
 </ol>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>我在整理自己的紀錄時，發現「安裝 MSYS2 與 MinGW」是相對比較麻煩的，未來如有參考需要時，我可能會先從這一個部分開始安裝與設定。</p>
+<h3 id="安裝-Visual-Studio-Code-語言套件與-C-相關套件"><a href="#安裝-Visual-Studio-Code-語言套件與-C-相關套件" class="headerlink" title="安裝 Visual Studio Code 語言套件與 C++ 相關套件"></a>安裝 Visual Studio Code 語言套件與 C++ 相關套件</h3><ol>
+<li>下完 <code>code .</code> 這個指令後，就會跳出 VSCode 主程式，勾選「Trust the …」，點下「Yes, I trust…」那個按鈕。 <img src="https://live.staticflickr.com/65535/51409171432_c55909e577_o.png"></li>
+<li>一進入程式，程式的右下角就會出現「安裝語言套件…」，而且會對應到使用者的系統語言設定，可以不安裝，但如果對中文比較熟悉的人，倒是可以安裝並重新啟動 VSCode。 <img src="https://live.staticflickr.com/65535/51410186728_477f759cc2_o.png"></li>
+<li>找從程式介面左側，從上數下來的第 5 個圖示，在搜尋框打「C++」，把 C&#x2F;C++ for Visual Studio Code 的套件找出來安裝。 <img src="https://live.staticflickr.com/65535/51410897355_88054cbe38_o.png"></li>
+</ol>
+<h3 id="測試-VSCode"><a href="#測試-VSCode" class="headerlink" title="測試 VSCode"></a>測試 VSCode</h3><ol>
+<li>新增檔案，幾個方式可以達成：<br>(1)Ctrl+N。<br>(2)先在程式介面左邊「檔案總管」，找到一個文件上面有加號的圖示。<br>(3)「檔案」→「新增檔案」。 <img src="https://live.staticflickr.com/65535/51409920036_f011970a9f_o.png"></li>
+<li>寫一段程式碼測試看看，這裡我是拿官方給的程式碼，複製貼上，再按「Ctrl+S」，接著再按「F5」，程式會請我們選取環境，我選「C++ (GDB&#x2F;LLDB)」。 <img src="https://live.staticflickr.com/65535/51410897335_589dda6e0c_o.png"></li>
+<li>再選「g++.exe…」。 <img src="https://live.staticflickr.com/65535/51410676539_6dc27ce630_o.png"></li>
+<li>執行後，先跳出這個訊息。 <img src="https://live.staticflickr.com/65535/51410186653_250ee649c5_o.png"></li>
+<li>再按一次[Enter]，走到這裡應該就是沒有問題了。 <img src="https://live.staticflickr.com/65535/51410897295_0763e077f3_o.png"></li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>Have fun. Enjoy coding.</p>
 ]]></content>
       <categories>
         <category>windows</category>
@@ -3656,8 +3661,6 @@ gdb -v
       <tags>
         <tag>windows10</tag>
         <tag>vscode</tag>
-        <tag>mingw</tag>
-        <tag>msys2</tag>
       </tags>
   </entry>
   <entry>
@@ -3697,28 +3700,23 @@ gdb -v
       </tags>
   </entry>
   <entry>
-    <title>在 Windows 10 上安裝 Visual Studio Code EP3</title>
-    <url>/windows/installing-visual-studio-code-on-windows-ep3/</url>
+    <title>在 Windows 10 上安裝 Visual Studio Code EP2</title>
+    <url>/windows/installing-visual-studio-code-on-windows-ep2/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>寫程式，設定好 IDE，可以增加自己的效率，今天來紀錄一下安裝 Visual Studio Code (又稱 VSCode)，設定 C++ 的程式設計環境。</p>
 <p>我找了個從沒有安裝過的 Windows 10 上面完成安裝的，安裝後把紀錄大致分成幾個部分。</p>
 <p>EP 1：<a href="http://mtmatt.one/windows/installing-visual-studio-code-on-windows-ep1/" title="安裝 Visual Studio Code 主程式">安裝 Visual Studio Code 主程式</a><br>EP 2：<a href="http://mtmatt.one/windows/installing-visual-studio-code-on-windows-ep2/" title="安裝 MSYS2 與 MinGW">安裝 MSYS2 與 MinGW</a><br>EP 3：<a href="http://mtmatt.one/windows/installing-visual-studio-code-on-windows-ep3/" title="設定程式設計專案路徑，安裝 Visual Studio Code 語言套件與 C++ 相關套件">設定程式設計專案路徑，安裝 Visual Studio Code 語言套件與 C++ 相關套件</a></p>
-<h3 id="設定程式設計專案路徑"><a href="#設定程式設計專案路徑" class="headerlink" title="設定程式設計專案路徑"></a>設定程式設計專案路徑</h3><ol>
-<li>建立一個新的專案，只要下幾道指令就可以搞定，我的經驗是路徑命名要用英文，不要用中文。</li>
-<li>我要設定 C++ 的程式設計專案路徑，我下的指令如下。<br>(1)<code>mkdir cppP</code>：先開一個放所有專案的資料夾。<br>(2)<code>cd cppP</code>：進入剛才好開的資料夾(放所有專案)。<br>(3)<code>mkdir helloworld</code>：這個大家都懂，當然也可以命名為 test 之類的，高興就好。<br>(4)<code>cd helloworld</code>：進入 helloworld 這個資料夾。<br>(5)<code>code .</code>：啟動 VSCode。 <img src="https://live.staticflickr.com/65535/51410186768_e7c6bbea48_o.png"></li>
+<h3 id="安裝-MSYS2-與-MinGW"><a href="#安裝-MSYS2-與-MinGW" class="headerlink" title="安裝 MSYS2 與 MinGW"></a>安裝 MSYS2 與 MinGW</h3><ol>
+<li><a href="https://www.msys2.org/">MSYS2</a> 網站就有滿詳盡的說明，我基本上也是照著說明服用。</li>
+<li>我這次是下載 msys2-x86_64-20210725.exe，安裝時就是一直「下一步」到「完成」，即使如此，也麻煩要特別注意一下 Installation Folder 這個步驟，確認一下安裝路徑，因為這個後續的環境設定會用到，我想，對於安裝與設定過其他程式設計環境的人，應該不陌生。 <img src="https://live.staticflickr.com/65535/51410186958_0235ff01d2_o.png"></li>
+<li>下 3 道命令，把 MinGW 裝起來。<br>(1)<code>pacman -Syu</code>：這個指令是為了更新系統的核心套件，更新完會關掉視窗，請至開始功能表找到並開啟 MSYS2 MSYS。 <img src="https://live.staticflickr.com/65535/51411644776_360dbe16e6_o.png"><br>(2)<code>pacman -Su</code>：更新其他基礎套件。<br>(3)<code>pacman -S --needed base-devel mingw-w64-x86_64-toolchain</code>：安裝 mingw-w64 GCC 與相關工具套件。</li>
+<li>接著，有二種走法。<br>(1)快速進入「系統內容」，就是開 Windows 的 Terminal (CMD) 或是按住「Win+R」，執行 <code>systempropertiesadvanced</code>。使用這個方法，就可以在執行完之後，直接走到下列步驟：第 5 點的第 (5) 項【也就是說，可以跳過 第 5 點的第 (1) 項至第 (4) 項這些步驟】。 <img src="https://live.staticflickr.com/65535/51412035993_93f59e4aac_o.png"><br>(2)對 Terminal (CMD) 或是按住「Win+R」不習慣的伙伴，可以從下列步驟：第 5 點的第 (1) 項開始按步驟操課服用，也行得通。</li>
+<li>如果不想影響 Windows 的 PATH 環境變數，可以使用 MinGW 終端機，但，我想把相對應的路徑加入 PATH 環境變數，這個部分，我不常設定，其實也找了一下，這次就筆記下來，方便以後好找、好設定。<br>(1)「開始功能表」→「設定」(齒輪圖示)→「Windows 設定」，再點一下「系統」。 <img src="https://live.staticflickr.com/65535/51412423034_8b09e95c4e_o.png"><br>(2)點「關於」。 <img src="https://live.staticflickr.com/65535/51410832467_168ab6a180_o.png"><br>(3)點「系統資訊」。 <img src="https://live.staticflickr.com/65535/51410832462_0026676783_o.png"><br>(4)進入「系統內容」後，點「進階系統設定」。 <img src="https://live.staticflickr.com/65535/51411575456_dc2f8429a6_o.png"><br>(5)點「環境變數」。 <img src="https://live.staticflickr.com/65535/51410832422_82a36470d6_o.png"><br>(6)從「系統變數」欄位中，找到「Path」，點選後，再點「編輯」。 <img src="https://live.staticflickr.com/65535/51411575416_d8007961a4_o.png"><br>(7)把「C:\msys64\mingw64\bin」這個路徑，新增進去吧！ <img src="https://live.staticflickr.com/65535/51410676684_a59aa77c03_o.png"></li>
+<li>如果有已開啟的 Windows Termial (CMD) 的話，關掉並重新啟動 Terminal，如果沒有，直接啟動一個新的，執行下列命令，確認安裝完成。<pre><code>g++ -v
+gdb -v
+</code></pre>
+ <img src="https://live.staticflickr.com/65535/51409171467_5553f05524_o.png"></li>
 </ol>
-<h3 id="安裝-Visual-Studio-Code-語言套件與-C-相關套件"><a href="#安裝-Visual-Studio-Code-語言套件與-C-相關套件" class="headerlink" title="安裝 Visual Studio Code 語言套件與 C++ 相關套件"></a>安裝 Visual Studio Code 語言套件與 C++ 相關套件</h3><ol>
-<li>下完 <code>code .</code> 這個指令後，就會跳出 VSCode 主程式，勾選「Trust the …」，點下「Yes, I trust…」那個按鈕。 <img src="https://live.staticflickr.com/65535/51409171432_c55909e577_o.png"></li>
-<li>一進入程式，程式的右下角就會出現「安裝語言套件…」，而且會對應到使用者的系統語言設定，可以不安裝，但如果對中文比較熟悉的人，倒是可以安裝並重新啟動 VSCode。 <img src="https://live.staticflickr.com/65535/51410186728_477f759cc2_o.png"></li>
-<li>找從程式介面左側，從上數下來的第 5 個圖示，在搜尋框打「C++」，把 C&#x2F;C++ for Visual Studio Code 的套件找出來安裝。 <img src="https://live.staticflickr.com/65535/51410897355_88054cbe38_o.png"></li>
-</ol>
-<h3 id="測試-VSCode"><a href="#測試-VSCode" class="headerlink" title="測試 VSCode"></a>測試 VSCode</h3><ol>
-<li>新增檔案，幾個方式可以達成：<br>(1)Ctrl+N。<br>(2)先在程式介面左邊「檔案總管」，找到一個文件上面有加號的圖示。<br>(3)「檔案」→「新增檔案」。 <img src="https://live.staticflickr.com/65535/51409920036_f011970a9f_o.png"></li>
-<li>寫一段程式碼測試看看，這裡我是拿官方給的程式碼，複製貼上，再按「Ctrl+S」，接著再按「F5」，程式會請我們選取環境，我選「C++ (GDB&#x2F;LLDB)」。 <img src="https://live.staticflickr.com/65535/51410897335_589dda6e0c_o.png"></li>
-<li>再選「g++.exe…」。 <img src="https://live.staticflickr.com/65535/51410676539_6dc27ce630_o.png"></li>
-<li>執行後，先跳出這個訊息。 <img src="https://live.staticflickr.com/65535/51410186653_250ee649c5_o.png"></li>
-<li>再按一次[Enter]，走到這裡應該就是沒有問題了。 <img src="https://live.staticflickr.com/65535/51410897295_0763e077f3_o.png"></li>
-</ol>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>Have fun. Enjoy coding.</p>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>我在整理自己的紀錄時，發現「安裝 MSYS2 與 MinGW」是相對比較麻煩的，未來如有參考需要時，我可能會先從這一個部分開始安裝與設定。</p>
 ]]></content>
       <categories>
         <category>windows</category>
@@ -3726,58 +3724,8 @@ gdb -v
       <tags>
         <tag>windows10</tag>
         <tag>vscode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kaiboard 與嘸蝦米輸入法</title>
-    <url>/boshiamy/kaiboard-and-boshiamy/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>紀錄一下「Kaiboard 與嘸蝦米輸入法」的使用心得與設定流程。 <img src="https://live.staticflickr.com/65535/53998591101_9b646586c0_b.jpg" alt="kaiboardAndBoshiamyEp (1)"/></p>
-<h3 id="使用心得"><a href="#使用心得" class="headerlink" title="使用心得"></a>使用心得</h3><ol>
-<li><p>在 iOS、iPadOS 上，就我所知，可以「免費使用」的嘸蝦米輸入法，一個是「蝦米鍵盤 2」，另一個，應該就是今天的主角：「Kaiboard」。</p>
-</li>
-<li><p>目前，「Kaiboard」的設定畫面，並沒有廣告。而且，鍵盤的配置，算是合我的味口。</p>
-</li>
-<li><p>比較不習慣的部分，就是常用的標點符號：逗號（，）與句號（。）的入字方式，跟我會使用「空白鍵」入字的習慣不太一樣，就這一點，對我來說是需要花一點時間去適應的。 <img src="https://live.staticflickr.com/65535/53999018270_158b7c9bd1_k.jpg" alt="kaiboardAndBoshiamyEp (9)"/><img src="https://live.staticflickr.com/65535/53998590921_36dcc8c2c6_k.jpg" alt="kaiboardAndBoshiamyEp (10)"/></p>
-</li>
-<li><p>從 App Store 下載回來，啟用「Kaiboard」時會有幾個類似精靈的步驟，協助使用者做比較初始的設定，而這個設定好像只在頭一次安裝與啟用時出現，…很可惜，這一次，我沒有截圖下來。</p>
-</li>
-<li><p>使用嘸蝦米輸入法前，需要再多做一點設定，這個部分，我試著用截圖紀錄於後文。</p>
-</li>
-</ol>
-<h3 id="使用嘸蝦米輸入法的相關設定"><a href="#使用嘸蝦米輸入法的相關設定" class="headerlink" title="使用嘸蝦米輸入法的相關設定"></a>使用嘸蝦米輸入法的相關設定</h3><ol>
-<li><p>點一下「Kaiboard」圖示後，就會進入「Kaiboard」的主畫面，可以看到「設定」、「界面」與「關於」3 個選項。</p>
-</li>
-<li><p>我的做法是先在「設定」這個項下，將「選字」項下的「空白鍵功能」改為「選首字」。至於底下的「空白輔助鍵」，我是保留在「關閉」的選項上。 <img src="https://live.staticflickr.com/65535/53998827028_240923c8a9_k.jpg" alt="kaiboardAndBoshiamyEp (2)"/></p>
-</li>
-<li><p>接著，同樣是在「設定」項下，點進「輸入法設定」，用右手邊的【三條線】按鍵，去調整「包含」與「不包含」項下的內容。 <img src="https://live.staticflickr.com/65535/53998591006_178b6fd9ef_k.jpg" alt="kaiboardAndBoshiamyEp (6)"/></p>
-</li>
-<li><p>承上，下圖是我自己的調整結果，想當然爾，「∞ 蝦米」是一定要被包含的。 <img src="https://live.staticflickr.com/65535/53998826953_7db7f0340a_k.jpg" alt="kaiboardAndBoshiamyEp (7)"/></p>
-</li>
-<li><p>再來，點到「界面」的畫面裡，我認為比較必要的是將「按鍵主字碼」改為「英文」。 <img src="https://live.staticflickr.com/65535/53999018340_bbb3b96b8c_k.jpg" alt="kaiboardAndBoshiamyEp (4)"/></p>
-</li>
-<li><p>至於，「界面」項下的其他選項，要不要動，就視個人而定，我自己的話，有試著去更改「按鍵大小」，還有「鍵盤主題」。 <img src="https://live.staticflickr.com/65535/53999286390_dff8d06672_k.jpg" alt="kaiboardAndBoshiamyEp (8)"/></p>
-</li>
-</ol>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li><p>目前，我所使用的是 iPhone 13，iOS 版本是 17.6.1。</p>
-</li>
-<li><p>說真的，「Kaiboard」算是很佛心的 App。因為，一方面，沒有廣告；另一方面，主要功能都不用另外付費，所以，我個人認為額外功能若有需要用到，費用的部分，算是合理的價位。</p>
-</li>
-<li><p>我所使用的「Kaiboard」版本號是 1.9.10，我在爬文的時候，讀到「<a href="https://www.ptt.cc/bbs/iOS/M.1677367369.A.4AC.html">[問題] Kaiboard 無蝦米 bug - 看板 iOS - 批踢踢實業坊</a>」，有網友提到「用kaiboard打字 常常第一個字會變成英文」的問題，我是沒有碰到的。</p>
-</li>
-<li><p><a href="https://kaiboard.app/">Kaiboard</a></p>
-</li>
-<li><p><a href="https://apps.apple.com/tw/app/kaiboard-%E4%B8%AD%E8%8B%B1%E6%B7%B7%E5%90%88%E9%8D%B5%E7%9B%A4/id946910980">App Store 上的《Kaiboard 中英混合鍵盤》</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>apple</tag>
-        <tag>boshiamy</tag>
-        <tag>ios</tag>
+        <tag>mingw</tag>
+        <tag>msys2</tag>
       </tags>
   </entry>
   <entry>
@@ -3793,6 +3741,45 @@ gdb -v
 <hr>
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>KB4023057 這支補丁，應該是要「更新 Windows Update 服務元件」，有點可惜的是…，無論是繁體中文或是英文，都看不太出來到底更新了什麼(猜想是「新的 Windows Update 使用者介面」)，所以，我最後的決定是先不要把這支補丁打上去。</p>
 <p>如果有伙伴知道這支補丁的更新細節，歡迎在本篇貼文回應，謝謝。</p>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>windows11</tag>
+        <tag>windowsupdate</tag>
+        <tag>quickrecap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[版本更新] 快速回顧 微軟發布 KB5010386 (Windows 11 作業系統組建 22000.493)</title>
+    <url>/windows/kb5010386-windows-11-os-build-22000-493/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>隨著不少新的電腦已搭載 Windows 11 出貨，我相信目前的 Windows 11 已經有一定的穩定度，而我此次更新到 Windows 11 後，會持續觀注系統補丁，而且不一定每一個補丁釋出，都立馬跟著更新，主要是希望，這一回升級到 Windows 11 至少要能夠穩穩用個 1 年。</p>
+<p>今天升級的機器，已經經歷過一次 Windows 11 升級，升級後掛點前，機器上的韌體更新了幾次，考量到微軟也陸續提供系統補丁，就在前天，注意到 Windows 11 推動的升級訊息時，我就前面幾點的考量後，便決定再次將系統升級到 Windows 11(花費大概 1 小時 15 分鐘)。恰巧的是我完成 Windows 11 升級的當天，正好碰上微軟釋出 <a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-2-%E6%9C%88-8-%E6%97%A5-kb5010386-os-build-22000-493-3c018e73-a58a-4fca-be69-8a93dd6fedbd">2022 年 2 月 8 日 —KB5010386 (OS Build 22000.493)</a> 這支補丁，並且，直到今天才收到更新的通知。</p>
+<p>說真的，這樣也好，通常更新跑第一，都需要一點冒險精神，這次升級到 Windows 11，我求的是穩定度，不會想要賭一把。 <a href="https://www.flickr.com/photos/194265827@N08/51873296441/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"><img src="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"></a></p>
+<hr>
+<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><p>我先讀過 <a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-2-%E6%9C%88-8-%E6%97%A5-kb5010386-os-build-22000-493-3c018e73-a58a-4fca-be69-8a93dd6fedbd">2022 年 2 月 8 日 —KB5010386 (OS Build 22000.493)</a> 裡的說明。</p>
+<p>我特別注意到 2 個部分： 其一，中文輸入法的可靠性(Reliability)：可能是我中字打字還不夠多，也可能是我在 Windows 11 的機器上，搭配使用的 App 也不夠多元與廣泛，我自己並沒有發現任何中文輸入法不夠可靠的問題，另外，我使用的是嘸蝦米輸入法是否包涵在這次的更新範圍(…這麼說好了，我個人不太能夠從微軟的說明裡，具體地瞭解到更新「中文輸入法可靠性」指的是什麼)。 <a href="https://www.flickr.com/photos/194265827@N08/51877193562/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep1"><img src="https://live.staticflickr.com/65535/51877193562_642406362d_k.jpg" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep1"></a></p>
+<p>其二，Your Microsoft Account 與 HelpWith：這 2 個地方，應屬介面上的更新，HelpWith 會提供一些說明連結供使用者在需要時點傳送門上網瀏覽。 <a href="https://www.flickr.com/photos/194265827@N08/51878159441/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep2"><img src="https://live.staticflickr.com/65535/51878159441_a97a9528d9_k.jpg" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep2"></a></p>
+<hr>
+<h3 id="更新過程與更新後的觀察"><a href="#更新過程與更新後的觀察" class="headerlink" title="更新過程與更新後的觀察"></a>更新過程與更新後的觀察</h3><p>更新之前，我先跑一趟 Microsoft Account 與【系統〉顯示器】，去看原本的模樣。</p>
+<p>Microsoft Account 的部分，我總覺得更新之前，就跟影片介面的樣子，沒有太大差別。這個部分，可以就下面 2 張圖做比較。</p>
+<p>(↓)這張是影片介紹截圖。 <a href="https://www.flickr.com/photos/194265827@N08/51878272751/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep9"><img src="https://live.staticflickr.com/65535/51878272751_10c4cd754d_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep9"></a></p>
+<p>(↓)這張則是我的機器上的螢幕截圖。 <a href="https://www.flickr.com/photos/194265827@N08/51878159421/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep4"><img src="https://live.staticflickr.com/65535/51878159421_947f7c1d4a_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep4"></a></p>
+<p>【系統〉顯示器】，拉到最底下，英文的部分，會看到「Help with Display」，中文就不知道會怎麼翻譯。同樣地，我也截了 2 張圖做比較。</p>
+<p>(↓)這張是影片介紹截圖。 <a href="https://www.flickr.com/photos/194265827@N08/51877307902/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep10"><img src="https://live.staticflickr.com/65535/51877307902_631cb39483_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep10"></a></p>
+<p>(↓)這張則是我的機器上的螢幕截圖。 <a href="https://www.flickr.com/photos/194265827@N08/51878474374/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep3"><img src="https://live.staticflickr.com/65535/51878474374_51daf7e314_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep3"></a></p>
+<p>看一下更新的時間後，也讓另外一支補丁，一併安裝進來。 <a href="https://www.flickr.com/photos/194265827@N08/51878802275/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep5"><img src="https://live.staticflickr.com/65535/51878802275_6254cf0d43_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep5"></a></p>
+<p> <a href="https://www.flickr.com/photos/194265827@N08/51878474334/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep6"><img src="https://live.staticflickr.com/65535/51878474334_5b69a4ab68_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep6"></a></p>
+<p>更新很快就完成，我特別先跑一趟 Microsoft Account 與【系統〉顯示器】，想看看更新之後長什麼樣？</p>
+<p>答案是「都沒有變」(…呃，詳見下圖)。我在更新完幾個小時後，還重開機確認是沒有，這個部分，Microsoft Account 的部分，好像更新就長這樣，而 HelpWith 的部分，可能要另外開啟，或是中文版的部分，還不在這次的更新補丁裡…吧…？！ <a href="https://www.flickr.com/photos/194265827@N08/51878368078/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep12"><img src="https://live.staticflickr.com/65535/51878368078_66624f22a6_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep12"></a></p>
+<p> <a href="https://www.flickr.com/photos/194265827@N08/51877325702/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep11"><img src="https://live.staticflickr.com/65535/51877325702_4b3b343512_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep11"></a></p>
+<p>剛更新完時，我特別先再去看一下，系統是不是順利將補丁更新上來。 <a href="https://www.flickr.com/photos/194265827@N08/51878944845/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep7"><img src="https://live.staticflickr.com/65535/51878944845_6f38bff6f8_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep7"></a></p>
+<p> <a href="https://www.flickr.com/photos/194265827@N08/51878385608/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep8"><img src="https://live.staticflickr.com/65535/51878385608_b83f3c8814_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep8"></a></p>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>關於 KB5010386 補丁的更新內容，也可參考 <a href="https://www.ithome.com/0/602/192.htm">微软 Win11 Build 22000.493 (KB5010386) 发布：修复 SSD 硬盘性能 Bug，设置新增管理订阅</a>，但我這次沒有特別針對 SSD 讀取速度去做測試，不確定這支補丁是不是真的讓 SSD 的讀取速度改善，就我目前的使用上，感覺也並不是那麼特別明顯。</p>
+<p>另外，服務堆疊更新 (SSU) 是什麼？有興趣的伙伴可以自行上網搜尋，或是參考 <a href="https://support.microsoft.com/zh-tw/topic/%E6%9C%8D%E5%8B%99%E5%A0%86%E7%96%8A%E6%9B%B4%E6%96%B0-ssu-%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E9%9B%86-06b62771-1cb0-368c-09cf-87c4efc4f2fe">服務堆疊更新 (SSU)：常見問題集</a>。</p>
 ]]></content>
       <categories>
         <category>windows</category>
@@ -3862,6 +3849,58 @@ gdb -v
       </tags>
   </entry>
   <entry>
+    <title>Kaiboard 與嘸蝦米輸入法</title>
+    <url>/boshiamy/kaiboard-and-boshiamy/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>紀錄一下「Kaiboard 與嘸蝦米輸入法」的使用心得與設定流程。 <img src="https://live.staticflickr.com/65535/53998591101_9b646586c0_b.jpg" alt="kaiboardAndBoshiamyEp (1)"/></p>
+<h3 id="使用心得"><a href="#使用心得" class="headerlink" title="使用心得"></a>使用心得</h3><ol>
+<li><p>在 iOS、iPadOS 上，就我所知，可以「免費使用」的嘸蝦米輸入法，一個是「蝦米鍵盤 2」，另一個，應該就是今天的主角：「Kaiboard」。</p>
+</li>
+<li><p>目前，「Kaiboard」的設定畫面，並沒有廣告。而且，鍵盤的配置，算是合我的味口。</p>
+</li>
+<li><p>比較不習慣的部分，就是常用的標點符號：逗號（，）與句號（。）的入字方式，跟我會使用「空白鍵」入字的習慣不太一樣，就這一點，對我來說是需要花一點時間去適應的。 <img src="https://live.staticflickr.com/65535/53999018270_158b7c9bd1_k.jpg" alt="kaiboardAndBoshiamyEp (9)"/><img src="https://live.staticflickr.com/65535/53998590921_36dcc8c2c6_k.jpg" alt="kaiboardAndBoshiamyEp (10)"/></p>
+</li>
+<li><p>從 App Store 下載回來，啟用「Kaiboard」時會有幾個類似精靈的步驟，協助使用者做比較初始的設定，而這個設定好像只在頭一次安裝與啟用時出現，…很可惜，這一次，我沒有截圖下來。</p>
+</li>
+<li><p>使用嘸蝦米輸入法前，需要再多做一點設定，這個部分，我試著用截圖紀錄於後文。</p>
+</li>
+</ol>
+<h3 id="使用嘸蝦米輸入法的相關設定"><a href="#使用嘸蝦米輸入法的相關設定" class="headerlink" title="使用嘸蝦米輸入法的相關設定"></a>使用嘸蝦米輸入法的相關設定</h3><ol>
+<li><p>點一下「Kaiboard」圖示後，就會進入「Kaiboard」的主畫面，可以看到「設定」、「界面」與「關於」3 個選項。</p>
+</li>
+<li><p>我的做法是先在「設定」這個項下，將「選字」項下的「空白鍵功能」改為「選首字」。至於底下的「空白輔助鍵」，我是保留在「關閉」的選項上。 <img src="https://live.staticflickr.com/65535/53998827028_240923c8a9_k.jpg" alt="kaiboardAndBoshiamyEp (2)"/></p>
+</li>
+<li><p>接著，同樣是在「設定」項下，點進「輸入法設定」，用右手邊的【三條線】按鍵，去調整「包含」與「不包含」項下的內容。 <img src="https://live.staticflickr.com/65535/53998591006_178b6fd9ef_k.jpg" alt="kaiboardAndBoshiamyEp (6)"/></p>
+</li>
+<li><p>承上，下圖是我自己的調整結果，想當然爾，「∞ 蝦米」是一定要被包含的。 <img src="https://live.staticflickr.com/65535/53998826953_7db7f0340a_k.jpg" alt="kaiboardAndBoshiamyEp (7)"/></p>
+</li>
+<li><p>再來，點到「界面」的畫面裡，我認為比較必要的是將「按鍵主字碼」改為「英文」。 <img src="https://live.staticflickr.com/65535/53999018340_bbb3b96b8c_k.jpg" alt="kaiboardAndBoshiamyEp (4)"/></p>
+</li>
+<li><p>至於，「界面」項下的其他選項，要不要動，就視個人而定，我自己的話，有試著去更改「按鍵大小」，還有「鍵盤主題」。 <img src="https://live.staticflickr.com/65535/53999286390_dff8d06672_k.jpg" alt="kaiboardAndBoshiamyEp (8)"/></p>
+</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><p>目前，我所使用的是 iPhone 13，iOS 版本是 17.6.1。</p>
+</li>
+<li><p>說真的，「Kaiboard」算是很佛心的 App。因為，一方面，沒有廣告；另一方面，主要功能都不用另外付費，所以，我個人認為額外功能若有需要用到，費用的部分，算是合理的價位。</p>
+</li>
+<li><p>我所使用的「Kaiboard」版本號是 1.9.10，我在爬文的時候，讀到「<a href="https://www.ptt.cc/bbs/iOS/M.1677367369.A.4AC.html">[問題] Kaiboard 無蝦米 bug - 看板 iOS - 批踢踢實業坊</a>」，有網友提到「用kaiboard打字 常常第一個字會變成英文」的問題，我是沒有碰到的。</p>
+</li>
+<li><p><a href="https://kaiboard.app/">Kaiboard</a></p>
+</li>
+<li><p><a href="https://apps.apple.com/tw/app/kaiboard-%E4%B8%AD%E8%8B%B1%E6%B7%B7%E5%90%88%E9%8D%B5%E7%9B%A4/id946910980">App Store 上的《Kaiboard 中英混合鍵盤》</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>apple</tag>
+        <tag>boshiamy</tag>
+        <tag>ios</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[版本更新] 快速回顧 微軟發布 KB5011563 (Windows 11 作業系統組建 22000.593)</title>
     <url>/windows/kb5011563-windows-11-os-build-22000-593/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我有注意到 4 月份的 Windows 11 品質更新，已經釋出：KB5011563 (作業系統組建 22000.593)。 <a href="https://www.flickr.com/photos/194265827@N08/51990340253/in/dateposted-public/" title="Windows11UpdateKB5011563(OSBuild22000.593)"><img src="https://live.staticflickr.com/65535/51990340253_0d67db6d47_b.jpg" alt="Windows11UpdateKB5011563(OSBuild22000.593)"></a></p>
@@ -3912,45 +3951,6 @@ gdb -v
 <p>這次我算運氣好，但，我也不是常常運氣好。</p>
 <p>我能夠理解，當一支程式或一套作業系統，發展到一定的程度時，要在每一次的更新出擊都達到完美，並不是那麼容易。</p>
 <p>只是，做為一個 End User 而言，期待穩定、好使力的作業系統，應該不是太過份的期望。</p>
-]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>windows11</tag>
-        <tag>windowsupdate</tag>
-        <tag>quickrecap</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[版本更新] 快速回顧 微軟發布 KB5010386 (Windows 11 作業系統組建 22000.493)</title>
-    <url>/windows/kb5010386-windows-11-os-build-22000-493/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>隨著不少新的電腦已搭載 Windows 11 出貨，我相信目前的 Windows 11 已經有一定的穩定度，而我此次更新到 Windows 11 後，會持續觀注系統補丁，而且不一定每一個補丁釋出，都立馬跟著更新，主要是希望，這一回升級到 Windows 11 至少要能夠穩穩用個 1 年。</p>
-<p>今天升級的機器，已經經歷過一次 Windows 11 升級，升級後掛點前，機器上的韌體更新了幾次，考量到微軟也陸續提供系統補丁，就在前天，注意到 Windows 11 推動的升級訊息時，我就前面幾點的考量後，便決定再次將系統升級到 Windows 11(花費大概 1 小時 15 分鐘)。恰巧的是我完成 Windows 11 升級的當天，正好碰上微軟釋出 <a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-2-%E6%9C%88-8-%E6%97%A5-kb5010386-os-build-22000-493-3c018e73-a58a-4fca-be69-8a93dd6fedbd">2022 年 2 月 8 日 —KB5010386 (OS Build 22000.493)</a> 這支補丁，並且，直到今天才收到更新的通知。</p>
-<p>說真的，這樣也好，通常更新跑第一，都需要一點冒險精神，這次升級到 Windows 11，我求的是穩定度，不會想要賭一把。 <a href="https://www.flickr.com/photos/194265827@N08/51873296441/in/dateposted-public/" title="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"><img src="https://live.staticflickr.com/65535/51873296441_845058dbab_o.png" alt="makingBoshiamyBetheDefaultChineseInputMethodonWindows11Ep1"></a></p>
-<hr>
-<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><p>我先讀過 <a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-2-%E6%9C%88-8-%E6%97%A5-kb5010386-os-build-22000-493-3c018e73-a58a-4fca-be69-8a93dd6fedbd">2022 年 2 月 8 日 —KB5010386 (OS Build 22000.493)</a> 裡的說明。</p>
-<p>我特別注意到 2 個部分： 其一，中文輸入法的可靠性(Reliability)：可能是我中字打字還不夠多，也可能是我在 Windows 11 的機器上，搭配使用的 App 也不夠多元與廣泛，我自己並沒有發現任何中文輸入法不夠可靠的問題，另外，我使用的是嘸蝦米輸入法是否包涵在這次的更新範圍(…這麼說好了，我個人不太能夠從微軟的說明裡，具體地瞭解到更新「中文輸入法可靠性」指的是什麼)。 <a href="https://www.flickr.com/photos/194265827@N08/51877193562/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep1"><img src="https://live.staticflickr.com/65535/51877193562_642406362d_k.jpg" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep1"></a></p>
-<p>其二，Your Microsoft Account 與 HelpWith：這 2 個地方，應屬介面上的更新，HelpWith 會提供一些說明連結供使用者在需要時點傳送門上網瀏覽。 <a href="https://www.flickr.com/photos/194265827@N08/51878159441/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep2"><img src="https://live.staticflickr.com/65535/51878159441_a97a9528d9_k.jpg" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep2"></a></p>
-<hr>
-<h3 id="更新過程與更新後的觀察"><a href="#更新過程與更新後的觀察" class="headerlink" title="更新過程與更新後的觀察"></a>更新過程與更新後的觀察</h3><p>更新之前，我先跑一趟 Microsoft Account 與【系統〉顯示器】，去看原本的模樣。</p>
-<p>Microsoft Account 的部分，我總覺得更新之前，就跟影片介面的樣子，沒有太大差別。這個部分，可以就下面 2 張圖做比較。</p>
-<p>(↓)這張是影片介紹截圖。 <a href="https://www.flickr.com/photos/194265827@N08/51878272751/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep9"><img src="https://live.staticflickr.com/65535/51878272751_10c4cd754d_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep9"></a></p>
-<p>(↓)這張則是我的機器上的螢幕截圖。 <a href="https://www.flickr.com/photos/194265827@N08/51878159421/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep4"><img src="https://live.staticflickr.com/65535/51878159421_947f7c1d4a_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep4"></a></p>
-<p>【系統〉顯示器】，拉到最底下，英文的部分，會看到「Help with Display」，中文就不知道會怎麼翻譯。同樣地，我也截了 2 張圖做比較。</p>
-<p>(↓)這張是影片介紹截圖。 <a href="https://www.flickr.com/photos/194265827@N08/51877307902/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep10"><img src="https://live.staticflickr.com/65535/51877307902_631cb39483_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep10"></a></p>
-<p>(↓)這張則是我的機器上的螢幕截圖。 <a href="https://www.flickr.com/photos/194265827@N08/51878474374/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep3"><img src="https://live.staticflickr.com/65535/51878474374_51daf7e314_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep3"></a></p>
-<p>看一下更新的時間後，也讓另外一支補丁，一併安裝進來。 <a href="https://www.flickr.com/photos/194265827@N08/51878802275/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep5"><img src="https://live.staticflickr.com/65535/51878802275_6254cf0d43_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep5"></a></p>
-<p> <a href="https://www.flickr.com/photos/194265827@N08/51878474334/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep6"><img src="https://live.staticflickr.com/65535/51878474334_5b69a4ab68_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep6"></a></p>
-<p>更新很快就完成，我特別先跑一趟 Microsoft Account 與【系統〉顯示器】，想看看更新之後長什麼樣？</p>
-<p>答案是「都沒有變」(…呃，詳見下圖)。我在更新完幾個小時後，還重開機確認是沒有，這個部分，Microsoft Account 的部分，好像更新就長這樣，而 HelpWith 的部分，可能要另外開啟，或是中文版的部分，還不在這次的更新補丁裡…吧…？！ <a href="https://www.flickr.com/photos/194265827@N08/51878368078/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep12"><img src="https://live.staticflickr.com/65535/51878368078_66624f22a6_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep12"></a></p>
-<p> <a href="https://www.flickr.com/photos/194265827@N08/51877325702/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep11"><img src="https://live.staticflickr.com/65535/51877325702_4b3b343512_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep11"></a></p>
-<p>剛更新完時，我特別先再去看一下，系統是不是順利將補丁更新上來。 <a href="https://www.flickr.com/photos/194265827@N08/51878944845/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep7"><img src="https://live.staticflickr.com/65535/51878944845_6f38bff6f8_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep7"></a></p>
-<p> <a href="https://www.flickr.com/photos/194265827@N08/51878385608/in/dateposted-public/" title="Windows11UpdateKB5010386(OSBuild22000.493)Ep8"><img src="https://live.staticflickr.com/65535/51878385608_b83f3c8814_o.png" alt="Windows11UpdateKB5010386(OSBuild22000.493)Ep8"></a></p>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>關於 KB5010386 補丁的更新內容，也可參考 <a href="https://www.ithome.com/0/602/192.htm">微软 Win11 Build 22000.493 (KB5010386) 发布：修复 SSD 硬盘性能 Bug，设置新增管理订阅</a>，但我這次沒有特別針對 SSD 讀取速度去做測試，不確定這支補丁是不是真的讓 SSD 的讀取速度改善，就我目前的使用上，感覺也並不是那麼特別明顯。</p>
-<p>另外，服務堆疊更新 (SSU) 是什麼？有興趣的伙伴可以自行上網搜尋，或是參考 <a href="https://support.microsoft.com/zh-tw/topic/%E6%9C%8D%E5%8B%99%E5%A0%86%E7%96%8A%E6%9B%B4%E6%96%B0-ssu-%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E9%9B%86-06b62771-1cb0-368c-09cf-87c4efc4f2fe">服務堆疊更新 (SSU)：常見問題集</a>。</p>
 ]]></content>
       <categories>
         <category>windows</category>
@@ -4022,6 +4022,105 @@ gdb -v
       </tags>
   </entry>
   <entry>
+    <title>[版本更新] 快速回顧 微軟發布 KB5014668 (Windows 11 作業系統組建 22000.778)</title>
+    <url>/windows/kb5014668-windows-11-os-build-22000-778/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>6 月 23 日，微軟針對 Windows 11 釋出 KB5014668 (作業系統組建 22000.778) 的更新。 <a href="https://www.flickr.com/photos/194265827@N08/52189801088/in/dateposted-public/" title="KB5014668Ep1"><img src="https://live.staticflickr.com/65535/52189801088_4396ebd524_b.jpg" alt="KB5014668Ep1"></a></p>
+<hr>
+<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><ol>
+<li><p>官方說明文件：<a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-6-%E6%9C%88-23-%E6%97%A5-kb5014668-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%B5%84%E5%BB%BA-22000-778-preview-2b5f1da6-d602-48b4-b443-96b460e3c38d">2022 年 6 月 23 日 - KB5014668 (作業系統組建 22000.778) Preview</a>，說明文件提到這支更新的重點。</p>
+</li>
+<li><p>這支補丁新增不少功能，不過，我只想多對「搜尋重點」多說一點點。官方的說法，我摘出如下。</p>
+<blockquote>
+<p>搜尋重點將呈現每日特別的值得注意且有趣的時刻，例如假日、紀念日，以及全球和您地區中的其他教育時刻。 若要查看搜尋重點，請按一下或點選工作列上的搜尋圖示。</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="新增「搜尋重點」後…"><a href="#新增「搜尋重點」後…" class="headerlink" title="新增「搜尋重點」後…"></a>新增「搜尋重點」後…</h3><ol>
+<li>我先從介面來看更新的樣子。 <a href="https://www.flickr.com/photos/194265827@N08/52190040889/in/dateposted-public/" title="KB5014668Ep2"><img src="https://live.staticflickr.com/65535/52190040889_4874c4e9de_c.jpg" alt="KB5014668Ep2"></a></li>
+<li>我認為，這次針對系統內「搜尋重點」做出的更新，應該與現在的電腦使用者習慣有關。我指的習慣，便是大多數人似乎已經被 Google 制約。寫論文，找 Google；求翻譯，找 Google；挖圖片，找 Google。「找 Google」是一個現代電腦使用的關鍵字，尤其當我們在上網的時候，而「找 Google」這一個行為，其實就讓我們養成凡事用「搜尋」比較快，而不是讓腦子去記所謂的「設定路徑」之類的東西。反過來說，腦子要記的一件事，就是「搜尋」。 <a href="https://www.flickr.com/photos/194265827@N08/52188771327/in/dateposted-public/" title="KB5014668Ep3"><img src="https://live.staticflickr.com/65535/52188771327_48ce0b3eca_b.jpg" alt="KB5014668Ep3"></a></li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>以前，我會用「執行」去把「命令提示字元」開出來使用，現在，多半都用「搜尋」來幫我處理。也就是說，「搜尋」取代原本的「執行」。</p>
+<p>所以，這一個更新，是雞肋，抑或是細膩的功能。或許，還是要讓時間去證明一切。以我而言，可能多少會使用到這個功能，卻不會到依賴的程度。</p>
+<p>最後，更新到目前為止，更新完的機器開關機約 3 次，我注意到前 2 次的啟動，即使已經進入系統，系統還是花費一些時間去載入本來常用的功能，例如：Wi-Fi，就讓我多等一下，才自行連線。</p>
+<p>除此之外，目前並沒有什麼太可怕的事發生。</p>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>windows11</tag>
+        <tag>windowsupdate</tag>
+        <tag>quickrecap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[版本更新] 快速回顧 微軟發布 KB5014697 (Windows 11 作業系統組建 22000.739)</title>
+    <url>/windows/kb5014697-windows-11-os-build-22000-739/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>6 月 14 日，微軟針對 Windows 11 釋出 KB5014697 (作業系統組建 22000.739) 的更新。 <a href="https://www.flickr.com/photos/194265827@N08/52156823915/in/dateposted-public/" title="KB5014697Ep1"><img src="https://live.staticflickr.com/65535/52156823915_25dcb95ccd_b.jpg" alt="KB5014697Ep1"></a></p>
+<hr>
+<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><ol>
+<li><p>官方說明文件：<a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-6-%E6%9C%88-14-%E6%97%A5-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%B5%84%E5%BB%BA-22000-739-kb5014697-cd3aaa0b-a8da-44a0-a778-dfb6f1d9ea11">2022 年 6 月 14 日 - (作業系統組建 22000.739) KB5014697</a>，說明文件提到這支更新的重點(如下)。</p>
+<blockquote>
+<p>解決Windows作業系統的安全性問題。</p>
+</blockquote>
+</li>
+<li><p>官方文件也提到改進的內容是「此更新包含內部作業系統功能的各項安全性改良功能。」 <a href="https://www.flickr.com/photos/194265827@N08/52156566469/in/dateposted-public/" title="KB5014697Ep2"><img src="https://live.staticflickr.com/65535/52156566469_9711f80767_z.jpg" alt="KB5014697Ep2"></a></p>
+</li>
+</ol>
+<hr>
+<h3 id="災情與駭客"><a href="#災情與駭客" class="headerlink" title="災情與駭客"></a>災情與駭客</h3><ol>
+<li>災情：因為是安全性更新，通常我不會想太多，也不會等太多天才更新，所以，當系統跳出更新訊息不久，我就把補丁打上。使用上沒有問題，所以，我就沒有想太多。然而，在撰寫本文之前，特意搜尋一下，發現這支補丁是有災情的，詳可見：<a href="https://3c.ltn.com.tw/news/49704">微軟坦言 Windows 更新又出包！一按鍵網路秒斷線　所有版本都遭殃 - 自由電子報 3C科技</a>、<a href="https://www.windowscentral.com/software-apps/windows-11/latest-windows-update-breaks-wi-fi-hotspot-feature-for-some-pcs">Latest Windows Update breaks Wi-Fi hotspot feature for some PCs | Windows Central</a>。</li>
+<li>駭客入侵：這一支補丁，網路上有風聲，主要是把安全性的洞口補起來，詳可見：<a href="https://tips2fix.com/urgent-dont-wait-to-install-the-june-2022-windows-update-it-will-protect-you-from-chinese-hackers/">Urgent! Don’t wait to install the June 2022 Windows update - it will protect you from Chinese hackers - Tips 2 Fix</a>。</li>
+<li>魚與熊掌：這樣的比喻有點怪怪的，不過，這支補丁似乎是要讓使用者選擇，看是要讓系統開啟熱點就自己掛點，還是要讓駭客入侵。</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>雖然我是更新之後，才知道有災情，但，也由於我的機器上從來不會開「行動熱點」，所以，應該影響是不會太大。 <a href="https://www.flickr.com/photos/194265827@N08/52156827855/in/dateposted-public/" title="KB5014697Ep3"><img src="https://live.staticflickr.com/65535/52156827855_2e29f7db5b_b.jpg" alt="KB5014697Ep3"></a></p>
+<p>截至目前，使用約 2 天，倒沒有特別奇怪的狀況發生。</p>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>windows11</tag>
+        <tag>windowsupdate</tag>
+        <tag>quickrecap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[版本更新] 快速回顧 微軟發布 KB5015814 (Windows 11 作業系統組建 22000.795)</title>
+    <url>/windows/kb5015814-windows-11-os-build-22000-795/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>7 月 12 日，微軟針對 Windows 11 釋出 KB5015814 (作業系統組建 22000.795) 的更新。 <a href="https://www.flickr.com/photos/194265827@N08/52265332314/in/dateposted-public/" title="KB5015814"><img src="https://live.staticflickr.com/65535/52265332314_879377249a_b.jpg" alt="KB5015814"></a></p>
+<hr>
+<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><ol>
+<li><p>官方說明文件：<a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-7-%E6%9C%88-12-%E6%97%A5-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%B5%84%E5%BB%BA-22000-795-kb5015814-74e7676e-4182-4747-8f73-bbe0c497dc2a">2022 年 7 月 12 日 - (作業系統組建 22000.795) KB5015814</a>，說明文件提到這支更新的重點。</p>
+</li>
+<li><p>這支補丁的更新重點是「解決 Windows 作業系統的安全性問題。」</p>
+</li>
+<li><p>至於改進的部分，則是「解決重新導向 PowerShell 命令輸出，讓文字記錄檔不包含任何內容的問題。 如果您開啟 PowerShell 記錄功能，字幕記錄可能會包含解密的密碼。 因此，文字記錄檔會遺失解密的密碼。」</p>
+</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>我是從 Vista 開始，接觸 PowerShell 的，但是，我並不常用，至今，仍多半以 CMD 為主力，但這僅僅是我個人使用需求與經驗。</li>
+<li>這一次的更新，我沒有想很多，也沒有先做功課，就直接點擊按鈕。打上補丁之後，觀察一個星期，使用起來倒是沒有什麼問題。</li>
+<li>撰寫本篇時，另外一支補丁已經釋出，從 <a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-7-%E6%9C%88-21-%E6%97%A5-kb5015882-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%B5%84%E5%BB%BA-22000-829-preview-473e1d95-06a0-4f40-9554-cdc7cca85584">2022 年 7 月 21 日 - KB5015882 (作業系統組建 22000.832) Preview</a> 讀起來，應該是大更新，這支補丁我決定先觀察一下，再打上去。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>windows11</tag>
+        <tag>windowsupdate</tag>
+        <tag>quickrecap</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[版本更新] 快速回顧 微軟發布 KB5014019 (Windows 11 作業系統組建 22000.708)</title>
     <url>/windows/kb5014019-windows-11-os-build-22000-708/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>5 月 24 日，微軟針對 Windows 11 釋出 KB5014019 (作業系統組建 22000.708) 的更新。 <a href="https://www.flickr.com/photos/194265827@N08/52100873267/in/dateposted-public/" title="KB5014019Ep1"><img src="https://live.staticflickr.com/65535/52100873267_7cf072027e_o.png" alt="KB5014019Ep1"></a></p>
@@ -4059,71 +4158,6 @@ gdb -v
 <h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>我正在思考，是不是要繼續使用 <a href="https://www.microsoft.com/zh-tw/bing/bing-wallpaper">Bing Wallpaper</a>。</p>
 <p>另外，我另外一部機器早就跑完更新，也拿來處理工作上的事，度過一整天(還包括加班)。</p>
 <p>截至目前在使用上，沒有特別奇怪的狀況發生。</p>
-]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>windows11</tag>
-        <tag>windowsupdate</tag>
-        <tag>quickrecap</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[版本更新] 快速回顧 微軟發布 KB5014668 (Windows 11 作業系統組建 22000.778)</title>
-    <url>/windows/kb5014668-windows-11-os-build-22000-778/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>6 月 23 日，微軟針對 Windows 11 釋出 KB5014668 (作業系統組建 22000.778) 的更新。 <a href="https://www.flickr.com/photos/194265827@N08/52189801088/in/dateposted-public/" title="KB5014668Ep1"><img src="https://live.staticflickr.com/65535/52189801088_4396ebd524_b.jpg" alt="KB5014668Ep1"></a></p>
-<hr>
-<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><ol>
-<li><p>官方說明文件：<a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-6-%E6%9C%88-23-%E6%97%A5-kb5014668-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%B5%84%E5%BB%BA-22000-778-preview-2b5f1da6-d602-48b4-b443-96b460e3c38d">2022 年 6 月 23 日 - KB5014668 (作業系統組建 22000.778) Preview</a>，說明文件提到這支更新的重點。</p>
-</li>
-<li><p>這支補丁新增不少功能，不過，我只想多對「搜尋重點」多說一點點。官方的說法，我摘出如下。</p>
-<blockquote>
-<p>搜尋重點將呈現每日特別的值得注意且有趣的時刻，例如假日、紀念日，以及全球和您地區中的其他教育時刻。 若要查看搜尋重點，請按一下或點選工作列上的搜尋圖示。</p>
-</blockquote>
-</li>
-</ol>
-<hr>
-<h3 id="新增「搜尋重點」後…"><a href="#新增「搜尋重點」後…" class="headerlink" title="新增「搜尋重點」後…"></a>新增「搜尋重點」後…</h3><ol>
-<li>我先從介面來看更新的樣子。 <a href="https://www.flickr.com/photos/194265827@N08/52190040889/in/dateposted-public/" title="KB5014668Ep2"><img src="https://live.staticflickr.com/65535/52190040889_4874c4e9de_c.jpg" alt="KB5014668Ep2"></a></li>
-<li>我認為，這次針對系統內「搜尋重點」做出的更新，應該與現在的電腦使用者習慣有關。我指的習慣，便是大多數人似乎已經被 Google 制約。寫論文，找 Google；求翻譯，找 Google；挖圖片，找 Google。「找 Google」是一個現代電腦使用的關鍵字，尤其當我們在上網的時候，而「找 Google」這一個行為，其實就讓我們養成凡事用「搜尋」比較快，而不是讓腦子去記所謂的「設定路徑」之類的東西。反過來說，腦子要記的一件事，就是「搜尋」。 <a href="https://www.flickr.com/photos/194265827@N08/52188771327/in/dateposted-public/" title="KB5014668Ep3"><img src="https://live.staticflickr.com/65535/52188771327_48ce0b3eca_b.jpg" alt="KB5014668Ep3"></a></li>
-</ol>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>以前，我會用「執行」去把「命令提示字元」開出來使用，現在，多半都用「搜尋」來幫我處理。也就是說，「搜尋」取代原本的「執行」。</p>
-<p>所以，這一個更新，是雞肋，抑或是細膩的功能。或許，還是要讓時間去證明一切。以我而言，可能多少會使用到這個功能，卻不會到依賴的程度。</p>
-<p>最後，更新到目前為止，更新完的機器開關機約 3 次，我注意到前 2 次的啟動，即使已經進入系統，系統還是花費一些時間去載入本來常用的功能，例如：Wi-Fi，就讓我多等一下，才自行連線。</p>
-<p>除此之外，目前並沒有什麼太可怕的事發生。</p>
-]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>windows11</tag>
-        <tag>windowsupdate</tag>
-        <tag>quickrecap</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[版本更新] 快速回顧 微軟發布 KB5015814 (Windows 11 作業系統組建 22000.795)</title>
-    <url>/windows/kb5015814-windows-11-os-build-22000-795/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>7 月 12 日，微軟針對 Windows 11 釋出 KB5015814 (作業系統組建 22000.795) 的更新。 <a href="https://www.flickr.com/photos/194265827@N08/52265332314/in/dateposted-public/" title="KB5015814"><img src="https://live.staticflickr.com/65535/52265332314_879377249a_b.jpg" alt="KB5015814"></a></p>
-<hr>
-<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><ol>
-<li><p>官方說明文件：<a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-7-%E6%9C%88-12-%E6%97%A5-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%B5%84%E5%BB%BA-22000-795-kb5015814-74e7676e-4182-4747-8f73-bbe0c497dc2a">2022 年 7 月 12 日 - (作業系統組建 22000.795) KB5015814</a>，說明文件提到這支更新的重點。</p>
-</li>
-<li><p>這支補丁的更新重點是「解決 Windows 作業系統的安全性問題。」</p>
-</li>
-<li><p>至於改進的部分，則是「解決重新導向 PowerShell 命令輸出，讓文字記錄檔不包含任何內容的問題。 如果您開啟 PowerShell 記錄功能，字幕記錄可能會包含解密的密碼。 因此，文字記錄檔會遺失解密的密碼。」</p>
-</li>
-</ol>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>我是從 Vista 開始，接觸 PowerShell 的，但是，我並不常用，至今，仍多半以 CMD 為主力，但這僅僅是我個人使用需求與經驗。</li>
-<li>這一次的更新，我沒有想很多，也沒有先做功課，就直接點擊按鈕。打上補丁之後，觀察一個星期，使用起來倒是沒有什麼問題。</li>
-<li>撰寫本篇時，另外一支補丁已經釋出，從 <a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-7-%E6%9C%88-21-%E6%97%A5-kb5015882-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%B5%84%E5%BB%BA-22000-829-preview-473e1d95-06a0-4f40-9554-cdc7cca85584">2022 年 7 月 21 日 - KB5015882 (作業系統組建 22000.832) Preview</a> 讀起來，應該是大更新，這支補丁我決定先觀察一下，再打上去。</li>
-</ol>
 ]]></content>
       <categories>
         <category>windows</category>
@@ -4188,40 +4222,6 @@ gdb -v
 <li>另外，Windows 11 小工具，我個人認為不是那麼好用。原因之一，不小心滑到反應的區域時，會自己跑出來；之二，有時候還不是那麼好關閉它；之三，同樣是小工具，Windows 10 還比較豐富貼近我的需求。講到第三點的時候，我都會想著…，這到底是 Windows 11 還是 Windows 9？</li>
 <li>好吧！與其說外觀調整有那麼點意義不明，我自己還是從實際的狀況去找出一點脈絡，比方說，目前的介面，或許是考量到平板、觸控的使用者習慣。然而，桌機版的使用介面，在我持續使用 1 年後，仍決定設定為老樣子，這一點，還真的要謝謝微軟沒有把這個設定鎖死。 <a href="https://www.flickr.com/photos/194265827@N08/52474000199/in/dateposted-public/" title="Windows11Desktop"><img src="https://live.staticflickr.com/65535/52474000199_b2ca0b330f_c.jpg" alt="Windows11Desktop"></a></li>
 </ol>
-]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>windows11</tag>
-        <tag>windowsupdate</tag>
-        <tag>quickrecap</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[版本更新] 快速回顧 微軟發布 KB5014697 (Windows 11 作業系統組建 22000.739)</title>
-    <url>/windows/kb5014697-windows-11-os-build-22000-739/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>6 月 14 日，微軟針對 Windows 11 釋出 KB5014697 (作業系統組建 22000.739) 的更新。 <a href="https://www.flickr.com/photos/194265827@N08/52156823915/in/dateposted-public/" title="KB5014697Ep1"><img src="https://live.staticflickr.com/65535/52156823915_25dcb95ccd_b.jpg" alt="KB5014697Ep1"></a></p>
-<hr>
-<h3 id="更新前內容概覽"><a href="#更新前內容概覽" class="headerlink" title="更新前內容概覽"></a>更新前內容概覽</h3><ol>
-<li><p>官方說明文件：<a href="https://support.microsoft.com/zh-tw/topic/2022-%E5%B9%B4-6-%E6%9C%88-14-%E6%97%A5-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%B5%84%E5%BB%BA-22000-739-kb5014697-cd3aaa0b-a8da-44a0-a778-dfb6f1d9ea11">2022 年 6 月 14 日 - (作業系統組建 22000.739) KB5014697</a>，說明文件提到這支更新的重點(如下)。</p>
-<blockquote>
-<p>解決Windows作業系統的安全性問題。</p>
-</blockquote>
-</li>
-<li><p>官方文件也提到改進的內容是「此更新包含內部作業系統功能的各項安全性改良功能。」 <a href="https://www.flickr.com/photos/194265827@N08/52156566469/in/dateposted-public/" title="KB5014697Ep2"><img src="https://live.staticflickr.com/65535/52156566469_9711f80767_z.jpg" alt="KB5014697Ep2"></a></p>
-</li>
-</ol>
-<hr>
-<h3 id="災情與駭客"><a href="#災情與駭客" class="headerlink" title="災情與駭客"></a>災情與駭客</h3><ol>
-<li>災情：因為是安全性更新，通常我不會想太多，也不會等太多天才更新，所以，當系統跳出更新訊息不久，我就把補丁打上。使用上沒有問題，所以，我就沒有想太多。然而，在撰寫本文之前，特意搜尋一下，發現這支補丁是有災情的，詳可見：<a href="https://3c.ltn.com.tw/news/49704">微軟坦言 Windows 更新又出包！一按鍵網路秒斷線　所有版本都遭殃 - 自由電子報 3C科技</a>、<a href="https://www.windowscentral.com/software-apps/windows-11/latest-windows-update-breaks-wi-fi-hotspot-feature-for-some-pcs">Latest Windows Update breaks Wi-Fi hotspot feature for some PCs | Windows Central</a>。</li>
-<li>駭客入侵：這一支補丁，網路上有風聲，主要是把安全性的洞口補起來，詳可見：<a href="https://tips2fix.com/urgent-dont-wait-to-install-the-june-2022-windows-update-it-will-protect-you-from-chinese-hackers/">Urgent! Don’t wait to install the June 2022 Windows update - it will protect you from Chinese hackers - Tips 2 Fix</a>。</li>
-<li>魚與熊掌：這樣的比喻有點怪怪的，不過，這支補丁似乎是要讓使用者選擇，看是要讓系統開啟熱點就自己掛點，還是要讓駭客入侵。</li>
-</ol>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>雖然我是更新之後，才知道有災情，但，也由於我的機器上從來不會開「行動熱點」，所以，應該影響是不會太大。 <a href="https://www.flickr.com/photos/194265827@N08/52156827855/in/dateposted-public/" title="KB5014697Ep3"><img src="https://live.staticflickr.com/65535/52156827855_2e29f7db5b_b.jpg" alt="KB5014697Ep3"></a></p>
-<p>截至目前，使用約 2 天，倒沒有特別奇怪的狀況發生。</p>
 ]]></content>
       <categories>
         <category>windows</category>
@@ -4994,6 +4994,55 @@ gdb -v
       </tags>
   </entry>
   <entry>
+    <title>Manjaro XFCE 21.2.2 with iBus 與嘸蝦米</title>
+    <url>/boshiamy/manjaro-xfce-21-2-2-with-ibus-and-boshiamy/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>iBus 輸入平台上，有行易有限公司釋出的官方嘸蝦米表格檔，原則上，我個人也比較推薦使用官方釋出的版本。</p>
+<p>今天，就把我自己從 fcitx 轉到 iBus 的部分，做一個小小的紀錄。</p>
+<hr>
+<h3 id="從-fcitx-轉換到-iBus"><a href="#從-fcitx-轉換到-iBus" class="headerlink" title="從 fcitx 轉換到 iBus"></a>從 fcitx 轉換到 iBus</h3><ol>
+<li><p>移除 fcitx，安裝 iBus。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -R fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-table-extra libime</span><br><span class="line">sudo pacman -S ibus ibus-table</span><br><span class="line">sudo vim /etc/enviroment</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>寫入以下內容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GTK_IM_MODULE=ibus</span><br><span class="line">QT_IM_MODULE=ibus</span><br><span class="line">XMODIFIERS=@im=ibus</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>至行易有限公司下載官方表格檔：<code>boshiamy-ibus-1-8-x.tar.gz</code>。</p>
+</li>
+<li><p>將官方表格檔解壓縮。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd 下載/ //沒有中文輸入法，可以善用 ls 指令或是 Tab 鍵，再用「複製貼上」。</span><br><span class="line">tar xvf boshiamy-ibus-1-8-x.tar.gz</span><br><span class="line">cd boshiamy-ibus-1-8-x/</span><br><span class="line">sudo cp _.db /usr/share/ibus-table/tables &amp;&amp; sudo cp_ .png /usr/share/ibus-table/icons</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>寫入一個讓 iBus 隨著開機啟動的 Script。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/profile.d/ibusStart.sh</span><br><span class="line">ibus-daemon -drxR</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新開機</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>重開機後，輸入法平台就變成 iBus，再做一些設定，就可以用官方的輸入法表格檔。</p>
+<p>(下圖)進入 iBus 設定介面，有 2 種方式，一個是直接點右下角的「FOX」或「小鍵盤」圖示，一個是在 Terminal 裡下 ibus-setup 指令。 <a href="https://www.flickr.com/photos/194265827@N08/51875600942/in/dateposted-public/" title="manjaroXFCE21.2.2withiBusandBoshiamyEp1"><img src="https://live.staticflickr.com/65535/51875600942_3477d8e4e8_o.png" alt="manjaroXFCE21.2.2withiBusandBoshiamyEp1"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<p>(下圖)找個地方，小試一下 iBus 上的嘸蝦米。 <a href="https://www.flickr.com/photos/194265827@N08/51876563511/in/dateposted-public/" title="manjaroXFCE21.2.2withiBusandBoshiamyEp2"><img src="https://live.staticflickr.com/65535/51876563511_6d19646c05_o.png" alt="manjaroXFCE21.2.2withiBusandBoshiamyEp2"></a></p>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><a href="https://manjaro.org/">Manjaro - enjoy the simplicity</a></li>
+<li><a href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
+<li><a href="https://code.google.com/archive/p/ibus/">Google Code Archive - Long-term storage for Google Code Project Hosting.</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>boshiamy</tag>
+        <tag>archlinux</tag>
+        <tag>linux</tag>
+        <tag>ibus</tag>
+        <tag>manjaro</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Manjaro XFCE 23.0 與嘸蝦米</title>
     <url>/boshiamy/manjaro-xfce-23-0-and-boshiamy/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Manjaro 走到 23.0 這個版本，我想在這個版本，再做一次嘸蝦米輸入法安裝使用的紀錄。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53176919425/in/album-72177720311076900/" title="manjaroXfce23.0AndBoshiamyEp (17)"><img src="https://live.staticflickr.com/65535/53176919425_aa0f643b17_c.jpg" width="800" height="500" alt="manjaroXfce23.0AndBoshiamyEp (17)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
@@ -5080,55 +5129,6 @@ gdb -v
         <tag>latex</tag>
         <tag>markdown</tag>
         <tag>wordpress</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Manjaro XFCE 21.2.2 with iBus 與嘸蝦米</title>
-    <url>/boshiamy/manjaro-xfce-21-2-2-with-ibus-and-boshiamy/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>iBus 輸入平台上，有行易有限公司釋出的官方嘸蝦米表格檔，原則上，我個人也比較推薦使用官方釋出的版本。</p>
-<p>今天，就把我自己從 fcitx 轉到 iBus 的部分，做一個小小的紀錄。</p>
-<hr>
-<h3 id="從-fcitx-轉換到-iBus"><a href="#從-fcitx-轉換到-iBus" class="headerlink" title="從 fcitx 轉換到 iBus"></a>從 fcitx 轉換到 iBus</h3><ol>
-<li><p>移除 fcitx，安裝 iBus。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -R fcitx5 fcitx5-im fcitx5-chinese-addons fcitx5-configtool fcitx5-table-extra libime</span><br><span class="line">sudo pacman -S ibus ibus-table</span><br><span class="line">sudo vim /etc/enviroment</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>寫入以下內容</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GTK_IM_MODULE=ibus</span><br><span class="line">QT_IM_MODULE=ibus</span><br><span class="line">XMODIFIERS=@im=ibus</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>至行易有限公司下載官方表格檔：<code>boshiamy-ibus-1-8-x.tar.gz</code>。</p>
-</li>
-<li><p>將官方表格檔解壓縮。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd 下載/ //沒有中文輸入法，可以善用 ls 指令或是 Tab 鍵，再用「複製貼上」。</span><br><span class="line">tar xvf boshiamy-ibus-1-8-x.tar.gz</span><br><span class="line">cd boshiamy-ibus-1-8-x/</span><br><span class="line">sudo cp _.db /usr/share/ibus-table/tables &amp;&amp; sudo cp_ .png /usr/share/ibus-table/icons</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>寫入一個讓 iBus 隨著開機啟動的 Script。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/profile.d/ibusStart.sh</span><br><span class="line">ibus-daemon -drxR</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重新開機</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>重開機後，輸入法平台就變成 iBus，再做一些設定，就可以用官方的輸入法表格檔。</p>
-<p>(下圖)進入 iBus 設定介面，有 2 種方式，一個是直接點右下角的「FOX」或「小鍵盤」圖示，一個是在 Terminal 裡下 ibus-setup 指令。 <a href="https://www.flickr.com/photos/194265827@N08/51875600942/in/dateposted-public/" title="manjaroXFCE21.2.2withiBusandBoshiamyEp1"><img src="https://live.staticflickr.com/65535/51875600942_3477d8e4e8_o.png" alt="manjaroXFCE21.2.2withiBusandBoshiamyEp1"></a></p>
-<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-
-<p>(下圖)找個地方，小試一下 iBus 上的嘸蝦米。 <a href="https://www.flickr.com/photos/194265827@N08/51876563511/in/dateposted-public/" title="manjaroXFCE21.2.2withiBusandBoshiamyEp2"><img src="https://live.staticflickr.com/65535/51876563511_6d19646c05_o.png" alt="manjaroXFCE21.2.2withiBusandBoshiamyEp2"></a></p>
-<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li><a href="https://manjaro.org/">Manjaro - enjoy the simplicity</a></li>
-<li><a href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
-<li><a href="https://code.google.com/archive/p/ibus/">Google Code Archive - Long-term storage for Google Code Project Hosting.</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>boshiamy</tag>
-        <tag>archlinux</tag>
-        <tag>linux</tag>
-        <tag>ibus</tag>
-        <tag>manjaro</tag>
       </tags>
   </entry>
   <entry>
@@ -5912,9 +5912,9 @@ gdb -v
         <tag>archlinux</tag>
         <tag>garudalinux</tag>
         <tag>linux</tag>
-        <tag>mxlinux</tag>
         <tag>fcitx5</tag>
         <tag>fcitx5-table-extra</tag>
+        <tag>mxlinux</tag>
         <tag>fcitx</tag>
       </tags>
   </entry>
@@ -6232,6 +6232,46 @@ gdb -v
       </tags>
   </entry>
   <entry>
+    <title>ubuntu 24.04 LTS 與嘸蝦米</title>
+    <url>/boshiamy/ubuntu-24-04-lts-and-boshiamy/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇，主要是紀錄 ubuntu 24.04 LTS 安裝嘸蝦米輸入法的過程。<br><img src="https://live.staticflickr.com/65535/53691892810_c303b2af6b_b.jpg"></p>
+<h3 id="安裝過程"><a href="#安裝過程" class="headerlink" title="安裝過程"></a>安裝過程</h3><p>Fcitx5 在 ubuntu 24.04 LTS 已經是預設安裝好的的中文輸入法框架，一直以來，沒有被收錄的套件：<code>fcitx5-table-extra</code>，終於，在這個版本的 ubuntu 被納入軟體庫。<br><img src="https://live.staticflickr.com/65535/53690555372_4d98060b9f_b.jpg"></p>
+<p>也因此，整個安裝的過程(如下)，變得容易許多。</p>
+<ol>
+<li><p>先下一道指令，安裝<code>fcitx5-table-extra</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install fcitx5-table-extra</span><br></pre></td></tr></table></figure>
+<p><img src="https://live.staticflickr.com/65535/53692690457_b13ffabd64_b.jpg"></p>
+</li>
+<li><p>在 GUI 介面，[先]執行「Fcitx 5」，此時，系統桌面上方的工作列會跳出一個訊息框。<br><img src="https://live.staticflickr.com/65535/53692675397_8154091c55_b.jpg"><img src="https://live.staticflickr.com/65535/53692675417_f3fc6a3a61_b.jpg"></p>
+</li>
+<li><p>接著，在 GUI 介面，[再]執行「Fcitx 5 設定」。<br><img src="https://live.staticflickr.com/65535/53693558196_8c245c7480_b.jpg"></p>
+</li>
+<li><p>把右邊的「嘸蝦米」，加到左邊的清單裡。<br><img src="https://live.staticflickr.com/65535/53691651023_4d40866191_b.jpg"><img src="https://live.staticflickr.com/65535/53691876995_497db291fb_b.jpg"></p>
+</li>
+<li><p>找個地方「吃蝦」：試試嘸蝦米輸入法。<br><img src="https://live.staticflickr.com/65535/53690555252_fc5d39a99b_b.jpg"><img src="https://live.staticflickr.com/65535/53690555272_1d6d1b734c_b.jpg"></p>
+</li>
+</ol>
+<h3 id="安裝過程影片-Powered-by-Youtube"><a href="#安裝過程影片-Powered-by-Youtube" class="headerlink" title="安裝過程影片(Powered by Youtube)"></a>安裝過程影片(Powered by Youtube)</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/LgN66FF2K2s?si=iL16SWEWUtASEWmW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li><a href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
+<li><a href="https://zh.wikipedia.org/zh-tw/%E5%98%B8%E8%9D%A6%E7%B1%B3%E8%BC%B8%E5%85%A5%E6%B3%95">嘸蝦米輸入法 - 維基百科，自由的百科全書</a></li>
+<li><a href="https://zh.wikipedia.org/zh-tw/Fcitx">Fcitx - 維基百科，自由的百科全書</a></li>
+<li><a href="https://fcitx-im.org/wiki/Fcitx_5/zh-cn">小企鹅输入法5 - Fcitx</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>boshiamy</tag>
+        <tag>linux</tag>
+        <tag>fcitx</tag>
+        <tag>fcitx-table-boshiamy</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ubuntu 23.04 與嘸蝦米</title>
     <url>/boshiamy/ubuntu-23-04-and-boshiamy/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>來試試在 ubuntu 23.04 快速安裝 fcitx(4) 並啟用嘸蝦米。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53162814422" title="boshiamyAndUbuntu23.04Ep (15)"><img src="https://live.staticflickr.com/65535/53162814422_9478259b91_c.jpg" width="800" height="500" alt="boshiamyAndUbuntu23.04Ep (15)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
@@ -6294,46 +6334,6 @@ gdb -v
         <tag>scim</tag>
         <tag>ubuntu</tag>
         <tag>gcin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ubuntu 24.04 LTS 與嘸蝦米</title>
-    <url>/boshiamy/ubuntu-24-04-lts-and-boshiamy/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這一篇，主要是紀錄 ubuntu 24.04 LTS 安裝嘸蝦米輸入法的過程。<br><img src="https://live.staticflickr.com/65535/53691892810_c303b2af6b_b.jpg"></p>
-<h3 id="安裝過程"><a href="#安裝過程" class="headerlink" title="安裝過程"></a>安裝過程</h3><p>Fcitx5 在 ubuntu 24.04 LTS 已經是預設安裝好的的中文輸入法框架，一直以來，沒有被收錄的套件：<code>fcitx5-table-extra</code>，終於，在這個版本的 ubuntu 被納入軟體庫。<br><img src="https://live.staticflickr.com/65535/53690555372_4d98060b9f_b.jpg"></p>
-<p>也因此，整個安裝的過程(如下)，變得容易許多。</p>
-<ol>
-<li><p>先下一道指令，安裝<code>fcitx5-table-extra</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install fcitx5-table-extra</span><br></pre></td></tr></table></figure>
-<p><img src="https://live.staticflickr.com/65535/53692690457_b13ffabd64_b.jpg"></p>
-</li>
-<li><p>在 GUI 介面，[先]執行「Fcitx 5」，此時，系統桌面上方的工作列會跳出一個訊息框。<br><img src="https://live.staticflickr.com/65535/53692675397_8154091c55_b.jpg"><img src="https://live.staticflickr.com/65535/53692675417_f3fc6a3a61_b.jpg"></p>
-</li>
-<li><p>接著，在 GUI 介面，[再]執行「Fcitx 5 設定」。<br><img src="https://live.staticflickr.com/65535/53693558196_8c245c7480_b.jpg"></p>
-</li>
-<li><p>把右邊的「嘸蝦米」，加到左邊的清單裡。<br><img src="https://live.staticflickr.com/65535/53691651023_4d40866191_b.jpg"><img src="https://live.staticflickr.com/65535/53691876995_497db291fb_b.jpg"></p>
-</li>
-<li><p>找個地方「吃蝦」：試試嘸蝦米輸入法。<br><img src="https://live.staticflickr.com/65535/53690555252_fc5d39a99b_b.jpg"><img src="https://live.staticflickr.com/65535/53690555272_1d6d1b734c_b.jpg"></p>
-</li>
-</ol>
-<h3 id="安裝過程影片-Powered-by-Youtube"><a href="#安裝過程影片-Powered-by-Youtube" class="headerlink" title="安裝過程影片(Powered by Youtube)"></a>安裝過程影片(Powered by Youtube)</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/LgN66FF2K2s?si=iL16SWEWUtASEWmW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li><a href="https://boshiamy.com/">行易有限公司 :: 嘸蝦米輸入法</a></li>
-<li><a href="https://zh.wikipedia.org/zh-tw/%E5%98%B8%E8%9D%A6%E7%B1%B3%E8%BC%B8%E5%85%A5%E6%B3%95">嘸蝦米輸入法 - 維基百科，自由的百科全書</a></li>
-<li><a href="https://zh.wikipedia.org/zh-tw/Fcitx">Fcitx - 維基百科，自由的百科全書</a></li>
-<li><a href="https://fcitx-im.org/wiki/Fcitx_5/zh-cn">小企鹅输入法5 - Fcitx</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>boshiamy</tag>
-        <tag>linux</tag>
-        <tag>fcitx</tag>
-        <tag>fcitx-table-boshiamy</tag>
-        <tag>ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -6583,6 +6583,41 @@ gdb -v
       </tags>
   </entry>
   <entry>
+    <title>在 Debian 11 上直接用 Fcitx 5 與嘸蝦米 (2023 年 9 月 17 日更新)</title>
+    <url>/boshiamy/using-fcitx-5-with-boshiamy-on-debian-11/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Fcitx5 是 Debian 11 預先安裝好的中文輸入法，目前，無法在 Debian 11 上直接透過 <code>apt install fcitx5-table-extra fcitx5-table-other</code> 把其他的中文輸入法安裝進來。</p>
+<p>我在 pkgs.org 找到 Arch Linux 上已經編譯好的表格與圖示檔，詳可見：<a href="https://pkgs.org/download/fcitx5-table-extra" title="Fcitx5-table-extra Download (RPM, TGZ, XBPS, XZ, ZST)">Fcitx5-table-extra Download (RPM, TGZ, XBPS, XZ, ZST)</a>，觀察頁面說明的 Files 部分，判定可以直接取回服用。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192856088/in/dateposted-public/" title="fcitx5-table-extra-Ep (2)"><img src="https://live.staticflickr.com/65535/53192856088_3791c43224_c.jpg" width="800" height="600" alt="fcitx5-table-extra-Ep (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<hr>
+<h3 id="服用的紀錄步驟"><a href="#服用的紀錄步驟" class="headerlink" title="服用的紀錄步驟"></a>服用的紀錄步驟</h3><ol>
+<li>儘管「Fcitx5 是 Debian 11 預先安裝好的中文輸入法」，我們還是先確認一下系統上的輸入法設定。這個部分，可以下一道指令 <code>im-config</code> 處理。習慣用 GUI 做設定的伙伴，也可以這麼走：「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「輸入法」。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192270729/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (1)"><img src="https://live.staticflickr.com/65535/53192270729_c9c690ac84_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (1)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192466516/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (2)"><img src="https://live.staticflickr.com/65535/53192466516_7675c56f0a_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192466506/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (3)"><img src="https://live.staticflickr.com/65535/53192466506_188966bbca_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (3)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662525/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (4)"><img src="https://live.staticflickr.com/65535/53192662525_2b43259e53_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (4)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>或是直接下一道指令，將設定改成我們要的 Fcitx5。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">im-config -n fcitx5</span><br></pre></td></tr></table></figure>
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192270654/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (5)"><img src="https://live.staticflickr.com/65535/53192270654_fd1356537f_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (5)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>下載 fcitx5-table-extra 並放到正確的位置。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">wget https://eu.mirror.archlinuxarm.org/aarch64/extra/fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">//小提醒：這個下載的連結網址可能隨版本更新及任何原因而改變，更新本文時，</span><br><span class="line">//下載位置已隨著版本更新而轉變成 https://eu.mirror.archlinuxarm.org/aarch64/extra/fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">//因此，建議下指令前，先到 pkgs.org 搜尋與確認下載連結的網址。</span><br><span class="line">//更新日期：2023 年 9 月 17 日。</span><br><span class="line"></span><br><span class="line">tar xvf fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">cp -r usr/share /usr/</span><br></pre></td></tr></table></figure>
+ <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192270644" title="usingFcitx5withBoshiamyTableonDebian11Ep (6)"><img src="https://live.staticflickr.com/65535/53192270644_a128aff596_c.jpg" width="800" height="332" alt="usingFcitx5withBoshiamyTableonDebian11Ep (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192008427/in/photostream/" title="usingFcitx5withBoshiamyTableonDebian11Ep (7)"><img src="https://live.staticflickr.com/65535/53192008427_3fb71eb749_c.jpg" width="800" height="332" alt="usingFcitx5withBoshiamyTableonDebian11Ep (7)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192833628/in/photostream/" title="usingFcitx5withBoshiamyTableonDebian11Ep (8)"><img src="https://live.staticflickr.com/65535/53192833628_15be9a7cc1_c.jpg" width="800" height="332" alt="usingFcitx5withBoshiamyTableonDebian11Ep (8)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>在 GNOME 桌面環境下的 Debian 11 使用的是 <code>wget</code> 這個指令，我另外在 debian-live-11.0.0-amd64-xfce.iso 安裝過(XFCE 桌面環境)，使用的下載指令則是 <code>curl -O</code>，如果習慣 <code>wget</code> 的話，我的經驗是要先用 <code>apt</code> 把 <code>wget</code> 安裝進來。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662340/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (18)"><img src="https://live.staticflickr.com/65535/53192662340_be9a6f74b1_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (18)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662345/in/album-72177720311237830/" title="usingFcitx5withBoshiamyTableonDebian11Ep (19)"><img src="https://live.staticflickr.com/65535/53192662345_17c666cd25_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (19)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>啟動 Fcitx5：透過指令 fcitx5 或是從「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「Fcitx 5」去啟動，都可以。</li>
+<li>加入嘸蝦米輸入法：「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「Fcitx 5 設定」，把嘸蝦米輸入法加進來。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192008442/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (10)"><img src="https://live.staticflickr.com/65535/53192008442_294d07f3ce_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (10)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662485/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (11)"><img src="https://live.staticflickr.com/65535/53192662485_d06f0996fd_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (11)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662415/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (12)"><img src="https://live.staticflickr.com/65535/53192662415_ca9cdbc893_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (12)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192466401/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (13)"><img src="https://live.staticflickr.com/65535/53192466401_c00bf13777_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (13)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+<li>走到這邊，原則上就能正常服用。<br>↘GNOME 桌面環境。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192008312/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (14)"><img src="https://live.staticflickr.com/65535/53192008312_1ffd56e047_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (14)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192466376/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (15)"><img src="https://live.staticflickr.com/65535/53192466376_d3399888cc_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (15)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192270609/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (16)"><img src="https://live.staticflickr.com/65535/53192270609_f084f2c249_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (16)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script><br>↘XFCE 桌面環境。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192833573/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (20)"><img src="https://live.staticflickr.com/65535/53192833573_a9a89086b5_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (20)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 debian-11.0.0-amd64-DVD-1.iso。</li>
+<li>之前曾經在 Fedora 34 上面安裝 Fcitx5，沒打幾個字，所以沒有感覺到所謂的「快」，這次在 Debian 11 是從 fcitx(4) 切換過來，感覺似乎比較快，當然，這多少有可能是心理作用。當然，如果 Fcitx5 能夠有穩定的表現，我肯定會跳槽過來。</li>
+<li>隨著時間飛逝，在我個人後續的使用經驗裡，遇發行版預設的輸入法框架是 Fcitx5 的話，我原則上，都會直接拿來服用。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>boshiamy</tag>
+        <tag>linux</tag>
+        <tag>fcitx5</tag>
+        <tag>fcitx5-table-extra</tag>
+        <tag>debian</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在 macOS mojave 上的 Visual Studio Code (VSCode) 設定 C++ 的程式開發環境 (IDE)</title>
     <url>/apple/using-clang-in-visual-studio-code-on-macos-mojave/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Visual Studio Code (又稱 VSCode)，在三大平台都能夠使用，今天這一則貼文是紀錄在 macOS mojave 上安裝 VSCode，設定一個可以進行 C++ 程式設計 IDE 的過程。</p>
@@ -6693,41 +6728,6 @@ gdb -v
         <tag>linux</tag>
         <tag>fedora</tag>
         <tag>gcin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在 Debian 11 上直接用 Fcitx 5 與嘸蝦米 (2023 年 9 月 17 日更新)</title>
-    <url>/boshiamy/using-fcitx-5-with-boshiamy-on-debian-11/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Fcitx5 是 Debian 11 預先安裝好的中文輸入法，目前，無法在 Debian 11 上直接透過 <code>apt install fcitx5-table-extra fcitx5-table-other</code> 把其他的中文輸入法安裝進來。</p>
-<p>我在 pkgs.org 找到 Arch Linux 上已經編譯好的表格與圖示檔，詳可見：<a href="https://pkgs.org/download/fcitx5-table-extra" title="Fcitx5-table-extra Download (RPM, TGZ, XBPS, XZ, ZST)">Fcitx5-table-extra Download (RPM, TGZ, XBPS, XZ, ZST)</a>，觀察頁面說明的 Files 部分，判定可以直接取回服用。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192856088/in/dateposted-public/" title="fcitx5-table-extra-Ep (2)"><img src="https://live.staticflickr.com/65535/53192856088_3791c43224_c.jpg" width="800" height="600" alt="fcitx5-table-extra-Ep (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<hr>
-<h3 id="服用的紀錄步驟"><a href="#服用的紀錄步驟" class="headerlink" title="服用的紀錄步驟"></a>服用的紀錄步驟</h3><ol>
-<li>儘管「Fcitx5 是 Debian 11 預先安裝好的中文輸入法」，我們還是先確認一下系統上的輸入法設定。這個部分，可以下一道指令 <code>im-config</code> 處理。習慣用 GUI 做設定的伙伴，也可以這麼走：「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「輸入法」。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192270729/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (1)"><img src="https://live.staticflickr.com/65535/53192270729_c9c690ac84_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (1)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192466516/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (2)"><img src="https://live.staticflickr.com/65535/53192466516_7675c56f0a_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192466506/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (3)"><img src="https://live.staticflickr.com/65535/53192466506_188966bbca_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (3)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662525/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (4)"><img src="https://live.staticflickr.com/65535/53192662525_2b43259e53_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (4)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>或是直接下一道指令，將設定改成我們要的 Fcitx5。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">im-config -n fcitx5</span><br></pre></td></tr></table></figure>
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192270654/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (5)"><img src="https://live.staticflickr.com/65535/53192270654_fd1356537f_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (5)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>下載 fcitx5-table-extra 並放到正確的位置。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">wget https://eu.mirror.archlinuxarm.org/aarch64/extra/fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">//小提醒：這個下載的連結網址可能隨版本更新及任何原因而改變，更新本文時，</span><br><span class="line">//下載位置已隨著版本更新而轉變成 https://eu.mirror.archlinuxarm.org/aarch64/extra/fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">//因此，建議下指令前，先到 pkgs.org 搜尋與確認下載連結的網址。</span><br><span class="line">//更新日期：2023 年 9 月 17 日。</span><br><span class="line"></span><br><span class="line">tar xvf fcitx5-table-extra-5.1.0-1-any.pkg.tar.xz</span><br><span class="line">cp -r usr/share /usr/</span><br></pre></td></tr></table></figure>
- <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192270644" title="usingFcitx5withBoshiamyTableonDebian11Ep (6)"><img src="https://live.staticflickr.com/65535/53192270644_a128aff596_c.jpg" width="800" height="332" alt="usingFcitx5withBoshiamyTableonDebian11Ep (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192008427/in/photostream/" title="usingFcitx5withBoshiamyTableonDebian11Ep (7)"><img src="https://live.staticflickr.com/65535/53192008427_3fb71eb749_c.jpg" width="800" height="332" alt="usingFcitx5withBoshiamyTableonDebian11Ep (7)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192833628/in/photostream/" title="usingFcitx5withBoshiamyTableonDebian11Ep (8)"><img src="https://live.staticflickr.com/65535/53192833628_15be9a7cc1_c.jpg" width="800" height="332" alt="usingFcitx5withBoshiamyTableonDebian11Ep (8)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>在 GNOME 桌面環境下的 Debian 11 使用的是 <code>wget</code> 這個指令，我另外在 debian-live-11.0.0-amd64-xfce.iso 安裝過(XFCE 桌面環境)，使用的下載指令則是 <code>curl -O</code>，如果習慣 <code>wget</code> 的話，我的經驗是要先用 <code>apt</code> 把 <code>wget</code> 安裝進來。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662340/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (18)"><img src="https://live.staticflickr.com/65535/53192662340_be9a6f74b1_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (18)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662345/in/album-72177720311237830/" title="usingFcitx5withBoshiamyTableonDebian11Ep (19)"><img src="https://live.staticflickr.com/65535/53192662345_17c666cd25_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (19)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>啟動 Fcitx5：透過指令 fcitx5 或是從「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「Fcitx 5」去啟動，都可以。</li>
-<li>加入嘸蝦米輸入法：「概覽」→「顯示應用程式」(左下角那九個點的 ICON)→「Fcitx 5 設定」，把嘸蝦米輸入法加進來。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192008442/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (10)"><img src="https://live.staticflickr.com/65535/53192008442_294d07f3ce_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (10)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662485/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (11)"><img src="https://live.staticflickr.com/65535/53192662485_d06f0996fd_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (11)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192662415/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (12)"><img src="https://live.staticflickr.com/65535/53192662415_ca9cdbc893_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (12)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192466401/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (13)"><img src="https://live.staticflickr.com/65535/53192466401_c00bf13777_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (13)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-<li>走到這邊，原則上就能正常服用。<br>↘GNOME 桌面環境。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192008312/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (14)"><img src="https://live.staticflickr.com/65535/53192008312_1ffd56e047_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (14)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192466376/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (15)"><img src="https://live.staticflickr.com/65535/53192466376_d3399888cc_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (15)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192270609/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (16)"><img src="https://live.staticflickr.com/65535/53192270609_f084f2c249_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (16)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script><br>↘XFCE 桌面環境。<br><a data-flickr-embed="true" href="https://www.flickr.com/photos/194265827@N08/53192833573/in/dateposted-public/" title="usingFcitx5withBoshiamyTableonDebian11Ep (20)"><img src="https://live.staticflickr.com/65535/53192833573_a9a89086b5_c.jpg" width="800" height="600" alt="usingFcitx5withBoshiamyTableonDebian11Ep (20)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-</ol>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>本次安裝使用的 ISO 檔版本是 debian-11.0.0-amd64-DVD-1.iso。</li>
-<li>之前曾經在 Fedora 34 上面安裝 Fcitx5，沒打幾個字，所以沒有感覺到所謂的「快」，這次在 Debian 11 是從 fcitx(4) 切換過來，感覺似乎比較快，當然，這多少有可能是心理作用。當然，如果 Fcitx5 能夠有穩定的表現，我肯定會跳槽過來。</li>
-<li>隨著時間飛逝，在我個人後續的使用經驗裡，遇發行版預設的輸入法框架是 Fcitx5 的話，我原則上，都會直接拿來服用。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>boshiamy</tag>
-        <tag>linux</tag>
-        <tag>fcitx5</tag>
-        <tag>fcitx5-table-extra</tag>
-        <tag>debian</tag>
       </tags>
   </entry>
   <entry>
@@ -6852,56 +6852,6 @@ gdb -v
       </tags>
   </entry>
   <entry>
-    <title>Zorin OS 16.3 Core 與嘸蝦米</title>
-    <url>/boshiamy/zorin-os-16-3-core-and-boshiamy/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Zorin OS 也是一支以 ubuntu 為基礎的 Linux Distro。<br> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172742516/in/dateposted/" title="zorinOS16.3andBoshiamyEp (12)"><img src="https://live.staticflickr.com/65535/53172742516_d8c4eb312d_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (12)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<hr>
-<h3 id="安裝-Zorin-OS"><a href="#安裝-Zorin-OS" class="headerlink" title="安裝 Zorin OS"></a>安裝 Zorin OS</h3><ol>
-<li>安裝的過程，就像是 ubuntu 23.04 版本之前的安裝程式，換上另外一張皮，初次進入系統，可以跟著指示走，基本而言，並沒有什麼難度。</li>
-<li>在 Zorin OS 16.3 我注意到一件事，在安裝過程，安裝程式把「參加人口普查」的前面再加個「不要」二個字，以現在的使用介面引導話語而言，使用者可能會很容易地就參加人口普查 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173248363/in/dateposted/" title="zorinOS16.3andBoshiamyEp (14)"><img src="https://live.staticflickr.com/65535/53173248363_4fa338cf23_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (14)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
-</ol>
-<hr>
-<h3 id="在-Zorin-OS-16-3-上安裝及使用嘸蝦米"><a href="#在-Zorin-OS-16-3-上安裝及使用嘸蝦米" class="headerlink" title="在 Zorin OS 16.3 上安裝及使用嘸蝦米"></a>在 Zorin OS 16.3 上安裝及使用嘸蝦米</h3><p>推薦順序上，就跟 Zorin OS 16 一樣：iBus → fcitx(4) → Fcitx5。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172151442/in/dateposted/" title="zorinOS16.3andBoshiamyEp (1)"><img src="https://live.staticflickr.com/65535/53172151442_fba6a15823_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (1)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173176775/in/photostream/" title="zorinOS16.3andBoshiamyEp (2)"><img src="https://live.staticflickr.com/65535/53173176775_6a5338cd43_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<h4 id="iBus"><a href="#iBus" class="headerlink" title="iBus"></a>iBus</h4><ul>
-<li>Zorin OS 16.3 預設的輸入法是 iBus，ibut-table 這支套件一開始就已經安裝好，我個人滿推薦直接服用官網的表格檔。</li>
-</ul>
-<h4 id="fcitx-4"><a href="#fcitx-4" class="headerlink" title="fcitx(4)"></a>fcitx(4)</h4><ol>
-<li><p>相較於我在 Zorin OS 16 時所下的指令(<code>sudo apt-get install fcitx fcitx-m17n fcitx-table-boshiamy</code>)，Zorin OS 16.3 變得簡單很多，而且與多數的 ubuntu 及其衍生發行版一樣，指令如下。</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install fcitx-table-boshiamy</span><br></pre></td></tr></table></figure>
-<p> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172943389/in/photostream/" title="zorinOS16.3andBoshiamyEp (3)"><img src="https://live.staticflickr.com/65535/53172943389_93e1d2229c_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (3)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173226718/in/photostream/" title="zorinOS16.3andBoshiamyEp (4)"><img src="https://live.staticflickr.com/65535/53173226718_f436a857d6_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (4)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-</li>
-<li><p>從開始選單，進入「設定值」→「地區和語言」→「管理安裝的語言」，設定 fcitx 為「鍵盤輸入法系統」(這個地方，也可以用一道指令搞定：<code>im-config -n fcitx</code>)。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173226648/in/photostream/" title="zorinOS16.3andBoshiamyEp (5)"><img src="https://live.staticflickr.com/65535/53173226648_d735fd9507_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (5)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172943289/in/photostream/" title="zorinOS16.3andBoshiamyEp (6)"><img src="https://live.staticflickr.com/65535/53172943289_c83b4b54b8_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172742571/in/photostream/" title="zorinOS16.3andBoshiamyEp (7)"><img src="https://live.staticflickr.com/65535/53172742571_24dc04151c_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (7)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172742576/in/photostream/" title="zorinOS16.3andBoshiamyEp (8)"><img src="https://live.staticflickr.com/65535/53172742576_523495b546_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (8)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-</li>
-<li><p>重新啟動 Zorin OS。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172943294/in/photostream/" title="zorinOS16.3andBoshiamyEp (9)"><img src="https://live.staticflickr.com/65535/53172943294_36714fa2d9_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (9)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172742606/in/photostream/" title="zorinOS16.3andBoshiamyEp (10)"><img src="https://live.staticflickr.com/65535/53172742606_8327d7b468_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (10)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-</li>
-<li><p>原則上，雖然系統上看起來是 iBus 與 fcitx(4) 兩個輸入法框架並行，但使用 Win+Space 切換到 iBus 的新酷音輸入法是無法使用的，而只能是 Ctrl+Space 將輸入法切換到 fcitx(4) 的嘸蝦米輸入法。換句話說，設定好 fcitx(4) 之後，基本上，就可以移除「輸入來源」裡的「新酷音」，讓輸入法框架在呈現上單純一點。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172943194/in/photostream/" title="zorinOS16.3andBoshiamyEp (11)"><img src="https://live.staticflickr.com/65535/53172943194_eb9a0550c0_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (11)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173176680/in/photostream/" title="zorinOS16.3andBoshiamyEp (13)"><img src="https://live.staticflickr.com/65535/53173176680_8b85ba6347_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (13)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-</li>
-</ol>
-<h4 id="Fcitx5"><a href="#Fcitx5" class="headerlink" title="Fcitx5"></a>Fcitx5</h4><ol>
-<li>可以透過 APT 安裝 Fcitx5，但是軟體倉庫裡並沒有 fcitx5-table-extra，如要使用，應該也可以像 Debian 12 一樣，走一趟 pkgs.org 找表格檔處理。</li>
-<li>我不推薦的原因，就是除了安裝軟體倉庫的 Fcitx5 相關程式外，還得另外處理表格檔，多幾道工法才能達到目的，除非讓我遇到某些程式，iBus 或 fcitx(4) 無法使用，我才會把念頭動到 Fcitx5 身上。</li>
-</ol>
-<hr>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
-<li>本次安裝使用的 ISO 檔版本是 Zorin-OS-16.3-Core-64-bit.iso。</li>
-<li>Zorin OS 16.3 分為 3 個版本，分別是需要付費的 Pro 版(美金 40.5 元)、Core 版與 Lite 版，3 個版本都有 Zorin 外觀(皮)，要簡說出不同的部分，應該是就是付費的 Pro 版包含了 Core 與 Lite 版的功能外，還有類 macOS、 Windows 11 &amp; Classic 與 ubuntu 等幾個桌面環境、內建專業層級的 App 套件包與進階的生產力軟體等等。</li>
-<li>我是在 Zorin OS 16.3 這一版(立基於 ubuntu 20.04.3 LTS) 開始與 Zorin OS 的。使用後不久，我就滿喜歡這一支 Distro 的，也曾經一度讓 Zorin OS 以雙系統的方式，在筆電上生活好長一段時間。今天再跑一趟，把玩一下 Zorin OS，一方面，想看看有沒有 Back to School 的優惠；另一方面，則是想要看看安裝嘸蝦米的部分，是不是更輕鬆簡單一點(按常理而言，這個想法應該是「肯定」的)。</li>
-<li>立基在 ubuntu 架構與特性上的 Distro，我目前知道有 Linux Mint、elementary OS 與這次紀錄的 Zorin OS，有一種開枝散葉的感覺。<br>(1)Linux Mint：From freedom came elegance.<br>(2)elementary OS：The thoughtful, capable, and ethical replacement for Windows and macOS.<br>(3)Zorin OS：Make your computer better, faster, easier, more powerful, secure, and reliable.</li>
-</ol>
-]]></content>
-      <categories>
-        <category>boshiamy</category>
-      </categories>
-      <tags>
-        <tag>boshiamy</tag>
-        <tag>linux</tag>
-        <tag>ibus</tag>
-        <tag>fcitx</tag>
-        <tag>fcitx-table-boshiamy</tag>
-        <tag>zorinos</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>zplug</title>
     <url>/apple/zplug/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今天，我決定在 macOS 與 Linux 上都安裝與設定 zplug，並且以本篇貼文留下紀錄。<br><img src="https://live.staticflickr.com/65535/53652176921_0d6c5ea4b8_o.png"></p>
@@ -6955,6 +6905,56 @@ gdb -v
         <tag>monterey</tag>
         <tag>shell</tag>
         <tag>zsh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Zorin OS 16.3 Core 與嘸蝦米</title>
+    <url>/boshiamy/zorin-os-16-3-core-and-boshiamy/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Zorin OS 也是一支以 ubuntu 為基礎的 Linux Distro。<br> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172742516/in/dateposted/" title="zorinOS16.3andBoshiamyEp (12)"><img src="https://live.staticflickr.com/65535/53172742516_d8c4eb312d_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (12)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<hr>
+<h3 id="安裝-Zorin-OS"><a href="#安裝-Zorin-OS" class="headerlink" title="安裝 Zorin OS"></a>安裝 Zorin OS</h3><ol>
+<li>安裝的過程，就像是 ubuntu 23.04 版本之前的安裝程式，換上另外一張皮，初次進入系統，可以跟著指示走，基本而言，並沒有什麼難度。</li>
+<li>在 Zorin OS 16.3 我注意到一件事，在安裝過程，安裝程式把「參加人口普查」的前面再加個「不要」二個字，以現在的使用介面引導話語而言，使用者可能會很容易地就參加人口普查 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173248363/in/dateposted/" title="zorinOS16.3andBoshiamyEp (14)"><img src="https://live.staticflickr.com/65535/53173248363_4fa338cf23_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (14)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></li>
+</ol>
+<hr>
+<h3 id="在-Zorin-OS-16-3-上安裝及使用嘸蝦米"><a href="#在-Zorin-OS-16-3-上安裝及使用嘸蝦米" class="headerlink" title="在 Zorin OS 16.3 上安裝及使用嘸蝦米"></a>在 Zorin OS 16.3 上安裝及使用嘸蝦米</h3><p>推薦順序上，就跟 Zorin OS 16 一樣：iBus → fcitx(4) → Fcitx5。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172151442/in/dateposted/" title="zorinOS16.3andBoshiamyEp (1)"><img src="https://live.staticflickr.com/65535/53172151442_fba6a15823_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (1)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173176775/in/photostream/" title="zorinOS16.3andBoshiamyEp (2)"><img src="https://live.staticflickr.com/65535/53173176775_6a5338cd43_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (2)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<h4 id="iBus"><a href="#iBus" class="headerlink" title="iBus"></a>iBus</h4><ul>
+<li>Zorin OS 16.3 預設的輸入法是 iBus，ibut-table 這支套件一開始就已經安裝好，我個人滿推薦直接服用官網的表格檔。</li>
+</ul>
+<h4 id="fcitx-4"><a href="#fcitx-4" class="headerlink" title="fcitx(4)"></a>fcitx(4)</h4><ol>
+<li><p>相較於我在 Zorin OS 16 時所下的指令(<code>sudo apt-get install fcitx fcitx-m17n fcitx-table-boshiamy</code>)，Zorin OS 16.3 變得簡單很多，而且與多數的 ubuntu 及其衍生發行版一樣，指令如下。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install fcitx-table-boshiamy</span><br></pre></td></tr></table></figure>
+<p> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172943389/in/photostream/" title="zorinOS16.3andBoshiamyEp (3)"><img src="https://live.staticflickr.com/65535/53172943389_93e1d2229c_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (3)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173226718/in/photostream/" title="zorinOS16.3andBoshiamyEp (4)"><img src="https://live.staticflickr.com/65535/53173226718_f436a857d6_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (4)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+<li><p>從開始選單，進入「設定值」→「地區和語言」→「管理安裝的語言」，設定 fcitx 為「鍵盤輸入法系統」(這個地方，也可以用一道指令搞定：<code>im-config -n fcitx</code>)。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173226648/in/photostream/" title="zorinOS16.3andBoshiamyEp (5)"><img src="https://live.staticflickr.com/65535/53173226648_d735fd9507_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (5)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172943289/in/photostream/" title="zorinOS16.3andBoshiamyEp (6)"><img src="https://live.staticflickr.com/65535/53172943289_c83b4b54b8_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (6)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172742571/in/photostream/" title="zorinOS16.3andBoshiamyEp (7)"><img src="https://live.staticflickr.com/65535/53172742571_24dc04151c_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (7)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172742576/in/photostream/" title="zorinOS16.3andBoshiamyEp (8)"><img src="https://live.staticflickr.com/65535/53172742576_523495b546_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (8)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+<li><p>重新啟動 Zorin OS。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172943294/in/photostream/" title="zorinOS16.3andBoshiamyEp (9)"><img src="https://live.staticflickr.com/65535/53172943294_36714fa2d9_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (9)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172742606/in/photostream/" title="zorinOS16.3andBoshiamyEp (10)"><img src="https://live.staticflickr.com/65535/53172742606_8327d7b468_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (10)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+<li><p>原則上，雖然系統上看起來是 iBus 與 fcitx(4) 兩個輸入法框架並行，但使用 Win+Space 切換到 iBus 的新酷音輸入法是無法使用的，而只能是 Ctrl+Space 將輸入法切換到 fcitx(4) 的嘸蝦米輸入法。換句話說，設定好 fcitx(4) 之後，基本上，就可以移除「輸入來源」裡的「新酷音」，讓輸入法框架在呈現上單純一點。 <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53172943194/in/photostream/" title="zorinOS16.3andBoshiamyEp (11)"><img src="https://live.staticflickr.com/65535/53172943194_eb9a0550c0_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (11)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <a data-flickr-embed="true" href="https://www.flickr.com/photos/jutedev/53173176680/in/photostream/" title="zorinOS16.3andBoshiamyEp (13)"><img src="https://live.staticflickr.com/65535/53173176680_8b85ba6347_c.jpg" width="800" height="600" alt="zorinOS16.3andBoshiamyEp (13)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+</li>
+</ol>
+<h4 id="Fcitx5"><a href="#Fcitx5" class="headerlink" title="Fcitx5"></a>Fcitx5</h4><ol>
+<li>可以透過 APT 安裝 Fcitx5，但是軟體倉庫裡並沒有 fcitx5-table-extra，如要使用，應該也可以像 Debian 12 一樣，走一趟 pkgs.org 找表格檔處理。</li>
+<li>我不推薦的原因，就是除了安裝軟體倉庫的 Fcitx5 相關程式外，還得另外處理表格檔，多幾道工法才能達到目的，除非讓我遇到某些程式，iBus 或 fcitx(4) 無法使用，我才會把念頭動到 Fcitx5 身上。</li>
+</ol>
+<hr>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ol>
+<li>本次安裝使用的 ISO 檔版本是 Zorin-OS-16.3-Core-64-bit.iso。</li>
+<li>Zorin OS 16.3 分為 3 個版本，分別是需要付費的 Pro 版(美金 40.5 元)、Core 版與 Lite 版，3 個版本都有 Zorin 外觀(皮)，要簡說出不同的部分，應該是就是付費的 Pro 版包含了 Core 與 Lite 版的功能外，還有類 macOS、 Windows 11 &amp; Classic 與 ubuntu 等幾個桌面環境、內建專業層級的 App 套件包與進階的生產力軟體等等。</li>
+<li>我是在 Zorin OS 16.3 這一版(立基於 ubuntu 20.04.3 LTS) 開始與 Zorin OS 的。使用後不久，我就滿喜歡這一支 Distro 的，也曾經一度讓 Zorin OS 以雙系統的方式，在筆電上生活好長一段時間。今天再跑一趟，把玩一下 Zorin OS，一方面，想看看有沒有 Back to School 的優惠；另一方面，則是想要看看安裝嘸蝦米的部分，是不是更輕鬆簡單一點(按常理而言，這個想法應該是「肯定」的)。</li>
+<li>立基在 ubuntu 架構與特性上的 Distro，我目前知道有 Linux Mint、elementary OS 與這次紀錄的 Zorin OS，有一種開枝散葉的感覺。<br>(1)Linux Mint：From freedom came elegance.<br>(2)elementary OS：The thoughtful, capable, and ethical replacement for Windows and macOS.<br>(3)Zorin OS：Make your computer better, faster, easier, more powerful, secure, and reliable.</li>
+</ol>
+]]></content>
+      <categories>
+        <category>boshiamy</category>
+      </categories>
+      <tags>
+        <tag>boshiamy</tag>
+        <tag>linux</tag>
+        <tag>ibus</tag>
+        <tag>fcitx</tag>
+        <tag>fcitx-table-boshiamy</tag>
+        <tag>zorinos</tag>
       </tags>
   </entry>
 </search>
