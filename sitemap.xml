@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/kaiboard-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/about/index.html</loc>
+    
+    <lastmod>2024-10-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/404.html</loc>
+    
+    <lastmod>2024-10-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/boshiamy/kaiboard-and-boshiamy/</loc>
     
     <lastmod>2024-10-01</lastmod>
     
@@ -11,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/boshiamy-table-for-iacces-keyboard/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/boshiamy-table-for-iacces-keyboard/</loc>
     
     <lastmod>2024-09-28</lastmod>
     
@@ -20,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-11/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/about-my-settings-of-boshiamy-on-windows-11/</loc>
     
     <lastmod>2024-09-15</lastmod>
     
@@ -29,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/about-my-settings-of-boshiamy-on-windows-10/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/about-my-settings-of-boshiamy-on-windows-10/</loc>
     
     <lastmod>2024-09-15</lastmod>
     
@@ -38,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/my-review-of-using-boshiamy-on-the-smartphone/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/my-review-of-using-boshiamy-on-the-smartphone/</loc>
     
     <lastmod>2024-09-06</lastmod>
     
@@ -47,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/install-boshiamy-table-to-fcitx5-for-android/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/install-boshiamy-table-to-fcitx5-for-android/</loc>
     
     <lastmod>2024-09-06</lastmod>
     
@@ -56,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/fix-the-recovery-server-could-not-be-contacted-error-when-installing-macos-high-sierra/</loc>
+    <loc>http://lazytoclick.github.io/apple/fix-the-recovery-server-could-not-be-contacted-error-when-installing-macos-high-sierra/</loc>
     
     <lastmod>2024-08-23</lastmod>
     
@@ -65,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/ubuntu-22-04-lts-and-official-boshiamy-ibus-table/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/ubuntu-22-04-lts-and-official-boshiamy-ibus-table/</loc>
     
     <lastmod>2024-08-23</lastmod>
     
@@ -74,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/my-review-of-installing-fcitx-with-boshiamy-table-on-linux/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/my-review-of-installing-fcitx-with-boshiamy-table-on-linux/</loc>
     
     <lastmod>2024-08-02</lastmod>
     
@@ -83,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/upgrade-to-linux-mint-22-from-linux-mint-22-beta/</loc>
+    <loc>http://lazytoclick.github.io/linux/upgrade-to-linux-mint-22-from-linux-mint-22-beta/</loc>
     
     <lastmod>2024-07-31</lastmod>
     
@@ -92,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/linux-mint-22-and-boshiamy-feat-fcitx5-table-extra/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/linux-mint-22-and-boshiamy-feat-fcitx5-table-extra/</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -101,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/linux-mint-22-beta/</loc>
+    <loc>http://lazytoclick.github.io/linux/linux-mint-22-beta/</loc>
     
     <lastmod>2024-07-27</lastmod>
     
@@ -110,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/enable-group-policy-editor-gpedit-msc-on-windows-11-home/</loc>
+    <loc>http://lazytoclick.github.io/windows/enable-group-policy-editor-gpedit-msc-on-windows-11-home/</loc>
     
     <lastmod>2024-07-08</lastmod>
     
@@ -119,7 +137,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-arch-linux-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/installing-arch-linux-and-boshiamy/</loc>
     
     <lastmod>2024-06-24</lastmod>
     
@@ -128,7 +146,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/github/fix-error-bad-signature-0x00000000/</loc>
+    <loc>http://lazytoclick.github.io/github/fix-error-bad-signature-0x00000000/</loc>
     
     <lastmod>2024-06-24</lastmod>
     
@@ -137,7 +155,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/github/mtmatt-on-github-feat-hexo/</loc>
+    <loc>http://lazytoclick.github.io/github/mtmatt-on-github-feat-hexo/</loc>
     
     <lastmod>2024-06-24</lastmod>
     
@@ -146,16 +164,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/about/index.html</loc>
-    
-    <lastmod>2024-06-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://mtmatt.one/windows/github-account-and-accessing-credential-manager/</loc>
+    <loc>http://lazytoclick.github.io/windows/github-account-and-accessing-credential-manager/</loc>
     
     <lastmod>2024-06-22</lastmod>
     
@@ -164,7 +173,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/red-hat-enterprise-linux-9-4/</loc>
+    <loc>http://lazytoclick.github.io/linux/red-hat-enterprise-linux-9-4/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -173,7 +182,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/android/abattery-and-shizuku/</loc>
+    <loc>http://lazytoclick.github.io/android/abattery-and-shizuku/</loc>
     
     <lastmod>2024-06-18</lastmod>
     
@@ -182,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-fcitx-with-boshiamy-table-on-ubuntu-21-04/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-fcitx-with-boshiamy-table-on-ubuntu-21-04/</loc>
     
     <lastmod>2024-06-01</lastmod>
     
@@ -191,7 +200,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/quickrecap-of-ubuntu-21-10/</loc>
+    <loc>http://lazytoclick.github.io/linux/quickrecap-of-ubuntu-21-10/</loc>
     
     <lastmod>2024-05-25</lastmod>
     
@@ -200,7 +209,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/manjaro-xfce-21-2-2-and-boshiamy-feat-fcitx5/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/manjaro-xfce-21-2-2-and-boshiamy-feat-fcitx5/</loc>
     
     <lastmod>2024-05-20</lastmod>
     
@@ -209,7 +218,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/fedora-40/</loc>
+    <loc>http://lazytoclick.github.io/linux/fedora-40/</loc>
     
     <lastmod>2024-05-12</lastmod>
     
@@ -218,7 +227,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/install-chrome-to-ubuntu-24-04-lts/</loc>
+    <loc>http://lazytoclick.github.io/linux/install-chrome-to-ubuntu-24-04-lts/</loc>
     
     <lastmod>2024-05-10</lastmod>
     
@@ -227,7 +236,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/things-to-do-after-installing-ubuntu-24-04-lts/</loc>
+    <loc>http://lazytoclick.github.io/linux/things-to-do-after-installing-ubuntu-24-04-lts/</loc>
     
     <lastmod>2024-05-10</lastmod>
     
@@ -236,7 +245,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/ubuntu-24-04-lts-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/ubuntu-24-04-lts-and-boshiamy/</loc>
     
     <lastmod>2024-05-06</lastmod>
     
@@ -245,7 +254,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/make-ubuntu-23-04-speak-traditional-chinese/</loc>
+    <loc>http://lazytoclick.github.io/linux/make-ubuntu-23-04-speak-traditional-chinese/</loc>
     
     <lastmod>2024-05-06</lastmod>
     
@@ -254,7 +263,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/zplug/</loc>
+    <loc>http://lazytoclick.github.io/apple/zplug/</loc>
     
     <lastmod>2024-04-21</lastmod>
     
@@ -263,7 +272,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/auto-cpufreq/</loc>
+    <loc>http://lazytoclick.github.io/linux/auto-cpufreq/</loc>
     
     <lastmod>2024-04-20</lastmod>
     
@@ -272,7 +281,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/fedora-38-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/linux/fedora-38-and-boshiamy/</loc>
     
     <lastmod>2024-04-19</lastmod>
     
@@ -281,7 +290,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/caprine/</loc>
+    <loc>http://lazytoclick.github.io/linux/caprine/</loc>
     
     <lastmod>2024-04-14</lastmod>
     
@@ -290,7 +299,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/rosa-linux-12-5/</loc>
+    <loc>http://lazytoclick.github.io/linux/rosa-linux-12-5/</loc>
     
     <lastmod>2024-04-07</lastmod>
     
@@ -299,7 +308,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/winlibs/</loc>
+    <loc>http://lazytoclick.github.io/windows/winlibs/</loc>
     
     <lastmod>2024-04-04</lastmod>
     
@@ -308,7 +317,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/ibus-with-boshiamy-on-mx-linux-mx-21/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/ibus-with-boshiamy-on-mx-linux-mx-21/</loc>
     
     <lastmod>2024-04-04</lastmod>
     
@@ -317,7 +326,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/manjaro-xfce-21-2-2-with-ibus-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/manjaro-xfce-21-2-2-with-ibus-and-boshiamy/</loc>
     
     <lastmod>2024-04-01</lastmod>
     
@@ -326,7 +335,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/how-to-get-old-versions-of-macos/</loc>
+    <loc>http://lazytoclick.github.io/apple/how-to-get-old-versions-of-macos/</loc>
     
     <lastmod>2024-03-25</lastmod>
     
@@ -335,7 +344,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/making-a-dual-bootable-flash-drive-on-my-imac/</loc>
+    <loc>http://lazytoclick.github.io/apple/making-a-dual-bootable-flash-drive-on-my-imac/</loc>
     
     <lastmod>2024-03-25</lastmod>
     
@@ -344,7 +353,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/fedora-35/</loc>
+    <loc>http://lazytoclick.github.io/linux/fedora-35/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -353,7 +362,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/installing-pop_os-21-10-on-my-mac-mini/</loc>
+    <loc>http://lazytoclick.github.io/apple/installing-pop_os-21-10-on-my-mac-mini/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -362,7 +371,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/downgraded-from-macos-mojave-to-macos-high-sierra/</loc>
+    <loc>http://lazytoclick.github.io/apple/downgraded-from-macos-mojave-to-macos-high-sierra/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -371,7 +380,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/using-clang-in-visual-studio-code-on-macos-mojave/</loc>
+    <loc>http://lazytoclick.github.io/apple/using-clang-in-visual-studio-code-on-macos-mojave/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -380,7 +389,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/installing-arch-linux-on-my-mac-mini/</loc>
+    <loc>http://lazytoclick.github.io/apple/installing-arch-linux-on-my-mac-mini/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -389,7 +398,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/openvanilla-1-6-2-and-boshiamy-unix-table/</loc>
+    <loc>http://lazytoclick.github.io/apple/openvanilla-1-6-2-and-boshiamy-unix-table/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -398,7 +407,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/openvanilla-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/apple/openvanilla-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -407,7 +416,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/boshiamy-chinese-input-method-on-lubuntu-18-04/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/boshiamy-chinese-input-method-on-lubuntu-18-04/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -416,7 +425,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/converting-the-table-of-boshiamy-for-scim/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/converting-the-table-of-boshiamy-for-scim/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -425,7 +434,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/fedora-10-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/fedora-10-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -434,7 +443,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-gcin-and-boshiamy-on-ubuntu-8-10/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/installing-gcin-and-boshiamy-on-ubuntu-8-10/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -443,7 +452,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/ubuntu-8-04-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/ubuntu-8-04-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -452,7 +461,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/using-boshiamy-with-gcin-on-linux/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/using-boshiamy-with-gcin-on-linux/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -461,7 +470,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/using-gcin-with-boshiamy-on-fedora-core-4/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/using-gcin-with-boshiamy-on-fedora-core-4/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -470,7 +479,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/archlabs-linux-2023-01-20/</loc>
+    <loc>http://lazytoclick.github.io/linux/archlabs-linux-2023-01-20/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -479,7 +488,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/archcraft-2023-01-01/</loc>
+    <loc>http://lazytoclick.github.io/linux/archcraft-2023-01-01/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -488,7 +497,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/fcitx5-with-chewing-on-ubuntu-22-04-lts/</loc>
+    <loc>http://lazytoclick.github.io/linux/fcitx5-with-chewing-on-ubuntu-22-04-lts/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -497,7 +506,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/fedora-36/</loc>
+    <loc>http://lazytoclick.github.io/linux/fedora-36/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -506,7 +515,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/fcitx5-with-chewing-on-arch-linux/</loc>
+    <loc>http://lazytoclick.github.io/linux/fcitx5-with-chewing-on-arch-linux/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -515,7 +524,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/endeavouros-artemis-nova-22-9/</loc>
+    <loc>http://lazytoclick.github.io/linux/endeavouros-artemis-nova-22-9/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -524,7 +533,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/bsd/freebsd-14-0-and-l10n/</loc>
+    <loc>http://lazytoclick.github.io/bsd/freebsd-14-0-and-l10n/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -533,7 +542,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/bsd/freebsd-13-2-and-l10n/</loc>
+    <loc>http://lazytoclick.github.io/bsd/freebsd-13-2-and-l10n/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -542,7 +551,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/slackware-15-0/</loc>
+    <loc>http://lazytoclick.github.io/linux/slackware-15-0/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -551,7 +560,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/mx-linux-mx-23/</loc>
+    <loc>http://lazytoclick.github.io/linux/mx-linux-mx-23/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -560,7 +569,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/fcitx5-with-fcitx5-table-extra-on-ubuntu-22-04-1-lts/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/fcitx5-with-fcitx5-table-extra-on-ubuntu-22-04-1-lts/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -569,7 +578,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/elementary-os-6-0/</loc>
+    <loc>http://lazytoclick.github.io/linux/elementary-os-6-0/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -578,7 +587,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/elementary-os-7-1/</loc>
+    <loc>http://lazytoclick.github.io/linux/elementary-os-7-1/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -587,7 +596,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/installing-clear-linux-into-my-mac-mini-late-2014/</loc>
+    <loc>http://lazytoclick.github.io/apple/installing-clear-linux-into-my-mac-mini-late-2014/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -596,7 +605,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-pop_os-20-04-lts-on-asus-m32cd/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-pop_os-20-04-lts-on-asus-m32cd/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -605,7 +614,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/lmde-5/</loc>
+    <loc>http://lazytoclick.github.io/linux/lmde-5/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -614,7 +623,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/endeavouros-apollo-22-1/</loc>
+    <loc>http://lazytoclick.github.io/linux/endeavouros-apollo-22-1/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -623,7 +632,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/garuda-dr460nized-gaming-linux-zen-230311/</loc>
+    <loc>http://lazytoclick.github.io/linux/garuda-dr460nized-gaming-linux-zen-230311/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -632,7 +641,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/garuda-linux-kde-dr460nized-edition/</loc>
+    <loc>http://lazytoclick.github.io/linux/garuda-linux-kde-dr460nized-edition/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -641,7 +650,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/lmde-6/</loc>
+    <loc>http://lazytoclick.github.io/linux/lmde-6/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -650,7 +659,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-amarok-linux-3-2-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/installing-amarok-linux-3-2-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -659,7 +668,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/fcitx5-with-boshiamy-on-archcraft-2023-01-01/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/fcitx5-with-boshiamy-on-archcraft-2023-01-01/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -668,7 +677,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/ubuntu-23-04-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/ubuntu-23-04-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -677,7 +686,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/after-upgrading-and-using-windows-11-and-boshiamy-for-several-hours/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/after-upgrading-and-using-windows-11-and-boshiamy-for-several-hours/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -686,7 +695,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/making-boshiamy-be-the-default-chinese-input-method-on-windows-10/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/making-boshiamy-be-the-default-chinese-input-method-on-windows-10/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -695,7 +704,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/installing-mx-linux-mx-21-and-boshiamy-feat-fcitx/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -704,7 +713,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/fcitx5-with-boshiamy-on-archlabs-linux-2023-01-20/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/fcitx5-with-boshiamy-on-archlabs-linux-2023-01-20/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -713,7 +722,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/about-the-setting-of-boshiamy-keyboard-2-for-ios-and-ipados/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/about-the-setting-of-boshiamy-keyboard-2-for-ios-and-ipados/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -722,7 +731,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/arcolinuxl-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/arcolinuxl-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -731,7 +740,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/debian-12-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/debian-12-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -740,7 +749,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/fedora-39-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/fedora-39-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -749,7 +758,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-boshiamy-table-for-fcitx-on-debian-10-10/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/installing-boshiamy-table-for-fcitx-on-debian-10-10/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -758,7 +767,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-debian-11-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/installing-debian-11-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -767,7 +776,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-fcitx-4-with-boshiamy-table-on-ubuntu-22-04-lts/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/installing-fcitx-4-with-boshiamy-table-on-ubuntu-22-04-lts/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -776,7 +785,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-pop_os-21-04-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/installing-pop_os-21-04-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -785,7 +794,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/installing-ubuntu-budgie-21-10-desktop-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/installing-ubuntu-budgie-21-10-desktop-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -794,7 +803,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/manjaro-xfce-21-1-5-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/manjaro-xfce-21-1-5-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -803,7 +812,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/manjaro-xfce-23-0-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/manjaro-xfce-23-0-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -812,7 +821,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/opensuse-leap-15-5-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/opensuse-leap-15-5-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -821,7 +830,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/opensuse-tumbleweed-snapshot20231018-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/opensuse-tumbleweed-snapshot20231018-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -830,7 +839,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/the-bug-of-boshiamy-tsf-x64-on-microsoft-edge/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/the-bug-of-boshiamy-tsf-x64-on-microsoft-edge/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -839,7 +848,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/using-fcitx-5-with-boshiamy-on-debian-11/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/using-fcitx-5-with-boshiamy-on-debian-11/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -848,7 +857,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/zorin-os-16-3-core-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/zorin-os-16-3-core-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -857,7 +866,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/about-the-setting-of-boshiamy-ime-professional-android/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/about-the-setting-of-boshiamy-ime-professional-android/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -866,7 +875,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/ibus-with-boshiamy-on-legacyos-2023/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/ibus-with-boshiamy-on-legacyos-2023/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -875,7 +884,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/feren-os-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/feren-os-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -884,7 +893,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/fcitx5-with-boshiamy-and-chewing-on-archcraft-2023-01-01/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/fcitx5-with-boshiamy-and-chewing-on-archcraft-2023-01-01/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -893,7 +902,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/fcitx5-with-boshiamy-and-chewing-on-archlabs-linux-2023-01-20/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/fcitx5-with-boshiamy-and-chewing-on-archlabs-linux-2023-01-20/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -902,7 +911,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/ibus-on-with-boshiamy-and-chewing-legacyos-2023/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/ibus-on-with-boshiamy-and-chewing-legacyos-2023/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -911,7 +920,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/fedora-10-live-usb/</loc>
+    <loc>http://lazytoclick.github.io/linux/fedora-10-live-usb/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -920,7 +929,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/fedora-9-make-waves/</loc>
+    <loc>http://lazytoclick.github.io/linux/fedora-9-make-waves/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -929,7 +938,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-fedora-core-4-ppc/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-fedora-core-4-ppc/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -938,7 +947,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-ubuntu-8-04-on-acer-aspire-x3600/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-ubuntu-8-04-on-acer-aspire-x3600/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -947,7 +956,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-ubuntu-8-04-using-wubi-on-windows-xp/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-ubuntu-8-04-using-wubi-on-windows-xp/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -956,7 +965,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-ubuntu-8-10-using-wubi-on-windows-xp/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-ubuntu-8-10-using-wubi-on-windows-vista/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -965,7 +974,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-ubuntu-8-10-using-wubi-on-windows-vista/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-ubuntu-8-10-using-wubi-on-windows-xp/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -974,7 +983,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-ubuntu-on-acer-aspire-5583-wxmi/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-ubuntu-on-acer-aspire-5583-wxmi/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -983,7 +992,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/using-hp-photosmart-c4385-on-ubuntu-8-04/</loc>
+    <loc>http://lazytoclick.github.io/linux/using-hp-photosmart-c4385-on-ubuntu-8-04/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -992,16 +1001,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/404.html</loc>
-    
-    <lastmod>2024-03-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://mtmatt.one/linux/things-to-do-after-installing-mx-linux-mx-21/</loc>
+    <loc>http://lazytoclick.github.io/linux/things-to-do-after-installing-mx-linux-mx-21/</loc>
     
     <lastmod>2024-02-07</lastmod>
     
@@ -1010,7 +1010,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/using-linux-lite-6-2-for-3-days/</loc>
+    <loc>http://lazytoclick.github.io/linux/using-linux-lite-6-2-for-3-days/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -1019,7 +1019,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/opensuse-leap-15-4/</loc>
+    <loc>http://lazytoclick.github.io/linux/opensuse-leap-15-4/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -1028,7 +1028,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/shifting-from-mx-linux-to-garuda-linux/</loc>
+    <loc>http://lazytoclick.github.io/linux/shifting-from-mx-linux-to-garuda-linux/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -1037,7 +1037,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/linux-mint-21-2/</loc>
+    <loc>http://lazytoclick.github.io/linux/linux-mint-21-2/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -1046,7 +1046,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/boshiamy/linux-mint-21-1-and-boshiamy-feat-fcitx5-table-extra/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/linux-mint-21-1-and-boshiamy-feat-fcitx5-table-extra/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -1055,7 +1055,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5010414-windows-11-os-build-22000-527/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5010414-windows-11-os-build-22000-527/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -1064,7 +1064,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5011493-windows-11-os-build-22000-556/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5011493-windows-11-os-build-22000-556/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -1073,7 +1073,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/centos-stream-9/</loc>
+    <loc>http://lazytoclick.github.io/linux/centos-stream-9/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -1082,7 +1082,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/20-days-after-shifting-to-garuda-linux/</loc>
+    <loc>http://lazytoclick.github.io/linux/20-days-after-shifting-to-garuda-linux/</loc>
     
     <lastmod>2023-12-24</lastmod>
     
@@ -1091,7 +1091,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/google/import-google-takeout-by-thunderbird-with-importexporttools-ng/</loc>
+    <loc>http://lazytoclick.github.io/google/import-google-takeout-by-thunderbird-with-importexporttools-ng/</loc>
     
     <lastmod>2023-11-06</lastmod>
     
@@ -1100,7 +1100,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/opensuse-tumbleweed-snapshot20220905/</loc>
+    <loc>http://lazytoclick.github.io/linux/opensuse-tumbleweed-snapshot20220905/</loc>
     
     <lastmod>2023-10-28</lastmod>
     
@@ -1109,7 +1109,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/installing-visual-studio-code-on-windows-ep2/</loc>
+    <loc>http://lazytoclick.github.io/windows/installing-visual-studio-code-on-windows-ep2/</loc>
     
     <lastmod>2023-09-27</lastmod>
     
@@ -1118,7 +1118,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/installing-visual-studio-code-on-windows-ep3/</loc>
+    <loc>http://lazytoclick.github.io/windows/installing-visual-studio-code-on-windows-ep3/</loc>
     
     <lastmod>2023-09-27</lastmod>
     
@@ -1127,7 +1127,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/how-to-copy-files-to-root-directory-on-linux-feat-thunar/</loc>
+    <loc>http://lazytoclick.github.io/linux/how-to-copy-files-to-root-directory-on-linux-feat-thunar/</loc>
     
     <lastmod>2023-09-23</lastmod>
     
@@ -1136,7 +1136,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/</loc>
+    <loc>http://lazytoclick.github.io/linux/install-chinese-input-method-on-linux-lite-6-6-feat-fcitx-5/</loc>
     
     <lastmod>2023-09-23</lastmod>
     
@@ -1145,7 +1145,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/linux-lite-6-2/</loc>
+    <loc>http://lazytoclick.github.io/linux/linux-lite-6-2/</loc>
     
     <lastmod>2023-09-21</lastmod>
     
@@ -1154,7 +1154,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/manjaro-linux-22-0-5-plasma-edition/</loc>
+    <loc>http://lazytoclick.github.io/linux/manjaro-linux-22-0-5-plasma-edition/</loc>
     
     <lastmod>2023-09-10</lastmod>
     
@@ -1163,7 +1163,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/how-to-disable-secure-boot-on-asus-m32cd/</loc>
+    <loc>http://lazytoclick.github.io/linux/how-to-disable-secure-boot-on-asus-m32cd/</loc>
     
     <lastmod>2023-09-05</lastmod>
     
@@ -1172,7 +1172,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/gufw-firewall-feat-manjaro/</loc>
+    <loc>http://lazytoclick.github.io/linux/gufw-firewall-feat-manjaro/</loc>
     
     <lastmod>2023-09-05</lastmod>
     
@@ -1181,7 +1181,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/fedora-37/</loc>
+    <loc>http://lazytoclick.github.io/linux/fedora-37/</loc>
     
     <lastmod>2023-09-05</lastmod>
     
@@ -1190,7 +1190,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/download-and-complete-windows-update-on-microsoft-update-catalog-feat-kb5012643/</loc>
+    <loc>http://lazytoclick.github.io/windows/download-and-complete-windows-update-on-microsoft-update-catalog-feat-kb5012643/</loc>
     
     <lastmod>2023-09-05</lastmod>
     
@@ -1199,7 +1199,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/remove-ubuntu-from-bios-boot-menu/</loc>
+    <loc>http://lazytoclick.github.io/linux/remove-ubuntu-from-bios-boot-menu/</loc>
     
     <lastmod>2023-09-05</lastmod>
     
@@ -1208,7 +1208,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-and-running-contest-management-system/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-and-running-contest-management-system/</loc>
     
     <lastmod>2023-09-01</lastmod>
     
@@ -1217,7 +1217,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-and-running-contest-management-system-on-ubuntu-live-server/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-and-running-contest-management-system-on-ubuntu-live-server/</loc>
     
     <lastmod>2023-09-01</lastmod>
     
@@ -1226,7 +1226,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb4023057-update-for-windows-update-service-components/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5010386-windows-11-os-build-22000-493/</loc>
     
     <lastmod>2023-09-01</lastmod>
     
@@ -1235,7 +1235,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5010386-windows-11-os-build-22000-493/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb4023057-update-for-windows-update-service-components/</loc>
     
     <lastmod>2023-09-01</lastmod>
     
@@ -1244,7 +1244,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5011563-windows-11-os-build-22000-593/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5011563-windows-11-os-build-22000-593/</loc>
     
     <lastmod>2023-09-01</lastmod>
     
@@ -1253,7 +1253,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5012592-windows-11-os-build-22000-613/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5012592-windows-11-os-build-22000-613/</loc>
     
     <lastmod>2023-09-01</lastmod>
     
@@ -1262,7 +1262,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5012643-windows-11-os-build-22000-652/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5012643-windows-11-os-build-22000-652/</loc>
     
     <lastmod>2023-09-01</lastmod>
     
@@ -1271,7 +1271,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/installing-and-setting-of-microsoft-garage-mouse-without-borders/</loc>
+    <loc>http://lazytoclick.github.io/windows/installing-and-setting-of-microsoft-garage-mouse-without-borders/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -1280,7 +1280,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/installing-visual-studio-code-on-windows-ep1/</loc>
+    <loc>http://lazytoclick.github.io/windows/installing-visual-studio-code-on-windows-ep1/</loc>
     
     <lastmod>2023-08-29</lastmod>
     
@@ -1289,7 +1289,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/risios-37-1-1/</loc>
+    <loc>http://lazytoclick.github.io/linux/risios-37-1-1/</loc>
     
     <lastmod>2023-08-29</lastmod>
     
@@ -1298,7 +1298,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/solus-4-4/</loc>
+    <loc>http://lazytoclick.github.io/linux/solus-4-4/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1307,7 +1307,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/enable-ahci-on-windows-10-via-cmd/</loc>
+    <loc>http://lazytoclick.github.io/windows/enable-ahci-on-windows-10-via-cmd/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1316,7 +1316,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/linux-mint-21-1-vs-manjaro-22-1-0/</loc>
+    <loc>http://lazytoclick.github.io/linux/linux-mint-21-1-vs-manjaro-22-1-0/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1325,7 +1325,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/upgrade-to-manjaro-linux-22-1-0-from-manjaro-linux-22-0-5/</loc>
+    <loc>http://lazytoclick.github.io/linux/upgrade-to-manjaro-linux-22-1-0-from-manjaro-linux-22-0-5/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1334,7 +1334,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/upgrade-to-ubuntu-22-04-2-lts-from-ubuntu-22-04-1-lts/</loc>
+    <loc>http://lazytoclick.github.io/linux/upgrade-to-ubuntu-22-04-2-lts-from-ubuntu-22-04-1-lts/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1343,7 +1343,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/upgrade-to-fedora-37-from-fedora-35/</loc>
+    <loc>http://lazytoclick.github.io/linux/upgrade-to-fedora-37-from-fedora-35/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1352,7 +1352,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5015882-windows-11-os-build-22000-832/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5015882-windows-11-os-build-22000-832/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1361,7 +1361,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5018418-windows-11-os-build-22000-1098/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5018418-windows-11-os-build-22000-1098/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1370,7 +1370,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5015814-windows-11-os-build-22000-795/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5015814-windows-11-os-build-22000-795/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1379,7 +1379,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5014668-windows-11-os-build-22000-778/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5014668-windows-11-os-build-22000-778/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1388,7 +1388,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5014697-windows-11-os-build-22000-739/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5014697-windows-11-os-build-22000-739/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1397,7 +1397,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5014019-windows-11-os-build-22000-708/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5014019-windows-11-os-build-22000-708/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1406,7 +1406,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/kb5013943-windows-11-os-build-22000-675/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5013943-windows-11-os-build-22000-675/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1415,7 +1415,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/</loc>
+    <loc>http://lazytoclick.github.io/apple/fixing-imageinstall-error-when-using-bootcamp-to-install-windows-10-on-my-imac/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1424,7 +1424,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/windows/my-note-about-creating-installers-for-windows-with-nsis/</loc>
+    <loc>http://lazytoclick.github.io/windows/my-note-about-creating-installers-for-windows-with-nsis/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1433,7 +1433,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/unistall-grub-by-clearlinux-live-usb/</loc>
+    <loc>http://lazytoclick.github.io/linux/unistall-grub-by-clearlinux-live-usb/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1442,7 +1442,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/nitrux-1-8-0/</loc>
+    <loc>http://lazytoclick.github.io/linux/nitrux-1-8-0/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1451,7 +1451,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/upgrade-to-fedora-35-from-fedora-34/</loc>
+    <loc>http://lazytoclick.github.io/linux/upgrade-to-fedora-35-from-fedora-34/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1460,7 +1460,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/linux/installing-virtualbox-6-1-26-on-clear-linux/</loc>
+    <loc>http://lazytoclick.github.io/linux/installing-virtualbox-6-1-26-on-clear-linux/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1469,7 +1469,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/installing-windows-10-on-usb-hdd-with-wintousb-and-bootcamp/</loc>
+    <loc>http://lazytoclick.github.io/apple/installing-windows-10-on-usb-hdd-with-wintousb-and-bootcamp/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1478,7 +1478,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/apple/installing-clear-linux-on-usb-hdd-with-my-imac-retina-4k-2017/</loc>
+    <loc>http://lazytoclick.github.io/apple/installing-clear-linux-on-usb-hdd-with-my-imac-retina-4k-2017/</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1487,7 +1487,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/index.html</loc>
+    <loc>http://lazytoclick.github.io/categories/index.html</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1496,7 +1496,7 @@
   </url>
   
   <url>
-    <loc>http://mtmatt.one/categories/index.html</loc>
+    <loc>http://lazytoclick.github.io/tags/index.html</loc>
     
     <lastmod>2023-08-03</lastmod>
     
@@ -1506,968 +1506,968 @@
   
 
   <url>
-    <loc>http://mtmatt.one/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://mtmatt.one/tags/archlinux/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/apple/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/garudalinux/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/boshiamy/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/linux/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/macos/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/android/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/macosx/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/abattery/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/windows/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/shizuku/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/windows10/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/apple/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/archlinux/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/boshiamy/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/garudalinux/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/macos/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/linux/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/macosx/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/android/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/windows/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/abattery/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/windows10/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/shizuku/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/ios/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/ios/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/windows11/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/windows11/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/archcraft/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/archlabs/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/archlabs/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/archcraft/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/linuxapps/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/arcolinux/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/mxlinux/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/fcitx5/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/ibus/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/fcitx5-table-extra/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/lubuntu/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/linuxapps/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/arcolinux/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/mxlinux/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/fcitx5/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/ibus/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/fcitx5-table-extra/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/lubuntu/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/centos/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/centos/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/fedora/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/fedora/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/redhat/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/redhat/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/scim/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/scim/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/debian/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/highsierra/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/highsierra/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/imac/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/imac/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/mojave/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/mojave/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/debian/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/microsoftupdatecatalog/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/microsoftupdatecatalog/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/windowsupdate/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/windowsupdate/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/elementoryos/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/elementoryos/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/fcitx/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/fcitx/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/odin/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/odin/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/virtualbox/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/virtualbox/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/fcitx-table-boshiamy/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/fcitx-table-boshiamy/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/bios/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/bios/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/endeavouros/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/endeavouros/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/fcitx5-chewing/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/fcitx5-chewing/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/ubuntu/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/ubuntu/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/gcin/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/gcin/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/ibux/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/ibux/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/ferenos/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/ferenos/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/blogware/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/blogware/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/hexo/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/hexo/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/git/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/git/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/github/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/github/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/apfs/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/freebsd/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/bootcamp/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/apfs/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/diskmgmt/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/bootcamp/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/diskpart/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/diskmgmt/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/fusiondrive/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/diskpart/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/freebsd/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/fusiondrive/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/firewalls/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/firewalls/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/gufw/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/gufw/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/manjaro/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/manjaro/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/linuxlite/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/linuxlite/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/thunar/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/thunar/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/asus/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/asus/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/ezflash/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/ezflash/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/secureboot/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/secureboot/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/uefi/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/uefi/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/appstore/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/appstore/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/bigsur/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/bigsur/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/mac/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/mac/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/monterey/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/monterey/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/safari/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/safari/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/xcode/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/xcode/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/legacyos/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/legacyos/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/googleAccount/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/google/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/gmail/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/chrome/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/mozilla/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/googleAccount/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/thunderbird/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/gmail/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/importExportToolsNG/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/mozilla/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/google/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/thunderbird/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/chrome/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/importExportToolsNG/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/amaroklinux/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/amaroklinux/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/contest/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/contest/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/web/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/web/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/clearlinux/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/clearlinux/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/macmini/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/macmini/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/appleComputer/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/appleComputer/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/osxelcapitan/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/osxelcapitan/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/osxyosemite/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/osxyosemite/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/usbhdd/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/usbhdd/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/grub/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/grub/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/linuxppc/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/linuxppc/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/davinciresolve17/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/davinciresolve17/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/nvidia/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/nvidia/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/pop-os/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/pop-os/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/spotify/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/spotify/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/acer/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/acer/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/windowsxp/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/windowsxp/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/wubi/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/wubi/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/ubuntubudgie/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/windowsvista/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/windowsvista/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/ubuntubudgie/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/vscode/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/vscode/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/mingw/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/swupd/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/msys2/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/mingw/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/swupd/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/msys2/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/wintousb/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/wintousb/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/quickrecap/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/quickrecap/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/linuxmint/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/linuxmint/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/lmde/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/lmde/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/locale/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/locale/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/locale-gen/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/locale-gen/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/update-locale/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/update-locale/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/dualboot/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/dualboot/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/flashdrive/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/flashdrive/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/multiboot/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/multiboot/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/latex/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/latex/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/markdown/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/markdown/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/wordpress/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/wordpress/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/installer/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/installer/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/nsis/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/nsis/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/opensuse/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/opensuse/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/leap/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/leap/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/tumbleweed/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/tumbleweed/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/openvanllia/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/openvanllia/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/intelCoreMac/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/intelCoreMac/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/openvanilla/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/openvanilla/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/risios/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/risios/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/chewing/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/chewing/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/mandriva/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/mandriva/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/rosa/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/rosa/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/solus/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/slackware/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/bug/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/solus/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/microsoftedge/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/bug/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/slackware/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/microsoftedge/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/upgrade/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/upgrade/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/hpprinter/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/hpprinter/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/winlibs/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/winlibs/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/shell/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/shell/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/zsh/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/zsh/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/tags/zorinos/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/tags/zorinos/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -2475,57 +2475,57 @@
 
   
   <url>
-    <loc>http://mtmatt.one/categories/linux/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/categories/boshiamy/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/categories/android/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/categories/linux/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/categories/boshiamy/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/categories/android/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/categories/apple/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/categories/apple/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/categories/windows/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/categories/windows/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/categories/github/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/categories/github/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/categories/bsd/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/categories/bsd/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mtmatt.one/categories/google/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <loc>http://lazytoclick.github.io/categories/google/</loc>
+    <lastmod>2024-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
