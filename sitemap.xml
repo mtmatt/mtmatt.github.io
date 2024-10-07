@@ -4,7 +4,7 @@
   <url>
     <loc>http://lazytoclick.github.io/about/index.html</loc>
     
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -821,7 +821,7 @@
   </url>
   
   <url>
-    <loc>http://lazytoclick.github.io/boshiamy/opensuse-leap-15-5-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/opensuse-tumbleweed-snapshot20231018-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -830,7 +830,7 @@
   </url>
   
   <url>
-    <loc>http://lazytoclick.github.io/boshiamy/opensuse-tumbleweed-snapshot20231018-and-boshiamy/</loc>
+    <loc>http://lazytoclick.github.io/boshiamy/opensuse-leap-15-5-and-boshiamy/</loc>
     
     <lastmod>2024-03-17</lastmod>
     
@@ -1226,7 +1226,7 @@
   </url>
   
   <url>
-    <loc>http://lazytoclick.github.io/windows/kb5010386-windows-11-os-build-22000-493/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb4023057-update-for-windows-update-service-components/</loc>
     
     <lastmod>2023-09-01</lastmod>
     
@@ -1235,7 +1235,7 @@
   </url>
   
   <url>
-    <loc>http://lazytoclick.github.io/windows/kb4023057-update-for-windows-update-service-components/</loc>
+    <loc>http://lazytoclick.github.io/windows/kb5010386-windows-11-os-build-22000-493/</loc>
     
     <lastmod>2023-09-01</lastmod>
     
@@ -1507,967 +1507,967 @@
 
   <url>
     <loc>http://lazytoclick.github.io/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://lazytoclick.github.io/tags/apple/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/boshiamy/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/macos/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/macosx/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/windows/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/windows10/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://lazytoclick.github.io/tags/archlinux/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/garudalinux/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/linux/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/android/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://lazytoclick.github.io/tags/abattery/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/shizuku/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <loc>http://lazytoclick.github.io/tags/boshiamy/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/ios/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/abattery/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/shizuku/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/apple/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/macos/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/macosx/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/windows/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/windows10/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/windows11/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/archlabs/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/archcraft/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://lazytoclick.github.io/tags/arcolinux/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/fcitx5/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/fcitx5-table-extra/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <loc>http://lazytoclick.github.io/tags/archlabs/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/linuxapps/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/mxlinux/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/ibus/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/lubuntu/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/arcolinux/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/fcitx5/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/fcitx5-table-extra/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/centos/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/fedora/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/redhat/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/scim/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/highsierra/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/imac/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/mojave/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/debian/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://lazytoclick.github.io/tags/microsoftupdatecatalog/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <loc>http://lazytoclick.github.io/tags/highsierra/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://lazytoclick.github.io/tags/windowsupdate/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <loc>http://lazytoclick.github.io/tags/imac/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/mojave/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/elementoryos/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/fcitx/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/odin/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/virtualbox/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/microsoftupdatecatalog/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/windowsupdate/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/fcitx-table-boshiamy/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/scim/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/bios/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/endeavouros/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/fcitx5-chewing/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/ubuntu/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/gcin/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/ibux/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/ferenos/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/blogware/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/hexo/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/git/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/github/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/freebsd/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/apfs/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/bootcamp/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/diskmgmt/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/diskpart/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/fusiondrive/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/freebsd/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/firewalls/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/gufw/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/manjaro/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/linuxlite/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/thunar/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/asus/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/ezflash/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/secureboot/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/uefi/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/appstore/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/bigsur/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/mac/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/monterey/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/safari/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/xcode/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/legacyos/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/google/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/chrome/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/googleAccount/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/gmail/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/mozilla/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/thunderbird/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/importExportToolsNG/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/google/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/chrome/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/amaroklinux/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/contest/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/web/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/clearlinux/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/macmini/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/appleComputer/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/clearlinux/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/macmini/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/osxelcapitan/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/osxyosemite/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/usbhdd/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/grub/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/linuxppc/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/davinciresolve17/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/nvidia/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/pop-os/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/spotify/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/acer/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/windowsxp/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/wubi/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/windowsvista/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/wubi/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/windowsxp/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/ubuntubudgie/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/vscode/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/swupd/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/vscode/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/mingw/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/msys2/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/wintousb/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/quickrecap/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/linuxmint/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/lmde/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/locale/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/locale-gen/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/update-locale/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/dualboot/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/flashdrive/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/multiboot/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/latex/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/markdown/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/wordpress/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/installer/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/nsis/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/opensuse/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/leap/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/tumbleweed/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/leap/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/openvanllia/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/intelCoreMac/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/openvanilla/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/risios/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/chewing/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/mandriva/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/rosa/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/slackware/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/solus/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/bug/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/microsoftedge/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/upgrade/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/hpprinter/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/winlibs/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/shell/</loc>
-    <lastmod>2024-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lazytoclick.github.io/tags/zsh/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/tags/zorinos/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/shell/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lazytoclick.github.io/tags/zsh/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -2475,57 +2475,57 @@
 
   
   <url>
-    <loc>http://lazytoclick.github.io/categories/boshiamy/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <loc>http://lazytoclick.github.io/categories/linux/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://lazytoclick.github.io/categories/linux/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <loc>http://lazytoclick.github.io/categories/boshiamy/</loc>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/categories/android/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/categories/apple/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/categories/windows/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/categories/github/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/categories/bsd/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://lazytoclick.github.io/categories/google/</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
