@@ -14,11 +14,5 @@ pageRef = "projects"
 identifier = "YdE5rYjb5I"
 weight = 2
 
-[[main]]
-name = "home"
-pageRef = "newSite"
-identifier = "PsdLEhPQ8R"
-weight = 1
-
 [[footer]]
 none = "none"
