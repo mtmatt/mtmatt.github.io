@@ -1,0 +1,19 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "博陸毅之島"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+description = "A peaceful island for mtmatt"
+
+  [params.author]
+  links = [ ]
+
+["params.author"]
+name = "mtmatt"
+image = "Usagi.png"
