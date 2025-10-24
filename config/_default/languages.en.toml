@@ -10,7 +10,7 @@ isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
 description = "A peaceful island for mtmatt"
-logo = "icon.png"
+logo = "favicon-64x64.png"
 
   [params.author]
   links = [ ]
