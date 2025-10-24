@@ -6,6 +6,8 @@ description: "The next-generation DSA judge system"
 tags: ["projects", "programming", "judge"]
 ---
 
+<!-- {{< github repo="OwoJudge-Team/OwoJudge" showThumbnail=true >}} -->
+
 ## Motivation
 
 After being a TA in the DSA course and preparing the programming assignments, I realized the inconvenience of the existing DSA judge system. The existing judge system has several limitations, including bare metal installation, out of dated dependencies, and inconvenient task preparation.

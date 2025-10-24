@@ -2,7 +2,7 @@
 title: "移動我的個人網站到 Hugo"
 date: 2025-10-24
 draft: false
-description: "Migration to Hugo"
+description: "A migration to Hugo"
 tags: ["misc"]
 ---
 
