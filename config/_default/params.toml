@@ -3,6 +3,7 @@ defaultAppearance = "light"
 autoSwitchAppearance = true
 enableA11y = false
 enableSearch = true
+mainSections = ["projects", "blogs"]
 enableCodeCopy = false
 replyByEmail = false
 disableImageOptimization = false
