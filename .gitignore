@@ -3,3 +3,4 @@
 
 hugo.linux
 hugo.darwin
+*.DS_Store
