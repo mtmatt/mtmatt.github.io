@@ -1,9 +1,12 @@
 ---
-title: "Compilation Thoughts for Linux Kernel (with Rust Support)"
+title: Compilation Thoughts for Linux Kernel (with Rust Support)
 date: 2025-10-27
 draft: false
-description: "Compilation thoughts for Linux kernel version 6.3.0+"
-tags: ["Linux", "Kernel", "System"]
+description: Compilation thoughts for Linux kernel version 6.3.0+
+tags:
+  - Linux
+  - Kernel
+  - System
 ---
 
 ## Introduction
