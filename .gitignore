@@ -4,3 +4,8 @@
 hugo.linux
 hugo.darwin
 *.DS_Store
+
+# Obsidian plugin data can hold machine-specific/sensitive config (e.g. a
+# LanguageTool Premium API key if this ever gets upgraded from the local
+# server). See ~/Programming/notes/Grammar Check Setup.md.
+.obsidian/plugins/*/data.json
