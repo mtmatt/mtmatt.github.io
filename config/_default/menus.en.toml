@@ -14,5 +14,11 @@ pageRef = "projects"
 identifier = "YdE5rYjb5I"
 weight = 2
 
+[[main]]
+name = "subscribe"
+pageRef = "subscribe"
+identifier = "subscribe"
+weight = 4
+
 [[footer]]
 none = "none"
