@@ -1,5 +1,6 @@
 +++
 title = 'subscribe'
+description = 'A peaceful island for mtmatt'
 layout = 'simple'
 
 # Keep this page out of the feed, or the new-post check would mail it to readers.
