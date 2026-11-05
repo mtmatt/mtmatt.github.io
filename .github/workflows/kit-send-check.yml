@@ -1,0 +1,39 @@
+# Checks whether the Kit account can send a broadcast through the API.
+# "send" delivers one real email to the account owner; see the script for the
+# checks that keep it from reaching anyone else.
+
+name: Kit send check
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "inspect only reads; send delivers one real email to the owner"
+        type: choice
+        options:
+          - inspect
+          - send
+        default: inspect
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Test
+        working-directory: .github/scripts
+        run: python3 -m unittest test_kit_send_check
+
+      - name: Run
+        env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          MODE: ${{ inputs.mode }}
+        run: python3 .github/scripts/kit_send_check.py "$MODE"
