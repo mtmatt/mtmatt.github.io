@@ -1,11 +1,12 @@
 theme = "blowfish"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
-summaryLength = 0
+summaryLength = 70
+hasCJKLanguage = true
 buildDrafts = false
 buildFuture = false
 enableEmoji = true
-baseURL = "https://mtmatt.github.io"
+baseURL = "https://mtmatt.csie.org/"
 
 [pagination]
 pagerSize = 100
