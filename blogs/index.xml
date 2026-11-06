@@ -1,1 +1,100 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on 博陸毅之島</title><link>https://mtmatt.github.io/blogs/</link><description>Recent content in Blogs on 博陸毅之島</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2026 Matt Bleuet</copyright><lastBuildDate>Thu, 29 Oct 2026 18:46:41 +0800</lastBuildDate><atom:link href="https://mtmatt.github.io/blogs/index.xml" rel="self" type="application/rss+xml"/><item><title>多一雙手</title><link>https://mtmatt.github.io/blogs/ai-feudal-novel/</link><pubDate>Thu, 29 Oct 2026 18:46:41 +0800</pubDate><guid>https://mtmatt.github.io/blogs/ai-feudal-novel/</guid><description/></item><item><title>Internship at Google</title><link>https://mtmatt.github.io/blogs/1790474574892-google-intern/</link><pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.github.io/blogs/1790474574892-google-intern/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.github.io/blogs/1790474574892-google-intern/featured.png"/></item><item><title>訊息對話排程演算法</title><link>https://mtmatt.github.io/blogs/chat-scheduling/</link><pubDate>Sun, 26 Jul 2026 22:11:56 +0800</pubDate><guid>https://mtmatt.github.io/blogs/chat-scheduling/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.github.io/blogs/chat-scheduling/featured.png"/></item><item><title>大三下隨筆</title><link>https://mtmatt.github.io/blogs/2026-spring/</link><pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.github.io/blogs/2026-spring/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.github.io/blogs/2026-spring/featured.png"/></item><item><title>日本旅行 - 京都大阪</title><link>https://mtmatt.github.io/blogs/1768519735220-japan-trip/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.github.io/blogs/1768519735220-japan-trip/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.github.io/blogs/1768519735220-japan-trip/featured.png"/></item><item><title>大三上隨筆</title><link>https://mtmatt.github.io/blogs/1767498783738-2025-fall/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.github.io/blogs/1767498783738-2025-fall/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.github.io/blogs/1767498783738-2025-fall/featured.png"/></item><item><title>四月是你的謊言 Your Lie in April</title><link>https://mtmatt.github.io/blogs/1761542895352-your-lie-in-april/</link><pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.github.io/blogs/1761542895352-your-lie-in-april/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.github.io/blogs/1761542895352-your-lie-in-april/featured.png"/></item><item><title>Compilation Thoughts for Linux Kernel (with Rust Support)</title><link>https://mtmatt.github.io/blogs/1761573591481-how-to-compile-linux-kernel/</link><pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate><guid>https://mtmatt.github.io/blogs/1761573591481-how-to-compile-linux-kernel/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.github.io/blogs/1761573591481-how-to-compile-linux-kernel/featured-inkscape.svg"/></item><item><title>移動我的個人網站到 Hugo</title><link>https://mtmatt.github.io/blogs/1761292127765-move-my-articles-to-hugo/</link><pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate><guid>https://mtmatt.github.io/blogs/1761292127765-move-my-articles-to-hugo/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.github.io/blogs/1761292127765-move-my-articles-to-hugo/featured.png"/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on 博陸毅之島</title><link>https://mtmatt.csie.org/blogs/</link><description>Recent content in Blogs on 博陸毅之島</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2026 Matt Bleuet</copyright><lastBuildDate>Thu, 29 Oct 2026 18:46:41 +0800</lastBuildDate><atom:link href="https://mtmatt.csie.org/blogs/index.xml" rel="self" type="application/rss+xml"/><item><title>多一雙手</title><link>https://mtmatt.csie.org/blogs/ai-feudal-novel/</link><pubDate>Thu, 29 Oct 2026 18:46:41 +0800</pubDate><guid>https://mtmatt.csie.org/blogs/ai-feudal-novel/</guid><description>&lt;h2 class="relative group"&gt;第一章 刷不開的門
+&lt;div id="第一章-刷不開的門" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e5%88%b7%e4%b8%8d%e9%96%8b%e7%9a%84%e9%96%80" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;識別證貼上感應板，綠燈沒有亮。&lt;/p&gt;
+&lt;p&gt;柏均把證拿開，在袖口擦了擦，再貼一次。感應板黑著，平常那一聲短短的嗶也沒有。他站在宿舍門外，身上是下樓丟垃圾時隨手披的外套，口袋裡只有證、一支筆和皮夾。鼻梁上的眼鏡是公司配發的，跟證同一年領，鏡架內側印著一個指甲大小的公司標誌，戴久了，那一小塊漆被汗磨得有點霧。天才剛亮，走廊的感應燈在他背後一盞一盞熄掉。&lt;/p&gt;</description></item><item><title>Internship at Google</title><link>https://mtmatt.csie.org/blogs/1790474574892-google-intern/</link><pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/1790474574892-google-intern/</guid><description>&lt;h2 class="relative group"&gt;時間序
+&lt;div id="時間序" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%99%82%e9%96%93%e5%ba%8f" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;年月&lt;/th&gt;
+&lt;th&gt;事件&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2025/11&lt;/td&gt;
+&lt;td&gt;履歷&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2025/12&lt;/td&gt;
+&lt;td&gt;面試&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026/03&lt;/td&gt;
+&lt;td&gt;Team Match&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026/06&lt;/td&gt;
+&lt;td&gt;Onboard (開工？)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026/09&lt;/td&gt;
+&lt;td&gt;Offboard&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 class="relative group"&gt;履歷
+&lt;div id="履歷" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b1%a5%e6%ad%b7" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;我們有人在履歷這裡遇見有趣的事情。他是資工雙財經，然而當他把兩個學歷都放上去時，他被刷掉了。神奇的是當他把財經的學歷從他履歷移除，這時反而通過第一階段。不過我們也不知道，兩次結果不同是不是因為這個改動。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1790474574892-google-intern/featured.png"/></item><item><title>訊息對話排程演算法</title><link>https://mtmatt.csie.org/blogs/chat-scheduling/</link><pubDate>Sun, 26 Jul 2026 22:11:56 +0800</pubDate><guid>https://mtmatt.csie.org/blogs/chat-scheduling/</guid><description>&lt;p&gt;我經常不清楚如何決定回應訊息的時間。有時會擔心太快會使人感到厭煩，太慢或許又會遭到漠視。儘管最後得知回應速度並非唯一，也不是最主要的評判標準，我還是認爲針對回應訊息做排程可以幫助我節省一些精力。雖然聽起來是挺抽象的。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/chat-scheduling/featured.png"/></item><item><title>大三下隨筆</title><link>https://mtmatt.csie.org/blogs/2026-spring/</link><pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/2026-spring/</guid><description>&lt;p&gt;總體而言，這學期過的挺有生活。儘管有各種波折，有些事情沒有做到最好，現在的我認為我願意付出一些成績、表現來換取生活品質。&lt;/p&gt;
+&lt;h2 class="relative group"&gt;事件
+&lt;div id="事件" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8b%e4%bb%b6" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;既然都這麼說了，這次當然要有不一樣的敘事方法。讓我們順著時間的長河逆流而上。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/2026-spring/featured.png"/></item><item><title>日本旅行 - 京都大阪</title><link>https://mtmatt.csie.org/blogs/1768519735220-japan-trip/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/1768519735220-japan-trip/</guid><description>&lt;p&gt;這次的旅程由高中的競程同伴發起。基本上我還是偏向處於被帶著走的狀況。老實說我覺得我真的不太會旅遊，其原因在於單看行程本身我是沒有什麼動力的。所以如果讓我安排的話有困難，沒有真的很想要去的地方。或許有空應該要訊問一下行程安排者的心路歷程，以及他們如何看待他們選的這些場所、景點、與餐食。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1768519735220-japan-trip/featured.png"/></item><item><title>大三上隨筆</title><link>https://mtmatt.csie.org/blogs/1767498783738-2025-fall/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/1767498783738-2025-fall/</guid><description>&lt;h2 class="relative group"&gt;課程
+&lt;div id="課程" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%aa%b2%e7%a8%8b" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;一般來說講到課程都會說到甜涼程度，我還記得大一時對這種評價的不屑程度。我曾經覺得「不需要做事情就可以拿到高分的課程算什麼課程」。然而，這學期修的課完全顛覆了我這種想法。「好需要一些這樣的課啊」期末的我這麼吶喊著。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1767498783738-2025-fall/featured.png"/></item><item><title>四月是你的謊言 Your Lie in April</title><link>https://mtmatt.csie.org/blogs/1761542895352-your-lie-in-april/</link><pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/1761542895352-your-lie-in-april/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;曾並著小小的肩膀走過， 曾為無聊小事相視而笑，也曾凝望著同一個夢想。只要側耳傾聽，如今彷彿還能聽見，在染上澄澈橘色的街道中，響起你的聲音。&lt;/p&gt;
+&lt;p&gt;你一不在，真的好無聊啊。若我說「好寂寞」，你大概又會笑我了吧。你留下的點點滴滴，我一次又一次地確認，它們未曾消逝，依舊閃耀著光芒。&lt;/p&gt;
+&lt;p&gt;像是雨過天晴的天空，像是撥雲見日的心情。我依然記得你的笑容，一想起來，自己也會跟著微笑。我們兩人一定還和那天一樣，依舊是那對天真無邪的孩子，奔跑著穿越流轉的四季，望向各自的明天。&lt;/p&gt;
+&lt;p&gt;每當我獨自一人感到不安、不想睡去的夜晚，我們總會聊個不停。&lt;/p&gt;
+&lt;p&gt;從今以後，你將會看見什麼樣的風景呢？而留在這裡的我，又將會看見什麼呢？沉落的夕陽，將街道染上橘色，我試著將淚水，悄悄寄託在這片景色中。&lt;/p&gt;
+&lt;p&gt;在數億的光芒中，誕生了唯一的愛。無論是變了、或不變，你就是你，別擔心啦。總有一天，當我們都成了大人，各自遇見了很棒的人，帶著無可取代的家人，若能在此地重逢，那該有多好。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作詞/作曲：MICHIRU&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1761542895352-your-lie-in-april/featured.png"/></item><item><title>Compilation Thoughts for Linux Kernel (with Rust Support)</title><link>https://mtmatt.csie.org/blogs/1761573591481-how-to-compile-linux-kernel/</link><pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/1761573591481-how-to-compile-linux-kernel/</guid><description>&lt;h2 class="relative group"&gt;Introduction
+&lt;div id="introduction" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;For those who are involved in Linux system development, compiling a Linux kernel should be a familiar task. However, for beginners like me, it is still quite challenging. This article shares my experience and the steps on how to compile the Linux kernel version 6.3.0+.&lt;/p&gt;
+&lt;h2 class="relative group"&gt;Why I Compile the Linux Kernel
+&lt;div id="why-i-compile-the-linux-kernel" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-i-compile-the-linux-kernel" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;I am participating in the Secure System Lab in NTU CSIE, and I am interested in Rust for Linux kind of stuff. To have a basic knowledge of how Rust for Linux works, I refer to our lab&amp;rsquo;s previous project (it&amp;rsquo;s a private repository, so I won&amp;rsquo;t link it here). Thus, I have to compile the Linux kernel with Rust support, along with the driver module developed by our lab.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1761573591481-how-to-compile-linux-kernel/featured-inkscape.svg"/></item><item><title>移動我的個人網站到 Hugo</title><link>https://mtmatt.csie.org/blogs/1761292127765-move-my-articles-to-hugo/</link><pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/1761292127765-move-my-articles-to-hugo/</guid><description>&lt;h2 class="relative group"&gt;前言
+&lt;div id="前言" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e8%a8%80" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;之前曾經用過 Hexo 在 GitHub 上架設過個人網站。不過因為舊的架構並不完善，所以我打算在 GitHub 上架設一個工作流自動在我更新網站內容的時候部屬。所以我決定重新開始。剛好身邊的同學建議我可以改用 Hugo 以及 Blowfish ，可以更順利的更動頁面的風格。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1761292127765-move-my-articles-to-hugo/featured.png"/></item></channel></rss>
