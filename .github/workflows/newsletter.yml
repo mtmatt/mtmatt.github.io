@@ -1,0 +1,60 @@
+# Finds posts that have not been announced by email. This workflow sends
+# nothing and uses no Kit credentials.
+
+name: Newsletter
+
+on:
+  workflow_run:
+    workflows: ["GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "print changes nothing; seed marks every current post as announced"
+        type: choice
+        options:
+          - print
+          - seed
+        default: print
+
+permissions:
+  contents: read
+
+concurrency:
+  group: newsletter
+  queue: max
+
+jobs:
+  print:
+    if: >-
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+      || (github.event_name == 'workflow_dispatch' && inputs.mode == 'print')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Test
+        working-directory: .github/scripts
+        run: python3 -m unittest test_new_posts
+
+      - name: Print new posts
+        run: python3 .github/scripts/new_posts.py print
+
+  seed:
+    if: github.event_name == 'workflow_dispatch' && inputs.mode == 'seed'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write # pushes to the newsletter-state branch
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Test
+        working-directory: .github/scripts
+        run: python3 -m unittest test_new_posts
+
+      - name: Seed the record
+        run: python3 .github/scripts/new_posts.py seed
