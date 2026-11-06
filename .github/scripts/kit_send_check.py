@@ -195,8 +195,8 @@ def wait_for_delivery(api, broadcast_id, sleep=time.sleep):
     return stats
 
 
-def send(api, now=None, sleep=time.sleep):
-    """Send one real email to the account owner and confirm it was delivered."""
+def owner_only_tag(api, sleep=time.sleep):
+    """Return the id of a tag that reaches the account owner and nobody else."""
     owner_email = api("GET", "/account")["account"]["primary_email_address"]
     owner = find_owner_subscriber(api, owner_email)
     if owner is None:
@@ -205,7 +205,12 @@ def send(api, now=None, sleep=time.sleep):
     tag_id = api("POST", "/tags", {"name": TEST_TAG_NAME})["tag"]["id"]
     api("POST", f"/tags/{tag_id}/subscribers", {"email_address": owner_email})
     ensure_only_member(api, tag_id, owner["id"], sleep)
+    return tag_id
 
+
+def send(api, now=None, sleep=time.sleep):
+    """Send one real email to the account owner and confirm it was delivered."""
+    tag_id = owner_only_tag(api, sleep)
     body = broadcast_body(tag_id, now or datetime.now(timezone.utc))
     print("creating broadcast; if this step fails, check Kit for a scheduled one", flush=True)
     broadcast = api("POST", "/broadcasts", body)["broadcast"]

@@ -1,5 +1,5 @@
-# Finds posts that have not been announced by email. This workflow sends
-# nothing and uses no Kit credentials.
+# Announces new posts by email through Kit. Automatic runs only print until the
+# NEWSLETTER_SEND repository variable is set to true.
 
 name: Newsletter
 
@@ -7,15 +7,24 @@ on:
   workflow_run:
     workflows: ["GitHub Pages"]
     types: [completed]
+  schedule:
+    - cron: "17 2 * * *" # Catches a post whose run after the deploy failed.
   workflow_dispatch:
     inputs:
       mode:
-        description: "print changes nothing; seed marks every current post as announced"
+        description: "print changes nothing; test mails the latest post to the owner alone; approve on an unconfirmed post can mail it twice, so check Kit first"
         type: choice
         options:
           - print
+          - test
+          - send
           - seed
+          - approve
+          - dismiss
         default: print
+      path:
+        description: "Post URL path, for approve and dismiss"
+        type: string
 
 permissions:
   contents: read
@@ -27,34 +36,43 @@ concurrency:
 jobs:
   print:
     if: >-
-      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
-      || (github.event_name == 'workflow_dispatch' && inputs.mode == 'print')
+      (github.event_name == 'workflow_dispatch' && inputs.mode == 'print')
+      || (vars.NEWSLETTER_SEND != 'true' && (github.event_name == 'schedule'
+        || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')))
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Test
         working-directory: .github/scripts
-        run: python3 -m unittest test_new_posts
+        run: python3 -m unittest test_new_posts test_kit_send_check
 
       - name: Print new posts
         run: python3 .github/scripts/new_posts.py print
 
-  seed:
-    if: github.event_name == 'workflow_dispatch' && inputs.mode == 'seed'
+  update:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.mode != 'print')
+      || (vars.NEWSLETTER_SEND == 'true' && (github.event_name == 'schedule'
+        || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')))
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 35
     permissions:
       contents: write # pushes to the newsletter-state branch
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Test
         working-directory: .github/scripts
-        run: python3 -m unittest test_new_posts
+        run: python3 -m unittest test_new_posts test_kit_send_check
 
-      - name: Seed the record
-        run: python3 .github/scripts/new_posts.py seed
+      - name: Update
+        env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          SEND_ENABLED: ${{ vars.NEWSLETTER_SEND }}
+          MODE: ${{ inputs.mode || 'send' }} # Automatic runs have no inputs.
+          POST_PATH: ${{ inputs.path }}
+        run: python3 .github/scripts/new_posts.py "$MODE" --path "$POST_PATH"
