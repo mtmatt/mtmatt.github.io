@@ -71,3 +71,21 @@
 .reading .chapter-nav > :last-child {
   text-align: end;
 }
+
+.reading-progress {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 100; /* Above the mobile menu (30), below search (500). */
+  height: 3px;
+  pointer-events: none;
+  background: rgb(var(--color-primary-500));
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@media print {
+  .reading-progress {
+    display: none;
+  }
+}

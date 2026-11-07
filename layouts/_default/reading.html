@@ -1,13 +1,18 @@
 {{/*
   Fiction page: only the title, date, reading time and text, plus a link to the
-  work and chapter navigation on serial chapters.
+  work and chapter navigation on serial chapters. A reading progress bar sits at
+  the top of the window.
   The date and reading time are written out here because the theme's
   article-meta partial shows whatever the site params enable, including the
   Zen mode button. Hiding it there would take `showZenMode = false` on every page.
 */}}
 {{ define "main" }}
   {{ $isChapter := eq .Section "fiction" }}
-  <article class="reading">
+  <div class="reading-progress" aria-hidden="true"></div>
+  <article
+    class="reading"
+    data-work="{{ if $isChapter }}{{ .CurrentSection.RelPermalink }}{{ end }}"
+    data-chapter="{{ if $isChapter }}{{ .RelPermalink }}{{ end }}">
     <header class="mt-5">
       {{ if $isChapter }}
         <a class="work-link" href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.Title }}</a>
@@ -28,4 +33,5 @@
       {{ partial "chapter-nav.html" . }}
     {{ end }}
   </article>
+  {{ partial "reading-script.html" . }}
 {{ end }}
