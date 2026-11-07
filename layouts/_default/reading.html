@@ -1,7 +1,8 @@
 {{/*
-  Fiction page: only the title, date, reading time and text, plus a link to the
-  work and chapter navigation on serial chapters. A reading progress bar sits at
-  the top of the window.
+  Fiction page: only the title, date, reading time and text. On serial chapters,
+  the work's title is the H1 and links to the work, the chapter title is the H2,
+  and chapter navigation follows the text. A reading progress bar sits at the top
+  of the window.
   The date and reading time are written out here because the theme's
   article-meta partial shows whatever the site params enable, including the
   Zen mode button. Hiding it there would take `showZenMode = false` on every page.
@@ -15,11 +16,17 @@
     data-chapter="{{ if $isChapter }}{{ .RelPermalink }}{{ end }}">
     <header class="mt-5">
       {{ if $isChapter }}
-        <a class="work-link" href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.Title }}</a>
+        <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+          <a class="work-link" href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.Title }}</a>
+        </h1>
+        <h2 class="mt-2 text-2xl font-bold text-neutral-900 dark:text-neutral">
+          {{ .Title | emojify }}
+        </h2>
+      {{ else }}
+        <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+          {{ .Title | emojify }}
+        </h1>
       {{ end }}
-      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        {{ .Title | emojify }}
-      </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         {{ partial "meta/date.html" .Date }}
         <span class="px-2 text-primary-500">&middot;</span>
