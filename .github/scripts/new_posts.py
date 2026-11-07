@@ -45,6 +45,38 @@ MAX_POST_AGE = timedelta(days=30)
 MAX_SUMMARY_SENTENCES = 3
 MAX_SUMMARY_LENGTH = 200
 MAX_PREVIEW_LENGTH = 100
+SITE_NAME = "博陸毅之島"
+SITE_URL = "https://mtmatt.csie.org/"
+# The same cover on every email: post covers run to 19 MB, too large to mail.
+# Published only because it is homepageImage in params.toml.
+COVER_IMAGE_URL = f"{SITE_URL}Lac.jpg"
+# Set by Kit's Text only template on the block around the email body.
+TEMPLATE_SIDE_MARGIN = "18px"
+# The negative margin undoes the template's, for a full-width cover. A client
+# that drops it still shows the cover, inside those margins.
+COVER_STYLE = (
+    f"margin:0 -{TEMPLATE_SIDE_MARGIN} 8px;background-color:#c9d6e8;"
+    f"background-image:url({COVER_IMAGE_URL});background-size:cover;"
+    "background-position:center"
+)
+# The flat color stands in for the fade where gradients aren't supported.
+COVER_OVERLAY_STYLE = (
+    f"padding:64px {TEMPLATE_SIDE_MARGIN} 88px;background-color:rgba(255,255,255,0.65);"
+    "background-image:linear-gradient(to bottom,rgba(255,255,255,0.65) 45%,#ffffff 100%)"
+)
+SITE_NAME_STYLE = "margin:0 0 4px;font-size:14px;color:#1f2937"
+SITE_LINK_STYLE = "color:#1f2937;text-decoration:none"
+TITLE_STYLE = "margin:0;font-size:30px;line-height:1.3;color:#111827"
+TITLE_LINK_STYLE = "color:#111827;text-decoration:none"
+SUMMARY_STYLE = (
+    "margin:0 0 24px;max-width:34em;font-size:16px;line-height:2;"
+    "letter-spacing:0.02em;color:#374151"
+)
+BUTTON_PARAGRAPH_STYLE = "margin:0 0 8px"
+BUTTON_STYLE = (
+    "display:inline-block;padding:12px 24px;background:#1f2937;color:#ffffff;"
+    "text-decoration:none;border-radius:6px;font-weight:600"
+)
 STARTING_POINT_TEMPLATE = "Starting point"
 # Gives Pages time to publish the post, and a window to cancel in Kit.
 SEND_DELAY = timedelta(minutes=10)
@@ -63,6 +95,14 @@ BOT_IDENTITY = {
 MISSING_REMOTE_REF_EXIT_CODE = 2
 # Closing quotes and brackets stay with the sentence they end.
 CLOSERS = "[」』”\"）)]*"
+# Chinese characters and punctuation, which take no spaces between them.
+CJK = "\u2e80-\u9fff\uf900-\ufaff\uff00-\uffef…⋯"
+# Elements that don't read as sentences: headings carry a "#" anchor.
+UNREADABLE_ELEMENTS = "h[1-6]|table|pre|figure|script|style"
+# Tags that sit inside a word or sentence, so removing them must not add a space.
+INLINE_TAGS = "a|abbr|b|cite|code|del|em|i|ins|kbd|mark|q|s|small|span|strong|sub|u"
+# Hugo builds automatic summaries from these. A written summary has none of them.
+BLOCK_TAGS = "p|h[1-6]|blockquote|ul|ol|li|div|table|pre|figure|dl|section|details|center"
 
 
 class Refused(Exception):
@@ -206,13 +246,31 @@ def warn_about_unresolved(entries, too_old):
             print(f"::warning::send was not confirmed, check Kit, then resolve: {path}")
 
 
+def is_written_summary(summary_html):
+    """Tell a front matter `summary` from Hugo's automatic one.
+
+    The feed doesn't say which it carries, but Hugo emits a one-paragraph written
+    summary as bare inline HTML. Several paragraphs count as automatic.
+    """
+    return not re.search(rf"(?i)</?(?:{BLOCK_TAGS})\b", summary_html)
+
+
+def plain_text(summary_html):
+    prose = re.sub(rf"(?is)<({UNREADABLE_ELEMENTS})\b.*?</\1>", " ", summary_html)
+    joined = re.sub(rf"(?i)</?(?:{INLINE_TAGS})\b[^>]*>", "", prose)
+    text = html.unescape(re.sub(r"<[^>]+>", " ", joined))
+    # A line wrapped in the source isn't a space, unlike one typed between phrases.
+    unwrapped = re.sub(rf"(?<=[{CJK}])\s*\n\s*(?=[{CJK}])", "", text)
+    return " ".join(unwrapped.split())
+
+
 def summarize(summary_html):
-    """Reduce a feed summary to its first few sentences of plain text."""
-    # Headings carry a "#" anchor, and tables and code don't read as sentences.
-    prose = re.sub(
-        r"(?is)<(h[1-6]|table|pre|figure|script|style)\b.*?</\1>", " ", summary_html
-    )
-    text = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", prose)).split())
+    """Reduce a feed summary to plain text, of a few sentences unless written by hand."""
+    text = plain_text(summary_html)
+    if is_written_summary(summary_html):
+        return text
+    # Removing tags left a space between Chinese paragraphs.
+    text = re.sub(rf"(?<=[{CJK}]) (?=[{CJK}])", "", text)
     sentences = re.findall(rf".+?(?:[。！？!?]+{CLOSERS}|\.{CLOSERS}(?=\s)|$)", text)
     summary = ""
     for sentence in sentences[:MAX_SUMMARY_SENTENCES]:
@@ -224,17 +282,38 @@ def summarize(summary_html):
     return summary.strip()
 
 
-def email_html(post):
-    """Build the email body: the summary and a link to the post.
+def email_text(text):
+    # Kit runs Liquid over the body, so post text must not look like a template.
+    return html.escape(text).replace("{", "&#123;")
 
-    The unsubscribe link and postal address come from the account's default
-    template, which ensure_template_adds_footer checks before anything is sent.
+
+def cover_banner(title_text, link):
+    site_name = f'<a href="{SITE_URL}" style="{SITE_LINK_STYLE}">{SITE_NAME}</a>'
+    title = f'<a href="{link}" style="{TITLE_LINK_STYLE}">{email_text(title_text)}</a>'
+    return (
+        f'<div style="{COVER_STYLE}"><div style="{COVER_OVERLAY_STYLE}">'
+        f'<p style="{SITE_NAME_STYLE}">{site_name}</p>'
+        f'<h1 style="{TITLE_STYLE}">{title}</h1>'
+        "</div></div>"
+    )
+
+
+def read_more_button(link):
+    button = f'<a href="{link}" style="{BUTTON_STYLE}">閱讀全文</a>'
+    return f'<p style="{BUTTON_PARAGRAPH_STYLE}">{button}</p>'
+
+
+def email_html(post):
+    """Build the email body: the site cover, the title, the summary and a link.
+
+    Styles are inline because email clients drop style sheets. The unsubscribe
+    link and postal address come from the account's default template, which
+    ensure_template_adds_footer checks before anything is sent.
     """
-    # Kit runs Liquid over this, so post text must not look like a template.
-    summary = html.escape(summarize(post.summary_html)).replace("{", "&#123;")
     link = html.escape(post.link, quote=True)
-    summary_paragraph = f"<p>{summary}</p>" if summary else ""
-    return f'{summary_paragraph}<p><a href="{link}">閱讀全文</a></p>'
+    summary = email_text(summarize(post.summary_html))
+    summary_paragraph = f'<p style="{SUMMARY_STYLE}">{summary}</p>' if summary else ""
+    return f"{cover_banner(post.title, link)}{summary_paragraph}{read_more_button(link)}"
 
 
 def broadcast_body(post, now, send_at):

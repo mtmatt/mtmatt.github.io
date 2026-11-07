@@ -22,10 +22,10 @@ def feed(*items):
     return f'<?xml version="1.0"?><rss version="2.0"><channel>{entries}</channel></rss>'
 
 
-def post(path, age=timedelta(days=1), summary_html="<p>Hello.</p>"):
+def post(path, age=timedelta(days=1), summary_html="<p>Hello.</p>", title="Title"):
     return new_posts.Post(
         path=path,
-        title="Title",
+        title=title,
         link=f"https://mtmatt.csie.org{path}",
         published=NOW - age,
         summary_html=summary_html,
@@ -104,6 +104,59 @@ class SummarizeTest(unittest.TestCase):
     def test_drops_headings_with_their_anchor(self):
         summary_html = '<h2 class="group">第一章<a href="#x">#</a></h2><p>綠燈沒有亮。</p>'
         self.assertEqual(new_posts.summarize(summary_html), "綠燈沒有亮。")
+
+    def test_joins_chinese_sentences_across_paragraphs_without_a_space(self):
+        summary_html = "<p>綠燈沒有亮。</p>\n<p>他說：「嗯。」</p>\n<p>再貼一次。</p>"
+        self.assertEqual(new_posts.summarize(summary_html), "綠燈沒有亮。他說：「嗯。」再貼一次。")
+
+    def test_reads_a_written_summary_with_inline_markup(self):
+        # Hugo renders a front matter summary as bare inline HTML, with no <p>.
+        summary_html = "我的<strong>摘要</strong>。二。<em>三</em>。四。<a href='x'>五</a>。"
+        self.assertEqual(new_posts.summarize(summary_html), "我的摘要。二。三。四。五。")
+
+    def test_joins_a_line_wrapped_written_summary(self):
+        self.assertEqual(new_posts.summarize("第一句，\n接著換行。\n第三句。"), "第一句，接著換行。第三句。")
+
+    def test_keeps_a_written_summary_whole(self):
+        summary_html = f"一。二。三。四。五。{'長' * 300}"
+        self.assertEqual(new_posts.summarize(summary_html), summary_html)
+
+    def test_limits_a_summary_taken_from_the_post(self):
+        self.assertEqual(new_posts.summarize("<blockquote>一。二。三。四。</blockquote>"), "一。二。三。")
+
+    def test_keeps_the_spaces_in_a_written_summary(self):
+        self.assertEqual(new_posts.summarize("門打不開了 證還在"), "門打不開了 證還在")
+
+    def test_limits_a_summary_opening_with_something_other_than_a_block(self):
+        for opening in ("<hr>", "<!-- note -->", '<img src="a.png">'):
+            with self.subTest(opening=opening):
+                summary_html = f"{opening}\n<p>一。二。三。四。</p>"
+                self.assertEqual(new_posts.summarize(summary_html), "一。二。三。")
+
+    def test_limits_a_summary_in_a_block_other_than_a_paragraph(self):
+        self.assertEqual(new_posts.summarize("<section>一。二。三。四。</section>"), "一。二。三。")
+
+    def test_keeps_spaces_in_text_that_is_not_chinese(self):
+        for summary_html, expected in (
+            ("<p>Café été.</p>", "Café été."),
+            ("<p>“Yes.”</p>\n<p>“No.”</p>", "“Yes.” “No.”"),
+        ):
+            with self.subTest(summary_html=summary_html):
+                self.assertEqual(new_posts.summarize(summary_html), expected)
+
+    def test_block_tags_are_found_in_any_case(self):
+        self.assertEqual(new_posts.summarize("<P>一。二。三。四。</P>"), "一。二。三。")
+
+    def test_joins_chinese_paragraphs_however_they_end(self):
+        self.assertEqual(new_posts.summarize("<p>他說……</p>\n<p>對。</p>"), "他說……對。")
+
+    def test_tags_between_words_still_separate_english_ones(self):
+        self.assertEqual(new_posts.summarize("<p>One</p><p>two.</p>"), "One two.")
+        self.assertEqual(new_posts.summarize("<p>One.<hr>Two.</p>"), "One. Two.")
+
+    def test_a_footnote_mark_stays_apart_from_its_word(self):
+        summary_html = '<p>Text<sup><a href="#f">1</a></sup> more.</p>'
+        self.assertEqual(new_posts.summarize(summary_html), "Text 1 more.")
 
     def test_drops_tables(self):
         summary_html = "<table><tr><td>2025/11</td></tr></table><p>Intro.</p>"
@@ -405,14 +458,20 @@ class ResolvePostTest(unittest.TestCase):
 
 
 class EmailHtmlTest(unittest.TestCase):
-    def test_has_the_summary_and_the_link(self):
+    def test_has_the_cover_title_summary_and_link(self):
         body = new_posts.email_html(post("/blogs/a/"))
-        self.assertIn("<p>Hello.</p>", body)
+        self.assertIn("url(https://mtmatt.csie.org/Lac.jpg)", body)
+        self.assertIn("Title</a></h1>", body)
+        self.assertIn(">Hello.</p>", body)
         self.assertIn('href="https://mtmatt.csie.org/blogs/a/"', body)
 
     def test_omits_an_empty_summary(self):
         body = new_posts.email_html(post("/blogs/a/", summary_html="<h2>x</h2>"))
-        self.assertTrue(body.startswith("<p><a "))
+        self.assertNotIn(new_posts.SUMMARY_STYLE, body)
+
+    def test_title_cannot_inject_markup_or_liquid(self):
+        body = new_posts.email_html(post("/blogs/a/", title="<b>{x}</b>"))
+        self.assertIn("&lt;b&gt;&#123;x}&lt;/b&gt;</a></h1>", body)
 
     def test_post_text_cannot_inject_liquid_into_the_preview(self):
         templated = post("/blogs/a/", summary_html="<p>{{ subscriber.email }} {% x %}.</p>")
