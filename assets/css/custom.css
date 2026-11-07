@@ -61,12 +61,32 @@
 }
 
 .reading .work-link:hover,
-.reading .chapter-nav a:hover {
+.reading .chapter-nav a:hover,
+.reading .prose .choice:hover {
   opacity: 0.7;
 }
 
 .reading .chapter-nav-row > :last-child {
   text-align: end;
+}
+
+.reading .prose .choice {
+  display: block;
+  margin-block: 0.75em;
+  padding: 0.75em 1em;
+  border: 1px solid currentcolor;
+  border-radius: 0.5em;
+  text-align: start;
+  text-decoration: none;
+}
+
+/* Browsers allow only colour here, which is enough to mark a route already read. */
+.reading .prose .choice:visited {
+  color: rgb(var(--color-neutral-500));
+}
+
+.dark .reading .prose .choice:visited {
+  color: rgb(var(--color-neutral-400));
 }
 
 .reading-progress {

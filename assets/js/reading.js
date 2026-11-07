@@ -27,15 +27,18 @@
 
   function showResumeLink() {
     const chapterPath = readSavedChapter();
+    if (!chapterPath) return;
+
     const chapterLinks = [...document.querySelectorAll(".fiction-list a")];
     const chapterLink = chapterLinks.find(
       (link) => link.getAttribute("href") === chapterPath,
     );
-    if (!chapterLink) return;
-
     const resumeLink = resume.querySelector("a");
     resumeLink.href = chapterPath;
-    resumeLink.textContent = `從上次的章節繼續：${chapterLink.textContent}`;
+    // A chapter off the main route isn't listed, so its title isn't on this page.
+    resumeLink.textContent = chapterLink
+      ? `從上次的章節繼續：${chapterLink.textContent}`
+      : "從上次的章節繼續";
     resume.hidden = false;
   }
 

@@ -2,6 +2,7 @@
   One line of chapter navigation: previous, centre, next. Takes the current page,
   its chapters in reading order, and the centre content. Pages.Next moves toward
   the start of the list, so the list is reversed to make it the following chapter.
+  A chapter with choices shows no next step, so a reader can't skip past them.
 */}}
 {{ $page := .page }}
 {{ $chaptersLastFirst := .chapters.Reverse }}
@@ -11,10 +12,12 @@
   </span>
   {{ .centre }}
   <span>
-    {{ with $chaptersLastFirst.Next $page }}
-      <a href="{{ .RelPermalink }}" rel="next">下一章 →</a>
-    {{ else }}
-      {{ if $page.CurrentSection.Params.completed }}全文完{{ else }}連載中，待續{{ end }}
+    {{ if not ($page.HasShortcode "choice") }}
+      {{ with $chaptersLastFirst.Next $page }}
+        <a href="{{ .RelPermalink }}" rel="next">下一章 →</a>
+      {{ else }}
+        {{ if $page.CurrentSection.Params.completed }}全文完{{ else }}連載中，待續{{ end }}
+      {{ end }}
     {{ end }}
   </span>
 </div>
