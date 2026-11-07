@@ -1,5 +1,5 @@
 theme = "blowfish"
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh-TW"
 enableRobotsTXT = true
 summaryLength = 70
 hasCJKLanguage = true
