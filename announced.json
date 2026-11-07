@@ -27,6 +27,7 @@
     "status": "seeded"
   },
   "/blogs/snow-in-taipei/": {
-    "status": "sending"
+    "broadcast_id": 26859309,
+    "status": "scheduled"
   }
 }
