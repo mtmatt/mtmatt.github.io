@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博陸毅之島</title><link>https://mtmatt.csie.org/</link><description>Recent content on 博陸毅之島</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2026 Matt Bleuet</copyright><lastBuildDate>Thu, 29 Oct 2026 18:46:41 +0800</lastBuildDate><atom:link href="https://mtmatt.csie.org/index.xml" rel="self" type="application/rss+xml"/><item><title>多一雙手</title><link>https://mtmatt.csie.org/blogs/ai-feudal-novel/</link><pubDate>Thu, 29 Oct 2026 18:46:41 +0800</pubDate><guid>https://mtmatt.csie.org/blogs/ai-feudal-novel/</guid><description>&lt;h2 class="relative group"&gt;第一章 刷不開的門
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博陸毅之島</title><link>https://mtmatt.csie.org/</link><description>Recent content on 博陸毅之島</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><copyright>© 2026 Matt Bleuet</copyright><lastBuildDate>Thu, 29 Oct 2026 18:46:41 +0800</lastBuildDate><atom:link href="https://mtmatt.csie.org/index.xml" rel="self" type="application/rss+xml"/><item><title>多一雙手</title><link>https://mtmatt.csie.org/blogs/ai-feudal-novel/</link><pubDate>Thu, 29 Oct 2026 18:46:41 +0800</pubDate><guid>https://mtmatt.csie.org/blogs/ai-feudal-novel/</guid><description>&lt;h2 class="relative group"&gt;第一章 刷不開的門
 &lt;div id="第一章-刷不開的門" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e5%88%b7%e4%b8%8d%e9%96%8b%e7%9a%84%e9%96%80" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e5%88%b7%e4%b8%8d%e9%96%8b%e7%9a%84%e9%96%80" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;識別證貼上感應板，綠燈沒有亮。&lt;/p&gt;
@@ -10,7 +10,7 @@ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-
 &lt;div id="時間序" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%99%82%e9%96%93%e5%ba%8f" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%99%82%e9%96%93%e5%ba%8f" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;table&gt;
@@ -47,7 +47,7 @@ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-
 &lt;div id="履歷" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b1%a5%e6%ad%b7" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b1%a5%e6%ad%b7" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h3&gt;
 &lt;p&gt;我們有人在履歷這裡遇見有趣的事情。他是資工雙財經，然而當他把兩個學歷都放上去時，他被刷掉了。神奇的是當他把財經的學歷從他履歷移除，這時反而通過第一階段。不過我們也不知道，兩次結果不同是不是因為這個改動。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1790474574892-google-intern/featured.png"/></item><item><title>訊息對話排程演算法</title><link>https://mtmatt.csie.org/blogs/chat-scheduling/</link><pubDate>Sun, 26 Jul 2026 22:11:56 +0800</pubDate><guid>https://mtmatt.csie.org/blogs/chat-scheduling/</guid><description>&lt;p&gt;我經常不清楚如何決定回應訊息的時間。有時會擔心太快會使人感到厭煩，太慢或許又會遭到漠視。儘管最後得知回應速度並非唯一，也不是最主要的評判標準，我還是認爲針對回應訊息做排程可以幫助我節省一些精力。雖然聽起來是挺抽象的。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/chat-scheduling/featured.png"/></item><item><title>大三下隨筆</title><link>https://mtmatt.csie.org/blogs/2026-spring/</link><pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/2026-spring/</guid><description>&lt;p&gt;總體而言，這學期過的挺有生活。儘管有各種波折，有些事情沒有做到最好，現在的我認為我願意付出一些成績、表現來換取生活品質。&lt;/p&gt;
@@ -55,14 +55,14 @@ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-
 &lt;div id="事件" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8b%e4%bb%b6" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8b%e4%bb%b6" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;既然都這麼說了，這次當然要有不一樣的敘事方法。讓我們順著時間的長河逆流而上。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/2026-spring/featured.png"/></item><item><title>日本旅行 - 京都大阪</title><link>https://mtmatt.csie.org/blogs/1768519735220-japan-trip/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/1768519735220-japan-trip/</guid><description>&lt;p&gt;這次的旅程由高中的競程同伴發起。基本上我還是偏向處於被帶著走的狀況。老實說我覺得我真的不太會旅遊，其原因在於單看行程本身我是沒有什麼動力的。所以如果讓我安排的話有困難，沒有真的很想要去的地方。或許有空應該要訊問一下行程安排者的心路歷程，以及他們如何看待他們選的這些場所、景點、與餐食。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1768519735220-japan-trip/featured.png"/></item><item><title>大三上隨筆</title><link>https://mtmatt.csie.org/blogs/1767498783738-2025-fall/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/1767498783738-2025-fall/</guid><description>&lt;h2 class="relative group"&gt;課程
 &lt;div id="課程" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%aa%b2%e7%a8%8b" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%aa%b2%e7%a8%8b" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;一般來說講到課程都會說到甜涼程度，我還記得大一時對這種評價的不屑程度。我曾經覺得「不需要做事情就可以拿到高分的課程算什麼課程」。然而，這學期修的課完全顛覆了我這種想法。「好需要一些這樣的課啊」期末的我這麼吶喊著。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1767498783738-2025-fall/featured.png"/></item><item><title>四月是你的謊言 Your Lie in April</title><link>https://mtmatt.csie.org/blogs/1761542895352-your-lie-in-april/</link><pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/blogs/1761542895352-your-lie-in-april/</guid><description>&lt;blockquote&gt;
@@ -79,7 +79,7 @@ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-
 &lt;div id="introduction" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;For those who are involved in Linux system development, compiling a Linux kernel should be a familiar task. However, for beginners like me, it is still quite challenging. This article shares my experience and the steps on how to compile the Linux kernel version 6.3.0+.&lt;/p&gt;
@@ -87,14 +87,14 @@ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-
 &lt;div id="why-i-compile-the-linux-kernel" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-i-compile-the-linux-kernel" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-i-compile-the-linux-kernel" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;I am participating in the Secure System Lab in NTU CSIE, and I am interested in Rust for Linux kind of stuff. To have a basic knowledge of how Rust for Linux works, I refer to our lab&amp;rsquo;s previous project (it&amp;rsquo;s a private repository, so I won&amp;rsquo;t link it here). Thus, I have to compile the Linux kernel with Rust support, along with the driver module developed by our lab.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1761573591481-how-to-compile-linux-kernel/featured-inkscape.svg"/></item><item><title>OwoJudge</title><link>https://mtmatt.csie.org/projects/1760951509467-owojudge/</link><pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate><guid>https://mtmatt.csie.org/projects/1760951509467-owojudge/</guid><description>&lt;h2 class="relative group"&gt;Motivation
 &lt;div id="motivation" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#motivation" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#motivation" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;After being a TA in the DSA course and preparing the programming assignments, I realized the inconvenience of the existing DSA judge system. The existing judge system has several limitations, including bare metal installation, out of dated dependencies, and inconvenient task preparation.&lt;/p&gt;
@@ -102,7 +102,7 @@ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-
 &lt;div id="前言" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e8%a8%80" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e8%a8%80" aria-label="定位點"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;之前曾經用過 Hexo 在 GitHub 上架設過個人網站。不過因為舊的架構並不完善，所以我打算在 GitHub 上架設一個工作流自動在我更新網站內容的時候部屬。所以我決定重新開始。剛好身邊的同學建議我可以改用 Hugo 以及 Blowfish ，可以更順利的更動頁面的風格。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mtmatt.csie.org/blogs/1761292127765-move-my-articles-to-hugo/featured.png"/></item></channel></rss>
