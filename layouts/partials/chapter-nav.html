@@ -1,19 +1,21 @@
 {{/*
-  Sorted here to match the work page, because .PrevInSection and .NextInSection
-  would follow weight first. Pages.Next moves toward the start of the list, so
-  newest-first makes it the following chapter.
+  Chapter links that match the work page: one line per reading order holding this
+  chapter, or a single date-order line. A page can't tell which order the reader
+  is following without JavaScript, so every order is offered. Date order is sorted
+  here because .PrevInSection and .NextInSection would follow weight first.
 */}}
-{{ $chapters := .CurrentSection.RegularPages.ByDate.Reverse }}
+{{ $page := . }}
+{{ $work := .CurrentSection }}
+{{ $tableOfContents := partial "chapter-contents-link.html" $work }}
 <nav class="chapter-nav" aria-label="章節導覽">
-  <span>
-    {{ with $chapters.Prev . }}<a href="{{ .RelPermalink }}" rel="prev">← 上一章</a>{{ end }}
-  </span>
-  <a href="{{ .CurrentSection.RelPermalink }}">目錄</a>
-  <span>
-    {{ with $chapters.Next . }}
-      <a href="{{ .RelPermalink }}" rel="next">下一章 →</a>
-    {{ else }}
-      {{ if .CurrentSection.Params.completed }}全文完{{ else }}連載中，待續{{ end }}
+  {{ with partial "reading-orders.html" $work }}
+    {{ range . }}
+      {{ if in .chapters $page }}
+        {{ partial "chapter-nav-row.html" (dict "page" $page "chapters" .chapters "centre" .name) }}
+      {{ end }}
     {{ end }}
-  </span>
+    <p class="chapter-nav-contents">{{ $tableOfContents }}</p>
+  {{ else }}
+    {{ partial "chapter-nav-row.html" (dict "page" $page "chapters" $work.RegularPages.ByDate "centre" $tableOfContents) }}
+  {{ end }}
 </nav>

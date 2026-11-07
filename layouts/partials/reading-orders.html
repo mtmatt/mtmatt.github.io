@@ -1,0 +1,22 @@
+{{/*
+  A work's optional reading orders, from `orders` in its front matter, with each
+  chapter name resolved to its page. Returns a list of { name, chapters }, empty
+  for a work that just runs in date order. A name that isn't a published chapter
+  of this work stops the build, so a typo can't ship as a wrong order. The check
+  is needed because GetPage also finds pages elsewhere on the site.
+*/}}
+{{ $work := . }}
+{{ $orders := slice }}
+{{ range $work.Params.orders }}
+  {{ $chapters := slice }}
+  {{ range .chapters }}
+    {{ $chapter := $work.GetPage . }}
+    {{ if in $work.RegularPages $chapter }}
+      {{ $chapters = $chapters | append $chapter }}
+    {{ else }}
+      {{ errorf "%s: no published chapter named %q in orders" $work.RelPermalink . }}
+    {{ end }}
+  {{ end }}
+  {{ $orders = $orders | append (dict "name" .name "chapters" $chapters) }}
+{{ end }}
+{{ return $orders }}

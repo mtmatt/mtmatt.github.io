@@ -1,0 +1,20 @@
+{{/*
+  One line of chapter navigation: previous, centre, next. Takes the current page,
+  its chapters in reading order, and the centre content. Pages.Next moves toward
+  the start of the list, so the list is reversed to make it the following chapter.
+*/}}
+{{ $page := .page }}
+{{ $chaptersLastFirst := .chapters.Reverse }}
+<div class="chapter-nav-row">
+  <span>
+    {{ with $chaptersLastFirst.Prev $page }}<a href="{{ .RelPermalink }}" rel="prev">← 上一章</a>{{ end }}
+  </span>
+  {{ .centre }}
+  <span>
+    {{ with $chaptersLastFirst.Next $page }}
+      <a href="{{ .RelPermalink }}" rel="next">下一章 →</a>
+    {{ else }}
+      {{ if $page.CurrentSection.Params.completed }}全文完{{ else }}連載中，待續{{ end }}
+    {{ end }}
+  </span>
+</div>
