@@ -1,6 +1,7 @@
 {{/*
-  A serial's page: its description and chapter list, oldest chapter first, plus
-  a resume link that reading.js fills in and reveals.
+  A serial's page: its description and chapter list, plus a resume link that
+  reading.js fills in and reveals. Chapters run oldest first, or under one heading
+  per reading order if the work has any.
 */}}
 {{ define "main" }}
   <article class="reading" data-work="{{ .RelPermalink }}">
@@ -16,14 +17,14 @@
       {{ with .Description }}<p>{{ . }}</p>{{ end }}
       {{ .Content }}
       <p class="resume" hidden><a></a></p>
-      <ol class="fiction-list">
-        {{ range .RegularPages.ByDate }}
-          <li>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <p>{{ partial "meta/date.html" .Date }}</p>
-          </li>
+      {{ with partial "reading-orders.html" . }}
+        {{ range . }}
+          <h2>{{ .name }}</h2>
+          {{ partial "chapter-list.html" .chapters }}
         {{ end }}
-      </ol>
+      {{ else }}
+        {{ partial "chapter-list.html" .RegularPages.ByDate }}
+      {{ end }}
       {{ with .OutputFormats.Get "rss" }}
         <p><a href="{{ .RelPermalink }}">RSS</a></p>
       {{ end }}

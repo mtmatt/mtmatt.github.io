@@ -1,0 +1,8 @@
+<ol class="fiction-list">
+  {{ range . }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <p>{{ partial "meta/date.html" .Date }}</p>
+    </li>
+  {{ end }}
+</ol>
