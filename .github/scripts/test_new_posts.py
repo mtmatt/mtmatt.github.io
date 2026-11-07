@@ -323,7 +323,7 @@ class SendNewPostsTest(unittest.TestCase):
         self.assertIs(body["public"], False)
         self.assertEqual(body["send_at"], (NOW + new_posts.SEND_DELAY).isoformat())
         self.assertNotIn("subscriber_filter", body)
-        self.assertEqual(body["subject"], "Title")
+        self.assertEqual(body["subject"], "Title｜博陸毅之島")
 
     def test_a_failed_call_leaves_the_post_claimed_so_it_is_never_resent(self):
         kit = FakeKit(fail_on_create=True)
@@ -402,18 +402,25 @@ class SendNewPostsTest(unittest.TestCase):
         self.assertIn("scheduled broadcast 99", output.getvalue())
 
     def test_a_template_like_title_stops_before_anything_is_claimed(self):
-        templated = new_posts.Post("/blogs/t/", "{{ x }}", "https://x/blogs/t/", NOW, "")
-        kit = FakeKit()
-        with self.assertRaises(new_posts.Refused):
-            self.send({}, [templated], kit)
-        self.assertEqual(self.writes, [])
-        self.assertEqual(kit.bodies(), [])
+        for title in ("{{ x }}", "{% x %}"):
+            with self.subTest(title=title):
+                kit = FakeKit()
+                with self.assertRaises(new_posts.Refused):
+                    self.send({}, [post("/blogs/t/", title=title)], kit)
+                self.assertEqual(self.writes, [])
+                self.assertEqual(kit.bodies(), [])
 
 
 class SendTestModeTest(unittest.TestCase):
-    def run_test_mode(self, kit):
+    def run_test_mode(self, kit, title="Title"):
         with contextlib.redirect_stdout(io.StringIO()):
-            new_posts.send_test([post("/blogs/a/")], kit, lambda: NOW, no_sleep)
+            new_posts.send_test([post("/blogs/a/", title=title)], kit, lambda: NOW, no_sleep)
+
+    def test_a_template_like_title_stops_before_any_broadcast(self):
+        kit = FakeKit()
+        with self.assertRaises(new_posts.Refused):
+            self.run_test_mode(kit, title="{{ x }}")
+        self.assertEqual(kit.bodies(), [])
 
     def test_tries_a_draft_then_mails_only_the_owner_tag(self):
         kit = FakeKit()
@@ -424,7 +431,7 @@ class SendTestModeTest(unittest.TestCase):
         self.assertLess(kit.calls.index(("DELETE", "/broadcasts/99", None)),
                         [c[1] for c in kit.calls].index("/account"))
         self.assertEqual(real["subscriber_filter"][0]["all"], [{"type": "tag", "ids": [42]}])
-        self.assertTrue(real["subject"].startswith("[測試]"))
+        self.assertEqual(real["subject"], "[測試] Title｜博陸毅之島")
 
     def test_the_draft_and_the_test_both_use_the_named_template(self):
         kit = FakeKit()
@@ -551,6 +558,7 @@ class EmailHtmlTest(unittest.TestCase):
         self.assertIn('src="https://mtmatt.csie.org/Lac.jpg"', body)
         self.assertIn("Title</a></h1>", body)
         self.assertIn(">Hello.</p>", body)
+        self.assertNotIn(f">{new_posts.SITE_NAME}<", body)
         self.assertIn('href="https://mtmatt.csie.org/blogs/a/"', body)
 
     def test_omits_an_empty_summary(self):
@@ -590,7 +598,7 @@ class PrintNewPostsTest(unittest.TestCase):
     def test_shows_the_email_for_a_new_post(self):
         output = self.output_of({}, [post("/blogs/new/")])
         self.assertIn("would announce: /blogs/new/", output)
-        self.assertIn("subject: Title", output)
+        self.assertIn("subject: Title｜博陸毅之島", output)
 
     def test_says_when_there_is_nothing_new(self):
         output = self.output_of({"/blogs/a/": {}}, [post("/blogs/a/")])

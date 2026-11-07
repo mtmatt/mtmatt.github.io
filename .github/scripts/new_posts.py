@@ -54,10 +54,8 @@ COVER_IMAGE_URL = f"{SITE_URL}Lac.jpg"
 # corners); these fill it.
 CARD_PADDING = "32px"
 COVER_STYLE = "display:block;width:100%;height:auto;border:0;border-radius:12px 12px 0 0"
-SITE_NAME_STYLE = f"margin:28px {CARD_PADDING} 4px;font-size:14px;color:#6b7280"
-SITE_LINK_STYLE = "color:#6b7280;text-decoration:none"
 TITLE_STYLE = (
-    f"margin:0 {CARD_PADDING} 16px;font-size:30px;font-weight:400;line-height:1.3;"
+    f"margin:28px {CARD_PADDING} 16px;font-size:30px;font-weight:400;line-height:1.3;"
     "color:#1f2937"
 )
 TITLE_LINK_STYLE = "color:#1f2937;text-decoration:none"
@@ -291,11 +289,9 @@ def email_text(text):
 
 def cover_and_title(title_text, link):
     cover = f'<img src="{COVER_IMAGE_URL}" alt="{SITE_NAME}" width="640" style="{COVER_STYLE}">'
-    site_name = f'<a href="{SITE_URL}" style="{SITE_LINK_STYLE}">{SITE_NAME}</a>'
     title = f'<a href="{link}" style="{TITLE_LINK_STYLE}">{email_text(title_text)}</a>'
     return (
         f'<a href="{SITE_URL}">{cover}</a>'
-        f'<p style="{SITE_NAME_STYLE}">{site_name}</p>'
         f'<h1 style="{TITLE_STYLE}">{title}</h1>'
     )
 
@@ -320,6 +316,10 @@ def email_html(post):
     return f"{cover_and_title(post.title, link)}{summary}{read_more_button(link)}"
 
 
+def email_subject(post):
+    return f"{post.title}｜{SITE_NAME}"
+
+
 def preview_text(post):
     joined = close_chinese_spaces(" ".join(summary_paragraphs(post)))
     return joined.replace("{", "")[:MAX_PREVIEW_LENGTH]
@@ -328,7 +328,7 @@ def preview_text(post):
 def broadcast_body(post, template_id, now, send_at):
     """Return the Kit broadcast for a post, leaving its audience to the caller."""
     return {
-        "subject": post.title,
+        "subject": email_subject(post),
         "preview_text": preview_text(post),
         "description": f"newsletter {post.path}",
         "content": email_html(post),
@@ -369,7 +369,7 @@ def find_email_template(api):
 
 def print_email(post):
     print(f"would announce: {post.path}")
-    print(f"  subject: {post.title}")
+    print(f"  subject: {email_subject(post)}")
     print(f"  body: {email_html(post)}")
 
 
@@ -447,7 +447,7 @@ def send_test(posts, api, clock=utc_now, sleep=time.sleep):
     now = clock()
     body = {
         **broadcast_body(post, template_id, now, (now + TEST_SEND_DELAY).isoformat()),
-        "subject": f"[測試] {post.title}",
+        "subject": f"[測試] {email_subject(post)}",
         "subscriber_filter": [
             {"all": [{"type": "tag", "ids": [tag_id]}], "any": None, "none": None}
         ],
