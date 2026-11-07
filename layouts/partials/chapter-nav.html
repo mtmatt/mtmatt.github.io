@@ -1,0 +1,15 @@
+{{/*
+  Sorted here to match the work page, because .PrevInSection and .NextInSection
+  would follow weight first. Pages.Next moves toward the start of the list, so
+  newest-first makes it the following chapter.
+*/}}
+{{ $chapters := .CurrentSection.RegularPages.ByDate.Reverse }}
+<nav class="chapter-nav" aria-label="章節導覽">
+  <span>
+    {{ with $chapters.Prev . }}<a href="{{ .RelPermalink }}" rel="prev">← 上一章</a>{{ end }}
+  </span>
+  <a href="{{ .CurrentSection.RelPermalink }}">目錄</a>
+  <span>
+    {{ with $chapters.Next . }}<a href="{{ .RelPermalink }}" rel="next">下一章 →</a>{{ end }}
+  </span>
+</nav>
