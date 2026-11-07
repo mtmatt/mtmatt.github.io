@@ -25,5 +25,8 @@
   },
   "/blogs/chat-scheduling/": {
     "status": "seeded"
+  },
+  "/blogs/snow-in-taipei/": {
+    "status": "sending"
   }
 }
