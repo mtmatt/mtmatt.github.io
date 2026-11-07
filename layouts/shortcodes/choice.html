@@ -1,0 +1,19 @@
+{{- /*
+  A branch in a story: a link to another chapter of the same work, shown as a
+  block. Plain links work without JavaScript, and Back undoes a choice.
+  Mistakes stop the build. A work needs orders, or its branches would lead on to
+  each other by date. GetPage alone would also find pages elsewhere on the site.
+  Usage: {{< choice "03a" >}}Text of the choice{{< /choice >}}
+*/ -}}
+{{- $work := .Page.CurrentSection -}}
+{{- $chapter := $work.GetPage (.Get 0) -}}
+{{- $text := strings.TrimSpace .Inner -}}
+{{- if not $work.Params.orders -}}
+  {{- errorf "%s: a choice needs orders on its work" .Position -}}
+{{- else if not (in $work.RegularPages $chapter) -}}
+  {{- errorf "%s: no published chapter named %q in choice" .Position (.Get 0) -}}
+{{- else if not $text -}}
+  {{- errorf "%s: a choice needs text" .Position -}}
+{{- else -}}
+  <a class="choice" href="{{ $chapter.RelPermalink }}">{{ $text }}</a>
+{{- end -}}

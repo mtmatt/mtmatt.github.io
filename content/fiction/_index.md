@@ -14,6 +14,13 @@ layout = 'list'
 #   [[orders]]
 #   name = '故事時間'
 #   chapters = ['03', '01', '02']
+# To branch, end a chapter with one choice per line, each naming a chapter of the
+# same work. A choice's text is plain text, not Markdown:
+#   {{< choice "03a" >}}Text of the choice{{< /choice >}}
+# A chapter with choices has no next link, so a branch rejoins the main route with
+# a choice of its own. List only the main route in orders, which a work with choices
+# must have: a chapter in no order links just to the contents and stays off the work
+# page.
 # To keep a non-linear work's chapters out of search, the sitemap and the site feed,
 # so they can't give away its ending, add this to the work. It removes the work's
 # own feed too. Plain keys such as outputs and completed go above the first [[...]]
