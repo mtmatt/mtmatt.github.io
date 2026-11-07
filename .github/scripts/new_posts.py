@@ -50,18 +50,17 @@ SITE_URL = "https://mtmatt.csie.org/"
 # The same cover on every email: post covers run to 19 MB, too large to mail.
 # Published only because it is homepageImage in params.toml.
 COVER_IMAGE_URL = f"{SITE_URL}Lac.jpg"
-# Set by Kit's Text only template on the block around the email body.
-TEMPLATE_SIDE_MARGIN = "18px"
-# The negative margin undoes the template's, for a full-width cover. A client
-# that drops it still shows the cover, inside those margins.
+# The template in .github/kit-email-template.html has no side margins, so that
+# the cover can reach both edges and the text sets its own.
+TEXT_SIDE_MARGIN = "18px"
 COVER_STYLE = (
-    f"margin:0 -{TEMPLATE_SIDE_MARGIN} 8px;background-color:#c9d6e8;"
+    "margin:0 0 8px;background-color:#c9d6e8;"
     f"background-image:url({COVER_IMAGE_URL});background-size:cover;"
     "background-position:center"
 )
 # The flat color stands in for the fade where gradients aren't supported.
 COVER_OVERLAY_STYLE = (
-    f"padding:64px {TEMPLATE_SIDE_MARGIN} 88px;background-color:rgba(255,255,255,0.65);"
+    f"padding:64px {TEXT_SIDE_MARGIN} 88px;background-color:rgba(255,255,255,0.65);"
     "background-image:linear-gradient(to bottom,rgba(255,255,255,0.65) 45%,#ffffff 100%)"
 )
 SITE_NAME_STYLE = "margin:0 0 4px;font-size:14px;color:#1f2937"
@@ -69,10 +68,10 @@ SITE_LINK_STYLE = "color:#1f2937;text-decoration:none"
 TITLE_STYLE = "margin:0;font-size:30px;line-height:1.3;color:#111827"
 TITLE_LINK_STYLE = "color:#111827;text-decoration:none"
 SUMMARY_STYLE = (
-    "margin:0 0 24px;max-width:34em;font-size:16px;line-height:2;"
+    f"margin:0 {TEXT_SIDE_MARGIN} 24px;max-width:34em;font-size:16px;line-height:2;"
     "letter-spacing:0.02em;color:#374151"
 )
-BUTTON_PARAGRAPH_STYLE = "margin:0 0 8px"
+BUTTON_PARAGRAPH_STYLE = f"margin:0 {TEXT_SIDE_MARGIN} 8px"
 BUTTON_STYLE = (
     "display:inline-block;padding:12px 24px;background:#1f2937;color:#ffffff;"
     "text-decoration:none;border-radius:6px;font-weight:600"
