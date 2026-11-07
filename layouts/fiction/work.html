@@ -5,6 +5,9 @@
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title }}
       </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400">
+        {{ partial "work-status.html" . }}
+      </div>
     </header>
     <div class="prose dark:prose-invert">
       {{ with .Description }}<p>{{ . }}</p>{{ end }}

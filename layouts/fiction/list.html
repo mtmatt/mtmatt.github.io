@@ -1,5 +1,7 @@
-{{/* The fiction index: serials from this section, then short stories from blogs. */}}
+{{/* The fiction index: ongoing and completed serials, then short stories from blogs. */}}
 {{ define "main" }}
+  {{ $completedWorks := where .Sections "Params.completed" true }}
+  {{ $ongoingWorks := .Sections | complement $completedWorks }}
   {{ $shortStories := where (where site.RegularPages "Section" "blogs") "Layout" "reading" }}
   <article class="reading">
     <header class="mt-5 mb-6">
@@ -8,8 +10,12 @@
       </h1>
     </header>
     <div class="prose dark:prose-invert">
-      {{ with .Sections }}
-        <h2>連載</h2>
+      {{ with $ongoingWorks }}
+        <h2>連載中</h2>
+        {{ template "works" . }}
+      {{ end }}
+      {{ with $completedWorks }}
+        <h2>完結</h2>
         {{ template "works" . }}
       {{ end }}
       {{ with $shortStories }}
@@ -25,6 +31,7 @@
     {{ range . }}
       <li>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ if .IsSection }}<p>{{ partial "work-status.html" . }}</p>{{ end }}
         {{ with or .Description (.Summary | plainify) }}<p>{{ . | truncate 80 }}</p>{{ end }}
       </li>
     {{ end }}
