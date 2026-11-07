@@ -1,12 +1,17 @@
 {{/*
-  Fiction page: only the title, date, reading time and text.
+  Fiction page: only the title, date, reading time and text, plus a link to the
+  work and chapter navigation on serial chapters.
   The date and reading time are written out here because the theme's
   article-meta partial shows whatever the site params enable, including the
   Zen mode button. Hiding it there would take `showZenMode = false` on every page.
 */}}
 {{ define "main" }}
+  {{ $isChapter := eq .Section "fiction" }}
   <article class="reading">
     <header class="mt-5">
+      {{ if $isChapter }}
+        <a class="work-link" href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.Title }}</a>
+      {{ end }}
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
@@ -19,5 +24,8 @@
     <div class="prose dark:prose-invert">
       {{ .Content }}
     </div>
+    {{ if $isChapter }}
+      {{ partial "chapter-nav.html" . }}
+    {{ end }}
   </article>
 {{ end }}

@@ -1,0 +1,32 @@
+{{/* The fiction index: serials from this section, then short stories from blogs. */}}
+{{ define "main" }}
+  {{ $shortStories := where (where site.RegularPages "Section" "blogs") "Layout" "reading" }}
+  <article class="reading">
+    <header class="mt-5 mb-6">
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title }}
+      </h1>
+    </header>
+    <div class="prose dark:prose-invert">
+      {{ with .Sections }}
+        <h2>連載</h2>
+        {{ template "works" . }}
+      {{ end }}
+      {{ with $shortStories }}
+        <h2>短篇</h2>
+        {{ template "works" . }}
+      {{ end }}
+    </div>
+  </article>
+{{ end }}
+
+{{ define "works" }}
+  <ul class="fiction-list">
+    {{ range . }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with or .Description (.Summary | plainify) }}<p>{{ . | truncate 80 }}</p>{{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

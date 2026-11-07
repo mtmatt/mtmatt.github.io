@@ -1,0 +1,25 @@
+{{/* A serial's page: its description and chapter list, oldest chapter first. */}}
+{{ define "main" }}
+  <article class="reading">
+    <header class="mt-5">
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title }}
+      </h1>
+    </header>
+    <div class="prose dark:prose-invert">
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      {{ .Content }}
+      <ol class="fiction-list">
+        {{ range .RegularPages.ByDate }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <p>{{ partial "meta/date.html" .Date }}</p>
+          </li>
+        {{ end }}
+      </ol>
+      {{ with .OutputFormats.Get "rss" }}
+        <p><a href="{{ .RelPermalink }}">RSS</a></p>
+      {{ end }}
+    </div>
+  </article>
+{{ end }}

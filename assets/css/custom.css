@@ -22,3 +22,51 @@
 .reading .prose p {
   margin-block: 1em;
 }
+
+.reading .work-link {
+  display: block;
+  margin-block-end: 0.5em;
+  font-size: 0.9em;
+}
+
+.reading .fiction-list {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.reading .fiction-list li {
+  padding-inline-start: 0;
+}
+
+.reading .fiction-list p {
+  margin-block: 0.25em 0;
+  font-size: 0.9em;
+  opacity: 0.75;
+}
+
+.reading .chapter-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1em;
+  margin-block: 3em 1em;
+}
+
+.reading .chapter-nav a {
+  display: inline-block;
+  padding-block: 0.75em;
+}
+
+.reading .work-link,
+.reading .chapter-nav a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.reading .work-link:hover,
+.reading .chapter-nav a:hover {
+  opacity: 0.7;
+}
+
+.reading .chapter-nav > :last-child {
+  text-align: end;
+}
