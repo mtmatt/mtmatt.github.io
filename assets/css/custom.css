@@ -1,0 +1,24 @@
+/* Fiction pages. The width in em keeps a desktop line near 34 Chinese characters. */
+.reading {
+  max-width: 34em;
+  margin-inline: auto;
+  font-size: 1.0625rem;
+}
+
+@media (min-width: 768px) {
+  .reading {
+    font-size: 1.125rem;
+  }
+}
+
+.reading .prose {
+  max-width: none;
+  font-size: inherit;
+  line-height: 1.9;
+  line-break: strict;
+  text-align: justify;
+}
+
+.reading .prose p {
+  margin-block: 1em;
+}

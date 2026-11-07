@@ -4,6 +4,7 @@ draft = false
 title = '多一雙手'
 description = '短篇小說：自動化流程把柏均從公司移除之後，他照著一張八年前寄來的地圖走出城。'
 tags = ["ai", "feudal", "novel"]
+layout = 'reading'
 +++
 
 ## 第一章 刷不開的門
