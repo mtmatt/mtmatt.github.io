@@ -76,6 +76,8 @@ BUTTON_STYLE = (
     "display:inline-block;padding:12px 24px;background:#1f2937;color:#ffffff;"
     "text-decoration:none;border-radius:6px;font-weight:600"
 )
+# Picked by name because Kit wouldn't make it the default template.
+EMAIL_TEMPLATE_NAME = "monterey"
 STARTING_POINT_TEMPLATE = "Starting point"
 # Gives Pages time to publish the post, and a window to cancel in Kit.
 SEND_DELAY = timedelta(minutes=10)
@@ -306,8 +308,8 @@ def email_html(post):
     """Build the email body: the site cover, the title, the summary and a link.
 
     Styles are inline because email clients drop style sheets. The unsubscribe
-    link and postal address come from the account's default template, which
-    ensure_template_adds_footer checks before anything is sent.
+    link and postal address come from the template, which find_email_template
+    checks before anything is sent.
     """
     link = html.escape(post.link, quote=True)
     summary = email_text(summarize(post.summary_html))
@@ -315,13 +317,14 @@ def email_html(post):
     return f"{cover_banner(post.title, link)}{summary_paragraph}{read_more_button(link)}"
 
 
-def broadcast_body(post, now, send_at):
+def broadcast_body(post, template_id, now, send_at):
     """Return the Kit broadcast for a post, leaving its audience to the caller."""
     return {
         "subject": post.title,
         "preview_text": summarize(post.summary_html).replace("{", "")[:MAX_PREVIEW_LENGTH],
         "description": f"newsletter {post.path}",
         "content": email_html(post),
+        "email_template_id": template_id,
         "public": False,
         "published_at": now.isoformat(),
         "send_at": send_at,
@@ -334,17 +337,26 @@ def ensure_subject_is_plain(post):
         raise Refused(f"the title of {post.path} looks like a Kit template")
 
 
-def ensure_template_adds_footer(api):
-    """Refuse a default template that won't add the required unsubscribe link.
+def find_email_template(api):
+    """Return the id of the email template, refusing one without an unsubscribe link.
 
     A Starting point template holds the whole email, so this script's body would
     have no footer. Kit could accept that and then never send it.
     """
     templates = api("GET", "/email_templates")["email_templates"]
-    default = next((t for t in templates if t["is_default"]), None)
-    if default is None or default["category"] == STARTING_POINT_TEMPLATE:
-        raise Refused("the default Kit email template won't add an unsubscribe link")
-    print(f"default template category: {default['category']}", flush=True)
+    template = next(
+        (t for t in templates if t["name"].casefold() == EMAIL_TEMPLATE_NAME.casefold()),
+        None,
+    )
+    if template is None:
+        raise Refused(f"Kit has no email template named {EMAIL_TEMPLATE_NAME}")
+    if template["category"] == STARTING_POINT_TEMPLATE:
+        raise Refused(
+            f"the {EMAIL_TEMPLATE_NAME} template is a {STARTING_POINT_TEMPLATE} one, "
+            "so it won't add an unsubscribe link"
+        )
+    print(f"email template category: {template['category']}", flush=True)
+    return template["id"]
 
 
 def print_email(post):
@@ -376,12 +388,12 @@ def send_new_posts(snapshot, posts, api, now):
     if not to_announce:
         print("nothing new to announce")
         return
-    ensure_template_adds_footer(api)
+    template_id = find_email_template(api)
     for post in to_announce:
         ensure_subject_is_plain(post)
     for post in to_announce:
         snapshot = set_status(snapshot, post.path, SENDING)
-        body = broadcast_body(post, now, (now + SEND_DELAY).isoformat())
+        body = broadcast_body(post, template_id, now, (now + SEND_DELAY).isoformat())
         broadcast = api("POST", "/broadcasts", body)["broadcast"]
         broadcast_id = broadcast["id"]
         # Printed before the next write: if that fails, this mail is still going out.
@@ -411,8 +423,9 @@ def send_test(posts, api, clock=utc_now, sleep=time.sleep):
         raise Refused("the feed has no posts to test with")
     post = posts[0]
     ensure_subject_is_plain(post)
-    ensure_template_adds_footer(api)
-    draft = api("POST", "/broadcasts", broadcast_body(post, clock(), None))["broadcast"]
+    template_id = find_email_template(api)
+    draft_body = broadcast_body(post, template_id, clock(), None)
+    draft = api("POST", "/broadcasts", draft_body)["broadcast"]
     print(
         f"draft {draft['id']} audience: {json.dumps(draft.get('subscriber_filter'))}, "
         f"template: {json.dumps(draft.get('email_template'))}",
@@ -425,7 +438,7 @@ def send_test(posts, api, clock=utc_now, sleep=time.sleep):
     # Taken after the tag check, which can wait for minutes.
     now = clock()
     body = {
-        **broadcast_body(post, now, (now + TEST_SEND_DELAY).isoformat()),
+        **broadcast_body(post, template_id, now, (now + TEST_SEND_DELAY).isoformat()),
         "subject": f"[測試] {post.title}",
         "subscriber_filter": [
             {"all": [{"type": "tag", "ids": [tag_id]}], "any": None, "none": None}

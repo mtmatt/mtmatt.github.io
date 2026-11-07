@@ -194,11 +194,12 @@ class FakeKit:
     """Records Kit calls and answers them like the real API."""
 
     def __init__(self, stored_public=False, fail_on_create=False, stored_filter=None,
-                 template_category="HTML"):
+                 template_category="HTML", template_name="Monterey"):
         self.stored_public = stored_public
         self.fail_on_create = fail_on_create
         self.stored_filter = stored_filter
         self.template_category = template_category
+        self.template_name = template_name
         self.calls = []
 
     def __call__(self, method, path, body=None):
@@ -213,7 +214,9 @@ class FakeKit:
             }}
         if path == "/email_templates":
             return {"email_templates": [
-                {"id": 1, "is_default": True, "category": self.template_category}
+                {"id": 1, "name": "Text only", "is_default": True, "category": "Classic"},
+                {"id": 2, "name": self.template_name, "is_default": False,
+                 "category": self.template_category},
             ]}
         if path == "/account":
             return {"account": {"primary_email_address": "owner@example.com"}}
@@ -335,7 +338,12 @@ class SendNewPostsTest(unittest.TestCase):
         with self.assertRaises(new_posts.Refused):
             self.send(None, [post("/blogs/a/")], FakeKit())
 
-    def test_a_default_template_without_a_footer_stops_before_anything_is_claimed(self):
+    def test_sends_with_the_named_template(self):
+        kit = FakeKit()
+        self.send({}, [post("/blogs/new/")], kit)
+        self.assertEqual([b["email_template_id"] for b in kit.bodies()], [2])
+
+    def test_a_template_without_a_footer_stops_before_anything_is_claimed(self):
         kit = FakeKit(template_category=new_posts.STARTING_POINT_TEMPLATE)
         with self.assertRaises(new_posts.Refused):
             self.send({}, [post("/blogs/new/")], kit)
@@ -380,6 +388,11 @@ class SendTestModeTest(unittest.TestCase):
         self.assertEqual(real["subscriber_filter"][0]["all"], [{"type": "tag", "ids": [42]}])
         self.assertTrue(real["subject"].startswith("[測試]"))
 
+    def test_the_draft_and_the_test_both_use_the_named_template(self):
+        kit = FakeKit()
+        self.run_test_mode(kit)
+        self.assertEqual([b["email_template_id"] for b in kit.bodies()], [2, 2])
+
     def test_deletes_a_broadcast_stored_for_a_wider_audience(self):
         everyone = [{"all": [{"type": "all_subscribers"}], "any": None, "none": None}]
         kit = FakeKit(stored_filter=everyone)
@@ -402,7 +415,7 @@ class SendTestModeTest(unittest.TestCase):
             self.run_test_mode(FakeKit())
         write_record.assert_not_called()
 
-    def test_a_default_template_without_a_footer_stops_before_any_broadcast(self):
+    def test_a_template_without_a_footer_stops_before_any_broadcast(self):
         kit = FakeKit(template_category=new_posts.STARTING_POINT_TEMPLATE)
         with self.assertRaises(new_posts.Refused):
             self.run_test_mode(kit)
@@ -457,6 +470,23 @@ class ResolvePostTest(unittest.TestCase):
         self.assertEqual(entries["/blogs/a/"], {"status": new_posts.DISMISSED})
 
 
+class FindEmailTemplateTest(unittest.TestCase):
+    def find(self, kit):
+        with contextlib.redirect_stdout(io.StringIO()):
+            return new_posts.find_email_template(kit)
+
+    def test_finds_the_template_by_name_rather_than_the_default(self):
+        self.assertEqual(self.find(FakeKit()), 2)
+
+    def test_refuses_when_the_template_is_missing(self):
+        with self.assertRaises(new_posts.Refused):
+            self.find(FakeKit(template_name="renamed"))
+
+    def test_refuses_a_starting_point_template(self):
+        with self.assertRaises(new_posts.Refused):
+            self.find(FakeKit(template_category=new_posts.STARTING_POINT_TEMPLATE))
+
+
 class EmailHtmlTest(unittest.TestCase):
     def test_has_the_cover_title_summary_and_link(self):
         body = new_posts.email_html(post("/blogs/a/"))
@@ -475,7 +505,7 @@ class EmailHtmlTest(unittest.TestCase):
 
     def test_post_text_cannot_inject_liquid_into_the_preview(self):
         templated = post("/blogs/a/", summary_html="<p>{{ subscriber.email }} {% x %}.</p>")
-        preview = new_posts.broadcast_body(templated, NOW, None)["preview_text"]
+        preview = new_posts.broadcast_body(templated, 2, NOW, None)["preview_text"]
         self.assertNotIn("{", preview)
 
     def test_post_text_cannot_inject_markup_or_liquid(self):
