@@ -7,7 +7,8 @@ layout = 'list'
 # description, and no date. Then add one file per chapter, such as 01.md, each
 # with a title and date. Chapters run in date order, so give each a different
 # date or time; weight is ignored. A work has no subfolders.
-# Works of 10,000 characters or fewer stay in blogs with layout = 'reading'.
+# Add completed = true to the work once its last chapter is out.
+# Stories short enough for one page stay in blogs with layout = 'reading'.
 [[cascade]]
 layout = 'work'
 [cascade.target]

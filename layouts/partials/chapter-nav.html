@@ -10,6 +10,10 @@
   </span>
   <a href="{{ .CurrentSection.RelPermalink }}">目錄</a>
   <span>
-    {{ with $chapters.Next . }}<a href="{{ .RelPermalink }}" rel="next">下一章 →</a>{{ end }}
+    {{ with $chapters.Next . }}
+      <a href="{{ .RelPermalink }}" rel="next">下一章 →</a>
+    {{ else }}
+      {{ if .CurrentSection.Params.completed }}全文完{{ else }}連載中，待續{{ end }}
+    {{ end }}
   </span>
 </nav>

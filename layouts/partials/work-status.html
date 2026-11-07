@@ -1,0 +1,6 @@
+{{- $chapterCount := len .RegularPages -}}
+{{- if .Params.completed -}}
+  完結 · 全 {{ $chapterCount }} 章
+{{- else -}}
+  連載中 · 已更新 {{ $chapterCount }} 章
+{{- end -}}
