@@ -45,6 +45,36 @@ MAX_POST_AGE = timedelta(days=30)
 MAX_SUMMARY_SENTENCES = 3
 MAX_SUMMARY_LENGTH = 200
 MAX_PREVIEW_LENGTH = 100
+SITE_NAME = "博陸毅之島"
+SITE_URL = "https://mtmatt.csie.org/"
+# The same cover on every email: post covers run to 19 MB, too large to mail.
+# Published only because it is homepageImage in params.toml.
+COVER_IMAGE_URL = f"{SITE_URL}Lac.jpg"
+# The white card comes from .github/kit-email-template.html (640px wide, 12px
+# corners); these fill it.
+CARD_PADDING = "32px"
+COVER_STYLE = "display:block;width:100%;height:auto;border:0;border-radius:12px 12px 0 0"
+SITE_NAME_STYLE = f"margin:28px {CARD_PADDING} 4px;font-size:14px;color:#6b7280"
+SITE_LINK_STYLE = "color:#6b7280;text-decoration:none"
+TITLE_STYLE = (
+    f"margin:0 {CARD_PADDING} 16px;font-size:30px;font-weight:400;line-height:1.3;"
+    "color:#1f2937"
+)
+TITLE_LINK_STYLE = "color:#1f2937;text-decoration:none"
+SUMMARY_STYLE = (
+    f"margin:0 {CARD_PADDING} 24px;font-size:16px;line-height:2;"
+    "letter-spacing:0.02em;color:#374151"
+)
+# Padding, not a margin: a bottom margin would collapse through the card.
+BUTTON_PARAGRAPH_STYLE = (
+    f"margin:0 {CARD_PADDING};padding-bottom:{CARD_PADDING};text-align:center"
+)
+BUTTON_STYLE = (
+    "display:inline-block;padding:12px 24px;background:#23549f;color:#ffffff;"
+    "text-decoration:none;border-radius:8px"
+)
+# Picked by name, so a change to the account's default can't alter this email.
+EMAIL_TEMPLATE_NAME = "monterey"
 STARTING_POINT_TEMPLATE = "Starting point"
 # Gives Pages time to publish the post, and a window to cancel in Kit.
 SEND_DELAY = timedelta(minutes=10)
@@ -63,6 +93,14 @@ BOT_IDENTITY = {
 MISSING_REMOTE_REF_EXIT_CODE = 2
 # Closing quotes and brackets stay with the sentence they end.
 CLOSERS = "[」』”\"）)]*"
+# Chinese characters and punctuation, which take no spaces between them.
+CJK = "\u2e80-\u9fff\uf900-\ufaff\uff00-\uffef…⋯"
+# Elements that don't read as sentences: headings carry a "#" anchor.
+UNREADABLE_ELEMENTS = "h[1-6]|table|pre|figure|script|style"
+# Tags that sit inside a word or sentence, so removing them must not add a space.
+INLINE_TAGS = "a|abbr|b|cite|code|del|em|i|ins|kbd|mark|q|s|small|span|strong|sub|u"
+# Hugo builds automatic summaries from these. A written summary has none of them.
+BLOCK_TAGS = "p|h[1-6]|blockquote|ul|ol|li|div|table|pre|figure|dl|section|details|center"
 
 
 class Refused(Exception):
@@ -206,13 +244,31 @@ def warn_about_unresolved(entries, too_old):
             print(f"::warning::send was not confirmed, check Kit, then resolve: {path}")
 
 
+def is_written_summary(summary_html):
+    """Tell a front matter `summary` from Hugo's automatic one.
+
+    The feed doesn't say which it carries, but Hugo emits a one-paragraph written
+    summary as bare inline HTML. Several paragraphs count as automatic.
+    """
+    return not re.search(rf"(?i)</?(?:{BLOCK_TAGS})\b", summary_html)
+
+
+def plain_text(summary_html):
+    prose = re.sub(rf"(?is)<({UNREADABLE_ELEMENTS})\b.*?</\1>", " ", summary_html)
+    joined = re.sub(rf"(?i)</?(?:{INLINE_TAGS})\b[^>]*>", "", prose)
+    text = html.unescape(re.sub(r"<[^>]+>", " ", joined))
+    # A line wrapped in the source isn't a space, unlike one typed between phrases.
+    unwrapped = re.sub(rf"(?<=[{CJK}])\s*\n\s*(?=[{CJK}])", "", text)
+    return " ".join(unwrapped.split())
+
+
 def summarize(summary_html):
-    """Reduce a feed summary to its first few sentences of plain text."""
-    # Headings carry a "#" anchor, and tables and code don't read as sentences.
-    prose = re.sub(
-        r"(?is)<(h[1-6]|table|pre|figure|script|style)\b.*?</\1>", " ", summary_html
-    )
-    text = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", prose)).split())
+    """Reduce a feed summary to plain text, of a few sentences unless written by hand."""
+    text = plain_text(summary_html)
+    if is_written_summary(summary_html):
+        return text
+    # Removing tags left a space between Chinese paragraphs.
+    text = re.sub(rf"(?<=[{CJK}]) (?=[{CJK}])", "", text)
     sentences = re.findall(rf".+?(?:[。！？!?]+{CLOSERS}|\.{CLOSERS}(?=\s)|$)", text)
     summary = ""
     for sentence in sentences[:MAX_SUMMARY_SENTENCES]:
@@ -224,26 +280,48 @@ def summarize(summary_html):
     return summary.strip()
 
 
+def email_text(text):
+    # Kit runs Liquid over the body, so post text must not look like a template.
+    return html.escape(text).replace("{", "&#123;")
+
+
+def cover_and_title(title_text, link):
+    cover = f'<img src="{COVER_IMAGE_URL}" alt="{SITE_NAME}" width="640" style="{COVER_STYLE}">'
+    site_name = f'<a href="{SITE_URL}" style="{SITE_LINK_STYLE}">{SITE_NAME}</a>'
+    title = f'<a href="{link}" style="{TITLE_LINK_STYLE}">{email_text(title_text)}</a>'
+    return (
+        f'<a href="{SITE_URL}">{cover}</a>'
+        f'<p style="{SITE_NAME_STYLE}">{site_name}</p>'
+        f'<h1 style="{TITLE_STYLE}">{title}</h1>'
+    )
+
+
+def read_more_button(link):
+    button = f'<a href="{link}" style="{BUTTON_STYLE}">閱讀全文</a>'
+    return f'<p style="{BUTTON_PARAGRAPH_STYLE}">{button}</p>'
+
+
 def email_html(post):
-    """Build the email body: the summary and a link to the post.
+    """Build the email body: the site cover, the title, the summary and a link.
 
-    The unsubscribe link and postal address come from the account's default
-    template, which ensure_template_adds_footer checks before anything is sent.
+    Styles are inline because email clients drop style sheets. The unsubscribe
+    link and postal address come from the template, which find_email_template
+    checks before anything is sent.
     """
-    # Kit runs Liquid over this, so post text must not look like a template.
-    summary = html.escape(summarize(post.summary_html)).replace("{", "&#123;")
     link = html.escape(post.link, quote=True)
-    summary_paragraph = f"<p>{summary}</p>" if summary else ""
-    return f'{summary_paragraph}<p><a href="{link}">閱讀全文</a></p>'
+    summary = email_text(summarize(post.summary_html))
+    summary_paragraph = f'<p style="{SUMMARY_STYLE}">{summary}</p>' if summary else ""
+    return f"{cover_and_title(post.title, link)}{summary_paragraph}{read_more_button(link)}"
 
 
-def broadcast_body(post, now, send_at):
+def broadcast_body(post, template_id, now, send_at):
     """Return the Kit broadcast for a post, leaving its audience to the caller."""
     return {
         "subject": post.title,
         "preview_text": summarize(post.summary_html).replace("{", "")[:MAX_PREVIEW_LENGTH],
         "description": f"newsletter {post.path}",
         "content": email_html(post),
+        "email_template_id": template_id,
         "public": False,
         "published_at": now.isoformat(),
         "send_at": send_at,
@@ -256,17 +334,26 @@ def ensure_subject_is_plain(post):
         raise Refused(f"the title of {post.path} looks like a Kit template")
 
 
-def ensure_template_adds_footer(api):
-    """Refuse a default template that won't add the required unsubscribe link.
+def find_email_template(api):
+    """Return the id of the email template, refusing one without an unsubscribe link.
 
     A Starting point template holds the whole email, so this script's body would
     have no footer. Kit could accept that and then never send it.
     """
     templates = api("GET", "/email_templates")["email_templates"]
-    default = next((t for t in templates if t["is_default"]), None)
-    if default is None or default["category"] == STARTING_POINT_TEMPLATE:
-        raise Refused("the default Kit email template won't add an unsubscribe link")
-    print(f"default template category: {default['category']}", flush=True)
+    template = next(
+        (t for t in templates if t["name"].casefold() == EMAIL_TEMPLATE_NAME.casefold()),
+        None,
+    )
+    if template is None:
+        raise Refused(f"Kit has no email template named {EMAIL_TEMPLATE_NAME}")
+    if template["category"] == STARTING_POINT_TEMPLATE:
+        raise Refused(
+            f"the {EMAIL_TEMPLATE_NAME} template is a {STARTING_POINT_TEMPLATE} one, "
+            "so it won't add an unsubscribe link"
+        )
+    print(f"email template category: {template['category']}", flush=True)
+    return template["id"]
 
 
 def print_email(post):
@@ -298,12 +385,12 @@ def send_new_posts(snapshot, posts, api, now):
     if not to_announce:
         print("nothing new to announce")
         return
-    ensure_template_adds_footer(api)
+    template_id = find_email_template(api)
     for post in to_announce:
         ensure_subject_is_plain(post)
     for post in to_announce:
         snapshot = set_status(snapshot, post.path, SENDING)
-        body = broadcast_body(post, now, (now + SEND_DELAY).isoformat())
+        body = broadcast_body(post, template_id, now, (now + SEND_DELAY).isoformat())
         broadcast = api("POST", "/broadcasts", body)["broadcast"]
         broadcast_id = broadcast["id"]
         # Printed before the next write: if that fails, this mail is still going out.
@@ -333,8 +420,9 @@ def send_test(posts, api, clock=utc_now, sleep=time.sleep):
         raise Refused("the feed has no posts to test with")
     post = posts[0]
     ensure_subject_is_plain(post)
-    ensure_template_adds_footer(api)
-    draft = api("POST", "/broadcasts", broadcast_body(post, clock(), None))["broadcast"]
+    template_id = find_email_template(api)
+    draft_body = broadcast_body(post, template_id, clock(), None)
+    draft = api("POST", "/broadcasts", draft_body)["broadcast"]
     print(
         f"draft {draft['id']} audience: {json.dumps(draft.get('subscriber_filter'))}, "
         f"template: {json.dumps(draft.get('email_template'))}",
@@ -347,7 +435,7 @@ def send_test(posts, api, clock=utc_now, sleep=time.sleep):
     # Taken after the tag check, which can wait for minutes.
     now = clock()
     body = {
-        **broadcast_body(post, now, (now + TEST_SEND_DELAY).isoformat()),
+        **broadcast_body(post, template_id, now, (now + TEST_SEND_DELAY).isoformat()),
         "subject": f"[測試] {post.title}",
         "subscriber_filter": [
             {"all": [{"type": "tag", "ids": [tag_id]}], "any": None, "none": None}
