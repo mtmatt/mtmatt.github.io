@@ -22,17 +22,29 @@ def feed(*items):
     return f'<?xml version="1.0"?><rss version="2.0"><channel>{entries}</channel></rss>'
 
 
-def post(path, age=timedelta(days=1), summary_html="<p>Hello.</p>", title="Title"):
+def post(path, age=timedelta(days=1), summary_html="<p>Hello.</p>", title="Title",
+         summary_is_written=False):
     return new_posts.Post(
         path=path,
         title=title,
         link=f"https://mtmatt.csie.org{path}",
         published=NOW - age,
         summary_html=summary_html,
+        summary_is_written=summary_is_written,
     )
 
 
 class ParseFeedTest(unittest.TestCase):
+    def test_notices_the_mark_on_a_written_summary(self):
+        xml = (
+            '<rss version="2.0"><channel><item><title>T</title>'
+            "<link>https://mtmatt.csie.org/blogs/a/</link>"
+            "<pubDate>Thu, 29 Oct 2026 18:46:41 +0800</pubDate><description>d</description>"
+            '<summaryWritten xmlns="https://mtmatt.csie.org/feed">true</summaryWritten>'
+            "</item></channel></rss>"
+        )
+        self.assertTrue(new_posts.parse_feed(xml)[0].summary_is_written)
+
     def test_reads_posts_and_decodes_the_escaped_summary(self):
         xml = feed((
             "多一雙手", "https://mtmatt.csie.org/blogs/hands/",
@@ -42,6 +54,7 @@ class ParseFeedTest(unittest.TestCase):
         self.assertEqual(parsed.path, "/blogs/hands/")
         self.assertEqual(parsed.title, "多一雙手")
         self.assertEqual(parsed.summary_html, "<p>第一段</p>")
+        self.assertFalse(parsed.summary_is_written)
         self.assertEqual(parsed.published.utcoffset(), timedelta(hours=8))
 
     def test_leaves_out_pages_that_are_not_blog_posts(self):
@@ -109,23 +122,8 @@ class SummarizeTest(unittest.TestCase):
         summary_html = "<p>綠燈沒有亮。</p>\n<p>他說：「嗯。」</p>\n<p>再貼一次。</p>"
         self.assertEqual(new_posts.summarize(summary_html), "綠燈沒有亮。他說：「嗯。」再貼一次。")
 
-    def test_reads_a_written_summary_with_inline_markup(self):
-        # Hugo renders a front matter summary as bare inline HTML, with no <p>.
-        summary_html = "我的<strong>摘要</strong>。二。<em>三</em>。四。<a href='x'>五</a>。"
-        self.assertEqual(new_posts.summarize(summary_html), "我的摘要。二。三。四。五。")
-
-    def test_joins_a_line_wrapped_written_summary(self):
-        self.assertEqual(new_posts.summarize("第一句，\n接著換行。\n第三句。"), "第一句，接著換行。第三句。")
-
-    def test_keeps_a_written_summary_whole(self):
-        summary_html = f"一。二。三。四。五。{'長' * 300}"
-        self.assertEqual(new_posts.summarize(summary_html), summary_html)
-
     def test_limits_a_summary_taken_from_the_post(self):
         self.assertEqual(new_posts.summarize("<blockquote>一。二。三。四。</blockquote>"), "一。二。三。")
-
-    def test_keeps_the_spaces_in_a_written_summary(self):
-        self.assertEqual(new_posts.summarize("門打不開了 證還在"), "門打不開了 證還在")
 
     def test_limits_a_summary_opening_with_something_other_than_a_block(self):
         for opening in ("<hr>", "<!-- note -->", '<img src="a.png">'):
@@ -149,6 +147,7 @@ class SummarizeTest(unittest.TestCase):
 
     def test_joins_chinese_paragraphs_however_they_end(self):
         self.assertEqual(new_posts.summarize("<p>他說……</p>\n<p>對。</p>"), "他說……對。")
+        self.assertEqual(new_posts.summarize("<p>一。</p><p>二。</p>"), "一。二。")
 
     def test_tags_between_words_still_separate_english_ones(self):
         self.assertEqual(new_posts.summarize("<p>One</p><p>two.</p>"), "One two.")
@@ -236,6 +235,45 @@ class FakeKit:
 
 def no_sleep(_seconds):
     pass
+
+
+class SummaryParagraphsTest(unittest.TestCase):
+    def written(self, summary_html):
+        return new_posts.summary_paragraphs(
+            post("/blogs/a/", summary_html=summary_html, summary_is_written=True)
+        )
+
+    def test_reads_inline_markup_in_a_bare_summary(self):
+        # Hugo renders a one-paragraph front matter summary with no <p>.
+        summary_html = "我的<strong>摘要</strong>。二。<em>三</em>。四。<a href='x'>五</a>。"
+        self.assertEqual(self.written(summary_html), ["我的摘要。二。三。四。五。"])
+
+    def test_keeps_every_paragraph_whole(self):
+        long_paragraph = f"一。二。三。四。五。{'長' * 300}"
+        self.assertEqual(
+            self.written(f"<p>{long_paragraph}</p>\n<p>第二段。</p>\n"),
+            [long_paragraph, "第二段。"],
+        )
+
+    def test_lists_and_quotes_stay_apart_from_their_neighbours(self):
+        summary_html = "<p>清單：</p>\n<ul>\n<li>甲項</li>\n<li>乙項</li>\n</ul>\n<blockquote>\n<p>引言。</p>\n</blockquote>\n<p>結尾。</p>"
+        self.assertEqual(self.written(summary_html), ["清單：", "甲項", "乙項", "引言。", "結尾。"])
+
+    def test_drops_empty_paragraphs(self):
+        self.assertEqual(self.written("<p>一。</p>\n<p> </p>\n<p>二。</p>"), ["一。", "二。"])
+
+    def test_joins_lines_wrapped_in_the_source(self):
+        self.assertEqual(self.written("第一句，\n接著換行。\n第三句。"), ["第一句，接著換行。第三句。"])
+
+    def test_keeps_a_typed_space(self):
+        self.assertEqual(self.written("門打不開了 證還在"), ["門打不開了 證還在"])
+
+    def test_limits_an_automatic_summary(self):
+        automatic = post("/blogs/a/", summary_html="<p>一。二。三。四。</p>\n<p>五。</p>")
+        self.assertEqual(new_posts.summary_paragraphs(automatic), ["一。二。三。"])
+
+    def test_an_empty_automatic_summary_has_no_paragraphs(self):
+        self.assertEqual(new_posts.summary_paragraphs(post("/blogs/a/", summary_html="")), [])
 
 
 class SendNewPostsTest(unittest.TestCase):
@@ -468,6 +506,26 @@ class ResolvePostTest(unittest.TestCase):
             {"/blogs/a/": {"status": new_posts.APPROVED}}, "/blogs/a/", new_posts.DISMISSED
         )
         self.assertEqual(entries["/blogs/a/"], {"status": new_posts.DISMISSED})
+
+
+class WrittenSummaryInEmailTest(unittest.TestCase):
+    def test_each_paragraph_is_separate_and_cannot_inject_liquid(self):
+        body = new_posts.email_html(post(
+            "/blogs/a/", summary_html="<p>{{ a }}第一段。</p>\n<p>第二段。</p>",
+            summary_is_written=True,
+        ))
+        self.assertEqual(body.count(new_posts.SUMMARY_STYLE), 2)
+        self.assertNotIn("{{", body)
+
+    def test_the_preview_joins_chinese_paragraphs_without_a_space(self):
+        written = post("/blogs/a/", summary_html="<p>一。</p>\n<p>二。</p>", summary_is_written=True)
+        self.assertEqual(new_posts.preview_text(written), "一。二。")
+
+    def test_the_preview_is_capped_and_cannot_inject_liquid(self):
+        long_summary = post("/blogs/a/", summary_html="{{ 長" * 100, summary_is_written=True)
+        preview = new_posts.broadcast_body(long_summary, 2, NOW, None)["preview_text"]
+        self.assertEqual(len(preview), new_posts.MAX_PREVIEW_LENGTH)
+        self.assertNotIn("{", preview)
 
 
 class FindEmailTemplateTest(unittest.TestCase):

@@ -62,12 +62,12 @@ TITLE_STYLE = (
 )
 TITLE_LINK_STYLE = "color:#1f2937;text-decoration:none"
 SUMMARY_STYLE = (
-    f"margin:0 {CARD_PADDING} 24px;font-size:16px;line-height:2;"
+    f"margin:0 {CARD_PADDING} 14px;font-size:16px;line-height:2;"
     "letter-spacing:0.02em;color:#374151"
 )
 # Padding, not a margin: a bottom margin would collapse through the card.
 BUTTON_PARAGRAPH_STYLE = (
-    f"margin:0 {CARD_PADDING};padding-bottom:{CARD_PADDING};text-align:center"
+    f"margin:24px {CARD_PADDING} 0;padding-bottom:{CARD_PADDING};text-align:center"
 )
 BUTTON_STYLE = (
     "display:inline-block;padding:12px 24px;background:#23549f;color:#ffffff;"
@@ -99,8 +99,8 @@ CJK = "\u2e80-\u9fff\uf900-\ufaff\uff00-\uffef…⋯"
 UNREADABLE_ELEMENTS = "h[1-6]|table|pre|figure|script|style"
 # Tags that sit inside a word or sentence, so removing them must not add a space.
 INLINE_TAGS = "a|abbr|b|cite|code|del|em|i|ins|kbd|mark|q|s|small|span|strong|sub|u"
-# Hugo builds automatic summaries from these. A written summary has none of them.
-BLOCK_TAGS = "p|h[1-6]|blockquote|ul|ol|li|div|table|pre|figure|dl|section|details|center"
+# Added to the feed by layouts/_default/rss.xml for a post with a front matter summary.
+WRITTEN_SUMMARY_ELEMENT = "{https://mtmatt.csie.org/feed}summaryWritten"
 
 
 class Refused(Exception):
@@ -114,6 +114,7 @@ class Post:
     link: str
     published: datetime
     summary_html: str
+    summary_is_written: bool = False
 
 
 @dataclass(frozen=True)
@@ -201,6 +202,7 @@ def parse_feed(feed_xml):
                 link=link,
                 published=parsedate_to_datetime(item.findtext("pubDate")),
                 summary_html=item.findtext("description") or "",
+                summary_is_written=item.find(WRITTEN_SUMMARY_ELEMENT) is not None,
             ))
     return posts
 
@@ -244,15 +246,6 @@ def warn_about_unresolved(entries, too_old):
             print(f"::warning::send was not confirmed, check Kit, then resolve: {path}")
 
 
-def is_written_summary(summary_html):
-    """Tell a front matter `summary` from Hugo's automatic one.
-
-    The feed doesn't say which it carries, but Hugo emits a one-paragraph written
-    summary as bare inline HTML. Several paragraphs count as automatic.
-    """
-    return not re.search(rf"(?i)</?(?:{BLOCK_TAGS})\b", summary_html)
-
-
 def plain_text(summary_html):
     prose = re.sub(rf"(?is)<({UNREADABLE_ELEMENTS})\b.*?</\1>", " ", summary_html)
     joined = re.sub(rf"(?i)</?(?:{INLINE_TAGS})\b[^>]*>", "", prose)
@@ -262,13 +255,15 @@ def plain_text(summary_html):
     return " ".join(unwrapped.split())
 
 
+def close_chinese_spaces(text):
+    """Remove the spaces left where Chinese text was joined, as Chinese has none."""
+    return re.sub(rf"(?<=[{CJK}]) (?=[{CJK}])", "", text)
+
+
 def summarize(summary_html):
-    """Reduce a feed summary to plain text, of a few sentences unless written by hand."""
+    """Reduce Hugo's automatic summary to its first few sentences of plain text."""
     text = plain_text(summary_html)
-    if is_written_summary(summary_html):
-        return text
-    # Removing tags left a space between Chinese paragraphs.
-    text = re.sub(rf"(?<=[{CJK}]) (?=[{CJK}])", "", text)
+    text = close_chinese_spaces(text)
     sentences = re.findall(rf".+?(?:[。！？!?]+{CLOSERS}|\.{CLOSERS}(?=\s)|$)", text)
     summary = ""
     for sentence in sentences[:MAX_SUMMARY_SENTENCES]:
@@ -278,6 +273,15 @@ def summarize(summary_html):
     if len(summary) > MAX_SUMMARY_LENGTH:
         summary = summary[:MAX_SUMMARY_LENGTH].rstrip() + "…"
     return summary.strip()
+
+
+def summary_paragraphs(post):
+    """Return the summary to mail: a written one's prose whole, an automatic one reduced."""
+    if post.summary_is_written:
+        blocks = re.split(r"(?i)</?(?:p|ul|ol|li|blockquote)\b[^>]*>", post.summary_html)
+        return [text for text in map(plain_text, blocks) if text]
+    summary = summarize(post.summary_html)
+    return [summary] if summary else []
 
 
 def email_text(text):
@@ -309,16 +313,23 @@ def email_html(post):
     checks before anything is sent.
     """
     link = html.escape(post.link, quote=True)
-    summary = email_text(summarize(post.summary_html))
-    summary_paragraph = f'<p style="{SUMMARY_STYLE}">{summary}</p>' if summary else ""
-    return f"{cover_and_title(post.title, link)}{summary_paragraph}{read_more_button(link)}"
+    summary = "".join(
+        f'<p style="{SUMMARY_STYLE}">{email_text(paragraph)}</p>'
+        for paragraph in summary_paragraphs(post)
+    )
+    return f"{cover_and_title(post.title, link)}{summary}{read_more_button(link)}"
+
+
+def preview_text(post):
+    joined = close_chinese_spaces(" ".join(summary_paragraphs(post)))
+    return joined.replace("{", "")[:MAX_PREVIEW_LENGTH]
 
 
 def broadcast_body(post, template_id, now, send_at):
     """Return the Kit broadcast for a post, leaving its audience to the caller."""
     return {
         "subject": post.title,
-        "preview_text": summarize(post.summary_html).replace("{", "")[:MAX_PREVIEW_LENGTH],
+        "preview_text": preview_text(post),
         "description": f"newsletter {post.path}",
         "content": email_html(post),
         "email_template_id": template_id,
