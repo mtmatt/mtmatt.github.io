@@ -490,7 +490,7 @@ class FindEmailTemplateTest(unittest.TestCase):
 class EmailHtmlTest(unittest.TestCase):
     def test_has_the_cover_title_summary_and_link(self):
         body = new_posts.email_html(post("/blogs/a/"))
-        self.assertIn("url(https://mtmatt.csie.org/Lac.jpg)", body)
+        self.assertIn('src="https://mtmatt.csie.org/Lac.jpg"', body)
         self.assertIn("Title</a></h1>", body)
         self.assertIn(">Hello.</p>", body)
         self.assertIn('href="https://mtmatt.csie.org/blogs/a/"', body)

@@ -50,33 +50,30 @@ SITE_URL = "https://mtmatt.csie.org/"
 # The same cover on every email: post covers run to 19 MB, too large to mail.
 # Published only because it is homepageImage in params.toml.
 COVER_IMAGE_URL = f"{SITE_URL}Lac.jpg"
-# The template in .github/kit-email-template.html has no side margins, so that
-# the cover can reach both edges and the text sets its own.
-TEXT_SIDE_MARGIN = "18px"
-COVER_STYLE = (
-    "margin:0 0 8px;background-color:#c9d6e8;"
-    f"background-image:url({COVER_IMAGE_URL});background-size:cover;"
-    "background-position:center"
+# The white card comes from .github/kit-email-template.html (640px wide, 12px
+# corners); these fill it.
+CARD_PADDING = "32px"
+COVER_STYLE = "display:block;width:100%;height:auto;border:0;border-radius:12px 12px 0 0"
+SITE_NAME_STYLE = f"margin:28px {CARD_PADDING} 4px;font-size:14px;color:#6b7280"
+SITE_LINK_STYLE = "color:#6b7280;text-decoration:none"
+TITLE_STYLE = (
+    f"margin:0 {CARD_PADDING} 16px;font-size:30px;font-weight:400;line-height:1.3;"
+    "color:#1f2937"
 )
-# The flat color stands in for the fade where gradients aren't supported.
-COVER_OVERLAY_STYLE = (
-    f"padding:64px {TEXT_SIDE_MARGIN} 88px;background-color:rgba(255,255,255,0.65);"
-    "background-image:linear-gradient(to bottom,rgba(255,255,255,0.65) 45%,#ffffff 100%)"
-)
-SITE_NAME_STYLE = "margin:0 0 4px;font-size:14px;color:#1f2937"
-SITE_LINK_STYLE = "color:#1f2937;text-decoration:none"
-TITLE_STYLE = "margin:0;font-size:30px;line-height:1.3;color:#111827"
-TITLE_LINK_STYLE = "color:#111827;text-decoration:none"
+TITLE_LINK_STYLE = "color:#1f2937;text-decoration:none"
 SUMMARY_STYLE = (
-    f"margin:0 {TEXT_SIDE_MARGIN} 24px;max-width:34em;font-size:16px;line-height:2;"
+    f"margin:0 {CARD_PADDING} 24px;font-size:16px;line-height:2;"
     "letter-spacing:0.02em;color:#374151"
 )
-BUTTON_PARAGRAPH_STYLE = f"margin:0 {TEXT_SIDE_MARGIN} 8px"
-BUTTON_STYLE = (
-    "display:inline-block;padding:12px 24px;background:#1f2937;color:#ffffff;"
-    "text-decoration:none;border-radius:6px;font-weight:600"
+# Padding, not a margin: a bottom margin would collapse through the card.
+BUTTON_PARAGRAPH_STYLE = (
+    f"margin:0 {CARD_PADDING};padding-bottom:{CARD_PADDING};text-align:center"
 )
-# Picked by name because Kit wouldn't make it the default template.
+BUTTON_STYLE = (
+    "display:inline-block;padding:12px 24px;background:#23549f;color:#ffffff;"
+    "text-decoration:none;border-radius:8px"
+)
+# Picked by name, so a change to the account's default can't alter this email.
 EMAIL_TEMPLATE_NAME = "monterey"
 STARTING_POINT_TEMPLATE = "Starting point"
 # Gives Pages time to publish the post, and a window to cancel in Kit.
@@ -288,14 +285,14 @@ def email_text(text):
     return html.escape(text).replace("{", "&#123;")
 
 
-def cover_banner(title_text, link):
+def cover_and_title(title_text, link):
+    cover = f'<img src="{COVER_IMAGE_URL}" alt="{SITE_NAME}" width="640" style="{COVER_STYLE}">'
     site_name = f'<a href="{SITE_URL}" style="{SITE_LINK_STYLE}">{SITE_NAME}</a>'
     title = f'<a href="{link}" style="{TITLE_LINK_STYLE}">{email_text(title_text)}</a>'
     return (
-        f'<div style="{COVER_STYLE}"><div style="{COVER_OVERLAY_STYLE}">'
+        f'<a href="{SITE_URL}">{cover}</a>'
         f'<p style="{SITE_NAME_STYLE}">{site_name}</p>'
         f'<h1 style="{TITLE_STYLE}">{title}</h1>'
-        "</div></div>"
     )
 
 
@@ -314,7 +311,7 @@ def email_html(post):
     link = html.escape(post.link, quote=True)
     summary = email_text(summarize(post.summary_html))
     summary_paragraph = f'<p style="{SUMMARY_STYLE}">{summary}</p>' if summary else ""
-    return f"{cover_banner(post.title, link)}{summary_paragraph}{read_more_button(link)}"
+    return f"{cover_and_title(post.title, link)}{summary_paragraph}{read_more_button(link)}"
 
 
 def broadcast_body(post, template_id, now, send_at):
