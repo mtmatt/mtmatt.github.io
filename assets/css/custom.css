@@ -23,12 +23,6 @@
   margin-block: 1em;
 }
 
-.reading .work-link {
-  display: block;
-  margin-block-end: 0.5em;
-  font-size: 0.9em;
-}
-
 .reading .fiction-list {
   padding-inline-start: 0;
   list-style: none;
@@ -55,10 +49,6 @@
 .reading .chapter-nav a {
   display: inline-block;
   padding-block: 0.75em;
-}
-
-.reading .work-link,
-.reading .chapter-nav a {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
