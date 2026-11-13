@@ -8,7 +8,7 @@ sent them, and the day. It stores no IP address and sets no cookie.
 The site's `/fiction/index.json` lists each work's chapters and endings, and
 the Worker accepts only those. The repository is public, so the Worker holds no
 secrets. Other sites' pages are kept out by the allowed origins, and scripts by
-a limit of 5 uploads per IP address per minute.
+a limit of 2 uploads per IP address per minute.
 
 ## Deploy
 

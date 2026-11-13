@@ -10,8 +10,8 @@
     {
       "binding": "DB",
       "database_name": "ending-stats",
-      // Replace with the ID that `wrangler d1 create ending-stats` prints.
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      // From `wrangler d1 create ending-stats`. It names the database but grants no access.
+      "database_id": "a2b040bf-9a77-4300-bfdf-ee6733ce2f21",
     },
   ],
   // Uploads per IP address per minute. The address is only counted in memory.
@@ -19,7 +19,7 @@
     {
       "name": "UPLOADS",
       "namespace_id": "1001",
-      "simple": { "limit": 5, "period": 60 },
+      "simple": { "limit": 2, "period": 60 },
     },
   ],
 }
