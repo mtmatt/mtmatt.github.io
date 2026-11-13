@@ -59,5 +59,5 @@ summary = '''
 「你先整理。」
 
 <div class="text-center" style="margin-top: 2.5rem">
-<a class="bg-primary-600 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" style="display: inline-block; padding: 0.85rem 2.25rem; border-radius: 0.6rem; font-size: 1.125rem" href="/fiction/high-context/" role="button">開始閱讀</a>
+<a class="bg-primary-600 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" style="display: inline-block; padding: 0.7rem 1.9rem; border-radius: 0.6rem; font-size: 1.125rem" href="/fiction/high-context/" role="button">開始閱讀</a>
 </div>
