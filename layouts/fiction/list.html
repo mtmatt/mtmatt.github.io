@@ -1,7 +1,14 @@
 {{/* The fiction index: ongoing and completed serials, then short stories from blogs. */}}
 {{ define "main" }}
-  {{ $completedWorks := where .Sections "Params.completed" true }}
-  {{ $ongoingWorks := .Sections | complement $completedWorks }}
+  {{ $completedWorks := slice }}
+  {{ $ongoingWorks := slice }}
+  {{ range .Sections }}
+    {{ if partial "is-completed.html" . }}
+      {{ $completedWorks = $completedWorks | append . }}
+    {{ else }}
+      {{ $ongoingWorks = $ongoingWorks | append . }}
+    {{ end }}
+  {{ end }}
   {{ $shortStories := where (where site.RegularPages "Section" "blogs") "Layout" "reading" }}
   <article class="reading">
     <header class="mt-5 mb-6">

@@ -6,6 +6,9 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: "21 * * * *" # Publishes future-dated chapters and timed completions.
+  workflow_dispatch:
 
 jobs:
   build-deploy:
@@ -22,7 +25,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
+          hugo-version: "0.169.0" # Pinned: builds also run unattended every hour.
 
       - name: Build
         run: hugo --minify

@@ -1,5 +1,5 @@
 {{- $chapterCount := len .RegularPages -}}
-{{- if .Params.completed -}}
+{{- if partial "is-completed.html" . -}}
   完結 · 全 {{ $chapterCount }} 章
 {{- else -}}
   連載中 · 已更新 {{ $chapterCount }} 章

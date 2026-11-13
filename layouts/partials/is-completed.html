@@ -1,0 +1,13 @@
+{{/*
+  Whether a work is complete: `completed = true`, or a `completed` date and time
+  that has passed when the site is built. A timed one turns over at the first
+  build after that moment, which the scheduled rebuild provides.
+*/}}
+{{- $completed := .Params.completed -}}
+{{- $done := false -}}
+{{- if eq (printf "%T" $completed) "bool" -}}
+  {{- $done = $completed -}}
+{{- else if $completed -}}
+  {{- $done = not (now.Before (time.AsTime $completed)) -}}
+{{- end -}}
+{{- return $done -}}
