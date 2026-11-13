@@ -11,6 +11,9 @@ disableImageOptimizationMD = false
 disableTextInHeader = false
 hotlinkFeatureImage = false
 fingerprintAlgorithm = "sha512"
+# The ending statistics Worker's address. Empty hides the statistics;
+# workers/ending-stats/README.md says how to deploy it.
+endingsApi = "https://ending-stats.ending-stats.workers.dev"
 giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v11.next.forgejo.org"
 firebase = { }

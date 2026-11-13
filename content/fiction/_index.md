@@ -2,6 +2,8 @@
 title = '小說'
 # The section cascade below also matches this page, which must stay the index.
 layout = 'list'
+# JSON lists each work's chapters and endings for the ending statistics service.
+outputs = ['html', 'rss', 'json']
 
 # To add a serial, create fiction/<work>/_index.md with a title and an optional
 # description, and no date. Then add one file per chapter, such as 01.md, each
@@ -25,6 +27,16 @@ layout = 'list'
 # a choice of its own. List only the main route in orders, which a work with choices
 # must have: a chapter in no order links just to the contents and stays off the work
 # page.
+# To mark an ending, give its chapter a name for it, which readers see only once
+# they reach it. An ending can't also offer choices:
+#   ending = '雪停'
+# Each ending then offers readers the ending distribution, if endingsApi is set in
+# config/_default/params.toml. Readers choose whether to add their own ending.
+# The site always publishes /fiction/index.json, which the statistics check
+# uploads against, even while endingsApi is empty. It's public, linked from
+# /fiction/, and lists each work with endings: its chapters' addresses and which
+# are endings, though not their names. So it shows how many endings a work has
+# and where, even with the setting below.
 # To keep a non-linear work's chapters out of search, the sitemap and the site feed,
 # so they can't give away its ending, add this to the work. It removes the work's
 # own feed too. Plain keys such as outputs and completed go above the first [[...]]

@@ -1,0 +1,25 @@
+{
+  "name": "ending-stats",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "vars": {
+    "ALLOWED_ORIGINS": "https://mtmatt.csie.org",
+    "MANIFEST_URL": "https://mtmatt.csie.org/fiction/index.json",
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ending-stats",
+      // From `wrangler d1 create ending-stats`. It names the database but grants no access.
+      "database_id": "a2b040bf-9a77-4300-bfdf-ee6733ce2f21",
+    },
+  ],
+  // Uploads per IP address per minute. The address is only counted in memory.
+  "ratelimits": [
+    {
+      "name": "UPLOADS",
+      "namespace_id": "1001",
+      "simple": { "limit": 2, "period": 60 },
+    },
+  ],
+}

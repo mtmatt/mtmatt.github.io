@@ -1,0 +1,33 @@
+# Tests the ending statistics Worker. Deploying it is done by hand; see
+# workers/ending-stats/README.md.
+
+name: Ending stats
+
+on:
+  push:
+    branches: [main]
+    paths: ["workers/ending-stats/**", ".github/workflows/ending-stats.yml"]
+  pull_request:
+    paths: ["workers/ending-stats/**", ".github/workflows/ending-stats.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # node:sqlite, which the tests stand in for D1 with, needs Node 22.13 or later.
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Test
+        run: node --test "workers/ending-stats/test/*.test.js"
