@@ -106,3 +106,70 @@
     display: none;
   }
 }
+
+.reading .ending-stats {
+  margin-block: 2.5rem;
+}
+
+.reading .ending-stats button {
+  padding: 0.5em 1.25em;
+  border: 1px solid currentcolor;
+  border-radius: 0.5em;
+}
+
+.reading .ending-stats button:hover {
+  opacity: 0.7;
+}
+
+.reading .ending-stats-ask {
+  padding: 1em 1.25em;
+  border: 1px solid rgb(var(--color-neutral-300));
+  border-radius: 0.5em;
+}
+
+.dark .reading .ending-stats-ask {
+  border-color: rgb(var(--color-neutral-600));
+}
+
+.reading .ending-stats-note {
+  font-size: 0.875em;
+  color: rgb(var(--color-neutral-500));
+}
+
+.reading .ending-stats-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-block-start: 1em;
+}
+
+/* One row per ending: name, bar, figure. The rows share columns, so the bars
+   line up, and the bar takes the width that's left. */
+.reading .ending-stats-result ol {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  gap: 0.5em 0.75em;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+.reading .ending-stats-result li {
+  display: contents;
+}
+
+.reading .ending-stats-bar {
+  height: 0.6em;
+  border-radius: 0.3em;
+  background:
+    linear-gradient(
+        rgb(var(--color-primary-500)),
+        rgb(var(--color-primary-500))
+      )
+      no-repeat 0 0 / var(--share) 100%,
+    rgb(var(--color-neutral-200));
+}
+
+.dark .reading .ending-stats-bar {
+  background-color: rgb(var(--color-neutral-700));
+}

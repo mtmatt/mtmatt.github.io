@@ -1,0 +1,20 @@
+{{- /*
+  /fiction/index.json: for each work with endings, its chapters and which of
+  them are endings. The ending statistics service accepts only what this lists.
+  Ending names are left out, so the file can't give them away.
+*/ -}}
+{{- $works := dict -}}
+{{- range .Sections -}}
+  {{- $chapters := slice -}}
+  {{- $endings := slice -}}
+  {{- range .RegularPages.ByDate -}}
+    {{- $chapters = $chapters | append .RelPermalink -}}
+    {{- if .Params.ending -}}
+      {{- $endings = $endings | append .RelPermalink -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $endings -}}
+    {{- $works = merge $works (dict .RelPermalink (dict "chapters" $chapters "endings" $endings)) -}}
+  {{- end -}}
+{{- end -}}
+{{- dict "works" $works | jsonify -}}

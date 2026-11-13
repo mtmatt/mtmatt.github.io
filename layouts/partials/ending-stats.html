@@ -1,0 +1,29 @@
+{{/*
+  Under an ending chapter: a button that shows how readers' endings are spread.
+  It first asks whether to add this reader's ending, and the path they took,
+  and shows the spread either way. reading.js reveals and runs it, so without
+  JavaScript, or until endingsApi is set in params.toml, nothing shows.
+*/}}
+{{ with .Params.ending }}
+  {{ if not (eq (printf "%T" .) "string") }}
+    {{ errorf "%s: ending must be the ending's name in quotes" $.File.Path }}
+  {{ end }}
+  {{ if $.HasShortcode "choice" }}
+    {{ errorf "%s: an ending can't also offer choices" $.File.Path }}
+  {{ end }}
+  {{ with site.Params.endingsApi }}
+    <section class="ending-stats" data-api="{{ strings.TrimSuffix "/" . }}" data-ending="{{ $.Params.ending }}" hidden>
+      <button type="button" class="ending-stats-show">顯示結局分布</button>
+      <form class="ending-stats-ask" hidden>
+        <p>要把你的結局「{{ $.Params.ending }}」匿名加入統計嗎？</p>
+        <label><input type="checkbox" name="path" checked> 一起上傳我走過的章節</label>
+        <p class="ending-stats-note">只會送出結局和章節，不會記錄你是誰。</p>
+        <div class="ending-stats-actions">
+          <button type="submit" value="add">加入統計</button>
+          <button type="submit" value="skip">不用，直接看</button>
+        </div>
+      </form>
+      <div class="ending-stats-result" aria-live="polite"></div>
+    </section>
+  {{ end }}
+{{ end }}
