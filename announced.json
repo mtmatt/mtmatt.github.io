@@ -27,7 +27,8 @@
     "status": "seeded"
   },
   "/blogs/high-context/": {
-    "status": "sending"
+    "broadcast_id": 27007780,
+    "status": "scheduled"
   },
   "/blogs/snow-in-taipei/": {
     "broadcast_id": 26859309,
