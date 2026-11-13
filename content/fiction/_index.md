@@ -8,6 +8,10 @@ layout = 'list'
 # with a title and date. Chapters run in date order, so give each a different
 # date or time; weight is ignored. A work has no subfolders.
 # Add completed = true to the work once its last chapter is out.
+# Or set completed to a date and time with its offset, such as
+# 2026-11-15T13:20:00+08:00, and the work completes at the first build after it.
+# Builds run hourly at :21, so it shows up to about an hour later. Without +08:00
+# the time is read as UTC, eight hours late.
 # To offer other reading orders, add them to the work. They replace date order on
 # the work page and in chapter links. List a chapter at most once in an order.
 # Naming an unpublished chapter fails the build:

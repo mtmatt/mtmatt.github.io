@@ -16,7 +16,7 @@
       {{ with $chaptersLastFirst.Next $page }}
         <a href="{{ .RelPermalink }}" rel="next">下一章 →</a>
       {{ else }}
-        {{ if $page.CurrentSection.Params.completed }}全文完{{ else }}連載中，待續{{ end }}
+        {{ if partial "is-completed.html" $page.CurrentSection }}全文完{{ else }}連載中，待續{{ end }}
       {{ end }}
     {{ end }}
   </span>
