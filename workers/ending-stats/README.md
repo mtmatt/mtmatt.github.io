@@ -48,7 +48,7 @@ the older chapter list.
 ## Test
 
 ```sh
-node --test test/
+node --test "test/*.test.js"
 ```
 
 To try it with the site, run the Worker and Hugo side by side. The Worker uses a

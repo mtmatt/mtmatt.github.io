@@ -30,4 +30,4 @@ jobs:
           node-version: 24
 
       - name: Test
-        run: node --test workers/ending-stats/test/
+        run: node --test "workers/ending-stats/test/*.test.js"

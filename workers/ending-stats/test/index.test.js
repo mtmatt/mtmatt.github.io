@@ -1,4 +1,4 @@
-// Run with: node --test workers/ending-stats/test/
+// Run with: node --test "workers/ending-stats/test/*.test.js"
 // D1 is stood in for by node:sqlite with the real schema, and fetch by the manifest.
 import { test, beforeEach } from "node:test";
 import assert from "node:assert/strict";
