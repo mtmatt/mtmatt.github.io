@@ -9,3 +9,7 @@ hugo.darwin
 # LanguageTool Premium API key if this ever gets upgraded from the local
 # server). See ~/Programming/notes/Grammar Check Setup.md.
 .obsidian/plugins/*/data.json
+
+# Local tool state: Claude Code preview config and wrangler cache.
+/.claude/
+/.wrangler/
